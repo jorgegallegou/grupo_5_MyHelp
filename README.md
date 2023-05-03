@@ -24,3 +24,10 @@ MyHelp es una plataforma abierta a la contribución de la comunidad. Si estás i
 ## Contacto
 
 Si tienes alguna pregunta o comentario, por favor no dudes en contactarnos a través de nuestro correo electrónico de atención al cliente support@myhelp.com o de nuestras redes sociales.
+
+
+# Breve descripción de los integrantes del equipo
+
+# Jorge
+
+Soy Jorge, un programador web full stack junior (en formación) apasionado por la vida y por la familia. Tengo experiencia de más de ocho años en coordinar y liderar áreas de tecnología en diferentes organizaciones de carácter público y privado, administrando los procesos de seguridad informática, recursos computacionales, e infraestructura de red de datos e internet, lo que me ha permitido desarrollar habilidades en el trabajo administrativo, con sentido de pertenencia por la institucionalidad; me baso en la disciplina, la puntualidad, el orden, el logro y superación de objetivos, el trabajo en equipo, aprendo rápido, cumplo con honestidad y responsabilidad las distintas actividades y metas planteadas en las organizaciones. Me encanta el fútbol, las películas de acción, y me fascina estar sentado al frente de un computador, y siempre estoy buscando nuevas formas de aprender y mejorar en mi trabajo. En este proyecto, pretendo consolidar una idea de seis estudiantes entusiastas por la programación web, y espero que mi trabajo sea de ayuda para la comunidad.
