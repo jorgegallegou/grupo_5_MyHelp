@@ -29,7 +29,9 @@ Si tienes alguna pregunta o comentario, por favor no dudes en contactarnos a tra
 # Breve descripción de los integrantes del equipo
 
 ## Sol
-
+Mi nombre es Sol, soy despachante de aeronaves, actualmente viviendo en Melbourne, Australia. 
+Me encuentro realizando el curso de Full stack ya que desde siempre  me intereso el mundo de la programacion  y por cuestiones de tiempo lo habia postergado.
+Mis hobbies son la lectura, el ski y pasar tiempo con mi familia. 
 ## Tatiana
 
 ## Michelle
