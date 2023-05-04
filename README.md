@@ -24,7 +24,7 @@ Mis hobbies son la lectura, el ski y pasar tiempo con mi familia.
 ## Michelle
 
 ## Diego
-
+Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente cursando el programa de Desarrollo Web Full Stack en Digital House. Me encanta muchísimo el aprendizaje continuo, disfruto pasar tiempo en familia, escuchar música y el cine. Soy una persona comprometida con lo que hago y perfeccionista. También soy un apasionado por los deportes, en especial el Basketball fan de la NBA.
 ## Santiago
 
 ## Jorge
