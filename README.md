@@ -31,12 +31,11 @@ Nos dirigimos a cualquier persona que necesite servicios para su hogar o empresa
 
 ## Websites de referencia.
 
-1.https://misaliados.com.co (website elegido por su estetica y su forma simple e intuitiva para navegar en el)
-2.https://www.jelpit.com (website elegido como referente debido a que nos brinda una idea clara de como deberia ser maquetado nuetro website)
-3.https://www.hogaru.com (website elegido por su estetica simple)
-4.https://www.timbrit.com.co(website elegido como referente por su paleta de colores y tipo de servicios brindados)
-5.http://www.hogarreparacion.com (website elegido como referente por su estetica y tipo de servicios brindados)
-
+* https://misaliados.com.co (website elegido por su estetica y su forma simple e intuitiva para navegar en el)
+* https://www.jelpit.com (website elegido como referente debido a que nos brinda una idea clara de como deberia ser maquetado nuetro website)
+* https://www.hogaru.com (website elegido por su estetica simple)
+* https://www.timbrit.com.co(website elegido como referente por su paleta de colores y tipo de servicios brindados)
+* http://www.hogarreparacion.com (website elegido como referente por su estetica y tipo de servicios brindados)
 
 
 # Breve descripción de los integrantes del equipo
@@ -60,7 +59,6 @@ Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente 
 ## Jorge
 
 Soy Jorge, un programador web full stack junior (en formación) apasionado por la vida y por la familia. Tengo experiencia de más de ocho años en coordinar y liderar áreas de tecnología en diferentes organizaciones de carácter público y privado. Me baso en la disciplina, la puntualidad, el orden, el logro y superación de objetivos, el trabajo en equipo, aprendo rápido, cumplo con honestidad y responsabilidad las distintas actividades y metas planteadas en las organizaciones. Me encanta el fútbol, las películas de acción, y me fascina estar sentado al frente de un computador.
-
 
 
 # Entregables
