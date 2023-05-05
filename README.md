@@ -60,3 +60,16 @@ Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente 
 ## Jorge
 
 Soy Jorge, un programador web full stack junior (en formación) apasionado por la vida y por la familia. Tengo experiencia de más de ocho años en coordinar y liderar áreas de tecnología en diferentes organizaciones de carácter público y privado. Me baso en la disciplina, la puntualidad, el orden, el logro y superación de objetivos, el trabajo en equipo, aprendo rápido, cumplo con honestidad y responsabilidad las distintas actividades y metas planteadas en las organizaciones. Me encanta el fútbol, las películas de acción, y me fascina estar sentado al frente de un computador.
+
+
+
+# Entregables
+
+## Wireframe
+https://marvelapp.com/prototype/19a8104e
+
+## Trello
+https://trello.com/invite/b/tT0zmY4m/ATTI83c4a5666e352387e64bee9e52dfba79D203D5A9/team5sprint1
+
+## Repositorio
+https://github.com/jorgegallegou/grupo_5_MyHelp
