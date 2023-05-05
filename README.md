@@ -20,9 +20,9 @@ En el sector del hogar, MyHelp cuenta con un equipo de expertos en diferentes á
 * Cerrajeria. 
 * Decoración de interiores.
 
-En el ámbito empresarial ofercemos servicios especializados, tales como:
+En el ámbito empresarial ofrecemos servicios especializados, tales como:
 
-* Limpiza profunda.
+* Limpieza profunda.
 * Desinfeccion de ambientes.
 
 ## Público objetivo 
