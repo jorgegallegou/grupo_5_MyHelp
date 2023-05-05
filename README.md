@@ -3,7 +3,7 @@ Proyector integrador
 
 # MyHelp
 
-## Descripción
+## Temática del sitio
 
 MyHelp es una compañía en linea líder en servicios profesionales del hogar y empresarial que se especializa en brindar soluciones integrales para satisfacer las necesidades de sus clientes.
 
@@ -25,21 +25,19 @@ En el ámbito empresarial ofercemos servicios especializados, tales como:
 * Limpiza profunda.
 * Desinfeccion de ambientes.
 
-## Público objetivo
+## Público objetivo 
 
-Nos dirigimos a cualquier persona que necesite servicios para su hogar, ya sea que se trate de pequeñas reparaciones o grandes proyectos de renovación. Ofrecemos una solución conveniente y confiable que te permitirá ahorrar tiempo y esfuerzo al buscar y seleccionar proveedores de servicios en el hogar.
+Nos dirigimos a cualquier persona que necesite servicios para su hogar o empresa, ya sea que se trate de pequeñas reparaciones o grandes proyectos de renovación. Ofrecemos una solución conveniente y confiable que te permitirá ahorrar tiempo y esfuerzo al buscar y seleccionar proveedores de servicios en el hogar.
 
-## Listado sitios de referencia
+## Websites de referencia.
 
-1.https://www.viator.com (website elegido por su estetica y su forma simple e intuitiva para navegar en el)
-
-2.https://www.jelpit.com (website elegido como referente debido a que el website nos brinda una idea clara de como deberia ser maquetado nuetro website)
-
+1.https://misaliados.com.co (website elegido por su estetica y su forma simple e intuitiva para navegar en el)
+2.https://www.jelpit.com (website elegido como referente debido a que nos brinda una idea clara de como deberia ser maquetado nuetro website)
 3.https://www.hogaru.com (website elegido por su estetica simple)
-
 4.https://www.timbrit.com.co(website elegido como referente por su paleta de colores y tipo de servicios brindados)
-
 5.http://www.hogarreparacion.com (website elegido como referente por su estetica y tipo de servicios brindados)
+
+
 
 # Breve descripción de los integrantes del equipo
 
@@ -54,7 +52,9 @@ Mis hobbies son la lectura, el ski y pasar tiempo con mi familia.
 ## Michelle
 
 ## Diego
+
 Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente cursando el programa de Desarrollo Web Full Stack en Digital House. Me encanta muchísimo el aprendizaje continuo, disfruto pasar tiempo en familia, escuchar música y el cine. Soy una persona comprometida con lo que hago y perfeccionista. También soy un apasionado por los deportes, en especial el Basketball fan de la NBA.
+
 ## Santiago
 
 ## Jorge
