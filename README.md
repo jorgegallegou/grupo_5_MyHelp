@@ -12,13 +12,13 @@ MyHelp es una compañía en linea líder en servicios profesionales del hogar y 
 En el sector del hogar, MyHelp cuenta con un equipo de expertos en diferentes áreas que brindan servicios especializados, tales como:
  
 * Mantenimiento y reparación locativa. 
-* Plomería.
-* Electricidad. 
-* Carpintería. 
-* Pintura. 
-* Limpieza.
-* Cerrajeria. 
-* Decoración de interiores.
+* Plomería
+* Electricidad
+* Carpintería 
+* Pintura
+* Limpieza
+* Cerrajería 
+* Decoración de interiores
 
 En el ámbito empresarial ofrecemos servicios especializados, tales como:
 
