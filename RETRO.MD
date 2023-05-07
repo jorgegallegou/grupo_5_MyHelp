@@ -1,3 +1,5 @@
+# Resultado de la retrospectiva
+
 ## Seguir haciendo
 Este paso llena al equipo de energía positiva porque es cuando el líder del equipo reconoce las cosas que se hacen bien y el valor que aportan a un proyecto.
 
