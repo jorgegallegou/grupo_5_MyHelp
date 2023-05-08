@@ -50,6 +50,8 @@ Mis hobbies son la lectura, el ski y pasar tiempo con mi familia.
 
 ## Michelle
 
+Mi nombre es Michelle, soy estudiante de medicina y programacion. Vivo en Buenos Aires, Argentina. Me encanta la tecnologia y el conocimiento. Apasionado de los videojuegos. Me habia llamado la atencion programacion pero no es hasta el dia de hoy que le empece a dedicar mi tiempo.
+
 ## Diego
 
 Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente cursando el programa de Desarrollo Web Full Stack en Digital House. Me encanta muchísimo el aprendizaje continuo, disfruto pasar tiempo en familia, escuchar música y el cine. Soy una persona comprometida con lo que hago y perfeccionista. También soy un apasionado por los deportes, en especial el Basketball fan de la NBA.
