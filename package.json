@@ -4,7 +4,7 @@
   "description": "Proyecto integrador",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
