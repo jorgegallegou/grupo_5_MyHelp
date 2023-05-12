@@ -1,0 +1,46 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.top-navbar {
+  background-color: #023047;
+}
+.main-navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 5px 10px;
+  margin: 0;
+}
+.main-navbar a {
+  text-decoration: none;
+  color: #ffb703; 
+}
+.logo {
+  height: 70px;
+}
+.container-menu {
+  background-color: #023047;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  margin-top: 1px;
+}
+.menu-navbar ul {
+  list-style: none;
+  display: flex;
+}
+.menu-navbar a {
+  color: #ffb703;
+  padding-right: 20px;
+}
+.menu-navbar i {
+  font-size: 20px;
+  text-align: center;
+}
+.menu-navbar i p{
+  font-size: 9px;
+}
