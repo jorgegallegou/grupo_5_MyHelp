@@ -1,0 +1,56 @@
+/* FORMULARIO DE REGISTRO  */
+
+.formulario {
+    background-image: ;
+    max-width: 450px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.formulario button {
+    border: none;
+    background-color: #FFB703;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 47%;
+    font-size: 16px;
+    font-weight: 400px;
+}
+.container-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 400px;
+}
+
+.input-normal {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    background-color: #8ECAE6;
+    border: 0.5px solid #219EBC;
+    font-weight: 400px;
+    box-sizing: border-box;
+    }
+
+.container-radio {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.container-radio input {
+    margin: 0px 10px;    
+}
+form div div {
+    padding: 10px; 
+    margin-left: 20px
+}
+
+.label-principal {
+    font-weight:bold;
+    font-size: 16px;
+}
