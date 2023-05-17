@@ -37,7 +37,7 @@ body {
   background-color: #023047;
   height: 100px;
   padding: 5px 10px;
-  border-top: solid 1px #219EBC;
+  border-top: solid 1px #044566;
 }
 .container-menu .menu .logo{
   height: 90px;
@@ -100,7 +100,7 @@ footer{
 }
 .newsletter {
   padding: 0 15px 15px 15px;
-  border-top: solid 1px #219EBC;
+  border-top: solid 1px #044566;
 }
 .newsletter h3{
   margin: 10px 0;
@@ -128,7 +128,7 @@ footer{
 }
 .information {
   padding: 0 15px 15px 15px;
-  border-top: solid 1px #219EBC;
+  border-top: solid 1px #044566;
   color: #8ECAE6;
 }
 .information .contact {
@@ -152,7 +152,7 @@ footer{
   text-decoration: none;
 }
 .footer-bottom {
-  border-top: solid 1px #219EBC;
+  border-top: solid 1px #044566;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -222,8 +222,5 @@ height: 90px;
   .information .contact h3 {
     width: 100%;
   }
-  .container {
-    max-width: 1280px;
-    margin: auto;
-  } 
+   
 }
