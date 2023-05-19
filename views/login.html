@@ -1,12 +1,136 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+   
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+<link href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”
+rel="stylesheet" />
+<script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
+
+    <link href="/css/styles.css" rel="stylesheet">
+    <title>Login</title>
 </head>
 <body>
+    <header>
+      <div class="top-navbar">
+        <nav class="nav-links">
+          <ul>
+            <li><a href="#">Servicios Hogar</a></li>
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Nosotros</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="container-menu">
+        <div class= "menu">
+          <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+            <nav class="nav-menu">
+              <ul>
+                <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"><p>Buscar</p></i></a></li>
+                <li class="log-in"><a href="#"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
+                <li class="shopping"><a href="#"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
+                <li class="Burger-menu"><a href="#"><i class="fa-solid fa-bars"><p>Menu</p></i></a></li>
+              </ul>
+            </nav>
+        </div>
+      </div>
+     
+    </header>
+      
+        <main>
+
+        <div class=" inicio">
+
+            
+            <div class="input"><h1>Iniciar Sesion</h1></div><br> 
+  
+            <div class="redes">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+       
+        <a href="#"><i class="fab fa-instagram"></i></a><br>
+    </div>
+    <hr>
+    <p>O ingresa con tu correo electronico</p>
+    <form action="" method="POST" class="formulario">
+
+    <label class="label-principal" for="correo">Correo electrónico</label>
+    <input class="input-normal" type="email" id="email" name="correo" placeholder="Ingresa tu correo" required>
     
+    <label class="label-principal" for="password">Contraseña</label>
+    <input class="input-normal" type="password" id="password" name="password" placeholder="Contraseña" required>
+    
+    <p>Recordarme</p>
+    <a href="#">Olvidaste tu contraseña?"</a>
+        
+         <div class="submit"> 
+        <button type="submit" tittle="Ingresar" name="Ingresar">Ingresar</button>
+        
+    </div> 
+
+    <p class="final">Aun sin registrarte?</p><a href="#">Crea tu cuenta</a>
+   
+</header>
+<footer>
+    <footer>
+        <div class="container">
+          <div class="clauses">
+            <ul class="items">
+              <li><a href="#">Quienes somos</a></li>
+              <li><a href="#">Quieres ser provedor?</a></li>
+              <li><a href="#">Terminos y condiciones</a></li>
+              <li><a href="#">Política de cookies</a></li>
+              <li><a href="#">Política de tratamiento datos personales</a></li>
+            </ul>
+          </div>
+          <div class="newsletter">
+            <h3>Enterate de nuestras ultimas noticias</h3>
+            <form action="" method="post" class="form-search">
+              <input type="email" name="email" placeholder="Email">
+              <button type="submit">Suscribete</button>
+            </form>
+
+            <div class="social-media">
+                <ul class="socials">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="information">
+                <ul class="contact">
+                  <h3>Contacto</h3>
+                  <li>Direccion: xxxxxx</li>
+                  <li>Telefono: (+57) 123456789</li>
+                  <li>Correo: www.contacto@MyHelp.com</li>
+                  <li>Correo: www.soporte@MyHelp.com</li>
+                </ul>
+
+                <div class="help">
+                    <h3>Ayuda</h3>
+                    <li>
+                      <a href="#">Centro de ayuda</a>
+                    </li>
+                  </div>
+                </div>
+              
+                <div class="footer-bottom">
+                    <a href="#"><img src="img/logo.png" alt="logo"></a>
+                    <p>Myhelp 2023-©Todos los derechos reservados</p>
+                  </div>
+              </div>
+</footer>
+</main>
 </body>
 </html>
