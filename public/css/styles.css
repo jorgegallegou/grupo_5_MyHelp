@@ -168,8 +168,10 @@ main div.submit {
     width: 100%;
 	 }
 
-	 
-p {
+
+.final p {
+	display: flex;
+	justify-content: space-between;
 	font-size: 12px;
 }
 
