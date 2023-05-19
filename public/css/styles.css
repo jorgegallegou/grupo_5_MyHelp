@@ -30,6 +30,7 @@ body {
 	font-weight: 400px;
 }
 
+
 .input-normal {
     display: block;
     width: 100%;
@@ -167,14 +168,30 @@ main div.submit {
 	display: block;
     width: 100%;
 	 }
-
-
-.final p {
+	 
+	 
+.submit {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+}
+.final {
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+}
+.ingresa {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-size: 12px;
 }
 
+.recordar {
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+}
 	 
 footer{
 	background-color: #023047;
