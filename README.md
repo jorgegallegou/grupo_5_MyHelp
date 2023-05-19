@@ -57,6 +57,9 @@ Mi nombre es Michelle, soy estudiante de medicina y programacion. Vivo en Buenos
 Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente cursando el programa de Desarrollo Web Full Stack en Digital House. Me encanta muchísimo el aprendizaje continuo, disfruto pasar tiempo en familia, escuchar música y el cine. Soy una persona comprometida con lo que hago y perfeccionista. También soy un apasionado por los deportes, en especial el Basketball fan de la NBA.
 
 ## Santiago
+Mi nombre es santiago alvarez,soy tecnico en programacion de software
+Me gusta mucho el ajedrez y el baloncesto.
+Actualmente estoy cursando el programa de Desarrollo Web Full Stack en Digital House.
 
 ## Jorge
 
