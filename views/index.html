@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyHelp</title>
-  <link rel="stylesheet" href="css/stylesHome.css">
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/stylesHome.css">
 
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <div class="top-navbar">
       <nav class="nav-links">
         <ul>
@@ -40,29 +40,45 @@
   </header>
 
   <main>
-    <h1>Main</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt distinctio nemo, eum optio fugit. Quis soluta culpa quo beatae delectus iusto fugiat vero fuga earum nobis eveniet, rerum voluptatibus. </p>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quo iure voluptates dolorum enim, recusandae illum hic quos sapiente provident similique repellendus, suscipit, laborum delectus ad expedita eligendi optio ab.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quisquam consectetur corrupti enim facere eum nemo adipisci vitae ut quas quasi aperiam, vel libero rerum consequuntur aut. Eum, neque? Praesentium.
-    </p><p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt distinctio nemo, eum optio fugit. Quis soluta culpa quo beatae delectus iusto fugiat vero fuga earum nobis eveniet, rerum voluptatibus. </p>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quo iure voluptates dolorum enim, recusandae illum hic quos sapiente provident similique repellendus, suscipit, laborum delectus ad expedita eligendi optio ab.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quisquam consectetur corrupti enim facere eum nemo adipisci vitae ut quas quasi aperiam, vel libero rerum consequuntur aut. Eum, neque? Praesentium.
-    </p><p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt distinctio nemo, eum optio fugit. Quis soluta culpa quo beatae delectus iusto fugiat vero fuga earum nobis eveniet, rerum voluptatibus. </p>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quo iure voluptates dolorum enim, recusandae illum hic quos sapiente provident similique repellendus, suscipit, laborum delectus ad expedita eligendi optio ab.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quisquam consectetur corrupti enim facere eum nemo adipisci vitae ut quas quasi aperiam, vel libero rerum consequuntur aut. Eum, neque? Praesentium.
-    </p>
+    <section class="main-container">
+      <div class="main-img">
+        <a href="productDetail">
+          <img src="img/imgServiciosMyHelp/limpiezaHogar.svg" alt="limpiezaHogarMedium">
+        </a>
+      </div>
+        <a href="productDetail">
+          <button class="send" type="submit"> Solicita aqui tu servicio</button>
+        </a>
+    </section>
+
+    <section class="highlight-container">
+      <h2>Servicios mas solicitados</h2>
+      <div class="services">
+        <article>
+          <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="limpiezaHogar">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+          </div>
+        </article>
+      </div>
+      <div class="services">
+        <article>
+          <img src="img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+          </div>
+        </article>
+      </div>
+      <div class="services">
+        <article>
+          <img src="img/imgServiciosMyHelp/desinfeccionAmbientes.svg" alt="desinfeccionAmbientes">
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+          </div>
+        </article>
+      </div>
+
+    </section>
   </main>
 
   <footer>
@@ -112,7 +128,7 @@
       </div>
     
       <div class="footer-bottom">
-        <a href="#"><img src="img/logo.png" alt="logo"></a>
+        <a href=""><img src="img/logo.png" alt="logo"></a>
         <p>Myhelp 2023-©Todos los derechos reservados</p>
       </div>
   </div>
