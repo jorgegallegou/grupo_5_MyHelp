@@ -69,7 +69,8 @@ Soy Jorge, un programador web full stack junior (en formación) apasionado por l
 # Entregables
 
 ## Wireframe
-https://marvelapp.com/prototype/19a8104e
+https://marvelapp.com/prototype/19a8104e 
+Hechas las modificaciones respectivas segun feedback de los profes. Pendientes los wireframes del formulario de login.
 
 ## Trello
 https://trello.com/invite/b/tT0zmY4m/ATTI83c4a5666e352387e64bee9e52dfba79D203D5A9/team5sprint1
