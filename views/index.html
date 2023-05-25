@@ -25,9 +25,8 @@
     <div class="container-menu">
       <div class= "menu">
         <img src="img/logo.png" alt="logo" class="logo">
-          <nav class="nav-menu">
+          <nav>
             <ul>
-              <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"><p>Buscar</p></i></a></li>
               <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
               <li class="register"><a href="/register"><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a></li>
               <li class="shopping"><a href="/productCart"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
@@ -36,7 +35,6 @@
           </nav>
       </div>
     </div>
-   
   </header>
 
   <main>
@@ -45,46 +43,56 @@
         <a href="productDetail">
           <img src="img/imgServiciosMyHelp/limpiezaHogar.svg" alt="limpiezaHogarMedium">
         </a>
-      </div>
         <a href="productDetail">
           <button class="send" type="submit"> Solicita aqui tu servicio</button>
         </a>
+      </div>
     </section>
 
     <section class="highlight-container">
+      <div class="search-bar">
+        <div class="title">
+          <h3>¡Encuentra el servicio a tu necesidad!</h3>
+          <p>Nuestros Profesionales te ayudaran</p>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="search" placeholder="Encuentra tu sevicio MyHelp">
+        <a href="#"><button type="submit">Buscar</button></a>
+      </div>
       <h2>Servicios mas solicitados</h2>
-      <div class="services">
-        <article>
-          <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="limpiezaHogar">
-          <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
-          </div>
-        </article>
+      <div class="all-services">
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="limpiezaHogar">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/desinfeccionAmbientes.svg" alt="desinfeccionAmbientes">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="services">
-        <article>
-          <img src="img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
-          <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
-          </div>
-        </article>
-      </div>
-      <div class="services">
-        <article>
-          <img src="img/imgServiciosMyHelp/desinfeccionAmbientes.svg" alt="desinfeccionAmbientes">
-          <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
-          </div>
-        </article>
-      </div>
-
     </section>
   </main>
 
   <footer>
-    <div class="container">
+    <div class="footer-container">
       <div class="clauses">
-        <ul class="items">
+        <ul>
           <li><a href="#">Quienes somos</a></li>
           <li><a href="#">Quieres ser provedor?</a></li>
           <li><a href="#">Terminos y condiciones</a></li>
@@ -95,13 +103,13 @@
 
       <div class="newsletter">
         <h3>Enterate de nuestras ultimas noticias</h3>
-        <form action="" method="post" class="form-search">
+        <form action="" method="post">
           <input type="email" name="email" placeholder="Email">
           <button type="submit">Suscribete</button>
         </form>
 
         <div class="social-media">
-          <ul class="socials">
+          <ul>
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
@@ -110,27 +118,20 @@
         </div>
       </div>
       
-      <div class="information">
-        <ul class="contact">
+      <div class="contact">
+        <ul>
           <h3>Contacto</h3>
-          <li>Direccion: xxxxxx</li>
           <li>Telefono: (+57) 123456789</li>
           <li>Correo: www.contacto@MyHelp.com</li>
           <li>Correo: www.soporte@MyHelp.com</li>
         </ul>
-
-        <div class="help">
-          <h3>Ayuda</h3>
-          <li>
-            <a href="#">Centro de ayuda</a>
-          </li>
-        </div>
       </div>
-    
-      <div class="footer-bottom">
-        <a href=""><img src="img/logo.png" alt="logo"></a>
-        <p>Myhelp 2023-©Todos los derechos reservados</p>
-      </div>
+  </div>
+  <div class="footer-bottom">
+    <a href="">
+      <img src="img/logo.png" alt="logo">
+    </a>
+    <p>Myhelp 2023-©Todos los derechos reservados</p>
   </div>
   </footer>
 </body>
