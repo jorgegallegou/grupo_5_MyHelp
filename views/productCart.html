@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyHelp</title>
-  <link rel="stylesheet" href="css/stylesProductCart.css">
+  <link rel="stylesheet" href="css/stylesHome.css">
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <div class="top-navbar">
       <nav class="nav-links">
         <ul>
@@ -24,18 +24,19 @@
     
     <div class="container-menu">
       <div class= "menu">
-        <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
-          <nav class="nav-menu">
+        <a href="/">
+          <img src="img/logo.png" alt="logo" class="logo">
+        </a>
+          <nav>
             <ul>
-              <li class="search"><a href="#"><i class="fa-solid fa-magnifying-glass"><p>Buscar</p></i></a></li>
-              <li class="log-in"><a href="#"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
-              <li class="shopping"><a href="#"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
+              <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
+              <li class="register"><a href="/register"><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a></li>
+              <li class="shopping"><a href="/productCart"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
               <li class="Burger-menu"><a href="#"><i class="fa-solid fa-bars"><p>Menu</p></i></a></li>
             </ul>
           </nav>
       </div>
     </div>
-   
   </header>
 
   <main>
@@ -72,60 +73,54 @@
             </div>
         </div>
     </section>
+  </main>
 
  <!--- footer -->
 
-  <footer>
-    <div class="container">
-      <div class="clauses">
-        <ul class="items">
-          <li><a href="#">Quienes somos</a></li>
-          <li><a href="#">Quieres ser provedor?</a></li>
-          <li><a href="#">Terminos y condiciones</a></li>
-          <li><a href="#">Política de cookies</a></li>
-          <li><a href="#">Política de tratamiento datos personales</a></li>
+ <footer>
+  <div class="footer-container">
+    <div class="clauses">
+      <ul>
+        <li><a href="#">Quienes somos</a></li>
+        <li><a href="#">Quieres ser provedor?</a></li>
+        <li><a href="#">Terminos y condiciones</a></li>
+        <li><a href="#">Política de cookies</a></li>
+        <li><a href="#">Política de tratamiento datos personales</a></li>
+      </ul>
+    </div>
+
+    <div class="newsletter">
+      <h3>Enterate de nuestras ultimas noticias</h3>
+      <form action="" method="post">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Suscribete</button>
+      </form>
+
+      <div class="social-media">
+        <ul>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
         </ul>
       </div>
-
-      <div class="newsletter">
-        <h3>Enterate de nuestras ultimas noticias</h3>
-        <form action="" method="post" class="form-search">
-          <input type="email" name="email" placeholder="Email">
-          <button type="submit">Suscribete</button>
-        </form>
-
-        <div class="social-media">
-          <ul class="socials">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="information">
-        <ul class="contact">
-          <h3>Contacto</h3>
-          <li>Direccion: xxxxxx</li>
-          <li>Telefono: (+57) 123456789</li>
-          <li>Correo: www.contacto@MyHelp.com</li>
-          <li>Correo: www.soporte@MyHelp.com</li>
-        </ul>
-
-        <div class="help">
-          <h3>Ayuda</h3>
-          <li>
-            <a href="#">Centro de ayuda</a>
-          </li>
-        </div>
-      </div>
+    </div>
     
-      <div class="footer-bottom">
-        <a href="#"><img src="img/logo.png" alt="logo"></a>
-        <p>Myhelp 2023-©Todos los derechos reservados</p>
-      </div>
-  </div>
-  </footer>
+    <div class="contact">
+      <ul>
+        <h3>Contacto</h3>
+        <li>Telefono: (+57) 123456789</li>
+        <li>Correo: www.contacto@MyHelp.com</li>
+        <li>Correo: www.soporte@MyHelp.com</li>
+      </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+  <a href="/">
+    <img src="img/logo.png" alt="logo">
+  </a>
+  <p>Myhelp 2023-©Todos los derechos reservados</p>
+</div>
+</footer>
 </body>
 </html>

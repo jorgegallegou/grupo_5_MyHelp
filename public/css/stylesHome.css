@@ -3,6 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*----------------------
+--------HEADER--------
+-----------------------*/
+
 .main-header {
  /*position: fixed;
  margin-top: 0;*/
@@ -75,7 +80,7 @@ Header container-menu
 }
 
 /*----------------------
-main
+----------MAIN----------
 -----------------------*/
 
 /*main {
@@ -83,6 +88,9 @@ main
   z-index: -1;
 }*/
 
+/*-------------------------
+------main del home------
+-------------------------*/
 .main-container {
   width: 100%;
   display: inline-block;
@@ -178,8 +186,212 @@ main
   text-align: center;
 }
 
+/*------------------------
+---STYLES REGISTER FORM---
+------------------------*/
+
+.main-register {
+  background-color: #8ECAE6;
+}
+.main-register h2 {
+  margin: 0 0 15px 0;
+}
+.formulario {
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Pragati Narrow', sans-serif;
+}
+.formulario button {
+  border: none;
+  background-color: #FFB703;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  width: 47%;
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 18px;
+  font-weight:bold;
+}
+.container-button, .container-nombre, .container-contrasenia, .container-identificacion {
+  display: flex;
+  justify-content: space-between;
+}
+.container-nombre div {
+  width: 49.5%;
+}
+.container-contrasenia div {
+  width: 49.5%;
+}
+.container-identificacion div {
+  width: 49.5%;
+}
+.input-normal {
+  width: 100%;
+  padding: 12px;
+  margin: 0px 0px 10px;
+  border-radius: 5px;
+  border-color: #219EBC;
+  color: #219EBC;
+  font-weight: 400px;
+  box-sizing: border-box;
+  border: solid 2px;
+  font-size: 18px;
+}
+.label-principal {
+  font-weight:bold;
+  font-size: 16px;
+}
+.politica {
+  display: flex;
+  align-items: first baseline;
+}
+.politica p {
+  text-align: justify ;
+}
+.select {
+  width: 100%;
+  padding: 12px;
+  margin: 0px 0px 10px;
+  border-radius: 5px;
+  border-color: #219EBC;
+  color: #219EBC;
+  font-weight: 400px;
+  box-sizing: border-box;
+  border: solid 2px;
+  font-size: 18px;
+}
+.ya-tienes-cuenta {
+  display: flex;
+  justify-content: space-around
+}
+.text-iniciar-sesion {
+  text-decoration: none;
+}
+
+::placeholder { color: #219EBC; }
+
+.crea-tu-cuenta {
+  text-align: center;
+  font-size: 40px;
+  margin: 15px 0px
+}
+
+/*------------------------
+--STYLES PRODUCT CART--
+------------------------*/
+
+/*Productos*/
+
+.contenedor{
+  max-width: 1200px;
+  max-height: 1000px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  contain: paint;
+}
+
+.contenedor .contenedor-items{
+  flex:wrap;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap:30px;
+  grid-row-gap: 30px;
+  width: 80%;
+  transition: .3s;
+}
+.contenedor .contenedor-items .item{
+  max-width: 200px;
+  margin: auto;
+  border: 1px solid #044566;
+  border-radius: 10px;
+  padding: 20px;
+  transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
+  width: 100%;
+}
+.contenedor .contenedor-items .item:hover{
+  box-shadow: 0 0 10px #ffb703;
+  scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contenedor .contenedor-items .item .precio-item{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.contenedor .contenedor-items .item .boton-item{
+  display: block;
+  margin: 10px auto;
+  border: none;
+  background-color: #044566;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Finalizacion de compra*/
+
+.contenedor .contenedor-compras{
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+grid-gap:30px;
+grid-row-gap: 30px;
+border: 1px solid #ffffff;
+width: 80%;
+transition: .3s;
+position: sticky !important;
+}
+.contenedor .contenedor-compras .compra{
+max-width: 200px;
+margin: auto;
+border-radius: 10px;
+padding: 20px;
+transition: .3s;
+}
+
+.contenedor .contenedor-compras .compra .titulo-compras{
+display: block;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+}
+.contenedor .contenedor-compras .compra .txt-compras{
+display: block;
+font-weight: 100;
+text-align: center;
+text-transform: uppercase;
+}
+.contenedor .contenedor-compras .compra .precio-compras{
+display: block;
+text-align: center;
+font-weight: bold;
+font-size: 22px;
+}
+
+.contenedor .contenedor-compras .compra .boton-compras{
+display: block;
+margin: 10px auto;
+border: none;
+background-color: #484d50;
+color: #fff;
+padding: 5px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
 /*----------------------
-Footer 
+--------FOOTER---------- 
 -----------------------*/
 
 footer{
