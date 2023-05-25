@@ -3,6 +3,9 @@
 .main-register {
     background-color: #8ECAE6;
 }
+.main-register h2 {
+    margin: 0 0 15px 0;
+}
 .formulario {
     max-width: 600px;
     padding: 20px;
