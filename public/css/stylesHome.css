@@ -37,6 +37,12 @@ Header Top nav-bar
   text-decoration: none;
   font-size: 16px;
   color: #ffb703;
+  transition: all 250ms;
+}
+.nav-links .hogar:hover,
+.nav-links .empresas:hover,
+.nav-links .nosotros:hover {
+  font-size: 18px;
 }
 
 /*--------------------
@@ -269,8 +275,6 @@ Header container-menu
 .text-iniciar-sesion {
   text-decoration: none;
 }
-
-::placeholder { color: #219EBC; }
 
 .crea-tu-cuenta {
   text-align: center;
