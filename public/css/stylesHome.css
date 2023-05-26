@@ -189,10 +189,16 @@ Header container-menu
 /*------------------------
 ---STYLES REGISTER FORM---
 ------------------------*/
+.img-register {
+  width: 100vw;
+  display: block;
+  
+}
 
 .main-register {
-  background-color: #8ECAE6;
+  position: relative;
 }
+
 .main-register h2 {
   margin: 0 0 15px 0;
 }
@@ -202,10 +208,13 @@ Header container-menu
   margin: 0 auto;
   box-sizing: border-box;
   font-family: 'Pragati Narrow', sans-serif;
+  position: absolute;
+  top: 20px;
+  right: 100px;
 }
 .formulario button {
   border: none;
-  background-color: #FFB703;
+  background-color: #044566;
   color: white;
   padding: 5px;
   border-radius: 20px;
@@ -213,6 +222,10 @@ Header container-menu
   font-family: 'Pragati Narrow', sans-serif;
   font-size: 18px;
   font-weight:bold;
+  transition: all 0.3s;
+}
+.formulario button:hover{
+  background-color: #FFB703;
 }
 .container-button, .container-nombre, .container-contrasenia, .container-identificacion {
   display: flex;
@@ -240,12 +253,13 @@ Header container-menu
   font-size: 18px;
 }
 .label-principal {
-  font-weight:bold;
-  font-size: 16px;
+  color: white;
+  font-size: 30px;
 }
 .politica {
   display: flex;
   align-items: first baseline;
+  color:white
 }
 .politica p {
   text-align: justify ;
@@ -264,10 +278,12 @@ Header container-menu
 }
 .ya-tienes-cuenta {
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+  color:white
 }
 .text-iniciar-sesion {
   text-decoration: none;
+  color:white
 }
 
 ::placeholder { color: #219EBC; }
@@ -275,7 +291,8 @@ Header container-menu
 .crea-tu-cuenta {
   text-align: center;
   font-size: 40px;
-  margin: 15px 0px
+  margin: 15px 0px;
+  color:#FFB703
 }
 
 /*------------------------
