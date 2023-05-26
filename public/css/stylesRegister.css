@@ -11,6 +11,13 @@
 }
 
 .formulario {
+<<<<<<< HEAD
+    max-width: 450px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+ }
+=======
     max-width: 600px;
     padding: 20px;
     margin: 0 auto;
@@ -18,6 +25,7 @@
     font-family: 'Pragati Narrow', sans-serif;
    
 }
+>>>>>>> 842810f18f293ceff7938af06c43bc73e4f858fe
 .formulario button {
     border: none;
     background-color: #FFB703;
