@@ -3,9 +3,13 @@
 .main-register {
     background-color: #8ECAE6;
 }
-.main-register h2 {
+
+.crea-tu-cuenta {
+    text-align: center;
+    font-size: 40px;
     margin: 0 0 15px 0;
 }
+
 .formulario {
     max-width: 600px;
     padding: 20px;
@@ -90,9 +94,5 @@
 
 ::placeholder { color: #219EBC; }
 
-.crea-tu-cuenta {
-    text-align: center;
-    font-size: 40px;
-    margin: 15px 0px
-}
+
 
