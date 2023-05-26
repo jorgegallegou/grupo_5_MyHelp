@@ -57,6 +57,9 @@ Mi nombre es Michelle, soy estudiante de medicina y programacion. Vivo en Buenos
 Mi nombre es Diego Rodríguez, soy un apasionado por la tecnología actualmente cursando el programa de Desarrollo Web Full Stack en Digital House. Me encanta muchísimo el aprendizaje continuo, disfruto pasar tiempo en familia, escuchar música y el cine. Soy una persona comprometida con lo que hago y perfeccionista. También soy un apasionado por los deportes, en especial el Basketball fan de la NBA.
 
 ## Santiago
+Mi nombre es santiago alvarez,soy tecnico en programacion de software
+Me gusta mucho el ajedrez y el baloncesto.
+Actualmente estoy cursando el programa de Desarrollo Web Full Stack en Digital House.
 
 ## Jorge
 
@@ -66,7 +69,8 @@ Soy Jorge, un programador web full stack junior (en formación) apasionado por l
 # Entregables
 
 ## Wireframe
-https://marvelapp.com/prototype/19a8104e
+https://marvelapp.com/prototype/19a8104e 
+Hechas las modificaciones respectivas segun feedback de los profes. Pendientes los wireframes del formulario de login.
 
 ## Trello
 https://trello.com/invite/b/tT0zmY4m/ATTI83c4a5666e352387e64bee9e52dfba79D203D5A9/team5sprint1
