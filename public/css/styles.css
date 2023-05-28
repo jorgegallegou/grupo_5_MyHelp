@@ -110,10 +110,12 @@ color: #FB8500
   display: inline-block;
   text-align: center;
   position: relative;
+  margin-bottom: 0px;
 }
 .main-img img {
   display: block;
   width: 100%;
+  height: 100%;
   border-top: solid 5px #219EBC;
   border-bottom: solid 5px #219EBC;
 }
@@ -147,13 +149,17 @@ color: #FB8500
   width: 100%;
   display: block;
   text-align: center;
-  position: relative;
-  margin-top: 0;
+  position: relative; 
 }
 .title h3 {
+  display: flex;
   color: #FFB703;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  
 }
 .title p {
   color: #FFB703;
@@ -260,7 +266,7 @@ color: #FB8500
   color: #219EBC;
   font-weight: 300px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 20px;
 }
 
@@ -270,7 +276,7 @@ color: #FB8500
 
 .label-principal {
   color: black;
-  font-size: 16px;
+  font-size: 12px;
 }
 .politica {
   display: flex;
@@ -280,6 +286,7 @@ color: #FB8500
 .politica p {
   text-align: justify;
   margin: 0px 0px 0px 0px;
+  font-size: 12px;
 }
 .select {
   width: 100%;
@@ -289,7 +296,7 @@ color: #FB8500
   font-weight: 300px;
   box-sizing: border-box;
   border: solid 1px #219EBC;
-  font-size: 16px;
+  font-size: 12px;
   color: #219EBC;
 }
 .select:focus {
@@ -304,6 +311,7 @@ color: #FB8500
 }
 .ya-tienes-cuenta p {
   margin: 20px 10px 0px 0px;
+  font-size: 12px;
 }
 .text-iniciar-sesion {
   text-decoration: none;
@@ -357,6 +365,7 @@ color: #FB8500
   display: flex;
   display:inline-block;
   align-items: center;
+  font-size: 12px;
 }
 
 
@@ -614,6 +623,7 @@ height: 50px;
     display: flex;
     justify-content: end;
   }
+  
 }
 
 @media(min-width: 769px) {
@@ -658,6 +668,24 @@ height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .input-normal {
+    font-size: 16px;
+  }
+  .label-principal {
+    font-size: 16px;
+  }
+  .select {
+    font-size: 16px;
+  }
+  .politica p {
+    font-size: 16px;
+  }
+  .ya-tienes-cuenta p {
+    font-size: 16px;
+  }
+  .button-text {
+    font-size: 16px;
   }
 }
 @media(min-width: 1280px) {
