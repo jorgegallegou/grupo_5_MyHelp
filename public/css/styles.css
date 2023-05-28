@@ -107,10 +107,9 @@ color: #FB8500
 -------------------------*/
 .main-container {
   width: 100%;
-  display: inline-block;
+  display: block;
   text-align: center;
   position: relative;
-  margin-bottom: 0px;
 }
 .main-img img {
   display: block;
@@ -118,6 +117,7 @@ color: #FB8500
   height: 100%;
   border-top: solid 5px #219EBC;
   border-bottom: solid 5px #219EBC;
+  
 }
 .send {  
   border: solid 1px #219EBC;
@@ -150,6 +150,7 @@ color: #FB8500
   display: block;
   text-align: center;
   position: relative; 
+  
 }
 .title h3 {
   display: flex;
