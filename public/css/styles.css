@@ -57,7 +57,7 @@ Header container-menu
   border-top: solid 1px #044566;
 }
 .menu .logo{
-  height: 70px;
+  height: 100px;
 }
 .container-menu .menu {
   display: flex;
