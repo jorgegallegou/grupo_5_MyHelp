@@ -39,6 +39,9 @@ Header Top nav-bar
   color: #ffb703;
   transition: all 250ms;
 }
+.top-navbar .nav-links a:hover{
+  color: #FB8500
+}
 .nav-links .hogar:hover,
 .nav-links .empresas:hover,
 .nav-links .nosotros:hover {
@@ -354,6 +357,35 @@ color: #FB8500
   display: flex;
   display:inline-block;
   align-items: center;
+}
+
+
+.facebook-login-button {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 40.4px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  border: solid 1px gray;
+  text-align: center;
+  align-items: center;
+}
+.facebook-login-button:hover {
+  opacity: 0.8;
+}
+.facebook-logo {
+  width: 20px;
+  height: 20px;
 }
 
 /*------------------------
