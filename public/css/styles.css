@@ -75,6 +75,11 @@ Header container-menu
   color: #ffb703;
   text-align: center;
 }
+.container-menu nav li a i:hover{
+color: #FB8500
+}
+
+
 .container-menu nav li i p{
   font-size: 14px;
   font-family: 'Pragati Narrow';
@@ -175,6 +180,8 @@ Header container-menu
   border-bottom-right-radius: 8px;
   font-family: 'Pragati Narrow';
 }
+
+
 .services {
   border:solid 1px #ebebeb;
   border-radius: 20px;
@@ -194,7 +201,7 @@ Header container-menu
 
 
 /*------------------------
----STYLES REGISTER FORM---
+------ REGISTER FORM-----
 ------------------------*/
 
 .main-register form h1 {
@@ -203,8 +210,6 @@ Header container-menu
   font-size: 30px;
   margin: 15px 0px;
 }
-
-
 .formulario {
   max-width: 500px;
   padding: 40px;
@@ -213,7 +218,6 @@ Header container-menu
   font-family: 'Pragati Narrow', sans-serif;
   border: solid 1px #219EBC;
   border-radius: 10px;
-  
 }
 .formulario button {
   border: none;
@@ -256,10 +260,14 @@ Header container-menu
   font-size: 16px;
   margin-bottom: 20px;
 }
+
+.input-normal:focus {
+  outline: 2px solid #FFB703;
+}
+
 .label-principal {
   color: black;
   font-size: 16px;
-  
 }
 .politica {
   display: flex;
@@ -281,21 +289,26 @@ Header container-menu
   font-size: 16px;
   color: #219EBC;
 }
+.select:focus {
+  outline: 2px solid #FFB703;
+}
 .ya-tienes-cuenta {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color:black;
   margin: 0px;
   padding: 0px;
 }
 .ya-tienes-cuenta p {
-  margin: 20px 0px;
+  margin: 20px 10px 0px 0px;
 }
 .text-iniciar-sesion {
   text-decoration: none;
   color:black;
 }
-
+.text-iniciar-sesion:hover{
+  color:#FFB703
+}
 .container-ingresar-login button {
   width: 100%;
   text-align: center;
@@ -303,7 +316,9 @@ Header container-menu
 }
 
 
-/*FORM LOGIN*/
+/*------------------------
+----- LOGIN FORM ---------
+------------------------*/
 
 .google-login-button {
   width: 100%;
@@ -322,34 +337,24 @@ Header container-menu
   border: solid 1px gray;
   text-align: center;
   align-items: center;
-  
 }
-
 .google-login-button:hover {
   opacity: 0.8;
 }
-
 .button-icon {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-
 .google-logo {
   width: 20px;
   height: 20px;
 }
-
 .button-text {
   display: flex;
   display:inline-block;
   align-items: center;
 }
-
-
-
-
-
 
 /*------------------------
 --STYLES PRODUCT CART--
