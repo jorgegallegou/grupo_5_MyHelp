@@ -123,11 +123,11 @@ Header container-menu
   font-size: 16px;
   text-align: center;
   display: none;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .send:hover {
-  color: #ffffff;
   background-color: #FB8500;
+  border: solid 2px #219EBC;
 }
 .highlight-container {
   width: 100%;
@@ -197,14 +197,11 @@ Header container-menu
 ------------------------*/
 .img-register {
   width: 100vw;
-  display: block;
-  
+  display: block; 
 }
-
 .main-register {
   position: relative;
 }
-
 .main-register h2 {
   margin: 0 0 15px 0;
 }
@@ -410,6 +407,150 @@ padding: 5px 15px;
 border-radius: 5px;
 cursor: pointer;
 }
+
+/*-------------------------
+--STYLES PRODUCT DETAIL--
+-------------------------*/
+
+.first-container {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.top-resume img {
+  width: 100%;
+  display: block;
+  border-top:solid 5px #219EBC;
+  border-bottom:solid 5px #219EBC;
+  opacity: 1;
+}
+.top-resume h2 {
+  position: absolute;
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+  bottom: 20px;
+  right: 20px;
+  font-size: 44px;
+  display: none;
+}
+.detail {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+.second-container .incluye {
+  padding: 0 5px;
+  margin: 5px 0;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+  border-radius: 5px;
+}
+.second-container .incluye ul{
+  border-top: solid 1px #044566;
+  padding: 5px 10px 5px 20px;
+  margin: 5px 0;
+}
+.second-container .incluye ul p {
+  margin: 0;
+  line-height: 1;
+  text-align: justify;
+}
+.second-container .no-incluye {
+  border-radius: 5px;
+  padding: 0 5px;
+  margin: 5px 0;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+.second-container .no-incluye ul{
+  padding: 5px 10px 5px 20px;
+  margin: 5px 0;
+}
+.second-container .no-incluye ul p {
+  margin: 0;
+  line-height: 1;
+  text-align: justify;
+}
+.horas {
+  margin: 5px auto;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.horas label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 5px;
+  background-color: #044566;
+  border: solid 1px #219EBC;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow: none;
+  padding: 5px 12px;
+  transition: all .2s;
+}
+.horas input[type="radio"]:checked + label {
+  background-color: #FB8500;
+  border: solid 2px #219EBC;
+  box-shadow: 0 0 10px rgb(100, 100, 100);  
+}
+.horas input[type="radio"] {
+  opacity: 0;
+}
+.periodo {
+  margin: 5px auto;
+  text-align: center;
+  border-top:solid 1px #219EBC;
+  border-bottom:solid 1px #219EBC ;
+  padding-bottom: 5px;
+}
+.periodo label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 5px;
+  background-color: #044566;
+  border: solid 1px #219EBC;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow:none;
+  padding: 5px 12px;
+  transition: all .2s;
+}
+.periodo input[type="radio"]:checked + label {
+  background-color: #FB8500;
+  border: solid 2px #219EBC;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+.periodo input[type="radio"] {
+  opacity: 0;
+}
+form {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+.name,
+.contact-data,
+.address {
+  display: flex;
+  justify-content: space-between;
+  justify-content:center;
+  align-items: center;
+  line-height: 1;
+}
+.name .first-name,
+.name .last-name,
+.contact-data .email,
+.contact-data .phone,
+.address .street,
+.address .location  {
+  margin: 10px;
+}
+
+
+
+
+
+
+
 
 /*----------------------
 --------FOOTER---------- 
