@@ -62,19 +62,19 @@
                 <label for="dia">Dia</label>
             </div>
         </div>
-        <form action="" method="post" id="product-form">
+        <form class="schedule" action="" method="post" id="product-form">
             <div class="name" id="user-group">
                 <div class="first-name">
                     <div>
                     <label class="labels" for="names">Nombres</label>
                     </div>
-                    <input type="text" name="name" id="names" placeholder="Ingresa tu nombre">
+                    <input type="text" name="name" id="names" placeholder="Ingresa tu nombre" required>
                 </div>
                 <div class="last-name">
                     <div>
                     <label class="labels" for="last-names">Apellidos</label>
                     </div>
-                    <input type="text" name="name" id="last-names" placeholder="Ingresa tus apellidos">
+                    <input type="text" name="name" id="last-names" placeholder="Ingresa tus apellidos" required>
                 </div>
             </div>
             <div class="contact-data">
@@ -82,13 +82,13 @@
                     <div>
                     <label class="labels" for="email">Email</label>
                     </div>
-                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo">
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo" required>
                 </div>
                 <div class="phone">
                     <div>
                     <label class="labels" for="celphone">Celular</label>
                     </div>
-                    <input type="text" name="name" id="celphone" placeholder="Ingresa tu celular">
+                    <input type="text" name="name" id="celphone" placeholder="Ingresa tu celular" required>
                 </div>    
             </div>
             <div class="address">
@@ -96,13 +96,13 @@
                     <div>
                     <label class="labels" for="direction">Dirección</label>
                     </div>
-                    <input type="text" name="direction" id="direction" placeholder="Ingresa tu direccion">
+                    <input type="text" name="direction" id="direction" placeholder="Ingresa tu direccion" required>
                 </div>
                 <div class="location">
                     <div>
                     <label class="labels" for="localidad">Localidad</label>
                     </div>
-                    <input type="text" name="localidad" id="localidad" placeholder="Ingresa tu localidad">
+                    <input type="text" name="localidad" id="localidad" placeholder="Ingresa tu localidad" required>
                 </div>   
             </div>
             <div class="date-service">
@@ -118,10 +118,23 @@
                     </div>
                     <select name="select" id="hora">
                         <option value="defaut">Selecione</option>
+                        <option value="1">7:30 AM - 3:00 PM</option>
+                        <option value="2">8:30 AM - 4:30 PM</option>
                     </select>
                 </div>   
             </div>
-              
+            <div class="recomendation">
+                <div class="label-title">
+                    <label class="labels" for="recomendaciones">¿Indicaciones o recomendaciones?</label>
+                <div class="space">
+                    <textarea name="recomendaciones" id="recomendaciones" cols="22" rows="5"></textarea>
+                </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+            </div>             
         </form>
     </div>
 

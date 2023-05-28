@@ -522,18 +522,17 @@ cursor: pointer;
 .periodo input[type="radio"] {
   opacity: 0;
 }
-form {
-  max-width: 500px;
-  max-height: 500px;
+.schedule {
+  max-width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 .name,
 .contact-data,
-.address {
-  display: flex;
-  justify-content: space-between;
-  justify-content:center;
-  align-items: center;
+.address,
+.date-service,
+.buttons {
+  display: block;
   line-height: 1;
 }
 .name .first-name,
@@ -541,8 +540,23 @@ form {
 .contact-data .email,
 .contact-data .phone,
 .address .street,
-.address .location  {
+.address .location,
+.date-service .select-date,
+.date-service .hour,
+.buttons button {
   margin: 10px;
+}
+.schedule input[type="text"]::placeholder {
+font-family: 'Pragati Narrow';
+
+}
+.schedule input[type="email"]::placeholder {
+  font-family: 'Pragati Narrow';
+}
+.schedule input {
+  border: solid 1px #219EBC;
+  height: 25px;
+  border-radius: 5px;
 }
 
 
