@@ -195,39 +195,35 @@ Header container-menu
 /*------------------------
 ---STYLES REGISTER FORM---
 ------------------------*/
-.img-register {
-  width: 100vw;
-  display: block;
-  
-}
 
-.main-register {
-  position: relative;
+
+.img-register {
+  width: 100%;
+  margin: auto;
 }
 
 .main-register h2 {
   margin: 0 0 15px 0;
 }
+
 .formulario {
-  max-width: 600px;
+  max-width: 500px;
   padding: 20px;
-  margin: 0 auto;
   box-sizing: border-box;
   font-family: 'Pragati Narrow', sans-serif;
-  position: absolute;
-  top: 20px;
-  right: 100px;
+  margin: auto;
+  
 }
 .formulario button {
   border: none;
+  border-radius: 20px;
   background-color: #044566;
   color: white;
   padding: 5px;
-  border-radius: 20px;
   width: 47%;
   font-family: 'Pragati Narrow', sans-serif;
   font-size: 18px;
-  font-weight:bold;
+  
   transition: all 0.3s;
 }
 .formulario button:hover{
@@ -236,6 +232,9 @@ Header container-menu
 .container-button, .container-nombre, .container-contrasenia, .container-identificacion {
   display: flex;
   justify-content: space-between;
+}
+.container-button{
+  margin-top: 20px;
 }
 .container-nombre div {
   width: 49.5%;
@@ -248,50 +247,58 @@ Header container-menu
 }
 .input-normal {
   width: 100%;
-  padding: 12px;
-  margin: 0px 0px 10px;
+  padding: 10px;
   border-radius: 5px;
-  border-color: #219EBC;
-  color: #219EBC;
-  font-weight: 400px;
-  box-sizing: border-box;
   border: solid 2px;
-  font-size: 18px;
+  color: black;
+  font-weight: 300px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 .label-principal {
-  color: white;
-  font-size: 30px;
+  color: black;
+  font-size: 16px;
+  
 }
 .politica {
   display: flex;
   align-items: first baseline;
-  color:white
+  color:black;
+  
 }
 .politica p {
-  text-align: justify ;
+  text-align: justify;
+  margin: 0px 0px 0px 0px;
 }
 .select {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin: 0px 0px 10px;
   border-radius: 5px;
-  border-color: #219EBC;
-  color: #219EBC;
-  font-weight: 400px;
+  font-weight: 300px;
   box-sizing: border-box;
   border: solid 2px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .ya-tienes-cuenta {
   display: flex;
   justify-content: space-around;
-  color:white
-}
-.text-iniciar-sesion {
-  text-decoration: none;
-  color:white
+  color:black;
+  margin: 0px;
+  padding: 0px;
 }
 
+.ya-tienes-cuenta p {
+  margin: 20px 0px;
+
+}
+
+
+.text-iniciar-sesion {
+  text-decoration: none;
+  color:black;
+}
 .crea-tu-cuenta {
   text-align: center;
   font-size: 40px;
@@ -519,6 +526,10 @@ height: 50px;
 --------------------------------------*/
 
 @media(min-width: 361px) {
+  
+  
+  
+  
   .top-navbar .nav-links ul{
     display: flex;
     justify-content: end;
@@ -567,6 +578,12 @@ height: 50px;
     justify-content: center;
     align-items: center;
   }
+
+  
+}
+
+
+
 }
 @media(min-width: 1280px) {
   
