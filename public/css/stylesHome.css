@@ -415,29 +415,33 @@ cursor: pointer;
 .first-container {
   width: 100%;
   display: block;
+}
+.top-resume {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
   position: relative;
 }
-.top-resume img {
+.top-resume .banner img {
   width: 100%;
   display: block;
   border-top:solid 5px #219EBC;
   border-bottom:solid 5px #219EBC;
-  opacity: 1;
+  
 }
-.top-resume h2 {
+.top-resume .banner h2 {
   position: absolute;
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
-  bottom: 20px;
-  right: 20px;
-  font-size: 44px;
-  display: none;
+  top: 80%;
+  left: 50%;
+  line-height: 1;
 }
 .detail {
   width: 95%;
   display: block;
-  margin: 0 auto;
+  margin: 0;
 }
 .second-container .incluye {
   padding: 0 5px;
@@ -499,7 +503,6 @@ cursor: pointer;
   margin: 5px auto;
   text-align: center;
   border-top:solid 1px #219EBC;
-  border-bottom:solid 1px #219EBC ;
   padding-bottom: 5px;
 }
 .periodo label {
@@ -522,16 +525,20 @@ cursor: pointer;
 .periodo input[type="radio"] {
   opacity: 0;
 }
-.schedule {
-  max-width: 90%;
+.first-container {
+  width: 95%;
   margin: 0 auto;
-  text-align: center;
+}
+.schedule {
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgb(100, 100, 100);
+  border-radius: 10px;
 }
 .name,
 .contact-data,
 .address,
 .date-service,
-.buttons {
+.recomendation {
   display: block;
   line-height: 1;
 }
@@ -548,23 +555,55 @@ cursor: pointer;
 }
 .schedule input[type="text"]::placeholder {
 font-family: 'Pragati Narrow';
+color: #219EBC;
+font-size: 16px;
 
 }
 .schedule input[type="email"]::placeholder {
   font-family: 'Pragati Narrow';
+  color: #219EBC;
 }
-.schedule input {
+.schedule input[type="text"],
+.schedule input[type="email"],
+.schedule input[type="date"]{
   border: solid 1px #219EBC;
   height: 25px;
   border-radius: 5px;
+  outline: none;
+  width: 100%;
 }
 
-
-
-
-
-
-
+.schedule .hour {
+  text-align: center;
+}
+.schedule .hour select {
+  border:solid 1px #219EBC;
+  border-radius: 5px;
+}
+.schedule .recomendation {
+  text-align: center;
+}
+.schedule .space textarea {
+  border:solid 1px #219EBC;
+  border-radius: 10px;
+}
+.schedule .buttons {
+  text-align: center;
+}
+.schedule .buttons button{
+  border: none;
+  background: #023047;
+  color: #ffffff;
+  font-family: 'Pragati Narrow';
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all .2s;
+}
+.schedule button[type="submit"]:hover, 
+.schedule button[type="reset"]:hover {
+  background: #FB8500;
+  border:solid 2px #219EBC;
+}
 
 /*----------------------
 --------FOOTER---------- 
@@ -680,6 +719,11 @@ height: 50px;
   }
 }
 @media(min-width: 769px) {
+  
+  /*----------------------
+  --------HEADER----------
+  ----------------------*/
+
   .log-in, .register, .shopping{
     display: block;
   }
@@ -694,6 +738,11 @@ height: 50px;
   .send {
     display: block;
   }
+
+  /*------------------------
+  ----------MAIN------------
+  ------------------------*/
+
   .highlight-container {
     display: flex;
     flex-wrap: wrap;
@@ -708,8 +757,47 @@ height: 50px;
   }
   .all-services .services {
     width: 30%;
-    box-shadow: 0 0 5px rgb(100, 100, 100);
+    box-shadow: 0 0 5px rgb(33, 158, 188);
   }
+
+  /*------------------------
+  ----MAIN PRODUCT DETAIL---
+  ------------------------*/
+
+  .first-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .first-container .select-options {
+    box-shadow: 0 0 5px rgb(100, 100, 100);
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  .name,
+  .contact-data,
+  .address,
+  .date-service{
+    display: flex;
+    line-height: 1;
+    margin-bottom: 10px;
+    justify-content: space-around;
+  }
+  .detail {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .top-resume .banner h2 {
+    font-size: 28px;
+    text-align: left;
+    top: 90%;
+    left: 50%;
+  }
+
+  /*------------------------
+  -----------footer---------
+  -------------------------*/
+
   .footer-container {
     display: flex;
     justify-content: center;
@@ -723,12 +811,39 @@ height: 50px;
     align-items: center;
   }
 }
-@media(min-width: 1280px) {
+@media(min-width: 1200px) {
+
+  /*----------------------
+  --------HEADER----------
+  ----------------------*/
   
   .top-navbar, .container-menu, .footer-container{
      max-width: 1200px; 
-     margin: auto;  
+     justify-content: space-around; 
   }
+  .first-container, .detail {
+    max-width: 1200px;
+  }
+
+  /*------------------------
+  ----------MAIN------------
+  ------------------------*/
+
+  /*------------------------
+  ----MAIN PRODUCT DETAIL---
+  ------------------------*/
+
+  .top-resume .banner h2 {
+    font-size: 44px;
+    text-align: left;
+    top: 90%;
+    left: 50%;
+  }
+
+  /*---------------------------
+  -----------footer------------
+  ----------------------------*/
+
   .clauses .items {
     display: flex;
     justify-content: space-around;

@@ -37,11 +37,13 @@
     </header>
 
     <main>
-     <div class="first-container">
-        <div class="top-resume">
+    <div class="top-resume">
+        <div class="banner">
+            <h2>¡Agenda tu servicio de limpieza hogar!</h2>
             <img src="img/imgServiciosMyHelp/background1.jpg" alt="background1">
-            <h2>¡Agenda tu servicio de limpieza!</h2>
         </div>
+    </div>
+     <div class="first-container">
         <div class="select-options">
             <div class="horas">
                 <h3>Elige el horario que se adapte a tus necesidades</h3>
@@ -62,8 +64,8 @@
                 <label for="dia">Dia</label>
             </div>
         </div>
-        <form class="schedule" action="" method="post" id="product-form">
-            <div class="name" id="user-group">
+        <form class="schedule" action="" method="post">
+            <div class="name">
                 <div class="first-name">
                     <div>
                     <label class="labels" for="names">Nombres</label>
@@ -110,7 +112,7 @@
                     <div>
                     <label class="labels" for="fecha">Fecha</label>
                     </div>
-                    <input type="date" name="fecha" id="fecha">
+                    <input class="date" type="date" name="fecha" id="fecha">
                 </div>
                 <div class="hour">
                     <div>
@@ -126,14 +128,14 @@
             <div class="recomendation">
                 <div class="label-title">
                     <label class="labels" for="recomendaciones">¿Indicaciones o recomendaciones?</label>
-                <div class="space">
-                    <textarea name="recomendaciones" id="recomendaciones" cols="22" rows="5"></textarea>
                 </div>
+                <div class="space">
+                    <textarea name="recomendaciones" id="recomendaciones" cols="30" rows="5"></textarea>
                 </div>
             </div>
             <div class="buttons">
-                <button type="submit">Enviar</button>
-                <button type="reset">Cancelar</button>
+                <a href="/productCart"><button class="sending" type="submit">¡Agendar servicio?</button></a>
+                <button class="clear" type="reset">Cancelar</button>
             </div>             
         </form>
     </div>
