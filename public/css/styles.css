@@ -421,7 +421,7 @@ color: #FB8500
 .contenedor .contenedor-items .item{
   max-width: 200px;
   margin: auto;
-  border: 1px solid #044566;
+  border: 1px solid #219EBC;
   border-radius: 10px;
   padding: 20px;
   transition: .3s;
@@ -454,6 +454,8 @@ color: #FB8500
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Pragati Narrow';
+  font-size: 14px;
 }
 
 /*Finalizacion de compra*/
@@ -469,7 +471,6 @@ position: sticky !important;
 }
 .contenedor .contenedor-compras .compra{
 max-width: 200px;
-margin: auto;
 border-radius: 10px;
 padding: 20px;
 transition: .3s;
@@ -478,31 +479,36 @@ transition: .3s;
 .contenedor .contenedor-compras .compra .titulo-compras{
 display: block;
 font-weight: bold;
-text-align: center;
+text-align: right;
 text-transform: uppercase;
 }
 .contenedor .contenedor-compras .compra .txt-compras{
 display: block;
 font-weight: 100;
-text-align: center;
+text-align: right;
 text-transform: uppercase;
+
 }
 .contenedor .contenedor-compras .compra .precio-compras{
 display: block;
 text-align: center;
 font-weight: bold;
 font-size: 22px;
+background: #023047;
 }
 
 .contenedor .contenedor-compras .compra .boton-compras{
 display: block;
-margin: 10px auto;
 border: none;
-background-color: #484d50;
+background-color: #023047;
 color: #fff;
 padding: 5px 15px;
 border-radius: 5px;
+width: 100px;
+margin: 10px 0 0 100px;
 cursor: pointer;
+font-family: 'Pragati Narrow';
+font-size: 14px;
 }
 
 /*-------------------------
