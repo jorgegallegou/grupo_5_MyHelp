@@ -4,90 +4,218 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyHelp</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>MyHelp-ProductDetail</title>
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="top-navbar">
-      <nav class="nav-links">
-        <ul>
-          <li><a href="#">Servicios Hogar</a></li>
-          <li><a href="#">Empresas</a></li>
-          <li><a href="#">Nosotros</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-    <div class="container-menu">
-      <div class= "menu">
-        
-        <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
-        
-          <nav>
+    <header class="main-header">
+        <div class="top-navbar">
+            <nav class="nav-links">
             <ul>
-              <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
-              <li class="register"><a href="/register"><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a></li>
-              <li class="shopping"><a href="/productCart"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
-              <li class="Burger-menu"><a href="#"><i class="fa-solid fa-bars"><p>Menu</p></i></a></li>
+                <li><a class="hogar" href="#">Servicios Hogar</a></li>
+                <li><a class="empresas" href="#">Empresas</a></li>
+                <li><a class="nosotros" href="#">Nosotros</a></li>
             </ul>
-          </nav>
-      </div>
-    </div>
-  </header>
-
-  <footer>
-    <div class="footer-container">
-      <div class="clauses">
-        <ul>
-          <li><a href="#">Quiénes somos</a></li>
-          <li><a href="#">¿Quieres ser provedor?</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Política de cookies</a></li>
-          <li><a href="#">Política de tratamiento datos personales</a></li>
-        </ul>
-      </div>
-
-      <div class="newsletter">
-        <h3>Entérate de nuestras últimas noticias</h3>
-        <form action="" method="post">
-          <input type="email" name="email" placeholder="Email">
-          <button type="submit">Suscríbete</button>
-        </form>
-
-        <div class="social-media">
-          <ul>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          </ul>
+            </nav>
         </div>
-      </div>
-      
-      <div class="contact">
-        <ul>
-          <h3>Contacto</h3>
-          <li>Teléfono: (+57) 123456789</li>
-          <li>Correo: contacto@MyHelp.com</li>
-          <li>Correo: soporte@MyHelp.com</li>
-        </ul>
-      </div>
-  </div>
-  <div class="footer-bottom">
-    <a href="">
-      <img src="img/logo.png" alt="logo">
-    </a>
-    <p>Myhelp 2023-©Todos los derechos reservados</p>
-  </div>
-  </footer>
-</body>
-</html>
+        
+        <div class="container-menu">
+            <div class= "menu">
+                <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <nav>
+                <ul>
+                    <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
+                    <li class="register"><a href="/register"><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a></li>
+                    <li class="shopping"><a href="/productCart"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
+                    <li class="Burger-menu"><a href="#"><i class="fa-solid fa-bars"><p>Menu</p></i></a></li>
+                </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<body>
+    <main>
+    <div class="top-resume">
+        <div class="banner">
+            <h2>¡Agenda tu servicio de limpieza hogar!</h2>
+            <img src="img/imgServiciosMyHelp/background1.jpg" alt="background1">
+        </div>
+    </div>
+     <div class="first-container">
+        <div class="select-options">
+            <div class="horas">
+                <h3>Elige el horario que se adapte a tus necesidades</h3>
+                <input type="radio" name="horas" id="4-horas-am" value="am">
+                <label for="4-horas-am">4 Horas - AM</label>
+                <input type="radio" name="horas" id="4-horas-pm" value="pm">
+                <label for="4-horas-pm">4 Horas - PM</label>
+                <input type="radio" name="horas" id="8-horas" value="all">
+                <label for="8-horas">8 Horas </label>
+            </div>
+            <div class="periodo">
+                <h3>Elige el periodo de tiempo</h3>
+                <input type="radio" name="periodo" id="semanal" value="sem">
+                <label for="semanal">Semanal</label>
+                <input type="radio" name="periodo" id="mensual" value="men">
+                <label for="mensual">Mensual</label>
+                <input type="radio" name="periodo" id="dia" value="all">
+                <label for="dia">Dia</label>
+            </div>
+        </div>
+        <form class="schedule" action="" method="post">
+            <div class="name">
+                <div class="first-name">
+                    <div>
+                    <label class="labels" for="names">Nombres</label>
+                    </div>
+                    <input type="text" name="name" id="names" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="last-name">
+                    <div>
+                    <label class="labels" for="last-names">Apellidos</label>
+                    </div>
+                    <input type="text" name="name" id="last-names" placeholder="Ingresa tus apellidos" required>
+                </div>
+            </div>
+            <div class="contact-data">
+                <div class="email">
+                    <div>
+                    <label class="labels" for="email">Email</label>
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="phone">
+                    <div>
+                    <label class="labels" for="celphone">Celular</label>
+                    </div>
+                    <input type="text" name="name" id="celphone" placeholder="Ingresa tu celular" required>
+                </div>    
+            </div>
+            <div class="address">
+                <div class="street">
+                    <div>
+                    <label class="labels" for="direction">Dirección</label>
+                    </div>
+                    <input type="text" name="direction" id="direction" placeholder="Ingresa tu direccion" required>
+                </div>
+                <div class="location">
+                    <div>
+                    <label class="labels" for="localidad">Localidad</label>
+                    </div>
+                    <input type="text" name="localidad" id="localidad" placeholder="Ingresa tu localidad" required>
+                </div>   
+            </div>
+            <div class="date-service">
+                <div class="select-date">
+                    <div>
+                    <label class="labels" for="fecha">Fecha</label>
+                    </div>
+                    <input class="date" type="date" name="fecha" id="fecha">
+                </div>
+                <div class="hour">
+                    <div>
+                    <label class="labels" for="hora">Hora</label>
+                    </div>
+                    <select name="select" id="hora">
+                        <option value="defaut">Selecione</option>
+                        <option value="1">7:30 AM - 3:00 PM</option>
+                        <option value="2">8:30 AM - 4:30 PM</option>
+                    </select>
+                </div>   
+            </div>
+            <div class="recomendation">
+                <div class="label-title">
+                    <label class="labels" for="recomendaciones">¿Indicaciones o recomendaciones?</label>
+                </div>
+                <div class="space">
+                    <textarea name="recomendaciones" id="recomendaciones" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="/productCart"><button class="sending" type="submit">¡Agendar servicio?</button></a>
+                <button class="clear" type="reset">Cancelar</button>
+            </div>             
+        </form>
+    </div>
 
+    <div class="detail">
+        <div class="second-container">
+            <div class="incluye">
+                <h2>¿Que incluye tu servicio?</h2>
+                    <ul>
+                        <li>
+                        <strong>SERVICIO POR 8 HORAS</strong>
+                        <p>Una empleada Myhelp realizará la labores de limpieza del hogar, teniendo en cuenta el tiempo contratado.</p>
+                        <p>Aseo general de todo tu hogar, incluido:</p>
+                        <p>Limpiar pisos (barrer o aspirar, trapear) en áreas comunes y habitaciones.</p>
+                        <p>Limpieza de baños (lavado general.)</p>
+                        <p>Limpiar cocina (mesón, piso, estufa, lavaplatos, loza.)</p>
+                        <p>Tender camas</p>
+                        <p>Quitar polvo de muebles y superficies de fácil acceso</p>
+                        <p>Lavar ropa y dejarla tendida en el tendedero</p>
+                    </li>
+                    </ul>
+              </div>
+              <div class="no-incluye">
+                <ul>
+                    <li>
+                       <strong>TU SERVICIO NO INCLUYE</strong>
+                       <p>Preparación o alistamiento de alimentos.</p>
+                       <p>Aseo profundo en áreas o elementos específicos.</p>
+                       <p>Elementos e insumos para la realización del servicio.</p>
+                    </li>
+                   </ul>
+              </div>
+        </div>
+     </div>           
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="clauses">
+            <ul>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Quieres ser provedor?</a></li>
+                <li><a href="#">Terminos y condiciones</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Política de tratamiento datos personales</a></li>
+            </ul>
+            </div>
+
+            <div class="newsletter">
+            <h3>Enterate de nuestras ultimas noticias</h3>
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Email">
+                <button type="submit">Suscribete</button>
+            </form>
+
+            <div class="social-media">
+                <ul>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="contact">
+            <ul>
+                <h3>Contacto</h3>
+                <li>Telefono: (+57) 123456789</li>
+                <li>Correo: www.contacto@MyHelp.com</li>
+                <li>Correo: www.soporte@MyHelp.com</li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+        <a href="">
+            <img src="img/logo.png" alt="logo">
+        </a>
+        <p>Myhelp 2023-©Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>
