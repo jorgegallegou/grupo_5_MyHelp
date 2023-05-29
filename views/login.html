@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-   
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-<link href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”
-rel="stylesheet" />
-<script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyHelp</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
 
-    <link href="/css/stylesHome.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
-    <title>Login</title>
 </head>
+
 <body>
+
   <header class="main-header">
     <div class="top-navbar">
       <nav class="nav-links">
@@ -33,8 +26,9 @@ rel="stylesheet" />
     
     <div class="container-menu">
       <div class= "menu">
+        
         <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
-    
+        
           <nav>
             <ul>
               <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
@@ -46,70 +40,51 @@ rel="stylesheet" />
       </div>
     </div>
   </header>
-      
-  <main>
-    <div class="inicio">
-      <div class="input">
-        <h1>Iniciar Sesion</h1>
-      </div> 
-      <form action="" method="POST" class="formulario">
+
+<main class="main-register">
+
+    <form action="" method="POST" class="formulario">
+        <h1>Iniciar sesión</h1>
         <label class="label-principal" for="correo">Correo electrónico</label>
         <input class="input-normal" type="email" id="email" name="correo" placeholder="Ingresa tu correo" required>
-              
-              <label class="label-principal" for="password">Contraseña</label>
-              <input class="input-normal" type="password" id="password" name="password" placeholder="Contraseña" required>
-              
-          
-              <div class="recordar">
-                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Recordarme</label><br>
-              
-              
-              <div class= "olvidaste"> <a href="#">Olvidaste tu contraseña?</a></div>
-              </div>
-              
-              <div class="submit"> 
-                  <button type="submit" tittle="Ingresar" name="Ingresar">Ingresar</button>
-              </div> 
-          
-              <div class="final">
-              <div class="registrar">Aun sin registrarte?</div>
-              
-              <div class= "crea"> <a href="#">Crea tu cuenta</a></div>
-             </div>
-             <hr>
-
-              <div class="sociales">
-                <form action="/action_page.php">
-                 <div class="row"></div>
-              <div class="col">
-                <a href="#" class="fb btn">
-                  <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                </a>
-              
-                <a href="#" class="google btn">
-                  <i class="fa fa-google fa-fw"></i> Login with Google+
-                </a>
-              </div>
+        <label class="label-principal" for="password">Contraseña</label>
+        <input class="input-normal" type="password" id="password" name="password" placeholder="Contraseña" required>
+        <div class="container-ingresar-login">
+          <button type="submit">Ingresar</button>
+        </div>
+        <a href="#" class="google-login-button">
+          <span class="button-icon">
+            <img src="img/google_logo.png" alt="Google Logo" class="google-logo">
+          </span>
+          <span class="button-text">Inicia sesión con Google</span>
+        </a>
+        <a href="#" class="facebook-login-button">
+          <span class="button-icon">
+            <img src="img/facebook_logo.png" alt="Facebook Logo" class="facebook-logo">
+          </span>
+          <span class="button-text">Inicia sesión con Facebook</span>
+        </a>
+    </form>
         
-              </div>
 </main>
+
 <footer>
   <div class="footer-container">
     <div class="clauses">
       <ul>
-        <li><a href="#">Quienes somos</a></li>
-        <li><a href="#">Quieres ser provedor?</a></li>
-        <li><a href="#">Terminos y condiciones</a></li>
+        <li><a href="#">Quiénes somos</a></li>
+        <li><a href="#">¿Quieres ser provedor?</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
         <li><a href="#">Política de cookies</a></li>
         <li><a href="#">Política de tratamiento datos personales</a></li>
       </ul>
     </div>
 
     <div class="newsletter">
-      <h3>Enterate de nuestras ultimas noticias</h3>
+      <h3>Entérate de nuestras últimas noticias</h3>
       <form action="" method="post">
         <input type="email" name="email" placeholder="Email">
-        <button type="submit">Suscribete</button>
+        <button type="submit">Suscríbete</button>
       </form>
 
       <div class="social-media">
@@ -125,19 +100,18 @@ rel="stylesheet" />
     <div class="contact">
       <ul>
         <h3>Contacto</h3>
-        <li>Telefono: (+57) 123456789</li>
-        <li>Correo: www.contacto@MyHelp.com</li>
-        <li>Correo: www.soporte@MyHelp.com</li>
+        <li>Teléfono: (+57) 123456789</li>
+        <li>Correo: contacto@MyHelp.com</li>
+        <li>Correo: soporte@MyHelp.com</li>
       </ul>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <a href="">
-      <img src="img/logo.png" alt="logo">
-    </a>
-    <p>Myhelp 2023-©Todos los derechos reservados</p>
-  </div>
+</div>
+<div class="footer-bottom">
+  <a href="">
+    <img src="img/logo.png" alt="logo">
+  </a>
+  <p>Myhelp 2023-©Todos los derechos reservados</p>
+</div>
 </footer>
-
 </body>
 </html>

@@ -5,11 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyHelp</title>
-  <link rel="stylesheet" href="css/stylesHome.css">
-  <link rel="stylesheet" href="css/stylesRegister.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a4dafc7c79.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
   <header class="main-header">
@@ -22,11 +20,9 @@
         </ul>
       </nav>
     </div>
-    
     <div class="container-menu">
       <div class= "menu">
         <a href="/"><img src="img/logo.png" alt="logo" class="logo"></a>
-        
           <nav>
             <ul>
               <li class="log-in"><a href="/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
@@ -40,80 +36,70 @@
   </header>
 
   <main class="main-register">
-    
-        <img src="img/img-main-register.jpg" alt="Register" class="img-register">
-    
-        
-        <form action="" method="GET" class="formulario">
-          <h2 class="crea-tu-cuenta" >Crea tu cuenta MyHelp</h2>
+
+  <form action="" method="GET" class="formulario">
+    <h1 class="crea-tu-cuenta" >Crea tu cuenta MyHelp</h1>
       <div class="container-nombre">
-          <div>
-            <label class="label-principal" for="nombre">Nombres</label>
-            <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-          </div>
-          <div>
-            <label class="label-principal" for="apellido">Apellidos</label>
-            <input class="input-normal" type="text" id="apellido" name="nombre" placeholder="Ingresa tus apellidos" required>
-          </div>
+        <div>
+          <label class="label-principal" for="nombre">Nombres</label>
+          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        <div>
+          <label class="label-principal" for="apellido">Apellidos</label>
+          <input class="input-normal" type="text" id="apellido" name="nombre" placeholder="Ingresa tus apellidos" required>
+        </div>
       </div>
-        
         <label class="label-principal" for="correo">Correo electrónico</label>
         <input class="input-normal" type="email" id="email" name="correo" placeholder="Ingresa tu correo" required>
-       
-       
         <div class="container-contrasenia"> 
           <div>
             <label class="label-principal" for="password">Contraseña</label>
             <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" required>
           </div>
           <div>
-            <label class="label-principal" for="cpassword">Confirme la contraseña</label>
-            <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirme contraseña" required>
+            <label class="label-principal" for="cpassword">Confirma la contraseña</label>
+            <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirma contraseña" required>
           </div>
         </div>
-      <div class="container-identificacion">
-        <div>
-          <label class="label-principal" for="select">Tipo de identificacón</label>
-          <select class="select" name="select">
-            <option value="value1">Seleccione...</option>
-            <option value="value2" required>Cédula de ciudadanía</option>
-            <option value="value3" required>Cédula de extranjería</option>
-            <option value="value4" required>Pasaporte</option>
-        </select>
-      </div>
-        <div>
-          <label class="label-principal" for="identificacion">Número</label>
-          <input class="input-normal" type="text" id="identificacion" name="identificacion" placeholder="Escribe tu documento" required>
-        </div> 
-      </div>        
+        <div class="container-identificacion">
+          <div>
+            <label class="label-principal" for="select">Tipo de identificacón</label>
+            <select class="select" name="select">
+              <option value="value1">Selecciona...</option>
+              <option value="value2" required>Cédula de ciudadanía</option>
+              <option value="value3" required>Cédula de extranjería</option>
+              <option value="value4" required>Pasaporte</option>
+            </select>
+          </div>
+          <div>
+            <label class="label-principal" for="identificacion">Número</label>
+            <input class="input-normal" type="text" id="identificacion" name="identificacion" placeholder="Escribe tu documento" required>
+          </div> 
+        </div>        
         <label class="label-principal" for="celular">Celular</label>
-        <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingrese su celular" required>
+        <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" required>
     
-    <div class="politica">
-      <input type="checkbox" name="politica" value="politica1">
-      <p>Acepto los términos y condiciones de uso del sitio web.</p>
-    </div>
-    <div class="politica"> 
-        <input type="checkbox" name="politica" value="politica2">
-        <p>Acepto el tratamiento de datos personales según la política de privacidad 
-        con el fin de ser contactado por MyHelp a través de los medios suministrados 
-        y/o recibir información relacionada con productos/servicios.</p>
-    </div>
+        <div class="politica">
+          <input type="checkbox" name="politica" value="politica1">
+          <p>Acepto los términos y condiciones de uso del sitio web.</p>
+        </div>
+        <div class="politica"> 
+            <input type="checkbox" name="politica" value="politica2">
+            <p>Acepto el tratamiento de datos personales según la política de privacidad 
+            con el fin de ser contactado por MyHelp a través de los medios suministrados 
+            y/o recibir información relacionada con productos/servicios.</p>
+        </div>
+        <div class="container-button">
+            <button type="reset">Cancelar</button>
+            <button type="submit">Enviar</button>
+        </div>  
+        <div class="ya-tienes-cuenta">
+          <p>¿Ya tienes una cuenta?</p>
+          <a class="text-iniciar-sesion" href="/login"><p>Iniciar sesión</p></a>
+        </div>
+  </form>
 
-
-    <div class="container-button">
-        <button type="reset">Cancelar</button>
-        <button type="submit">Enviar</button>
-    </div>  
-
-    <div class="ya-tienes-cuenta">
-      <p>¿Ya tienes una cuenta?</p>
-      <a class="text-iniciar-sesion" href="/login"><p>Iniciar sesión</p></a>
-    </div>
-
-</form>
-
-  </main>
+</main>
 
   <footer>
     <div class="footer-container">
@@ -147,9 +133,9 @@
       <div class="contact">
         <ul>
           <h3>Contacto</h3>
-          <li>Telefono: (+57) 123456789</li>
-          <li>Correo: www.contacto@MyHelp.com</li>
-          <li>Correo: www.soporte@MyHelp.com</li>
+          <li>Teléfono: (+57) 123456789</li>
+          <li>Correo: contacto@MyHelp.com</li>
+          <li>Correo: soporte@MyHelp.com</li>
         </ul>
       </div>
   </div>
