@@ -1,16 +1,20 @@
 # Resultado de la retrospectiva
 
 ## Seguir haciendo
-Este paso llena al equipo de energía positiva porque es cuando el líder del equipo reconoce las cosas que se hacen bien y el valor que aportan a un proyecto.
+Continuar con la disposición de ayudarnos como compañeros de equipo sin llegar a obviar la responsabilidad que cada uno adquiere cuando se asignan las tareas.
 
 ## Menos de
-¿Cuáles son las actividades que son improductivas para el equipo? Desde rutinas poco útiles hasta comportamientos negativos, los miembros del equipo deben trabajar para reducirlos lo más posible.
+1 Poca comunicación e interés por parte de algunos miembros del equipo por asistir a las reuniones programadas.
+2 Incumplimiento de los tiempos asignados para la entrega de tareas.
 
 ## Más de
-Enumera las actividades que tienen un potencial prometedor de agregar valor al equipo, pero que no se aprovechan lo suficiente.
+1 comunicacion efectiva.
+2 Reuniones de equipo minimo una vez a la semana.
 
 ## Dejar de hacer
-Deja las cosas que no aportan ningún valor o que se interponen en el camino para lograr nuevos hitos.
+1 Programar reuniones de manera esporadica sin fecha o hora previamente programada.
+2 Incumplimiento de los tiempos asignados para la entrega de tareas.
+
 
 ## Empezar a hacer
-Pon en práctica nuevas ideas que muestren potencial y puedan llevar a los equipos al éxito.
+1 concertar un dia y hora especifico para las reuniones de equipo en la semana.
