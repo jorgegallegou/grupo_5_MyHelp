@@ -1,3 +1,5 @@
+@import "formProduct.css";
+
 body {
   font-family: 'Pragati Narrow', sans-serif;
   margin: 0;
@@ -536,8 +538,8 @@ font-size: 14px;
   margin: 0;
   font-size: 20px;
   color: #ffffff;
-  top: 80%;
-  left: 50%;
+  bottom: 15px;
+  right: 15px;
   line-height: 1;
 }
 .detail {
@@ -801,7 +803,7 @@ footer{
 .footer-bottom {
   border-top: solid 1px #044566;
   text-align: center;
-  height: 55px;
+
 }
 .footer-bottom a img{
 height: 50px;
@@ -894,8 +896,6 @@ height: 50px;
   .top-resume .banner h2 {
     font-size: 28px;
     text-align: left;
-    top: 90%;
-    left: 50%;
   }
 
   /*------------------------
@@ -960,7 +960,5 @@ height: 50px;
   .top-resume .banner h2 {
     font-size: 44px;
     text-align: left;
-    top: 90%;
-    left: 50%;
   }
 }
