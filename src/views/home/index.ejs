@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<%- include ('../partials/head') %>
+<body>
+
+  <%- include ('../partials/header') %>
+
+  <main>
+    <section class="main-container">
+      <div class="main-img">
+        <a href="productDetail">
+          <img src="img/imgServiciosMyHelp/limpiezaHogar.svg" alt="limpiezaHogarMedium">
+        </a>
+        <a href="productDetail">
+          <button class="send" type="submit"> Solicita aquí tu servicio</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="highlight-container">
+      <div class="search-bar">
+        <div class="title">
+          <h3>¡Encuentra el servicio a tu necesidad!</h3>
+          <p>Nuestros profesionales te ayudarán</p>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="search" placeholder="Encuentra tu sevicio MyHelp">
+        <a href="#"><button type="submit">Buscar</button></a>
+      </div>
+      <h2>Servicios más solicitados</h2>
+      <div class="all-services">
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="limpiezaHogar">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
+        <div class="services">
+          <article>
+            <img src="img/imgServiciosMyHelp/desinfeccionAmbientes.svg" alt="desinfeccionAmbientes">
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include ('../partials/footer') %>
+  
+</body>
+</html>

@@ -1,0 +1,146 @@
+/*------------------------
+---STYLES REGISTER FORM---
+------------------------*/
+
+.main-register form h1 {
+    margin: 0 0 15px 0;
+    text-align: left;
+    font-size: 30px;
+    margin: 15px 0px;
+  }
+  .formulario {
+    max-width: 500px;
+    padding: 40px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    font-family: 'Pragati Narrow', sans-serif;
+    border: solid 1px #219EBC;
+    border-radius: 10px;
+  }
+  .formulario button {
+    border: none;
+    border-radius: 20px;
+    background-color: #044566;
+    color: white;
+    padding: 5px;
+    width: 47%;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+  .formulario button:hover{
+    background-color: #FFB703;
+  }
+  .container-button, .container-nombre, .container-contrasenia, .container-identificacion {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-button{
+    margin-top: 20px;
+  }
+  .container-nombre div {
+    width: 49.5%;
+  }
+  .container-contrasenia div {
+    width: 49.5%;
+  }
+  .container-identificacion div {
+    width: 49.5%;
+  }
+  .input-normal {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px;
+    color: #219EBC;
+    font-weight: 300px;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .input-normal:focus {
+    outline: 2px solid #FFB703;
+  }
+  
+  .label-principal {
+    color: black;
+    font-size: 12px;
+  }
+  .politica {
+    display: flex;
+    align-items: first baseline;
+    color:black; 
+  }
+  .politica p {
+    text-align: justify;
+    margin: 0px 0px 0px 0px;
+    font-size: 12px;
+  }
+  .select {
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0px 10px;
+    border-radius: 5px;
+    font-weight: 300px;
+    box-sizing: border-box;
+    border: solid 1px #219EBC;
+    font-size: 12px;
+    color: #219EBC;
+  }
+  .select:focus {
+    outline: 2px solid #FFB703;
+  }
+  .ya-tienes-cuenta {
+    display: flex;
+    justify-content: center;
+    color:black;
+    margin: 0px;
+    padding: 0px;
+  }
+  .ya-tienes-cuenta p {
+    margin: 20px 10px 0px 0px;
+    font-size: 12px;
+  }
+  .text-iniciar-sesion {
+    text-decoration: none;
+    color:black;
+  }
+  .text-iniciar-sesion:hover{
+    color:#FFB703
+  }
+  .container-ingresar-login button {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px
+  }
+
+/*---------------------------------
+------------MEDIA QUERIES---------
+----------------------------------*/
+
+  @media(min-width: 769px) {
+
+    /*------------------------
+    -----MAIN REGISTER-------
+    ------------------------*/
+  
+    .input-normal {
+      font-size: 16px;
+    }
+    .label-principal {
+      font-size: 16px;
+    }
+    .select {
+      font-size: 16px;
+    }
+    .politica p {
+      font-size: 16px;
+    }
+    .ya-tienes-cuenta p {
+      font-size: 16px;
+    }
+    .button-text {
+      font-size: 16px;
+    }
+  }
