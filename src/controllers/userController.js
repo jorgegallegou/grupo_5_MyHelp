@@ -1,12 +1,8 @@
-const path = require("path");
-
-const controller = {
+module.exports = {
   register: (req, res) => {
-    res.render(path.resolve("./src/views/user/register"));
+    res.render("user/register");
   },
   login: (req, res) => {
-    res.render(path.resolve("./src/views/user/login"));
+    res.render("user/login");
   },
 };
-
-module.exports = controller;

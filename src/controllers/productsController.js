@@ -1,12 +1,11 @@
-const path = require("path");
-
-const controller = {
+module.exports = {
   productCart: (req, res) => {
-    res.render(path.resolve("./src/views/products/productCart"));
+    res.render("products/productCart");
   },
   productDetail: (req, res) => {
-    res.render(path.resolve("./src/views/products/productDetail"));
+    res.render("products/productDetail");
+  },
+  productList: (req, res) => {
+    res.render("products/productList");
   },
 };
-
-module.exports = controller;
