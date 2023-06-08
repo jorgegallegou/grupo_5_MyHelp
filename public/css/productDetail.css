@@ -5,6 +5,7 @@
 .first-container {
     width: 100%;
     display: block;
+    width: 80%;
   }
   .top-resume {
     width: 100%;
@@ -29,22 +30,23 @@
   }
   .detail {
     width: 95%;
-    display: block;
-    margin: 0;
-  }
-  .detail {
-    margin: 0 9px;
-  }
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+    border-radius: 10px;
+  }  
   .second-container .incluye {
     padding: 0 5px;
     margin: 5px 0;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
-    border-radius: 5px;
+  }
+  .second-container .incluye h2{
+    text-align: center;
+    margin: 0;
   }
   .second-container .incluye ul{
     border-top: solid 1px #044566;
     padding: 5px 10px 5px 20px;
     margin: 5px 0;
+    list-style: none;
   }
   .second-container .incluye ul p {
     margin: 0;
@@ -55,11 +57,17 @@
     border-radius: 5px;
     padding: 0 5px;
     margin: 5px 0;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
+  }
+  .second-container .no-incluye h2 {
+    text-align: center;
+    margin: 0;
+
   }
   .second-container .no-incluye ul{
+    border-top: solid 1px #044566;
     padding: 5px 10px 5px 20px;
     margin: 5px 0;
+    list-style: none;
   }
   .second-container .no-incluye ul p {
     margin: 0;
@@ -164,7 +172,6 @@
     outline: none;
     width: 100%;
   }
-  
   .schedule .hour {
     text-align: center;
   }
@@ -201,7 +208,7 @@
 ----------MEDIA QUERIES-----------
 --------------------------------*/
 
-  @media(min-width: 408px) {
+  @media(min-width: 480px) {
   .name,
   .contact-data,
   .address,
@@ -225,12 +232,18 @@
   .first-container .select-options {
     box-shadow: 0 0 5px rgb(100, 100, 100);
     border-radius: 8px;
-    margin-top: 30px;
+    margin: 30px 0 30px 0;
+  }
+  .second-container {
+    display: flex;
+    justify-content:space-around;
+  }
+  .second-container .incluye {
+    width: 50%;
   }
   .detail {
     width: 80%;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    
   }
   .top-resume .banner h2 {
     font-size: 28px;

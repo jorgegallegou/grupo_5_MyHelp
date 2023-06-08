@@ -314,6 +314,9 @@ height: 50px;
   .log-in, .register, .shopping{
     display: block;
   }
+  .burger-menu {
+    display: none;
+  }
   /*.top-navbar .nav-links ul{
     display: flex;
     justify-content: end;
