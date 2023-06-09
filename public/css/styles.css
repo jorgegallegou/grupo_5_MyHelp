@@ -6,6 +6,7 @@
 @import "register.css";
 @import "productCart.css";
 @import "productDetail.css";
+@import "productList.css";
 
 body {
   font-family: 'Pragati Narrow', sans-serif;
