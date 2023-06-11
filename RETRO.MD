@@ -1,20 +1,21 @@
-# Resultado de la retrospectiva
-
-## Seguir haciendo
-Continuar con la disposición de ayudarnos como compañeros de equipo sin llegar a obviar la responsabilidad que cada uno adquiere cuando se asignan las tareas.
-
-## Menos de
-1 Poca comunicación e interés por parte de algunos miembros del equipo por asistir a las reuniones programadas.
-2 Incumplimiento de los tiempos asignados para la entrega de tareas.
-
-## Más de
-1 comunicacion efectiva.
-2 Reuniones de equipo minimo una vez a la semana.
-
-## Dejar de hacer
-1 Programar reuniones de manera esporadica sin fecha o hora previamente programada.
-2 Incumplimiento de los tiempos asignados para la entrega de tareas.
-
+# Retrospectiva 2do Sprint
 
 ## Empezar a hacer
-1 concertar un dia y hora especifico para las reuniones de equipo en la semana.
+Tratar de tener una comunicacion diaria , aunque sea minima por Discord para chequear como van los estadios del sprint
+
+
+## Seguir haciendo
+Continuar marcando metas semananales y cumpliendo los objetivos propuestos como hemos hecho en el anterior Sprint.
+
+## Menos de
+1 No dejar las tareas para ultimo momento
+
+## Más de
+1 Mas comunicacion y compartir los avances para ir motivandonos entre todos.
+2 Reuniones de equipo minimo dos  veces a la semana.
+
+## Dejar de hacer
+1 No inluir mas a los integrantes que no asisten a las reuniones ni dan muestra de interes, ya que el trabajo asignado termina sin realizarce y hay que volver a organizar todo
+
+
+
