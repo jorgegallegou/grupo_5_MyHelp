@@ -12,10 +12,10 @@ Continuar marcando metas semananales y cumpliendo los objetivos propuestos como 
 
 ## Más de
  Mas comunicacion y compartir los avances para ir motivandonos entre todos.
-2 Reuniones de equipo minimo dos  veces a la semana.
+Realizar 2 Reuniones de equipo minimo dos  veces a la semana.
 
 ## Dejar de hacer
- No inluir mas a los integrantes que no asisten a las reuniones ni dan muestra de interes, ya que el trabajo asignado termina sin realizarce y hay que volver a organizar todo
+ No incluir mas a los integrantes que no asisten a las reuniones ni dan muestra de interes, ya que el trabajo asignado termina sin realizarse y hay que volver a organizar todo
 
 
 
