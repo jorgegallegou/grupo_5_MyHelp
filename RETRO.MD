@@ -8,14 +8,14 @@ Tratar de tener una comunicacion diaria , aunque sea minima por Discord para che
 Continuar marcando metas semananales y cumpliendo los objetivos propuestos como hemos hecho en el anterior Sprint.
 
 ## Menos de
-1 No dejar las tareas para ultimo momento
+ No dejar las tareas para ultimo momento
 
 ## Más de
-1 Mas comunicacion y compartir los avances para ir motivandonos entre todos.
+ Mas comunicacion y compartir los avances para ir motivandonos entre todos.
 2 Reuniones de equipo minimo dos  veces a la semana.
 
 ## Dejar de hacer
-1 No inluir mas a los integrantes que no asisten a las reuniones ni dan muestra de interes, ya que el trabajo asignado termina sin realizarce y hay que volver a organizar todo
+ No inluir mas a los integrantes que no asisten a las reuniones ni dan muestra de interes, ya que el trabajo asignado termina sin realizarce y hay que volver a organizar todo
 
 
 
