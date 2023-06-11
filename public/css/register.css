@@ -17,7 +17,7 @@
     border: solid 1px #219EBC;
     border-radius: 10px;
   }
-  .formulario button {
+  .btn-form-register {
     border: none;
     border-radius: 20px;
     background-color: #044566;
@@ -28,6 +28,19 @@
     font-size: 18px;
     transition: all 0.3s;
   }
+  .btn-login-cargar-producto {
+    border: none;
+    border-radius: 20px;
+    background-color: #044566;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+
+
   .formulario button:hover{
     background-color: #FFB703;
   }
@@ -114,6 +127,8 @@
     text-align: center;
     margin: 30px 0px
   }
+
+  
 
 /*---------------------------------
 ------------MEDIA QUERIES---------

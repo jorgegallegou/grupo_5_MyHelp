@@ -8,4 +8,7 @@ module.exports = {
   productList: (req, res) => {
     res.render("products/productList");
   },
+  productLoad: (req, res) => {
+    res.render("products/productLoad");
+  },
 };
