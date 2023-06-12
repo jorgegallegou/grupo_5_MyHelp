@@ -177,6 +177,12 @@
 ---Special services--
 --------------------*/
 
+.special-services {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .works {
     border: solid 1px #ebebeb;
     border-radius: 8px;

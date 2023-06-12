@@ -93,6 +93,152 @@
     background-color: #FB8500;
 }
 
+/*--------------------
+---Cleaning services--
+--------------------*/
+
+.clean-services-company {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-description-company {
+    text-align: left;
+    padding: 0 15px;
+}
+.main-description-company h2 {
+    border-left: solid 5px #219EBC;
+    margin: 0;
+    padding: 0 15px;
+    color: #044566;
+}
+.main-description-company p {
+    line-height: 1;
+}
+.clean-company {
+    border: solid 1px #ebebeb;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(149, 149, 149);
+    width: 95vw;
+    margin: 10px auto;
+}
+.clean-company article {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clean-company article img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.clean-company article .img-clean-company{
+    width: 50%;
+    border-radius: 5px;    
+}
+.clean-company .second-description {
+    width: 50%;
+    text-align: left;
+    padding: 0 10px;
+}
+.clean-company .second-description h3 {
+    font-size: 16px;
+    color: #044566;
+    margin: 0;
+    line-height: 1;
+}
+.clean-company .second-description h4 {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+}
+.clean-company .second-description strong {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #044566;
+}
+.clean-company .second-description p {
+    display: none;
+    line-height: 1;
+}
+
+/*---------------------
+-Disinfection services-
+---------------------*/
+
+.disinfection-services-company {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-description-company {
+    text-align: left;
+    padding: 0 15px;
+}
+.main-description-company h2 {
+    border-left: solid 5px #219EBC;
+    margin: 0;
+    padding: 0 15px;
+    color: #044566;
+}
+.main-description-company p {
+    line-height: 1;
+}
+.disinfection-company {
+    border: solid 1px #ebebeb;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(149, 149, 149);
+    width: 95vw;
+    margin: 10px auto;
+}
+.disinfection-company article {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.disinfection-company article img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.disinfection-company article .img-disinfection-company{
+    width: 50%;
+    border-radius: 5px;    
+}
+.disinfection-company .second-description {
+    width: 50%;
+    text-align: left;
+    padding: 0 10px;
+}
+.disinfection-company .second-description h3 {
+    font-size: 16px;
+    color: #044566;
+    margin: 0;
+    line-height: 1;
+}
+.disinfection-company .second-description h4 {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+}
+.disinfection-company .second-description strong {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #044566;
+}
+.disinfection-company .second-description p {
+    display: none;
+    line-height: 1;
+}
+
 /*-----------------
 ---MEDIA QUERIES---
 -----------------*/
@@ -110,3 +256,65 @@
      align-items: center;
     } 
  }
+ @media(min-width:769px) {
+    .all-clean-works, .all-disinfection-works{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .clean-company {
+        width: 47%;
+    }
+    .disinfection-company {
+        width: 47%;
+    }
+    .disinfection-company-hidden {
+        width: 47%;
+    }
+ }
+ @media(min-width:960px) {
+    .clean-company .second-description p {
+        display: block;
+        line-height: 1;
+    }
+    .clean-company article {
+        flex-direction: column;
+    }
+    .clean-company article .second-description {
+        margin-top: 10px;
+    }
+    .clean-company article .img-clean-company,
+    .clean-company article .second-description {
+        width: 100%;
+    }
+    .clean-company article .second-description h3 {
+        font-size: 18px;
+    }
+
+    /*-----------------
+    ---Disinfection---
+    -----------------*/
+
+    .disinfection-company .second-description p {
+        display: block;
+        line-height: 1;
+    }
+    .disinfection-company article {
+        flex-direction: column;
+    }
+    .disinfection-company article .second-description {
+        margin-top: 10px;
+    }
+    .disinfection-company article .img-disinfection-company,
+    .disinfection-company article .second-description {
+        width: 100%;
+    }
+    .disinfection-company article .second-description h3 {
+        font-size: 18px;
+    }
+}
+@media(min-width:1280px) {
+    .category, .clean-services-company,
+    .disinfection-services-company {
+        max-width: 1200px;
+    }
+}
