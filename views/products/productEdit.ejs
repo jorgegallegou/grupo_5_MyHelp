@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Carga Producto'}) %>
+<%- include ('../partials/head', {title: 'Editar servicio'}) %>
 <body>
   
   <%- include ('../partials/header') %>
@@ -9,7 +9,18 @@
   
   
   <form action="" method="GET" class="formulario">
-    <h1>Formulario de carga de servicios</h1>
+    <h1>Formulario de edición de servicio</h1>
+    
+    <div>
+      <label class="label-principal" for="servicio">Seleccionar servicio:</label>
+      <select class="select" id="servicio" name="servicio" required>
+        <option value="">Seleccionar servicio</option>
+        <option value="1">Servicio 1</option>
+        <option value="2">Servicio 2</option>
+        <option value="3">Servicio 3</option>
+      </select>
+    </div>
+      
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
     <input class="input-normal" type="text" id="nombre" name="nombre" required>
     
@@ -19,7 +30,7 @@
     <label class="label-principal" for="descripcion">Descripción:</label>
     <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
 
-    <div class="form-group">
+    <div>
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
         <option value="">Selecciona...</option>
@@ -31,7 +42,13 @@
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
     
-    <button class="btn-login-cargar-producto" type="submit">Cargar servicio</button>
+    <div class="container-checkbox">
+      <div><input type="checkbox" value="disponible" name="disponible"><label for="disponible">Disponible</label></div>
+      <div><input type="checkbox" value="promocion" name="promocion"><label for="promicion">En promoción</label></div>
+      <div><input type="checkbox" value="pago" name="pago"><label for="pago">Acepta diferentes formas de pago</label></div>
+    </div>
+
+    <button class="btn-login-cargar-producto" type="submit">Guardar</button>
     
   </form>
 
