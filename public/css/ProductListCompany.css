@@ -92,3 +92,21 @@
 .disinfection-service article .clean-company-title button:hover {
     background-color: #FB8500;
 }
+
+/*-----------------
+---MEDIA QUERIES---
+-----------------*/
+
+@media(min-width: 480px) {
+    .company-category h2 {
+     margin: 0;
+    } 
+    .disinfection-service article .img, .clean-service article .img {
+     display: flex;
+     align-items: center;
+    }
+    .company-category {
+     justify-content: space-around;
+     align-items: center;
+    } 
+ }
