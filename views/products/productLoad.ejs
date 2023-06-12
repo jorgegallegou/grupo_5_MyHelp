@@ -18,7 +18,16 @@
     
     <label class="label-principal" for="descripcion">Descripción:</label>
     <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
-    
+
+    <div class="form-group">
+      <label class="label-principal" for="categoria">Categoría:</label>
+      <select class="select" id="categoria" name="categoria" required>
+        <option value="">Selecciona...</option>
+        <option value="limpieza">Limpieza</option>
+        <option value="mantenimiento">Mantenimiento</option>
+      </select>
+    </div>
+   
     <label class="label-principal" for="imagen">Imagen del producto:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
     
