@@ -1,11 +1,11 @@
 # grupo_5_MyHelp
-Proyector integrador
+Proyecto integrador
 
 # MyHelp
 
 ## Temática del sitio
 
-MyHelp es una compañía en linea líder en servicios profesionales del hogar y empresarial que se especializa en brindar soluciones integrales para satisfacer las necesidades de sus clientes.
+Myhelp es una compañía en linea líder en servicios profesionales del hogar y empresarial que se especializa en brindar soluciones integrales para satisfacer las necesidades de sus clientes.
 
 ## Servicios Ofrecidos
 
