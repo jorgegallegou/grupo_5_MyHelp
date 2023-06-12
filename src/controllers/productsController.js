@@ -5,8 +5,11 @@ module.exports = {
   productDetail: (req, res) => {
     res.render("products/productDetail");
   },
-  productList: (req, res) => {
-    res.render("products/productList");
+  productListHome: (req, res) => {
+    res.render("products/productListHome");
+  },
+  productListCompany: (req, res) => {
+    res.render("products/productListCompany");
   },
   productLoad: (req, res) => {
     res.render("products/productLoad");

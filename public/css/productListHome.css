@@ -1,0 +1,312 @@
+/*--------------------
+---MAIN PRODUCT LIST--
+--------------------*/
+
+/*--------------------
+---Service-category--
+--------------------*/
+.service-category {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #edf8fb;
+}
+.service-category h2 {
+    margin: 0;
+}
+.home-category {
+    display: flex;
+}
+.clean-serv {
+    border:solid 1px #219EBC;
+    border-radius: 20px;
+    margin: 10px 10px;
+    width: 50%;
+}
+.clean-serv article {
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clean-serv article img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.clean-serv article .img{
+    width: 50%;
+    border-radius: 5px;
+    display: none;
+}
+.clean-serv article .clean-title button{
+    background-color: #044566;
+    height: 35px;
+    margin: 0 10px;
+    border-right: solid 3px #219EBC;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: 8px;
+    font-family: 'Pragati Narrow';
+    color: #ffffff;
+    transition: all 0.3s;
+    line-height: 1;  
+}
+.clean-serv article .clean-title button:hover {
+    background-color: #FB8500;
+}
+.special-serv {
+    border:solid 1px #219EBC;
+    border-radius: 20px;
+    margin: 10px 10px;
+    width: 50%;
+}
+.special-serv article {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.special-serv article img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.special-serv article .img{
+    width: 50%;
+    border-radius: 5px;
+    display: none;
+}
+.special-serv article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.special-serv article .clean-title button{
+    background-color: #044566;
+    height: 35px;
+    margin: 0 10px;
+    border-right: solid 3px #FB8500;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: 8px;
+    font-family: 'Pragati Narrow';
+    color: #ffffff;
+    transition: all 0.3s;
+    line-height: 1;  
+}
+.special-serv article .clean-title button:hover {
+    background-color: #FB8500;
+}
+
+/*--------------------
+---Cleaning services--
+--------------------*/
+
+.cleaning-services {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-description {
+    text-align: left;
+    padding: 0 15px;
+}
+.main-description h2 {
+    border-left: solid 5px #219EBC;
+    margin: 0;
+    padding: 0 15px;
+    color: #044566;
+}
+.main-description p {
+    line-height: 1;
+}
+.clean-home {
+    border: solid 1px #ebebeb;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(149, 149, 149);
+    width: 95vw;
+    margin: 10px auto;
+}
+.clean-home article {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.clean-home article img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.clean-home article .img-clean{
+    width: 50%;
+    border-radius: 5px;    
+}
+.clean-home .second-description {
+    width: 50%;
+    text-align: left;
+    padding: 0 10px;
+}
+.clean-home .second-description h3 {
+    font-size: 16px;
+    color: #044566;
+    margin: 0;
+    line-height: 1;
+}
+.clean-home .second-description h4 {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+}
+.clean-home .second-description strong {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #044566;
+}
+.clean-home .second-description p {
+    display: none;
+    line-height: 1;
+}
+
+/*--------------------
+---Special services--
+--------------------*/
+
+.special-services {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.works {
+    border: solid 1px #ebebeb;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(149, 149, 149);
+    width: 95vw;
+    margin: 10px auto;
+}
+.works article {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.works article img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.works article .img-clean{
+    width: 50%;
+    border-radius: 5px;    
+}
+.works .second-description {
+    width: 50%;
+    text-align: left;
+    padding: 0 10px;
+}
+.works .second-description h3 {
+    font-size: 16px;
+    color: #044566;
+    margin: 0;
+    line-height: 1;
+}
+.works .second-description h4 {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+}
+.works .second-description strong {
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #044566;
+}
+.works .second-description p {
+    display: none;
+    line-height: 1;
+}
+
+/*-----------------
+---MEDIA QUERIES---
+-----------------*/
+
+@media(min-width: 480px) {
+   .service-category h2 {
+    margin: 0;
+   } 
+   .special-serv article .img, .clean-serv article .img {
+    display: flex;
+    align-items: center;
+   }
+   .home-category {
+    justify-content: space-around;
+    align-items: center;
+   } 
+}
+@media(min-width:769px) {
+    .all-works {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .clean-home {
+        width: 32%;
+    }
+    .works {
+        width: 32%;
+    }
+}
+@media(min-width:960px) {
+    .clean-home .second-description p {
+        display: block;
+        line-height: 1;
+    }
+    .clean-home article {
+        flex-direction: column;
+    }
+    .clean-home article .second-description {
+        margin-top: 10px;
+    }
+    .clean-home article .img-clean,
+    .clean-home article .second-description {
+        width: 100%;
+    }
+    .clean-home article .second-description h3 {
+        font-size: 18px;
+    }
+
+/*-----------------
+-Special-services-
+-----------------*/
+
+    .works .second-description p {
+        display: block;
+        line-height: 1;
+    }
+    .works article {
+        flex-direction: column;
+    }
+    .works article .second-description {
+        margin-top: 10px;
+    }
+    .works article .img-clean,
+    .works article .second-description {
+        width: 100%;
+    }
+    .works article .second-description h3 {
+        font-size: 18px;
+    }
+}
+@media(min-width:1280px) {
+    .service-category, .cleaning-services,
+    .special-services {
+        max-width: 1200px;
+    }
+}
