@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Carga Producto'}) %>
+<body>
+  
+  <%- include ('../partials/header') %>
+
+<main class="main-register">
+
+  
+  
+  <form action="" method="GET" class="formulario">
+    <h1>Formulario de carga de servicios</h1>
+    <label class="label-principal" for="nombre">Nombre del servicio:</label>
+    <input class="input-normal" type="text" id="nombre" name="nombre" required>
+    
+    <label class="label-principal" for="precio">Precio:</label>
+    <input class="input-normal" type="number" id="precio" name="precio" required>
+    
+    <label class="label-principal" for="descripcion">Descripción:</label>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
+
+    <div class="form-group">
+      <label class="label-principal" for="categoria">Categoría:</label>
+      <select class="select" id="categoria" name="categoria" required>
+        <option value="">Selecciona...</option>
+        <option value="limpieza">Limpieza</option>
+        <option value="mantenimiento">Servicios Especiales</option>
+      </select>
+    </div>
+   
+    <label class="label-principal" for="imagen">Imagen del servicio:</label>
+    <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
+    
+    <button class="btn-login-cargar-producto" type="submit">Cargar servicio</button>
+    
+  </form>
+
+</main>
+
+<%- include ('../partials/footer') %>  
+
+</body>
+</html>

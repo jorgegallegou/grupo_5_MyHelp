@@ -1,0 +1,263 @@
+/*-------------------------
+--STYLES PRODUCT DETAIL--
+-------------------------*/
+
+.first-container {
+    width: 100%;
+    display: block;
+    width: 80%;
+  }
+  .top-resume {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  }
+  .top-resume .banner img {
+    width: 100%;
+    display: block;
+    border-top:solid 5px #219EBC;
+    border-bottom:solid 5px #219EBC;
+  }
+  .top-resume .banner h2 {
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+    bottom: 15px;
+    right: 15px;
+    line-height: 1;
+  }
+  .detail {
+    width: 95%;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+    border-radius: 10px;
+  }  
+  .second-container .incluye {
+    padding: 0 5px;
+    margin: 5px 0;
+  }
+  .second-container .incluye h2{
+    text-align: center;
+    margin: 0;
+  }
+  .second-container .incluye ul{
+    border-top: solid 1px #044566;
+    padding: 5px 10px 5px 20px;
+    margin: 5px 0;
+    list-style: none;
+  }
+  .second-container .incluye ul p {
+    margin: 0;
+    line-height: 1;
+    text-align: justify;
+  }
+  .second-container .no-incluye {
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px 0;
+  }
+  .second-container .no-incluye h2 {
+    text-align: center;
+    margin: 0;
+
+  }
+  .second-container .no-incluye ul{
+    border-top: solid 1px #044566;
+    padding: 5px 10px 5px 20px;
+    margin: 5px 0;
+    list-style: none;
+  }
+  .second-container .no-incluye ul p {
+    margin: 0;
+    line-height: 1;
+    text-align: justify;
+  }
+  .horas {
+    margin: 5px auto;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .horas label {
+    display: inline-block;
+    width: 90px;
+    margin-bottom: 5px;
+    background-color: #044566;
+    border: solid 1px #219EBC;
+    border-radius: 25px;
+    color: #ffffff;
+    box-shadow: none;
+    padding: 5px 12px;
+    transition: all .2s;
+  }
+  .horas input[type="radio"]:checked + label {
+    background-color: #FB8500;
+    border: solid 2px #219EBC;
+    box-shadow: 0 0 10px rgb(100, 100, 100);  
+  }
+  .horas input[type="radio"] {
+    opacity: 0;
+  }
+  .periodo {
+    margin: 5px auto;
+    text-align: center;
+    border-top:solid 1px #219EBC;
+    padding-bottom: 5px;
+  }
+  .periodo label {
+    display: inline-block;
+    width: 90px;
+    margin-bottom: 5px;
+    background-color: #044566;
+    border: solid 1px #219EBC;
+    border-radius: 25px;
+    color: #ffffff;
+    box-shadow:none;
+    padding: 5px 12px;
+    transition: all .2s;
+  }
+  .periodo input[type="radio"]:checked + label {
+    background-color: #FB8500;
+    border: solid 2px #219EBC;
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+  }
+  .periodo input[type="radio"] {
+    opacity: 0;
+  }
+  .first-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .schedule {
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  .name,
+  .contact-data,
+  .address,
+  .date-service,
+  .recomendation {
+    display: block;
+    line-height: 1;
+  }
+  .name .first-name,
+  .name .last-name,
+  .contact-data .email,
+  .contact-data .phone,
+  .address .street,
+  .address .location,
+  .date-service .select-date,
+  .date-service .hour,
+  .buttons button {
+    margin: 10px;
+  }
+  .schedule input[type="text"]::placeholder {
+  font-family: 'Pragati Narrow';
+  color: #219EBC;
+  font-size: 16px;
+  
+  }
+  .schedule input[type="email"]::placeholder {
+    font-family: 'Pragati Narrow';
+    color: #219EBC;
+  }
+  .schedule input[type="text"],
+  .schedule input[type="email"],
+  .schedule input[type="date"]{
+    border: solid 1px #219EBC;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+  }
+  .schedule .hour {
+    text-align: center;
+  }
+  .schedule .hour select {
+    border:solid 1px #219EBC;
+    border-radius: 5px;
+  }
+  .schedule .recomendation {
+    text-align: center;
+  }
+  .schedule .space textarea {
+    border:solid 1px #219EBC;
+    border-radius: 10px;
+  }
+  .schedule .buttons {
+    text-align: center;
+  }
+  .schedule .buttons button{
+    border: none;
+    background: #023047;
+    color: #ffffff;
+    font-family: 'Pragati Narrow';
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all .2s;
+  }
+  .schedule button[type="submit"]:hover, 
+  .schedule button[type="reset"]:hover {
+    background: #FB8500;
+    border:solid 2px #219EBC;
+  }
+
+/*--------------------------------
+----------MEDIA QUERIES-----------
+--------------------------------*/
+
+  @media(min-width: 480px) {
+  .name,
+  .contact-data,
+  .address,
+  .date-service{
+    display: flex;
+    line-height: 1;
+    margin-bottom: 10px;
+    justify-content: space-around;
+  }
+  }
+  @media(min-width: 769px) {
+
+  /*------------------------
+  ----MAIN PRODUCT DETAIL---
+  ------------------------*/
+
+  .first-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .first-container .select-options {
+    box-shadow: 0 0 5px rgb(100, 100, 100);
+    border-radius: 8px;
+    margin: 30px 0 30px 0;
+  }
+  .second-container {
+    display: flex;
+    justify-content:space-around;
+  }
+  .second-container .incluye {
+    width: 50%;
+  }
+  .detail {
+    width: 80%;
+    
+  }
+  .top-resume .banner h2 {
+    font-size: 28px;
+    text-align: left;
+  }
+  }
+  @media(min-width: 1280px) {
+
+    /*------------------------
+    ----MAIN PRODUCT DETAIL---
+    ------------------------*/
+  
+    .top-resume .banner h2 {
+      font-size: 44px;
+      text-align: left;
+    }
+  }

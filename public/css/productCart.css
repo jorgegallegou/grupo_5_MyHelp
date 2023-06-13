@@ -1,0 +1,117 @@
+/*------------------------
+--STYLES PRODUCT CART--
+------------------------*/
+
+/*Productos*/
+
+.contenedor{
+    max-width: 1200px;
+    max-height: 1000px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+  }
+  
+  .contenedor .contenedor-items{
+    flex:wrap;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    width: 80%;
+    transition: .3s;
+  }
+  .contenedor .contenedor-items .item{
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #219EBC;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+  }
+  .contenedor .contenedor-items .item .img-item{
+    width: 100%;
+  }
+  .contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 10px #ffb703;
+    scale: 1.05;
+  }
+  .contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: #044566;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Pragati Narrow';
+    font-size: 14px;
+  }
+  
+  /*Finalizacion de compra*/
+  
+  .contenedor .contenedor-compras{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap:30px;
+  grid-row-gap: 30px;
+  border: 1px solid #ffffff;
+  width: 80%;
+  transition: .3s;
+  position: sticky !important;
+  }
+  .contenedor .contenedor-compras .compra{
+  max-width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: .3s;
+  }
+  
+  .contenedor .contenedor-compras .compra .titulo-compras{
+  display: block;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+  }
+  .contenedor .contenedor-compras .compra .txt-compras{
+  display: block;
+  font-weight: 100;
+  text-align: right;
+  text-transform: uppercase;
+  
+  }
+  .contenedor .contenedor-compras .compra .precio-compras{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  background: #023047;
+  }
+  
+  .contenedor .contenedor-compras .compra .boton-compras{
+  display: block;
+  border: none;
+  background-color: #023047;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  width: 100px;
+  margin: 10px 0 0 100px;
+  cursor: pointer;
+  font-family: 'Pragati Narrow';
+  font-size: 14px;
+  }

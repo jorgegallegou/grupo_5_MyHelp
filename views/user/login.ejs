@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Login'}) %>
+<body>
+
+  <%- include ('../partials/header') %>
+
+<main class="main-register">
+
+    <form action="" method="POST" class="formulario">
+        <h1>Iniciar sesión</h1>
+        <label class="label-principal" for="correo">Correo electrónico</label>
+        <input class="input-normal" type="email" id="email" name="correo" placeholder="Ingresa tu correo" required>
+        <label class="label-principal" for="password">Contraseña</label>
+        <input class="input-normal" type="password" id="password" name="password" placeholder="Contraseña" required>
+        <div class="container-ingresar-login">
+          <button class="btn-login-cargar-producto" type="submit">Ingresar</button>
+        </div>
+        <a href="#" class="google-login-button">
+          <span class="button-icon">
+            <img src="img/google_logo.png" alt="Google Logo" class="google-logo">
+          </span>
+          <span class="button-text">Inicia sesión con Google</span>
+        </a>
+        <a href="#" class="facebook-login-button">
+          <span class="button-icon">
+            <img src="img/facebook_logo.png" alt="Facebook Logo" class="facebook-logo">
+          </span>
+          <span class="button-text">Inicia sesión con Facebook</span>
+        </a>
+    </form>
+        
+</main>
+
+<%- include ('../partials/footer') %>
+
+</body>
+</html>
