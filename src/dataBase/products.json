@@ -5,7 +5,7 @@
       "precio": 70.000,
       "descripcion": "Servicio por horas. Deja impecable tu hogar.",
       "categoria": "Limpieza y Aseo",
-      "imagen": ""
+      "imagen": "limpiezaHogar.svg"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "precio": 90.000,
       "descripcion": "Servicio por horas. Deja impecable áreas específicas como baños y cocinas en tu hogar.",
       "categoria": "Limpieza y Aseo",
-      "imagen": ""
+      "imagen": "limpiezaVapor.svg"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "precio": 120.000,
       "descripcion": "Servicio por horas. Deja impecable tus colchones y muebles en tu hogar.",
       "categoria": "Limpieza y Aseo",
-      "imagen": ""
+      "imagen": "limpiezaColchones.svg"
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "precio": 70.000,
       "descripcion": "Servicio instalación y reparacion de tuberias, griferia y mas...",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "fontaneria.svg"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "precio": 70.000,
       "descripcion": "Reparación y diseño de productos de madera a medida.",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "carpinteria.svg"
     },
     {
       "id": 6,
@@ -45,7 +45,7 @@
       "precio": 90.000,
       "descripcion": "Servicio de instalaciones eléctricas, cableado y re cableado, instalación de iluminación.",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "electricista.svg"
     },
     {
       "id": 7,
@@ -53,7 +53,7 @@
       "precio": 85.000,
       "descripcion": "Servicio de pintura. Colores que hablan, ambientes que inspiran, confía en nosotros para tus proyectos de pintura.",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "pintura.svg"
     },
     {
       "id": 8,
@@ -61,7 +61,7 @@
       "precio": 75.000,
       "descripcion": "Servicio de cerrajería.Protege lo que más importa, cerrajería profesional para tu tranquilidad.",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "cerrajería.svg"
     },
     {
       "id": 9,
@@ -69,7 +69,7 @@
       "precio": 95.000,
       "descripcion": "Servicio de albañil. Tu proyecto, nuestro compromiso. Albañilería excepcional.",
       "categoria": "Servicios Especiales",
-      "imagen": ""
+      "imagen": "albañil.svg"
     },
     {
       "id": 10,
@@ -77,7 +77,7 @@
       "precio": 90.000,
       "descripcion": "Servicio diario o semanal. Aspiración o barrido de pisos, limpieza de escritorios y superficies y mucho mas...",
       "categoria": "Limpieza",
-      "imagen": ""
+      "imagen": "limpiezaGeneral.svg"
     },
     {
       "id": 11,
@@ -85,7 +85,7 @@
       "precio": 13.99,
       "descripcion": "Servicio diario o semanal. Limpieza exhaustiva y a fondo de las instalaciones.",
       "categoria": "Limpieza",
-      "imagen": ""
+      "imagen": "limpiezaProfunda.svg"
     },
     {
       "id": 12,
@@ -93,6 +93,6 @@
       "precio": 150.000,
       "descripcion": "Servicio diario o semanal.Nosotros eliminamos los gérmenes, disfruta de un espacio limpio y seguro.",
       "categoria": "Desinfección",
-      "imagen": ""
+      "imagen": "desinfeccion.svg"
     }
   ]
