@@ -11,8 +11,8 @@ module.exports = {
 		return res.render('products/productDetail');
 	},
 	productDetailId: (req, res) => {
-		const productFinded = products.find((row) => row.id == req.params.id);
-		if (productFinded) return res.render('products/productDetailId', { found: productFinded });
+		const productFound = products.find((row) => row.id == req.params.id);
+		if (productFound) return res.render('products/productDetailId', { found: productFound });
 		else return res.send('Product not found');
 	},
 	productListHome: (req, res) => {
@@ -31,6 +31,7 @@ module.exports = {
 	productLoad: (req, res) => {
 		res.render('products/productLoad');
 	},
+	processCreate: (req, res) => {},
 	productEdit: (req, res) => {
 		res.render('products/productEdit');
 	},

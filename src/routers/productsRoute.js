@@ -11,7 +11,7 @@ router.get('/productDetail', controller.productDetail);
 router.get('/productDetail/:id', controller.productDetailId);
 // LOAD PRODUCT
 router.get('/productLoad', controller.productLoad);
-router.post('/');
+router.post('/product', controller.processCreate);
 // EDIT PRODUCT
 router.get('/productEdit', controller.productEdit);
 // DELETE PRODUCT

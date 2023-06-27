@@ -1,0 +1,71 @@
+.clean {
+	border: solid 1px #ebebeb;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgb(149, 149, 149);
+	width: 95vw;
+	margin: 10px auto;
+}
+.clean article {
+	padding: 10px;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+}
+.clean article img {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.clean article .image {
+	width: 100%;
+	border-radius: 5px;
+}
+.clean .desc {
+	text-align: left;
+	padding: 0 10px;
+}
+.clean .desc h3 {
+	font-size: 16px;
+	color: #044566;
+	margin: 0;
+	line-height: 1;
+}
+.clean .desc h4 {
+	margin: 0;
+	line-height: 1;
+	font-size: 16px;
+	color: #000000;
+	font-weight: 400;
+}
+.clean .desc strong {
+	margin: 0;
+	line-height: 1;
+	font-size: 16px;
+	color: #044566;
+}
+.clean .desc p {
+	display: block;
+	line-height: 1;
+}
+@media (min-width: 769px) {
+	.clean article {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.clean article img {
+		margin-bottom: 0;
+	}
+	.clean article .image {
+		width: 50%;
+	}
+	.clean article .desc {
+		width: 50%;
+	}
+}
+@media (min-width: 1280px) {
+	.clean {
+		max-width: 1200px;
+	}
+}
