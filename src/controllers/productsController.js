@@ -24,7 +24,7 @@ module.exports = {
 		});
 	},
 	productListCompany: (req, res) => {
-		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza Empresa');
+		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza empresa');
 		const disinfectionProducts = products.filter((row) => row.categoria == 'Desinfeccion');
 		return res.render('products/productListCompany', {
 			cleaning: cleanProducts,
@@ -51,6 +51,19 @@ module.exports = {
 		return res.redirect('/');
 	},
 	productEdit: (req, res) => {
-		return res.render('products/productEdit');
+		const productFound = products.find((row) => row.id == req.params.id);
+		if (productFound) return res.render('products/productEdit', { found: productFound });
+		else return res.send('Product not found');
+	},
+	processEdit: (req, res) => {
+		const product = products.find((row) => row.id == req.params.id);
+		for (let prop in req.body) {
+			product[prop] = req.body[prop];
+		}
+		fs.writeFileSync(
+			path.resolve(__dirname, '../dataBase/products.json'),
+			JSON.stringify(products, null, 2)
+		);
+		return res.redirect('/');
 	},
 };

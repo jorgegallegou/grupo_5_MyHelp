@@ -28,7 +28,8 @@ router.get('/productDetail/:id', controller.productDetailId);
 router.get('/product/create', controller.productLoad);
 router.post('/product', fileUpload.single('imagen'), controller.processCreate);
 // EDIT PRODUCT
-router.get('/productEdit', controller.productEdit);
+router.get('/product/edit/:id', controller.productEdit);
+router.put('/product/edit/:id', controller.processEdit);
 // DELETE PRODUCT
 
 module.exports = router;

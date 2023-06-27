@@ -7,36 +7,33 @@
 <main class="main-register">
 
   
-  
-  <form action="" method="get" class="formulario">
-    <h1>Edición de servicio</h1>
+  <form action="/product/edit/<%= found.id %>?_method=PUT" method="post" class="formulario">
+    <h1>Edición de servicio</h1
     
-    
-      
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
-    <input class="input-normal" type="text" id="nombre" name="nombre" required>
+    <input class="input-normal" type="text" id="nombre" name="nombre" required value="<%= found.nombre %>">
     
     <label class="label-principal" for="precio">Precio:</label>
-    <input class="input-normal" type="number" id="precio" name="precio" required>
+    <input class="input-normal" type="number" id="precio" name="precio" required value="<%= found.precio %>">
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" required value="<%= found.descripcion %>">
 
     <div>
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
-        <option value="">Selecciona...</option>
-        <option value="limpieza hogar">Limpieza hogar</option>
-        <option value="servicios especiales">Servicios especiales</option>
-        <option value="limpieza empresa">Limpieza empresa</option>
-        <option value="desinfeccion">Desinfeccion</option>
+        <option value=""><%= found.categoria %></option>
+        <option value="Limpieza hogar">Limpieza hogar</option>
+        <option value="Servicios especiales">Servicios especiales</option>
+        <option value="Limpieza empresa">Limpieza empresa</option>
+        <option value="Desinfeccion">Desinfeccion</option>
       </select>
     </div>
    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
     
-    <button class="btn-login-cargar-producto" type="submit">Guardar</button>
+    <button class="btn-login-cargar-producto" type="submit">Editar</button>
     
   </form>
 
