@@ -16,23 +16,41 @@ module.exports = {
 		else return res.send('Product not found');
 	},
 	productListHome: (req, res) => {
-		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza y Aseo');
-		const specialProducts = products.filter((row) => row.categoria == 'Servicios Especiales');
-		res.render('products/productListHome', { clean: cleanProducts, special: specialProducts });
+		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza hogar');
+		const specialProducts = products.filter((row) => row.categoria == 'Servicios especiales');
+		return res.render('products/productListHome', {
+			clean: cleanProducts,
+			special: specialProducts,
+		});
 	},
 	productListCompany: (req, res) => {
-		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza');
-		const disinfectionProducts = products.filter((row) => row.categoria == 'Desinfección');
-		res.render('products/productListCompany', {
+		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza Empresa');
+		const disinfectionProducts = products.filter((row) => row.categoria == 'Desinfeccion');
+		return res.render('products/productListCompany', {
 			cleaning: cleanProducts,
 			disinfection: disinfectionProducts,
 		});
 	},
 	productLoad: (req, res) => {
-		res.render('products/productLoad');
+		return res.render('products/productLoad');
 	},
-	processCreate: (req, res) => {},
+	processCreate: (req, res) => {
+		const newProduct = {
+			id: products.length + 1,
+			nombre: req.body.nombre,
+			precio: req.body.precio,
+			descripcion: req.body.descripcion,
+			categoria: req.body.categoria,
+			imagen: req.body.imagen,
+		};
+		fs.writeFileSync(
+			path.resolve(__dirname, '../dataBase/products.json'),
+			JSON.stringify([...products, newProduct], null, 2),
+			'utf-8'
+		);
+		return res.redirect('/');
+	},
 	productEdit: (req, res) => {
-		res.render('products/productEdit');
+		return res.render('products/productEdit');
 	},
 };

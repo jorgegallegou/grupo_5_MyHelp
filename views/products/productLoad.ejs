@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Carga Producto'}) %>
+<%- include ('../partials/head', {title: 'Product load'}) %>
 <body>
   
   <%- include ('../partials/header') %>
 
 <main class="main-register">
-
   
-  
-  <form action="" method="GET" class="formulario">
-    <h1>Formulario de carga de servicios</h1>
+  <form action="/product" method="post" class="formulario">
+    <h1>Carga de servicios</h1>
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
     <input class="input-normal" type="text" id="nombre" name="nombre" required>
     
@@ -23,8 +21,10 @@
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
         <option value="">Selecciona...</option>
-        <option value="limpieza">Limpieza</option>
-        <option value="mantenimiento">Servicios Especiales</option>
+        <option value="Limpieza hogar">Limpieza hogar</option>
+        <option value="Servicios especiales">Servicios especiales</option>
+        <option value="Limpieza empresa">Limpieza empresa</option>
+        <option value="Desinfeccion">Desinfeccion</option>
       </select>
     </div>
    
