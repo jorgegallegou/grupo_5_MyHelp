@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%- include ('../partials/head.ejs', {title: 'DetailId'}) %>
+<body>
+    
+    <%- include ('../partials/header') %>
+
+    <main>
+      <div class="clean-home">
+        <article>
+          <div class="img-clean">
+            <img src="/img/imgServiciosMyHelp/<%= found.imagen %>" alt="<%= found.imagen %>" />
+          </div>
+          <div class="second-description">
+            <h3><%= found.nombre %></h3>
+            <h4>Precio: <strong>$<%= found.precio %></strong></h4>
+            <p><%= found.descripcion %></p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+  </body>
+  </html>

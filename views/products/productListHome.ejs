@@ -1,160 +1,79 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Myhelp List'}) %>
+<%- include ('../partials/head', {title: 'Myhelp Productslist'}) %>
 <body>
-  <%- include ('../partials/header') %>
-  <main>
-    <section class="service-category">
-      <h2>Seleccione la categoria</h2>
-      <div class="home-category">
-        <div class="clean-serv">
-          <article>
-            <div class="img">
-              <img src="img/imgServiciosMyHelp/limpieza.svg" alt="limpieza">
-            </div>
-          <div class="clean-title">
-            <a href="#cleaning-services"><button type="submit">Limpieza y Aseo</button></a>
-          </div>
-          </article>
-        </div>
-        <div class="special-serv">
-          <article>
-            <div class="img">
-              <img src="img/imgServiciosMyHelp/serviceCollage.svg" alt="limpieza">
-            </div>
-          <div class="clean-title">
-            <a href="#special-services"><button type="su
-              ">Servicios Especiales</button></a>
-          </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="cleaning-services">
-      <div class="main-description">
-        <h2>Limpieza y Aseo</h2>
-        <p>Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en servicios de limpieza. </p>
-      </div>
-      <div class="all-works">
-        <div class="clean-home">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/limpiezaHogar.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Limpieza Hogar</h3>
-            <h4>Precio: <strong>$ 70.000</strong></h4>
-            <p>Servicio por horas. Deja impecable tu hogar.</p>
-          </div>
-          </article>
-        </div>
-        <div class="clean-home">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/limpiezaVapor.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Limpieza Profunda vapor</h3>
-            <h4>Precio: <strong>$ 90.000</strong></h4>
-            <p>Servicio por horas. Deja impecable áreas específicas como baños y cocinas en tu hogar.</p>
-          </div>
-          </article>
-        </div>
-        <div class="clean-home">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/limpiezaColchones.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Limpieza Colchones y Muebles</h3>
-            <h4>Precio: <strong>$ 120.000</strong></h4>
-            <p>Servicio por horas. Deja impecable tus colchones y muebles en tu hogar.</p>
-          </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="special-services">
-      <div class="main-description">
-        <h2>Servicios Especiales</h2>
-        <p>Tu necesidad, nuestra especialidad.</p>
-      </div>
-      <div class="all-works">
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Fontaneria</h3>
-            <h4>Precio: <strong>$ 70.000</strong></h4>
-            <p>Servicio instalación y reparacion de tuberias, griferia y mas...</p>
-          </div>
-          </article>
-        </div>
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/carpinteria.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Carpintería</h3>
-            <h4>Precio: <strong>$ 95.000</strong></h4>
-            <p>Reparación y diseño de productos de madera a medida.</p>
-          </div>
-          </article>
-        </div>
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/electricista.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Electricista</h3>
-            <h4>Precio: <strong>$ 90.000</strong></h4>
-            <p>Servicio de instalaciones eléctricas,
-              cableado y re cableado,instalación de iluminación.</p>
-          </div>
-          </article>
-        </div>
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/pintura.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Pintura</h3>
-            <h4>Precio: <strong>$ 85.000</strong></h4>
-            <p>Servicio de pintura. Colores que hablan, ambientes que inspiran, confía en nosotros para tus proyectos de pintura. </p>
-          </div>
-          </article>
-        </div>
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/cerrajería.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Cerrajería</h3>
-            <h4>Precio: <strong>$ 75.000</strong></h4>
-            <p>Servicio de cerrajería.Protege lo que más importa, cerrajería profesional para tu tranquilidad.</p>
-          </div>
-          </article>
-        </div>
-        <div class="works">
-          <article>
-            <div class="img-clean">
-              <img src="img/imgServiciosMyHelp/albañil.svg" alt="limpieza">
-            </div>
-          <div class="second-description">
-            <h3>Maestro Albañil</h3>
-            <h4>Precio: <strong>$ 95.000</strong></h4>
-            <p>Servicio de albañil. Tu proyecto, nuestro compromiso. Albañilería excepcional.</p>
-          </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    
-  </main>
-  <%- include ('../partials/footer') %>
+	<%- include ('../partials/header') %>
+	<main>
+		<section class="service-category">
+			<h2>Seleccione la categoria</h2>
+			<div class="home-category">
+				<div class="clean-serv">
+					<article>
+						<div class="img">
+							<img src="img/imgServiciosMyHelp/limpieza.svg" alt="limpieza" />
+						</div>
+						<div class="clean-title">
+							<a href="#cleaning-services"><button type="submit">Limpieza y Aseo</button></a>
+						</div>
+					</article>
+				</div>
+				<div class="special-serv">
+					<article>
+						<div class="img">
+							<img src="img/imgServiciosMyHelp/serviceCollage.svg" alt="limpieza" />
+						</div>
+						<div class="clean-title">
+							<a href="#special-services"><button type="submit">Servicios Especiales</button></a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="cleaning-services">
+			<div class="main-description">
+				<h2>Limpieza y Aseo</h2>
+				<p>
+					Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en servicios de limpieza.
+				</p>
+			</div>
+			<div class="all-works">
+				<% clean.forEach(row => { %>
+				<div class="clean-home">
+					<article>
+						<div class="img-clean-company">
+							<img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
+						</div>
+						<div class="second-description">
+							<h3><%= row.nombre %></h3>
+							<h4>Precio: <strong>$<%= row.precio %></strong></h4>
+							<p><%= row.descripcion %></p>
+						</div>
+					</article>
+				</div>
+				<%}); %>
+			</div>
+		</section>
+		<section class="special-services">
+			<div class="main-description">
+				<h2>Servicios Especiales</h2>
+				<p>Tu necesidad, nuestra especialidad.</p>
+			</div>
+			<div class="all-works">
+				<% special.forEach(row => { %>
+				<div class="works">
+					<article>
+						<div class="img-clean">
+							<img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
+						</div>
+						<div class="second-description">
+							<h3><%= row.nombre %></h3>
+							<h4>Precio: <strong>$<%= row.precio %></strong></h4>
+							<p><%= row.descripcion %></p>
+						</div>
+					</article>
+				</div>
+				<%}); %>
+			</div>
+		</section>
+	</main>
+	<%- include ('../partials/footer') %>
 </body>
