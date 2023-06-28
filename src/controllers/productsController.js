@@ -66,5 +66,13 @@ module.exports = {
 		);
 		return res.redirect('/');
 	},
-	processDelete: (req, res) => {},
+	processDelete: (req, res) => {
+		const product = products.find((row) => row.id == req.params.id);
+		product.borrado = true;
+		fs.writeFileSync(
+			path.resolve(__dirname, '../dataBase/products.json'),
+			JSON.stringify(products, null, 2)
+		);
+		return res.redirect('/');
+	},
 };
