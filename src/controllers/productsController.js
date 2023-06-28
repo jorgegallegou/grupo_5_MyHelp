@@ -12,20 +12,29 @@ module.exports = {
 	},
 	productDetailId: (req, res) => {
 		const productFound = products.find((row) => row.id == req.params.id);
-		if (productFound) return res.render('products/productDetailId', { found: productFound });
+		if (productFound && productFound.borrado != true)
+			return res.render('products/productDetailId', { found: productFound });
 		else return res.send('Product not found');
 	},
 	productListHome: (req, res) => {
-		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza hogar');
-		const specialProducts = products.filter((row) => row.categoria == 'Servicios especiales');
+		const cleanProducts = products.filter(
+			(row) => row.categoria == 'Limpieza hogar' && row.borrado != true
+		);
+		const specialProducts = products.filter(
+			(row) => row.categoria == 'Servicios especiales' && row.borrado != true
+		);
 		return res.render('products/productListHome', {
 			clean: cleanProducts,
 			special: specialProducts,
 		});
 	},
 	productListCompany: (req, res) => {
-		const cleanProducts = products.filter((row) => row.categoria == 'Limpieza empresa');
-		const disinfectionProducts = products.filter((row) => row.categoria == 'Desinfeccion');
+		const cleanProducts = products.filter(
+			(row) => row.categoria == 'Limpieza empresa' && row.borrado != true
+		);
+		const disinfectionProducts = products.filter(
+			(row) => row.categoria == 'Desinfeccion' && row.borrado != true
+		);
 		return res.render('products/productListCompany', {
 			cleaning: cleanProducts,
 			disinfection: disinfectionProducts,
@@ -41,7 +50,7 @@ module.exports = {
 			precio: req.body.precio,
 			descripcion: req.body.descripcion,
 			categoria: req.body.categoria,
-			imagen: req.body.imagen,
+			imagen: req.file.filename,
 		};
 		fs.writeFileSync(
 			path.resolve(__dirname, '../dataBase/products.json'),
