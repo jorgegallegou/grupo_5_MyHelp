@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Editar servicio'}) %>
+<%- include ('../partials/head', {title: 'Edit service'}) %>
 <body>
   
 <%- include ('../partials/header') %>
@@ -7,49 +7,38 @@
 <main class="main-register">
 
   
-  
-  <form action="" method="GET" class="formulario">
-    <h1>Formulario de edición de servicio</h1>
+  <form action="/product/<%= found.id %>?_method=PUT" method="post" class="formulario">
+    <h1>Edición de servicio</h1>
     
-    <div>
-      <label class="label-principal" for="servicio">Seleccionar servicio:</label>
-      <select class="select" id="servicio" name="servicio" required>
-        <option value="">Seleccionar servicio</option>
-        <option value="1">Servicio 1</option>
-        <option value="2">Servicio 2</option>
-        <option value="3">Servicio 3</option>
-      </select>
-    </div>
-      
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
-    <input class="input-normal" type="text" id="nombre" name="nombre" required>
+    <input class="input-normal" type="text" id="nombre" name="nombre" required value="<%= found.nombre %>">
     
     <label class="label-principal" for="precio">Precio:</label>
-    <input class="input-normal" type="number" id="precio" name="precio" required>
+    <input class="input-normal" type="number" id="precio" name="precio" required value="<%= found.precio %>">
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" required value="<%= found.descripcion %>">
 
     <div>
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
-        <option value="">Selecciona...</option>
-        <option value="limpieza">Limpieza</option>
-        <option value="mantenimiento">Servicios Especiales</option>
+        <option value=""><%= found.categoria %></option>
+        <option value="Limpieza hogar">Limpieza hogar</option>
+        <option value="Servicios especiales">Servicios especiales</option>
+        <option value="Limpieza empresa">Limpieza empresa</option>
+        <option value="Desinfeccion">Desinfeccion</option>
       </select>
     </div>
    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
     
-    <div class="container-checkbox">
-      <div><input type="checkbox" value="disponible" name="disponible"><label for="disponible">Disponible</label></div>
-      <div><input type="checkbox" value="promocion" name="promocion"><label for="promicion">En promoción</label></div>
-      <div><input type="checkbox" value="pago" name="pago"><label for="pago">Acepta diferentes formas de pago</label></div>
-    </div>
-
-    <button class="btn-login-cargar-producto" type="submit">Guardar</button>
+    <button class="btn-login-cargar-producto" type="submit">Editar</button>
     
+  </form>
+
+  <form action="/product/<%= found.id %>?_method=DELETE" method="post" class="formulario">
+    <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
   </form>
 
 </main>
