@@ -24,12 +24,16 @@ router.get('/productCompany', controller.productListCompany);
 router.get('/productCart', controller.productCart);
 router.get('/productDetail', controller.productDetail);
 router.get('/productDetail/:id', controller.productDetailId);
+
 // LOAD PRODUCT
 router.get('/product/create', controller.productLoad);
 router.post('/product', fileUpload.single('imagen'), controller.processCreate);
+
 // EDIT PRODUCT
 router.get('/product/edit/:id', controller.productEdit);
-router.put('/product/edit/:id', controller.processEdit);
+router.put('/product/:id', controller.processEdit);
+
 // DELETE PRODUCT
+router.delete('/product/:id', controller.processDelete);
 
 module.exports = router;

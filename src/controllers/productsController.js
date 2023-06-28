@@ -66,4 +66,5 @@ module.exports = {
 		);
 		return res.redirect('/');
 	},
+	processDelete: (req, res) => {},
 };
