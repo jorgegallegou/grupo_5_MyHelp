@@ -6,7 +6,7 @@
 		"descripcion": "Servicio por horas. Deja impecable tu hogar.",
 		"categoria": "Limpieza hogar",
 		"imagen": "limpiezaHogar.svg",
-		"borrado": true
+		"borrado": false
 	},
 	{
 		"id": 2,
@@ -78,7 +78,7 @@
 		"descripcion": "Servicio de albañil. Tu proyecto, nuestro compromiso. Albañilería excepcional.",
 		"categoria": "Servicios especiales",
 		"imagen": "albañil.svg",
-		"borrado": true
+		"borrado": false
 	},
 	{
 		"id": 10,
@@ -105,7 +105,7 @@
 		"descripcion": "Servicio diario o semanal.Nosotros eliminamos los gérmenes, disfruta de un espacio limpio y seguro.",
 		"categoria": "Desinfeccion",
 		"imagen": "desinfeccion.svg",
-		"borrado": true
+		"borrado": false
 	},
 	{
 		"id": 13,
@@ -113,6 +113,7 @@
 		"precio": "75000",
 		"descripcion": "Servicio diario o semanal. Servicio de desinfección de superficies para tu oficina",
 		"categoria": "Desinfeccion",
-		"imagen": "1687960743367.jpg"
+		"imagen": "1687986866227.svg",
+		"borrado": true
 	}
 ]
