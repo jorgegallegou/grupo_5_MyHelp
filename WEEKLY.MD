@@ -8,3 +8,7 @@ Día 01/06/23
  * Planteamos las dudas
  * Tuvimos dudas con la categorizacion y los precios
  * Cada uno planteo su postura y lo resolvimos en conjunto
+
+ Día 27/08/23
+ * Reunión para finiquitar detalles de la entrega del Sprint
+ * Se concertó consultar a los profes, las dudas que tenemos con el método DELETE. 
