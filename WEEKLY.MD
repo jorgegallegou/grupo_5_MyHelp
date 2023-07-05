@@ -1,3 +1,10 @@
+Día 04/07/2023
+* Socialización requisitos del Sprint 5.
+* Asignación de tareas individuales: 
+- Diego: Implementar el registro de usuarios
+- Michelle: Implementar rutas de huéspedes y de usuarios
+- Jorge: Implementar el login de usuarios
+
 Día 01/06/23
  * Luego de la clase tuvimos una llamada
  * Se asignaron las tareas a cada integrante
