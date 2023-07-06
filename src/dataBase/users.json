@@ -1,77 +1,77 @@
 [
-    {  
-    "id":1,
-    "nombre":"morbi",
-    "apellido":"in est",
-    "email":"srawlin0@va.gov",
-    "contraseña":"cC?O\\EVAXyr|wzC",
-    "categoria":"Superadministrador",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"CEDULA",
-    "numero_identificacion":48,
-    "telefono":10
-},
-{   
-    "id":2,
-    "nombre":"aliquam quis",
-    "apellido":"eros elementum",
-    "email":"rleckie1@wix.com",
-    "contraseña":"nDnk8HYY|yL=Y",
-    "categoria":"Administrador",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"CEDULA",
-    "numero_identificacion":8,
-    "telefono":10
-},
-{   
-    "id":3,
-    "nombre":"nibh",
-    "apellido":"pede posuere",
-    "email":"ewheadon2@harvard.edu",
-    "contraseña":"sWFM{I.6!DZ.y)k",
-    "categoria":"Administrador",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"DNI",
-    "numero_identificacion":8,
-    "telefono":10
-},
-{   
-    "id":4,
-    "nombre":"sit amet",
-    "apellido":"sed",
-    "email":"bcamillo3@huffingtonpost.com",
-    "contraseña":"eRe%8Te2>D2REn3",
-    "categoria":"Usuario",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"DNI",
-    "numero_identificacion":8,
-    "telefono":10
-},
-{   
-    "id":5,
-    "nombre":"quisque id",
-    "apellido":"consequat",
-    "email":"risham4@gmpg.org",
-    "contraseña":"xGW=cGDn$3,)fg&",
-    "categoria":"Administrador",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"CEDULA",
-    "numero_identificacion":8,
-    "telefono":10
-},
-{   
-    "id":6,
-    "nombre":"quisque id",
-    "apellido":"consequat",
-    "email":"risham4@gmpg.org",
-    "contraseña":"xGW=cGDn$3,)fg&",
-    "categoria":"Administrador",
-    "image":"https://example.com/images/isabellalopez.jpg",
-    "tipo_identificacion":"CEDULA",
-    "numero_identificacion":8,
-    "telefono":10
-},
-{
+  {
+    "id": 1,
+    "nombre": "morbi",
+    "apellido": "in est",
+    "email": "srawlin0@va.gov",
+    "contraseña": "cC?OEVAXyr|wzC",
+    "categoria": "Superadministrador",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "CEDULA",
+    "numero_identificacion": 48,
+    "telefono": 10
+  },
+  {
+    "id": 2,
+    "nombre": "aliquam quis",
+    "apellido": "eros elementum",
+    "email": "rleckie1@wix.com",
+    "contraseña": "nDnk8HYY|yL=Y",
+    "categoria": "Administrador",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "CEDULA",
+    "numero_identificacion": 8,
+    "telefono": 10
+  },
+  {
+    "id": 3,
+    "nombre": "nibh",
+    "apellido": "pede posuere",
+    "email": "ewheadon2@harvard.edu",
+    "contraseña": "sWFM{I.6!DZ.y)k",
+    "categoria": "Administrador",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "DNI",
+    "numero_identificacion": 8,
+    "telefono": 10
+  },
+  {
+    "id": 4,
+    "nombre": "sit amet",
+    "apellido": "sed",
+    "email": "bcamillo3@huffingtonpost.com",
+    "contraseña": "eRe%8Te2>D2REn3",
+    "categoria": "Usuario",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "DNI",
+    "numero_identificacion": 8,
+    "telefono": 10
+  },
+  {
+    "id": 5,
+    "nombre": "quisque id",
+    "apellido": "consequat",
+    "email": "risham4@gmpg.org",
+    "contraseña": "xGW=cGDn$3,)fg&",
+    "categoria": "Administrador",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "CEDULA",
+    "numero_identificacion": 8,
+    "telefono": 10
+  },
+  {
+    "id": 6,
+    "nombre": "quisque id",
+    "apellido": "consequat",
+    "email": "risham4@gmpg.org",
+    "contraseña": "xGW=cGDn$3,)fg&",
+    "categoria": "Administrador",
+    "image": "https://example.com/images/isabellalopez.jpg",
+    "tipo_identificacion": "CEDULA",
+    "numero_identificacion": 8,
+    "telefono": 10
+  },
+  {
     "id": 7,
     "nombre": "David",
     "apellidos": "Brown",
@@ -82,9 +82,9 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "98765430",
     "celular": "9876543210"
-},
-  
-{
+  },
+
+  {
     "id": 8,
     "nombre": "Sophia",
     "apellidos": "Garcia",
@@ -95,8 +95,8 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "67890543",
     "celular": "8765432109"
-},
-{
+  },
+  {
     "id": 9,
     "nombre": "Matthew",
     "apellidos": "Taylor",
@@ -107,8 +107,8 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "45678901",
     "celular": "7654321098"
-},
-{
+  },
+  {
     "id": 10,
     "nombre": "Isabella",
     "apellidos": "Lopez",
@@ -119,5 +119,5 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "89012345",
     "celular": "6543210987"
-}
-]  
+  }
+]

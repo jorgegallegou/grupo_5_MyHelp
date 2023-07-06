@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 const path = require("path");
 
@@ -38,7 +39,7 @@ module.exports = {
       (row) => row.categoria == "Limpieza empresa" && row.borrado != true
     );
     const disinfectionProducts = products.filter(
-      (row) => row.categoria == "Desinfeccion" && row.borrado != true
+      (row) => row.categoria == "Desinfeccion empresa" && row.borrado != true
     );
     return res.render("products/productListCompany", {
       cleaning: cleanProducts,
@@ -75,6 +76,15 @@ module.exports = {
   },
   processEdit: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
+    if (req.file) {
+      fs.unlinkSync(
+        path.resolve(
+          __dirname,
+          "../../public/img/imgServiciosMyHelp/" + product.imagen
+        )
+      );
+      product.imagen = req.file.filename;
+    }
     for (let prop in req.body) {
       product[prop] = req.body[prop];
     }
