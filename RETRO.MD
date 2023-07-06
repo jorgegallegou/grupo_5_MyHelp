@@ -1,20 +1,21 @@
-# Retrospectiva tercer Sprint
+# Retrospectiva cuarto Sprint
 
 ## Empezar a hacer
-Tratar de tener una comunicacion diaria, aunque sea mínima por Discord para chequear cómo van los elementos del sprint
+- 'Codear juntos' los días martes y jueves de cada semana a las 8:00 p.m. (Colombia)
+- Mantener una comunicacion diaria por Discord para chequear cómo van los elementos del sprint.
 
 ## Seguir haciendo
-Continuar marcando metas semananales y cumpliendo los objetivos propuestos como hemos hecho en el anterior Sprint.
+- Continuar marcando metas semananales y cumpliendo los objetivos propuestos como hemos hecho en el anterior Sprint.
 
 ## Menos de
-No dejar las tareas para último momento
+- Asignar tareas a integrantes del equipo que no han participado de manera significativa en los encuentros del grupo.
 
 ## Más de
-Mas comunicacion y compartir los avances para ir motivándonos entre todos.
-Realizar una reunión de equipo los días jueves de cada semana.
+- Mas comunicacion y compartir los avances para ir motivándonos entre todos.
 
 ## Dejar de hacer
- No incluir a los integrantes que no asisten a las reuniones ni dan muestra de interés, ya que el trabajo asignado termina sin realizarse y hay que volver a organizar todo.
+- Tareas para último momento.
+
 
 
 
