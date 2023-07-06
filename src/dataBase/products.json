@@ -1,119 +1,110 @@
 [
-	{
-		"id": 1,
-		"nombre": "Limpieza Hogar",
-		"precio": 70000,
-		"descripcion": "Servicio por horas. Deja impecable tu hogar.",
-		"categoria": "Limpieza hogar",
-		"imagen": "limpiezaHogar.svg",
-		"borrado": false
-	},
-	{
-		"id": 2,
-		"nombre": "Limpieza Profunda vapor",
-		"precio": 90000,
-		"descripcion": "Servicio por horas. Deja impecable áreas específicas como baños y cocinas en tu hogar.",
-		"categoria": "Limpieza hogar",
-		"imagen": "limpiezaVapor.svg",
-		"borrado": false
-	},
-	{
-		"id": 3,
-		"nombre": "Limpieza Colchones y Muebles",
-		"precio": 120000,
-		"descripcion": "Servicio por horas. Deja impecable tus colchones y muebles en tu hogar.",
-		"categoria": "Limpieza hogar",
-		"imagen": "limpiezaColchones.svg",
-		"borrado": false
-	},
-	{
-		"id": 4,
-		"nombre": "Fontaneria",
-		"precio": 70000,
-		"descripcion": "Servicio instalación y reparacion de tuberias, griferia y mas...",
-		"categoria": "Servicios especiales",
-		"imagen": "fontaneria.svg",
-		"borrado": false
-	},
-	{
-		"id": 5,
-		"nombre": "Carpintería",
-		"precio": 70000,
-		"descripcion": "Reparación y diseño de productos de madera a medida.",
-		"categoria": "Servicios especiales",
-		"imagen": "carpinteria.svg",
-		"borrado": false
-	},
-	{
-		"id": 6,
-		"nombre": "Electricista",
-		"precio": 90000,
-		"descripcion": "Servicio de instalaciones eléctricas, cableado y re cableado, instalación de iluminación.",
-		"categoria": "Servicios especiales",
-		"imagen": "electricista.svg",
-		"borrado": false
-	},
-	{
-		"id": 7,
-		"nombre": "Pintura",
-		"precio": 85000,
-		"descripcion": "Servicio de pintura. Colores que hablan, ambientes que inspiran, confía en nosotros para tus proyectos de pintura.",
-		"categoria": "Servicios especiales",
-		"imagen": "pintura.svg",
-		"borrado": false
-	},
-	{
-		"id": 8,
-		"nombre": "Cerrajería",
-		"precio": 75000,
-		"descripcion": "Servicio de cerrajería.Protege lo que más importa, cerrajería profesional para tu tranquilidad.",
-		"categoria": "Servicios especiales",
-		"imagen": "cerrajería.svg",
-		"borrado": false
-	},
-	{
-		"id": 9,
-		"nombre": "Maestro Albañil",
-		"precio": 95000,
-		"descripcion": "Servicio de albañil. Tu proyecto, nuestro compromiso. Albañilería excepcional.",
-		"categoria": "Servicios especiales",
-		"imagen": "albañil.svg",
-		"borrado": false
-	},
-	{
-		"id": 10,
-		"nombre": "Limpieza General",
-		"precio": 90000,
-		"descripcion": "Servicio diario o semanal. Aspiración o barrido de pisos, limpieza de escritorios y superficies y mucho mas...",
-		"categoria": "Limpieza empresa",
-		"imagen": "limpiezaGeneral.svg",
-		"borrado": false
-	},
-	{
-		"id": 11,
-		"nombre": "Limpieza Profunda",
-		"precio": 130000,
-		"descripcion": "Servicio diario o semanal. Limpieza exhaustiva y a fondo de las instalaciones.",
-		"categoria": "Limpieza empresa",
-		"imagen": "limpiezaProfunda.svg",
-		"borrado": false
-	},
-	{
-		"id": 12,
-		"nombre": "Desinfección de Ambientes",
-		"precio": 150000,
-		"descripcion": "Servicio diario o semanal.Nosotros eliminamos los gérmenes, disfruta de un espacio limpio y seguro.",
-		"categoria": "Desinfeccion",
-		"imagen": "desinfeccion.svg",
-		"borrado": false
-	},
-	{
-		"id": 13,
-		"nombre": "Desinfección de superficies",
-		"precio": "75000",
-		"descripcion": "Servicio diario o semanal. Servicio de desinfección de superficies para tu oficina",
-		"categoria": "Desinfeccion",
-		"imagen": "1687986866227.svg",
-		"borrado": true
-	}
+  {
+    "id": 1,
+    "nombre": "Limpieza Hogar",
+    "precio": 70000,
+    "descripcion": "Servicio por horas. Deja impecable tu hogar.",
+    "categoria": "Limpieza hogar",
+    "imagen": "limpiezaHogar.svg",
+    "borrado": false
+  },
+  {
+    "id": 2,
+    "nombre": "Limpieza Profunda vapor",
+    "precio": 90000,
+    "descripcion": "Servicio por horas. Deja impecable áreas específicas como baños y cocinas en tu hogar.",
+    "categoria": "Limpieza hogar",
+    "imagen": "limpiezaVapor.svg",
+    "borrado": false
+  },
+  {
+    "id": 3,
+    "nombre": "Limpieza Colchones y Muebles",
+    "precio": 120000,
+    "descripcion": "Servicio por horas. Deja impecable tus colchones y muebles en tu hogar.",
+    "categoria": "Limpieza hogar",
+    "imagen": "limpiezaColchones.svg",
+    "borrado": false
+  },
+  {
+    "id": 4,
+    "nombre": "Fontaneria",
+    "precio": 70000,
+    "descripcion": "Servicio instalación y reparacion de tuberias, griferia y mas...",
+    "categoria": "Servicios especiales",
+    "imagen": "fontaneria.svg",
+    "borrado": false
+  },
+  {
+    "id": 5,
+    "nombre": "Carpintería",
+    "precio": 70000,
+    "descripcion": "Reparación y diseño de productos de madera a medida.",
+    "categoria": "Servicios especiales",
+    "imagen": "carpinteria.svg",
+    "borrado": false
+  },
+  {
+    "id": 6,
+    "nombre": "Electricista",
+    "precio": 90000,
+    "descripcion": "Servicio de instalaciones eléctricas, cableado y re cableado, instalación de iluminación.",
+    "categoria": "Servicios especiales",
+    "imagen": "electricista.svg",
+    "borrado": false
+  },
+  {
+    "id": 7,
+    "nombre": "Pintura",
+    "precio": 85000,
+    "descripcion": "Servicio de pintura. Colores que hablan, ambientes que inspiran, confía en nosotros para tus proyectos de pintura.",
+    "categoria": "Servicios especiales",
+    "imagen": "pintura.svg",
+    "borrado": false
+  },
+  {
+    "id": 8,
+    "nombre": "Cerrajería",
+    "precio": 75000,
+    "descripcion": "Servicio de cerrajería.Protege lo que más importa, cerrajería profesional para tu tranquilidad.",
+    "categoria": "Servicios especiales",
+    "imagen": "cerrajería.svg",
+    "borrado": false
+  },
+  {
+    "id": 9,
+    "nombre": "Maestro Albañil",
+    "precio": 95000,
+    "descripcion": "Servicio de albañil. Tu proyecto, nuestro compromiso. Albañilería excepcional.",
+    "categoria": "Servicios especiales",
+    "imagen": "albañil.svg",
+    "borrado": false
+  },
+  {
+    "id": 10,
+    "nombre": "Limpieza General",
+    "precio": 90000,
+    "descripcion": "Servicio diario o semanal. Aspiración o barrido de pisos, limpieza de escritorios y superficies y mucho mas...",
+    "categoria": "Limpieza empresa",
+    "imagen": "limpiezaGeneral.svg",
+    "borrado": false
+  },
+  {
+    "id": 11,
+    "nombre": "Limpieza Profunda",
+    "precio": 130000,
+    "descripcion": "Servicio diario o semanal. Limpieza exhaustiva y a fondo de las instalaciones.",
+    "categoria": "Limpieza empresa",
+    "imagen": "limpiezaProfunda.svg",
+    "borrado": false
+  },
+  {
+    "id": 12,
+    "nombre": "Desinfección de Ambientes",
+    "precio": "100000",
+    "descripcion": "Servicio diario o semanal.Nosotros eliminamos los gérmenes, disfruta de un espacio limpio.",
+    "categoria": "Desinfeccion",
+    "imagen": "desinfeccion.svg",
+    "borrado": true
+  }
 ]

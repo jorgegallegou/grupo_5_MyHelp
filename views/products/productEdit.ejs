@@ -22,16 +22,19 @@
     <div>
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
-        <option value=""><%= found.categoria %></option>
-        <option value="Limpieza hogar">Limpieza hogar</option>
-        <option value="Servicios especiales">Servicios especiales</option>
-        <option value="Limpieza empresa">Limpieza empresa</option>
-        <option value="Desinfeccion">Desinfeccion</option>
+        <option value="optinon 0" disabled>Selecciona categoria</option>
+        <% categories.forEach(row => { %>
+        <option value="<%= row.categoria %>" <% if (found.categoria == row.categoria) { %>
+          selected
+        <% } %>
+        ><%= row.categoria %></option>
+        <%}); %>
       </select>
     </div>
-   
+    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
-    <input class="input-normal" type="file" id="imagen" name="imagen" accept="image/*" required>
+
+    <input class="input-normal" type="file" id="imagen" name="imagen">
     
     <button class="btn-login-cargar-producto" type="submit">Editar</button>
     

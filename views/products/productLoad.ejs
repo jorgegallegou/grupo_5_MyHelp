@@ -20,11 +20,11 @@
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" id="categoria" name="categoria" required>
-        <option value="">Selecciona...</option>
-        <option value="Limpieza hogar">Limpieza hogar</option>
-        <option value="Servicios especiales">Servicios especiales</option>
-        <option value="Limpieza empresa">Limpieza empresa</option>
-        <option value="Desinfeccion">Desinfeccion</option>
+        <option value="">Selecciona categoria</option>
+        <% categories.forEach(row => {  %>
+        <option value="<%= row.categoria %>"><%= row.categoria %></option>
+        <%}); %>
+        
       </select>
     </div>
    
