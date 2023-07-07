@@ -103,8 +103,16 @@
     "nombre": "Desinfección de Ambientes",
     "precio": "100000",
     "descripcion": "Servicio diario o semanal.Nosotros eliminamos los gérmenes, disfruta de un espacio limpio.",
-    "categoria": "Desinfección empresa",
+    "categoria": "Desinfeccion empresa",
     "imagen": "1688682727065-desinfeccion.svg",
     "borrado": false
+  },
+  {
+    "id": 13,
+    "nombre": "Desinfección de superficies",
+    "precio": "75000",
+    "descripcion": "Servicio diario o semanal. Servicio de desinfección de superficies para tu oficina",
+    "categoria": "Desinfeccion empresa",
+    "imagen": "1688691306736-desinfeccionSuperficies.svg"
   }
 ]
