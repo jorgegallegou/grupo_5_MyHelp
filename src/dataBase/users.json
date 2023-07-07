@@ -2,9 +2,8 @@
   {
     "id": 1,
     "nombre": "morbi",
-    "apellido": "in est",
     "email": "srawlin0@va.gov",
-    "contraseña": "cC?OEVAXyr|wzC",
+    "password": "cC?OEVAXyr|wzC",
     "categoria": "Superadministrador",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "CEDULA",
@@ -14,9 +13,8 @@
   {
     "id": 2,
     "nombre": "aliquam quis",
-    "apellido": "eros elementum",
     "email": "rleckie1@wix.com",
-    "contraseña": "nDnk8HYY|yL=Y",
+    "password": "nDnk8HYY|yL=Y",
     "categoria": "Administrador",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "CEDULA",
@@ -26,9 +24,8 @@
   {
     "id": 3,
     "nombre": "nibh",
-    "apellido": "pede posuere",
     "email": "ewheadon2@harvard.edu",
-    "contraseña": "sWFM{I.6!DZ.y)k",
+    "password": "sWFM{I.6!DZ.y)k",
     "categoria": "Administrador",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "DNI",
@@ -37,10 +34,9 @@
   },
   {
     "id": 4,
-    "nombre": "sit amet",
-    "apellido": "sed",
+    "nombre": "sit ame",
     "email": "bcamillo3@huffingtonpost.com",
-    "contraseña": "eRe%8Te2>D2REn3",
+    "password": "eRe%8Te2>D2REn3",
     "categoria": "Usuario",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "DNI",
@@ -49,10 +45,9 @@
   },
   {
     "id": 5,
-    "nombre": "quisque id",
-    "apellido": "consequat",
+    "nombre": "quisquelin id",
     "email": "risham4@gmpg.org",
-    "contraseña": "xGW=cGDn$3,)fg&",
+    "password": "xGW=cGDn$3,)fg&",
     "categoria": "Administrador",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "CEDULA",
@@ -62,10 +57,9 @@
   {
     "id": 6,
     "nombre": "quisque id",
-    "apellido": "consequat",
     "email": "risham4@gmpg.org",
-    "contraseña": "xGW=cGDn$3,)fg&",
-    "categoria": "Administrador",
+    "password": "xGW=cGDn$3,)fg&",
+    "categoria": "administrador",
     "image": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "CEDULA",
     "numero_identificacion": 8,
@@ -74,22 +68,19 @@
   {
     "id": 7,
     "nombre": "David",
-    "apellidos": "Brown",
     "email": "davidbrown@example.com",
-    "contraseña": "password123",
+    "password": "password123",
     "categoria": "Usuario",
     "imagen": "https://example.com/images/davidbrown.jpg",
     "tipo_identificacion": "DNI",
     "numero_identificacion": "98765430",
     "celular": "9876543210"
   },
-
   {
     "id": 8,
     "nombre": "Sophia",
-    "apellidos": "Garcia",
     "email": "sophiagarcia@example.com",
-    "contraseña": "password456",
+    "password": "password456",
     "categoria": "Usuario",
     "imagen": "https://example.com/images/sophiagarcia.jpg",
     "tipo_identificacion": "DNI",
@@ -99,9 +90,8 @@
   {
     "id": 9,
     "nombre": "Matthew",
-    "apellidos": "Taylor",
     "email": "matthewtaylor@example.com",
-    "contraseña": "password789",
+    "password": "password789",
     "categoria": "Usuario",
     "imagen": "https://example.com/images/matthewtaylor.jpg",
     "tipo_identificacion": "DNI",
@@ -111,13 +101,23 @@
   {
     "id": 10,
     "nombre": "Isabella",
-    "apellidos": "Lopez",
     "email": "isabellalopez@example.com",
-    "contraseña": "passwordabc",
+    "password": "passwordabc",
     "categoria": "Usuario",
     "imagen": "https://example.com/images/isabellalopez.jpg",
     "tipo_identificacion": "DNI",
     "numero_identificacion": "89012345",
     "celular": "6543210987"
+  },
+  {
+    "id": 11,
+    "nombre": "Pepito Perez",
+    "email": "pepito@prueba.com",
+    "password": "1234",
+    "categoria": "Superadministrador",
+    "image": "1688701612856-luckSkywalker.png",
+    "tipo_identificacion": "value2",
+    "numero_identificacion": "93513306",
+    "telefono": "3004099031"
   }
 ]

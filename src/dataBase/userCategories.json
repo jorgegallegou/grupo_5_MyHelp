@@ -1,0 +1,11 @@
+[
+  {
+    "categoria": "Usuario"
+  },
+  {
+    "categoria": "Administrador"
+  },
+  {
+    "categoria": "Superadministrador"
+  }
+]
