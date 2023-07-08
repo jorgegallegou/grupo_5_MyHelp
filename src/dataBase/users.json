@@ -108,16 +108,5 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "89012345",
     "celular": "6543210987"
-  },
-  {
-    "id": 11,
-    "nombre": "Pepito Perez",
-    "email": "pepito@prueba.com",
-    "password": "1234",
-    "categoria": "Superadministrador",
-    "image": "1688701612856-luckSkywalker.png",
-    "tipo_identificacion": "value2",
-    "numero_identificacion": "93513306",
-    "telefono": "3004099031"
   }
 ]

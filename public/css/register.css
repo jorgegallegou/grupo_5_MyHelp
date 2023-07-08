@@ -70,7 +70,7 @@
   font-weight: 300px;
   box-sizing: border-box;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input-normal:focus {
@@ -80,6 +80,11 @@
 .label-principal {
   color: black;
   font-size: 12px;
+}
+.text-danger p {
+  color: #ff0000;
+  margin: 0 0 20px 0;
+  line-height: 0;
 }
 .politica {
   display: flex;

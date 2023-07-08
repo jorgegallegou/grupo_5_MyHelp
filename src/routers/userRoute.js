@@ -3,10 +3,11 @@ const router = express.Router();
 const controller = require("../controllers/userController");
 const multer = require("multer");
 const path = require("path");
+const { body } = require("express-validator");
 
 const multerDiskStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.resolve(__dirname, "../../public/img/imgServiciosMyHelp"));
+    cb(null, path.resolve(__dirname, "../../public/img/imgUsers"));
   },
   filename: (req, file, cb) => {
     let imageName = Date.now() + "-" + file.originalname;
@@ -18,11 +19,36 @@ const fileUpload = multer({
   storage: multerDiskStorage,
 });
 
-// USER LOAD //
-router.get("/register/create", controller.register);
-router.post("/register", fileUpload.single("imagen"), controller.processCreate);
+// VALIDATIONS //
+
+const validations = [
+  body("nombre").notEmpty().withMessage("Campo obligatório"),
+  body("email")
+    .notEmpty()
+    .withMessage("Campo obligatorio")
+    .isEmail()
+    .withMessage("ingrese un email válido"),
+  body("password").notEmpty().withMessage("Campo obligatorio"),
+  body("imagen").notEmpty().withMessage("Campo obligatorio"),
+  body("imagen").notEmpty().withMessage("Campo obligatorio"),
+  body("identificacion").notEmpty().withMessage("Campo obligatorio"),
+  body("celular").notEmpty().withMessage("Campo obligatorio"),
+];
+
+// USER register //
+router.get("/register", controller.register);
+router.post(
+  "/register",
+  fileUpload.single("imagen"),
+  validations,
+  controller.processRegister
+);
+
+// USER EDIT //
 
 // USER LOGIN //
 router.get("/login", controller.login);
+
+// USER DELETE //
 
 module.exports = router;

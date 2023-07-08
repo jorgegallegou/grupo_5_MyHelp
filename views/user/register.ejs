@@ -5,56 +5,83 @@
   <%- include ('../partials/header') %>
 
 <main class="main-register">
-
-  <form action="/user/register" method="post" enctype="multipart/form-data" class="formulario">
+  
+  <form action="/user/register" method="post"  enctype="multipart/form-data" class="formulario">
     <h1 class="crea-tu-cuenta" >Crea tu cuenta Myhelp</h1>
       <div class="container-nombre">
         <div>
           <label class="label-principal" for="nombre">Nombre completo</label>
-          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+          <% if (locals.errors && errors.nombre) { %>
+            <div class="text-danger">
+              <p><%= errors.nombre.msg %></p>
+            </div>
+          <% } %>
         </div>
       </div>
 
         <div>
           <label class="label-principal" for="email">Correo electrónico</label>
-        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" >
+        <% if (locals.errors && errors.email) { %>
+          <div class="text-danger">
+            <p><%= errors.email.msg %></p>
+          </div>
+        <% } %>
         </div>
 
         <div class="container-contrasenia"> 
           <div>
             <label class="label-principal" for="password">Contraseña</label>
-            <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" required>
+            <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" >
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+                <p><%= errors.password.msg %></p>
+              </div>
+            <% } %>
           </div>
           <div>
             <label class="label-principal" for="cpassword">Confirma la contraseña</label>
-            <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirma contraseña" required>
+            <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirma contraseña" >
           </div>
         </div>
 
         <div>
           <label class="label-principal" for="imagen">Avatar</label>
-          <input class="input-normal" type="file" id="imagen" name="imagen" required>
+          <input class="input-normal" type="file" id="imagen" name="imagen">
         </div>
 
         <div class="container-identificacion">
           <div>
             <label class="label-principal" for="tipo_identificacion">Tipo de identificacón</label>
+            <% let typeOfDucument = ['Cedula de ciudadania', 'Cedula de extrangeria', 'Pasaporte'] %>
             <select class="select" id="tipo_identificacion" name="tipo_identificacion">
               <option value="value1">Selecciona...</option>
-              <option value="value2" required>Cédula de ciudadanía</option>
-              <option value="value3" required>Cédula de extranjería</option>
-              <option value="value4" required>Pasaporte</option>
+              <% for (let doc of typeOfDucument ) { %>
+                <option value="<%= doc %>" ><%= doc %></option>
+              <% } %>
+              
             </select>
           </div>
           <div>
             <label class="label-principal" for="identificacion">Número</label>
-            <input class="input-normal" type="text" id="identificacion" name="identificacion" placeholder="Escribe tu documento" required>
+            <input class="input-normal" type="number" id="identificacion" name="identificacion" placeholder="Escribe tu documento" >
+            <% if (locals.errors && errors.identificacion) { %>
+              <div class="text-danger">
+                <p><%= errors.identificacion.msg %></p>
+              </div>
+            <% } %>
           </div> 
         </div> 
 
         <div>
             <label class="label-principal" for="celular">Celular</label>
-            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" required>
+            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" >
+            <% if (locals.errors && errors.celular) { %>
+              <div class="text-danger">
+                <p><%= errors.celular.msg %></p>
+              </div>
+            <% } %>
         </div>
     
         <div class="politica">
