@@ -14,27 +14,30 @@ module.exports = {
     res.render("user/register");
   },
   processRegister: (req, res) => {
-    const regValidation = validationResult(req);
+    const rsdoValidation = validationResult(req);
 
-    if (!regValidation.isEmpty()) {
-      res.render("user/register", { errors: regValidation.mapped() });
+    if (!rsdoValidation.isEmpty()) {
+      res.render("user/register", { errors: rsdoValidation.mapped(), oldData: req.body });
+    }else {
+      const newUser = {
+        id: users.length + 1,
+        nombre: req.body.nombre,
+        email: req.body.email,
+        password: req.body.password,
+        categoria: "",
+        image: req.file.filename,
+        tipo_identificacion: req.body.tipo_identificacion,
+        numero_identificacion: req.body.identificacion,
+        telefono: req.body.celular,
+      };
+      fs.writeFileSync(
+        path.resolve(__dirname, "../dataBase/users.json"),
+        JSON.stringify([...users, newUser], null, 2),
+        "utf-8"
+      );
+      res.send(`Usuario ${newUser.nombre}  creado`)
     }
-    const newUser = {
-      id: users.length + 1,
-      nombre: req.body.nombre,
-      email: req.body.email,
-      password: req.body.password,
-      categoria: "",
-      image: req.file.filename,
-      tipo_identificacion: req.body.tipo_identificacion,
-      numero_identificacion: req.body.identificacion,
-      telefono: req.body.celular,
-    };
-    fs.writeFileSync(
-      path.resolve(__dirname, "../dataBase/users.json"),
-      JSON.stringify([...users, newUser], null, 2),
-      "utf-8"
-    );
+    
   },
   login: (req, res) => {
     res.render("user/login");

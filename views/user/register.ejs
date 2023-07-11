@@ -11,7 +11,7 @@
       <div class="container-nombre">
         <div>
           <label class="label-principal" for="nombre">Nombre completo</label>
-          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
           <% if (locals.errors && errors.nombre) { %>
             <div class="text-danger">
               <p><%= errors.nombre.msg %></p>
@@ -22,7 +22,7 @@
 
         <div>
           <label class="label-principal" for="email">Correo electrónico</label>
-        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" >
+        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
         <% if (locals.errors && errors.email) { %>
           <div class="text-danger">
             <p><%= errors.email.msg %></p>
@@ -54,18 +54,20 @@
         <div class="container-identificacion">
           <div>
             <label class="label-principal" for="tipo_identificacion">Tipo de identificacón</label>
-            <% let typeOfDucument = ['Cedula de ciudadania', 'Cedula de extrangeria', 'Pasaporte'] %>
+            <% let typeOfDocument = ['Cedula de ciudadania', 'Cedula de extrangeria', 'Pasaporte'] %>
             <select class="select" id="tipo_identificacion" name="tipo_identificacion">
-              <option value="value1">Selecciona...</option>
-              <% for (let doc of typeOfDucument ) { %>
-                <option value="<%= doc %>" ><%= doc %></option>
+              <option value="">Selecciona...</option>
+              <% for (let doc of typeOfDocument ) { %>
+                <option value="<%= doc %>" 
+                <%= locals.oldData && (doc == oldData.tipo_identificacion) ? 'selected' : null%>
+                > <%= doc %> </option>
               <% } %>
               
             </select>
           </div>
           <div>
             <label class="label-principal" for="identificacion">Número</label>
-            <input class="input-normal" type="number" id="identificacion" name="identificacion" placeholder="Escribe tu documento" >
+            <input class="input-normal" type="number" id="identificacion" name="identificacion" placeholder="Escribe tu documento" value="<%= locals.oldData ? oldData.identificacion : null %>">
             <% if (locals.errors && errors.identificacion) { %>
               <div class="text-danger">
                 <p><%= errors.identificacion.msg %></p>
@@ -76,7 +78,7 @@
 
         <div>
             <label class="label-principal" for="celular">Celular</label>
-            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" >
+            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" value="<%= locals.oldData ? oldData.celular : null %>">
             <% if (locals.errors && errors.celular) { %>
               <div class="text-danger">
                 <p><%= errors.celular.msg %></p>
