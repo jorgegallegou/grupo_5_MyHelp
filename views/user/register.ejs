@@ -49,6 +49,11 @@
         <div>
           <label class="label-principal" for="imagen">Avatar</label>
           <input class="input-normal" type="file" id="imagen" name="imagen">
+          <% if (locals.errors && errors.imagen) { %>
+            <div class="text-danger">
+              <p><%= errors.imagen.msg %></p>
+            </div>
+          <% } %>
         </div>
 
         <div class="container-identificacion">

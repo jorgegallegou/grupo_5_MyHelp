@@ -29,7 +29,10 @@ const validations = [
     .isEmail()
     .withMessage("ingrese un email válido"),
   body("password").notEmpty().withMessage("Campo obligatorio"),
-  body("imagen").exists().withMessage("Campo no obligatorio").optional(),
+  body("imagen").custom((value, {req}) => {
+    let file = req.file;
+    if (!file) throw new Error('Inserta una imagen');
+  }),
   body("tipo_identificacion").exists().optional(),
   body("identificacion").notEmpty().withMessage("Campo obligatorio"),
   body("celular").notEmpty().withMessage("Campo obligatorio"),
