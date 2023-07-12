@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
 const users = JSON.parse(
@@ -17,13 +18,13 @@ module.exports = {
     const rsdoValidation = validationResult(req);
 
     if (!rsdoValidation.isEmpty()) {
-      res.render("user/register", { errors: rsdoValidation.mapped(), oldData: req.body });
+      return res.render("user/register", { errors: rsdoValidation.mapped(), oldData: req.body });
     }else {
       const newUser = {
         id: users.length + 1,
         nombre: req.body.nombre,
         email: req.body.email,
-        password: req.body.password,
+        password: bcrypt.hashSync(req.body.password, 10), 
         categoria: "",
         image: req.file.filename,
         tipo_identificacion: req.body.tipo_identificacion,
@@ -35,7 +36,9 @@ module.exports = {
         JSON.stringify([...users, newUser], null, 2),
         "utf-8"
       );
-      res.send(`Usuario ${newUser.nombre}  creado`)
+      return res.send(`Usuario 
+      ${newUser.nombre} 
+      creado`)
     }
     
   },

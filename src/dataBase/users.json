@@ -108,16 +108,5 @@
     "tipo_identificacion": "DNI",
     "numero_identificacion": "89012345",
     "celular": "6543210987"
-  },
-  {
-    "id": 11,
-    "nombre": "Diego Ferney Rodriguez Castro",
-    "email": "rodriguezcastrodiegof@gmail.com",
-    "password": "12345",
-    "categoria": "",
-    "image": "1689091466253-luckSkywalker.png",
-    "tipo_identificacion": "Cedula de ciudadania",
-    "numero_identificacion": "93513306",
-    "telefono": "3004099031"
   }
 ]
