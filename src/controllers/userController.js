@@ -6,9 +6,6 @@ const { validationResult } = require("express-validator");
 const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
-const categories = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/userCategories.json"))
-);
 
 module.exports = {
   register: (req, res) => {
