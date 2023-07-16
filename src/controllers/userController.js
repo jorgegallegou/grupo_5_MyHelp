@@ -2,21 +2,33 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
-const users = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
-);
+const users = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json")));
 const User = require ("../../models/User.js");
 
 module.exports = {
+
   register: (req, res) => {
     res.render("user/register");
   },
-  processRegister: (req, res) => {
-    const rsdoValidation = validationResult(req);
 
+  processRegister: (req, res) => {
+    
+    //Validación de email ya registrado
+    let userInDB = User.findByField('email', req.body.email);
+      if (userInDB) {
+        return res.render ('user/register', {
+          errors: {
+            email: {
+              msg: 'Este email ya está registrado'
+            }
+          }          
+        })
+      }
+
+    const rsdoValidation = validationResult(req);
     if (!rsdoValidation.isEmpty()) {
       return res.render("user/register", { errors: rsdoValidation.mapped(), oldData: req.body });
-    }else {
+    } else {
       const newUser = {
         id: users.length + 1,
         nombre: req.body.nombre,
@@ -36,10 +48,10 @@ module.exports = {
       return res.send(`Usuario 
       ${newUser.nombre} 
       creado`)
-    }
-    
+      }
   },
+
   login: (req, res) => {
-    res.render("user/login");
-  },
-};
+  res.render("user/login");
+  }
+}
