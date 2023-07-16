@@ -119,5 +119,38 @@
     "tipo_identificacion": "Cedula de ciudadania",
     "numero_identificacion": "93413356",
     "telefono": "3004099032"
+  },
+  {
+    "id": 12,
+    "nombre": "JORGE",
+    "email": "JM@GMAIL.COM",
+    "password": "$2a$10$.0Ph1kthxtjCaqHz1owJiOQ4jvxeTun46JJClQ2ZPHQgveSUk2URK",
+    "categoria": "",
+    "image": "1689476302540-perfilok.jpg",
+    "tipo_identificacion": "Cedula de ciudadania",
+    "numero_identificacion": "1",
+    "telefono": "1"
+  },
+  {
+    "id": 13,
+    "nombre": "JORGE",
+    "email": "JM@GMAIL.COM",
+    "password": "$2a$10$09AM9TDopWlWTmPSFT4P.uHvcvqvOv5IZ6NgPRNuPboZjoC9V1QJ6",
+    "categoria": "",
+    "image": "1689476665475-perfilok.jpg",
+    "tipo_identificacion": "Cedula de ciudadania",
+    "numero_identificacion": "1",
+    "telefono": "1"
+  },
+  {
+    "id": 14,
+    "nombre": "JORGE",
+    "email": "JM@GMAIL.COM",
+    "password": "$2a$10$DeLZTjFqu71J7CkFCKL/l.W7K10qwaxhfpyw55Dm7azimosRfNBCG",
+    "categoria": "",
+    "image": "1689476688936-perfilok.jpg",
+    "tipo_identificacion": "Pasaporte",
+    "numero_identificacion": "123",
+    "telefono": "123"
   }
 ]

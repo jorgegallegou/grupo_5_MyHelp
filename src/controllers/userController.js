@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
-
 const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
+const User = require ("../../models/User.js");
 
 module.exports = {
   register: (req, res) => {
