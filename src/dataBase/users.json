@@ -119,5 +119,16 @@
     "tipo_identificacion": "Cedula de ciudadania",
     "numero_identificacion": "93413356",
     "telefono": "3004099032"
+  },
+  {
+    "id": 12,
+    "nombre": "JORGE",
+    "email": "jm@gmail.com",
+    "password": "$2a$10$MnU/9o9wIlBNrWN2oTt6.uEaFmKVrC2iwS7tbSogHzCPRcL4LA24S",
+    "categoria": "",
+    "image": "1689544170108-perfilok.jpg",
+    "tipo_identificacion": "Cedula de ciudadania",
+    "numero_identificacion": "123",
+    "telefono": "123"
   }
 ]

@@ -5,8 +5,15 @@ const mainRouter = require("./routers/mainRoute");
 const productsRouter = require("./routers/productsRoute");
 const userRouter = require("./routers/userRoute");
 const methodOverride = require("method-override");
+const session = require ('express-session');
 
 app.use(express.static("public"));
+
+app.use(session({
+  secret: "Shhh, It's a secret ",
+  resave: false,
+  saveUninitialized: false,
+}))
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

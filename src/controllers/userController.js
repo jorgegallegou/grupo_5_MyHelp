@@ -24,6 +24,7 @@ module.exports = {
           }          
         })
       }
+    //-------
 
     const rsdoValidation = validationResult(req);
     if (!rsdoValidation.isEmpty()) {
@@ -52,6 +53,26 @@ module.exports = {
   },
 
   login: (req, res) => {
-  res.render("user/login");
+  return res.render("user/login");
+  },
+
+  loginProcess: (req, res) => {
+     let userToLogin = User.findByField('email', req.body.email)
+     if (userToLogin) {
+       let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+       if (isOkThePassword) {
+         delete userToLogin.password
+         req.session.userLogged = userToLogin
+         return res.redirect("profile")
+       }
+       return res.render ("user/login", {errors: {email: {msg: 'Las credenciales son inválidas'}}});
+     }
+     return res.render ("user/login", {errors: {email: {msg: 'Email no encontrado'}}})
+  },
+
+  profile: (req,res) => {
+    return res.render ("user/profile", {
+      user: req.session.userLogged
+    })
   }
 }

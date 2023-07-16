@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Login'}) %>
+<body>
+
+  <%- include ('../partials/header') %>
+
+<main class="main-login">
+
+  	<div>
+		<h2>Hola <%= user.nombre %> </h2>
+		<img src="/img/imgUsers/<%= user.image %> ">
+		<div><h2><%= user.email %></h2> </div>
+	</div>
+        
+</main>
+
+<%- include ('../partials/footer') %>
+
+</body>
+</html>

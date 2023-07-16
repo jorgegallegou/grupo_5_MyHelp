@@ -4,7 +4,6 @@ const controller = require("../controllers/userController");
 const multer = require("multer");
 const path = require("path");
 
-
 const multerDiskStorage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.resolve(__dirname, "../../public/img/imgUsers"));
@@ -32,11 +31,8 @@ router.post(
   controller.processRegister
 );
 
-// USER EDIT //
-
-// USER LOGIN //
 router.get("/login", controller.login);
-
-// USER DELETE //
+router.post("/login", controller.loginProcess)
+router.get("/profile", controller.profile)
 
 module.exports = router;
