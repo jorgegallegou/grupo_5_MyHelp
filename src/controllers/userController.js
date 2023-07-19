@@ -63,6 +63,14 @@ module.exports = {
        if (isOkThePassword) {
          delete userToLogin.password
          req.session.userLogged = userToLogin
+
+        if (req.body.remember_user) {
+          res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) * 2 })
+
+        }
+
+
+
          return res.redirect("profile")
        }
        return res.render ("user/login", {errors: {email: {msg: 'Las credenciales son inválidas'}}});
@@ -77,6 +85,7 @@ module.exports = {
   },
 
   logout: (req,res) => {
+    res.clearCookie('userEmail')
     req.session.destroy();
     return res.redirect('/')
   }

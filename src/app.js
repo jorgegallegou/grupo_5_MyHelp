@@ -6,9 +6,10 @@ const productsRouter = require("./routers/productsRoute");
 const userRouter = require("./routers/userRoute");
 const methodOverride = require("method-override");
 const session = require ('express-session');
-const userLoggedMiddleare = require ('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
+const cookies = require ("cookie-parser");
 
-app.use(userLoggedMiddleare);
+
 
 app.use(express.static("public"));
 
@@ -17,6 +18,10 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }))
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

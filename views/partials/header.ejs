@@ -14,27 +14,20 @@
       <a href="/"><img src="/img/logo.png" alt="logo" class="logo" /></a>
 
       <nav>
-        <ul>
-          <li class="log-in">
-            <a href="/user/login"
-              ><i class="fa-regular fa-user"><p>Ingresar</p></i></a
-            >
-          </li>
-          <li class="register">
-            <a href="/user/register"
-              ><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a
-            >
-          </li>
-          <li class="shopping">
-            <a href="/productCart"
-              ><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a
-            >
-          </li>
-          <li class="burger-menu">
-            <a href="#"
-              ><i class="fa-solid fa-bars"><p>Menu</p></i></a
-            >
-          </li>
+        <ul> 
+          <% if (locals.isLogged) { %>
+           
+                
+          <li class=""><a href="#"><img src="/img/imgUsers/<%= locals.userLogged.image%>" width="40" style="border-radius: 100%;">Hola <%= locals.userLogged.nombre %></a>
+          <li class=""><a href="/user/profile"><i class=""><p>Mi perfil</p></i></a></li>
+          <li class=""><a href="/user/logout"><i class=""><p>Salir</p></i></a></li>         
+          
+          <% } else { %> 
+          <li class="register"><a href="/user/register"><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a></li>
+          <li class="log-in"><a href="/user/login"><i class="fa-regular fa-user"><p>Ingresar</p></i></a></li>
+          <li class="shopping"><a href="/productCart"><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a></li>
+          <li class="burger-menu"><a href="#"><i class="fa-solid fa-bars"><p>Menu</p></i></a></li>
+          <% } %>
         </ul>
       </nav>
     </div>
