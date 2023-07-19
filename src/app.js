@@ -6,6 +6,9 @@ const productsRouter = require("./routers/productsRoute");
 const userRouter = require("./routers/userRoute");
 const methodOverride = require("method-override");
 const session = require ('express-session');
+const userLoggedMiddleare = require ('./middlewares/userLoggedMiddleware');
+
+app.use(userLoggedMiddleare);
 
 app.use(express.static("public"));
 
