@@ -9,6 +9,49 @@
 	width: 100%;
 }
 
+/* MY PROFILE */
+
+/* Estilo para el enlace del perfil */
+.profile-link {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.profile-link a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #ffb703;
+}
+
+.profile-link img {
+	width: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+/* Estilo para los enlaces de la lista */
+.nav-item {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.nav-item a {
+	display: block;
+	text-decoration: none;
+	color: #666;
+}
+
+/* Estilo para el ícono en los enlaces */
+.nav-item i {
+	margin-right: 5px;
+}
+
+
+
+
+
+
 /*--------------------
  Header Top nav-bar
  ---------------------*/
