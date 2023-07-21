@@ -15,9 +15,7 @@
 
       <nav>
         <ul> 
-          <% if (locals.isLogged) { %>
-           
-                
+          <% if (locals.isLogged) { %>   
           <li class="profile-link"><a href="#"><img src="/img/imgUsers/<%= locals.userLogged.image%>" width="40" style="border-radius: 100%;">Hola <%= locals.userLogged.nombre %></a>
           <li class="nav-item"><a href="/user/profile"><i class="fa fa-user"><p>Mi perfil</p></i></a></li>
           <li class="nav-item"><a href="/user/logout"><i class="fa fa-sign-out"><p>Salir</p></i></a></li>         
