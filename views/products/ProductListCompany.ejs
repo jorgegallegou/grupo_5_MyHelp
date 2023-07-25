@@ -1,55 +1,51 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'MyHelp'}) %>
+<%- include ('../partials/head', {title: 'MyHelp Productlist'}) %>
 <body>
 
   <%- include ('../partials/header') %>
   <main>
-   
-    
-      <div class="main-description-company">
-        <h2>Limpieza</h2>
-        <p>Tu empresa siempre impecable! Limpieza eficiente que tu empresa merece. </p>
-      </div>
-      <div class="all-clean-works">
-        <% cleaning.forEach(row => { %>
-        <div class="clean-company">
-          <article>
-            <div class="img-clean-company">
-              <img src="/img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>">
-            </div>
-          <div class="second-description">
+    <div class="main-description-company">
+      <h2>Limpieza</h2>
+      <p>Tu empresa siempre impecable! Limpieza eficiente que tu empresa merece.
+      </p>
+    </div>
+    <div class="all-clean-works">
+      <% cleaning.forEach(row => { %>
+      <div class="clean-company">
+            <img src="/img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>">
             <h3><%= row.nombre %></h3>
-            <h4>Precio: <strong>$<%= row.precio %></strong></h4>
-            <p><%= row.descripcion %></p>
-          </div>
-          </article>
+          
+        <div class="descriptionCompany">
+          <h4>Precio: <strong>$<%= row.precio %></strong></h4>
+          <p><%= row.descripcion %></p>
+          <a href="productDetail">
+            <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
         </div>
-        <%}); %>
       </div>
-
-    
-      <div class="main-description-company">
-        <h2>Desinfección</h2>
-        <p>Un ambiente limpio y saludable para tu empresa.</p>
-      </div>
-      <div class="all-disinfection-works">
-        <% disinfection.forEach(row => { %>
-        <div class="disinfection-company">
-          <article>
-            <div class="img-disinfection-company">
-              <img src="/img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>">
-            </div>
-          <div class="second-description">
+      <%}); %>
+    </div>
+  
+    <div class="main-description-company">
+      <h2>Desinfección</h2>
+      <p>Un ambiente limpio y saludable para tu empresa.
+      </p>
+    </div>
+    <div class="all-disinfection-works">
+      <% disinfection.forEach(row => { %>
+      <div class="disinfection-company">
+           <img src="/img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>">
             <h3><%= row.nombre %></h3>
-            <h4>Precio: <strong>$<%= row.precio %></strong></h4>
-            <p><%= row.descripcion %></p>
-          </div>
-          </article>
+          
+        <div class="descriptionCompany">
+          <h4>Precio: <strong>$<%= row.precio %></strong></h4>
+          <p><%= row.descripcion %></p>
+          <a href="productDetail">
+            <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
         </div>
-        <%}); %>
       </div>
-    
-  </main>
+      <%}); %>
+    </div>
+</main>
   <%- include ('../partials/footer') %>
   
 </body>

@@ -1,88 +1,103 @@
-
-
 /*--------------------
 ---Cleaning services--
 --------------------*/
-
 .main-description-company {
     text-align: left;
-    padding: 0 15px;
-    margin: 10px 0;
+	padding: 0 15px;
+	margin: 10px 0;
 }
 .main-description-company h2 {
-    border-left: solid 5px #219EBC;
-    margin: 0;
-    padding: 0 15px;
-    color: #044566;
+    border-left: solid 5px #219ebc;
+	margin: 0;
+	padding: 0 15px;
+	color: #044566;
 }
 .main-description-company p {
     line-height: 1;
 }
 .clean-company {
-    border: solid 1px #ebebeb;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgb(149, 149, 149);
-    width: 95vw;
-    margin: 10px auto;
-    transition: .3s;
+    position: relative;
+	width: 50%;
+	border: solid 1px #ebebeb;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgb(149, 149, 149);
+	width: 95vw;
+	margin: 10px auto;
+	padding: 5px;
 }
-.clean-company:hover {
-    transform:scale(1.05)
-}
-.clean-company article {
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.clean-company article img{
+.clean-company img{
     display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
 }
-.clean-company article .img-clean-company{
-    width: 50%;
-    border-radius: 5px;    
+.descriptionCompany {
+    position: absolute;
+	bottom: 100%;
+	right: 0;
+	left: 0;
+	background: linear-gradient(180deg,#219ebc, #044566) ;
+	overflow: hidden;
+	width: 95%;
+	height: 0;
+	text-align: center;
+	padding: 0 10px;
+	transition: .7s ease;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-.clean-company .second-description {
-    width: 50%;
-    text-align: left;
-    padding: 0 10px;
+.clean-company:hover .descriptionCompany {
+	bottom: 0;
+	height: 100%;
 }
-.clean-company .second-description h3 {
-    font-size: 16px;
-    color: #044566;
+.clean-company h3 {
+    text-align: center;
+	color: #044566;
+	margin: 0;
+	line-height: 1;
+}
+.descriptionCompany h4 {
     margin: 0;
-    line-height: 1;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 400;
 }
-.clean-company .second-description h4 {
+.descriptionCompany strong {
     margin: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #000000;
-    font-weight: 400;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffffff;
 }
-.clean-company .second-description strong {
-    margin: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #044566;
+.descriptionCompany p {
+    margin: 10px;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 400;
 }
-.clean-company .second-description p {
-    display: none;
-    line-height: 1;
+.request {
+	width: 200px;
+	height: 40px;
+  border: solid 1px #219ebc;
+	border-radius: 8px;
+	color: #ffffff;
+	background-color: #044566;
+	font-family: 'Pragati Narrow';
+	font-size: 20px;
+	text-align: center;
+	transition: all 0.3s;
+}
+.request:hover {
+	background-color: #fb8500;
 }
 
 /*---------------------
 -Disinfection services-
 ---------------------*/
-
-.disinfection-services-company {
-    width: 100vw;
-    margin: 0 auto;
-    text-align: center;
-}
 .main-description-company {
     text-align: left;
     padding: 0 15px;
@@ -97,132 +112,110 @@
     line-height: 1;
 }
 .disinfection-company {
-    border: solid 1px #ebebeb;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgb(149, 149, 149);
-    width: 95vw;
-    margin: 10px auto;
+    position: relative;
+	width: 50%;
+	border: solid 1px #ebebeb;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgb(149, 149, 149);
+	width: 95vw;
+	margin: 10px auto;
+	padding: 5px;
 }
-.disinfection-company article {
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.disinfection-company article img{
+.disinfection-company img{
     display: block;
-    width: 100%;
-    border-radius: 5px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
 }
-.disinfection-company article .img-disinfection-company{
-    width: 50%;
-    border-radius: 5px;    
+.descriptionCompany {
+    position: absolute;
+	bottom: 100%;
+	right: 0;
+	left: 0;
+	background: linear-gradient(180deg,#219ebc, #044566) ;
+	overflow: hidden;
+	width: 95%;
+	height: 0;
+	text-align: center;
+	padding: 0 10px;
+	transition: .7s ease;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-.disinfection-company .second-description {
-    width: 50%;
-    text-align: left;
-    padding: 0 10px;
+.disinfection-company:hover .descriptionCompany {
+	bottom: 0;
+	height: 100%;
 }
-.disinfection-company .second-description h3 {
-    font-size: 16px;
-    color: #044566;
+.disinfection-company h3 {
+    text-align: center;
+	color: #044566;
+	margin: 0;
+	line-height: 1;
+}
+.descriptionCompany h4 {
     margin: 0;
-    line-height: 1;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 400;
 }
-.disinfection-company .second-description h4 {
+.descriptionCompany strong {
     margin: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #000000;
-    font-weight: 400;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffb703;
 }
-.disinfection-company .second-description strong {
-    margin: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #044566;
+.descriptionCompany p {
+    margin: 10px;
+	line-height: 1;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: 400;
 }
-.disinfection-company .second-description p {
-    display: none;
-    line-height: 1;
+.request {
+	width: 200px;
+	height: 40px;
+  border: solid 1px #219ebc;
+	border-radius: 8px;
+	color: #ffffff;
+	background-color: #044566;
+	font-family: 'Pragati Narrow';
+	font-size: 20px;
+	text-align: center;
+	transition: all 0.3s;
+}
+.request:hover {
+	background-color: #fb8500;
 }
 
 /*-----------------
 ---MEDIA QUERIES---
 -----------------*/
 
-@media(min-width: 480px) {
-    .company-category h2 {
-     margin: 0;
-    } 
-    .disinfection-service article .img, .clean-service article .img {
-     display: flex;
-     align-items: center;
-    }
-    .company-category {
-     justify-content: space-around;
-     align-items: center;
-    } 
- }
- @media(min-width:769px) {
-    .all-clean-works, .all-disinfection-works{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .clean-company {
-        width: 47%;
-    }
-    .disinfection-company {
-        width: 47%;
-    }
-    .disinfection-company-hidden {
-        width: 47%;
-    }
- }
- @media(min-width:960px) {
-    .clean-company .second-description p {
-        display: block;
-        line-height: 1;
-    }
-    .clean-company article {
-        flex-direction: column;
-    }
-    .clean-company article .second-description {
-        margin-top: 10px;
-    }
-    .clean-company article .img-clean-company,
-    .clean-company article .second-description {
-        width: 100%;
-    }
-    .clean-company article .second-description h3 {
-        font-size: 18px;
-    }
-
-    /*-----------------
-    ---Disinfection---
-    -----------------*/
-
-    .disinfection-company .second-description p {
-        display: block;
-        line-height: 1;
-    }
-    .disinfection-company article {
-        flex-direction: column;
-    }
-    .disinfection-company article .second-description {
-        margin-top: 10px;
-    }
-    .disinfection-company article .img-disinfection-company,
-    .disinfection-company article .second-description {
-        width: 100%;
-    }
-    .disinfection-company article .second-description h3 {
-        font-size: 18px;
-    }
+@media (min-width: 480px) {
+	.descriptionCompany{
+		width: auto;
+	}
 }
-@media(min-width:1280px) {
-    .category, .clean-services-company,
-    .disinfection-services-company {
-        max-width: 1200px;
-    }
+@media (min-width: 769px) {
+	.all-clean-works,
+    .all-disinfection-works {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.clean-company {
+		width: 30%;
+	}
+	.disinfection-company {
+		width: 30%;
+	}
+}
+@media (min-width: 1200px) {
+	.clean-company,
+	.disinfection-company {
+		max-width: 1280px;
+	}
 }
