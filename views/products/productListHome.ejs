@@ -3,77 +3,47 @@
 <body>
 	<%- include ('../partials/header') %>
 	<main>
-		<section class="service-category">
-			<h2>Seleccione la categoria</h2>
-			<div class="home-category">
-				<div class="clean-serv">
-					<article>
-						<div class="img">
-							<img src="img/imgServiciosMyHelp/limpieza.svg" alt="limpieza" />
-						</div>
-						<div class="clean-title">
-							<a href="#cleaning-services"><button type="submit">Limpieza y Aseo</button></a>
-						</div>
-					</article>
-				</div>
-				<div class="special-serv">
-					<article>
-						<div class="img">
-							<img src="img/imgServiciosMyHelp/serviceCollage.svg" alt="limpieza" />
-						</div>
-						<div class="clean-title">
-							<a href="#special-services"><button type="submit">Servicios Especiales</button></a>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-		<section class="cleaning-services">
-			<div class="main-description">
-				<h2>Limpieza y Aseo</h2>
-				<p>
-					Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en servicios de limpieza.
-				</p>
-			</div>
-			<div class="all-works">
+		<div class="main-description">
+			<h2>Limpieza y Aseo</h2>
+			<p>
+				Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en servicios de limpieza.
+			</p>
+		</div>
+		<div class="all-works">
 				<% clean.forEach(row => { %>
 				<div class="clean-home">
-					<article>
-						<div class="img-clean">
 							<img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
-						</div>
-						<div class="second-description">
 							<h3><%= row.nombre %></h3>
-							<h4>Precio: <strong>$<%= row.precio %></strong></h4>
-							<p><%= row.descripcion %></p>
-						</div>
-					</article>
+
+							<div class="second-description">
+								<h4>Precio: <strong>$<%= row.precio %></strong></h4>
+								<p><%= row.descripcion %></p>
+								<a href="productDetail">
+									<button class="request" type="submit"> Solicita aquí tu servicio</button></a>
+							</div>
 				</div>
 				<%}); %>
-			</div>
-		</section>
-		<section class="special-services">
-			<div class="main-description">
-				<h2>Servicios Especiales</h2>
-				<p>Tu necesidad, nuestra especialidad.</p>
-			</div>
-			<div class="all-works">
-				<% special.forEach(row => { %>
-				<div class="works">
-					<article>
-						<div class="img-clean">
-							<img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
-						</div>
-						<div class="second-description">
-							<h3><%= row.nombre %></h3>
-							<h4>Precio: <strong>$<%= row.precio %></strong></h4>
-							<p><%= row.descripcion %></p>
-						</div>
-					</article>
+		</div>
+
+	<div class="main-description">
+		<h2>Servicios Especiales</h2>
+		<p>Tu necesidad, nuestra especialidad.</p>
+	</div>
+	<div class="all-works">
+		<% special.forEach(row => { %>
+		<div class="works">
+					<img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
+					<h3><%= row.nombre %></h3>
+				
+				<div class="description">
+					<h4>Precio: <strong>$<%= row.precio %></strong></h4>
+					<p><%= row.descripcion %></p>
+					<a href="productDetail">
+						<button class="request" type="submit"> Solicita aquí tu servicio</button></a>
 				</div>
-				<%}); %>
-			</div>
-		</section>
-	</main>
+		</div>
+		<%}); %>
+	</div>
+</main>
 	<%- include ('../partials/footer') %>
 </body>
