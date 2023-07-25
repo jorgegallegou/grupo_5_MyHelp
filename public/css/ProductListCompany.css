@@ -1,110 +1,13 @@
-.category {
-    width: 100vw;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #edf8fb;
-}
-.category h2 {
-    margin: 0;
-}
-.company-category {
-    display: flex;
-}
-.clean-service {
-    border:solid 1px #219EBC;
-    border-radius: 20px;
-    margin: 10px 10px;
-    width: 50%;
-}
-.clean-service article {
-    padding: 10px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.clean-service article img {
-    display: block;
-    width: 100%;
-    border-radius: 5px;
-}
-.clean-service article .img{
-    width: 50%;
-    border-radius: 5px;
-    display: none;
-}
-.clean-service article .clean-company-title button{
-    background-color: #044566;
-    height: 35px;
-    margin: 0 10px;
-    border-right: solid 3px #219EBC;
-    border-bottom: none;
-    border-top: none;
-    border-left: none;
-    border-radius: 8px;
-    font-family: 'Pragati Narrow';
-    color: #ffffff;
-    transition: all 0.3s;
-    line-height: 1;  
-}
-.clean-service article .clean-company-title button:hover {
-    background-color: #FB8500;
-}
-.disinfection-service {
-    border:solid 1px #219EBC;
-    border-radius: 20px;
-    margin: 10px 10px;
-    width: 50%;
-}
-.disinfection-service article {
-    padding: 10px;
-    margin-bottom: 5px;
-}
-.disinfection-service article img {
-    display: block;
-    width: 100%;
-    border-radius: 5px;
-}
-.disinfection-service article .img{
-    width: 50%;
-    border-radius: 5px;
-    display: none;
-}
-.disinfection-service article{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.disinfection-service article .clean-company-title button{
-    background-color: #044566;
-    height: 35px;
-    margin: 0 10px;
-    border-right: solid 3px #FB8500;
-    border-bottom: none;
-    border-top: none;
-    border-left: none;
-    border-radius: 8px;
-    font-family: 'Pragati Narrow';
-    color: #ffffff;
-    transition: all 0.3s;
-    line-height: 1;  
-}
-.disinfection-service article .clean-company-title button:hover {
-    background-color: #FB8500;
-}
+
 
 /*--------------------
 ---Cleaning services--
 --------------------*/
 
-.clean-services-company {
-    width: 100vw;
-    margin: 0 auto;
-    text-align: center;
-}
 .main-description-company {
     text-align: left;
     padding: 0 15px;
+    margin: 10px 0;
 }
 .main-description-company h2 {
     border-left: solid 5px #219EBC;
@@ -121,6 +24,10 @@
     box-shadow: 0 0 5px rgb(149, 149, 149);
     width: 95vw;
     margin: 10px auto;
+    transition: .3s;
+}
+.clean-company:hover {
+    transform:scale(1.05)
 }
 .clean-company article {
     padding: 10px;
@@ -131,6 +38,7 @@
 .clean-company article img{
     display: block;
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 .clean-company article .img-clean-company{

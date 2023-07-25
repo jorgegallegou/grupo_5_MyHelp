@@ -1,22 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/productsController");
-const multer = require("multer");
-const path = require("path");
 
-const multerDiskStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.resolve(__dirname, "../../public/img/imgServiciosMyHelp"));
-  },
-  filename: (req, file, cb) => {
-    let imageName = Date.now() + "-" + file.originalname;
-    cb(null, imageName);
-  },
-});
-
-const fileUpload = multer({
-  storage: multerDiskStorage,
-});
+const uploadFile = require("../middlewares/multerProductMiddleware")
 
 // PRODUCTS
 router.get("/productHome", controller.productListHome);
@@ -27,11 +13,11 @@ router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT
 router.get("/product/create", controller.productLoad);
-router.post("/product", fileUpload.single("imagen"), controller.processCreate);
+router.post("/product", uploadFile.single("imagen"), controller.processCreate);
 
 // EDIT PRODUCT
 router.get("/product/edit/:id", controller.productEdit);
-router.put("/product/:id", fileUpload.single("imagen"), controller.processEdit);
+router.put("/product/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT
 router.delete("/product/:id", controller.processDelete);
