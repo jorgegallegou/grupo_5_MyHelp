@@ -9,7 +9,9 @@
 	width: 100%;
 }
 
-/* MY PROFILE */
+/* ----------------
+     MY PROFILE 
+----------------- * /
 
 /* Estilo para el enlace del perfil */
 .profile-link {
@@ -46,10 +48,6 @@
 .nav-item i {
 	margin-right: 5px;
 }
-
-
-
-
 
 
 /*--------------------
