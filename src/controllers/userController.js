@@ -24,7 +24,6 @@ module.exports = {
           }          
         })
       }
-    //-------
 
     const rsdoValidation = validationResult(req);
     if (!rsdoValidation.isEmpty()) {
@@ -46,9 +45,7 @@ module.exports = {
         JSON.stringify([...users, newUser], null, 2),
         "utf-8"
       );
-      return res.send(`Usuario 
-      ${newUser.nombre} 
-      creado`)
+      return res.redirect("/")
       }
   },
 
@@ -68,9 +65,6 @@ module.exports = {
           res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) * 2 })
 
         }
-
-
-
          return res.redirect("profile")
        }
        return res.render ("user/login", {errors: {email: {msg: 'Las credenciales son inválidas'}}});

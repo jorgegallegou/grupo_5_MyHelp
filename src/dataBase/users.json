@@ -108,5 +108,16 @@
     "tipo_identificacion": "Cedula de ciudadania",
     "numero_identificacion": "3210987654",
     "telefono": "3210987654"
+  },
+  {
+    "id": 11,
+    "nombre": "Pepito Perez",
+    "email": "pepito@prueba.com",
+    "password": "$2a$10$WiHtC3Iq0DufIuL94E6WS.YEnqo8wiTuuFLl5FlAZFIzP5f6Imeju",
+    "categoria": "",
+    "image": "1690211829442-01-01-2014.jpg",
+    "tipo_identificacion": "Cedula de ciudadania",
+    "numero_identificacion": "93513306",
+    "telefono": "3177156374"
   }
 ]
