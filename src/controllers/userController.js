@@ -14,16 +14,16 @@ module.exports = {
   processRegister: (req, res) => {
     
     //Validación de email ya registrado
-    let userInDB = User.findByField('email', req.body.email);
-      if (userInDB) {
-        return res.render ('user/register', {
-          errors: {
-            email: {
-              msg: 'Este email ya está registrado'
-            }
-          }          
-        })
-      }
+    let userRegistered = users.find((row) => row.email == req.body.email);
+        if (userRegistered) {
+          return res.render("user/register", {
+            errors: {
+              email: {
+                msg: "Email ya registrado",
+              },
+            },
+          });
+        }
 
     const rsdoValidation = validationResult(req);
     if (!rsdoValidation.isEmpty()) {
@@ -81,6 +81,6 @@ module.exports = {
   logout: (req,res) => {
     res.clearCookie('userEmail')
     req.session.destroy();
-    return res.redirect('/')
+    return res.redirect('user/profile')
   }
 }

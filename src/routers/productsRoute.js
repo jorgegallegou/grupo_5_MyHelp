@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/productsController");
 
 const uploadFile = require("../middlewares/multerProductMiddleware")
+const guestMiddleware = require("../middlewares/guestMiddleware")
 
 // PRODUCTS
 router.get("/productHome", controller.productListHome);
@@ -12,11 +13,11 @@ router.get("/productDetail", controller.productDetail);
 router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT
-router.get("/product/create", controller.productLoad);
+router.get("/product/create", guestMiddleware, controller.productLoad);
 router.post("/product", uploadFile.single("imagen"), controller.processCreate);
 
 // EDIT PRODUCT
-router.get("/product/edit/:id", controller.productEdit);
+router.get("/product/edit/:id", guestMiddleware, controller.productEdit);
 router.put("/product/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT
