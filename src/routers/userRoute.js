@@ -24,11 +24,11 @@ router.post(
 //Formulario de login
 router.get("/login", guestMiddleware, controller.login);
 
-//Procesr el login
-router.post("/login", controller.loginProcess)
+//Process el login
+router.post("/login", controller.loginProcess);
 
 //Perfil del usuario
-router.get("/profile", authMiddleware, controller.profile)
+router.get("/profile", authMiddleware, controller.profile);
 
 //Logout
 router.get("/logout", controller.logout)
