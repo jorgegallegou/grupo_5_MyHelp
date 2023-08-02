@@ -1,3 +1,21 @@
+# Retrospectiva quinto Sprint
+
+## Empezar a hacer
+- 'Codear juntos' los días martes y jueves de cada semana a las 8:00 p.m. (Colombia)
+
+## Seguir haciendo
+- Reuniones semanales los martes a las 20:00 horas.
+
+## Menos de
+- Hacer entrega de los sprint de manera parcial, sin cumplir todos las tareas asignadas. 
+
+## Más de
+- Comunicarnos efectivamente de tal manera que podamos resolver las dificultades como equipo.
+
+## Dejar de hacer
+- Tareas para último momento.
+
+
 # Retrospectiva cuarto Sprint
 
 ## Empezar a hacer
