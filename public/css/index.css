@@ -20,7 +20,7 @@
 }
 
 .profile-link a {
-  display: flex;
+  display: none;
   align-items: center;
   text-decoration: none;
   color: #ffb703;
@@ -28,7 +28,8 @@
 
 .profile-link img {
   width: 40px;
-  border-radius: 50%;
+  height: 40px;
+  border-radius: 100%;
   margin-right: 10px;
 }
 
@@ -342,6 +343,11 @@ footer {
       display: flex;
       justify-content: end;
     }*/
+}
+@media (min-width: 480px) {
+  .profile-link a {
+    display: flex;
+  }
 }
 @media (min-width: 769px) {
   /*----------------------

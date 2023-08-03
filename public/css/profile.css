@@ -1,0 +1,80 @@
+.card {
+  border: solid 1px #219ebc;
+  border-radius: 20px;
+  width: 40%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #023047;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+}
+.card img {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 15px;
+  border: solid 1px #219ebc;
+}
+.data {
+  padding: 15px;
+  color: #ffffff;
+}
+.data h2 {
+  text-align: center;
+  margin: 5px;
+  font-weight: 400;
+}
+.edit-button {
+  text-align: center;
+  padding: 10px;
+}
+.edit-button button {
+  width: 130px;
+}
+.admin-buttons {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.edit-product button,
+.create-product button {
+  width: 130px;
+  margin: 10px;
+}
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.email li {
+  list-style: none;
+  margin-right: 10px;
+}
+.email li i {
+  font-size: 30px;
+  color: #219ebc;
+}
+.email h3 {
+  line-height: 1;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+.phone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phone li {
+  list-style: none;
+  margin-right: 10px;
+}
+.phone li i {
+  font-size: 30px;
+  color: #219ebc;
+}
+.phone h3 {
+  line-height: 1;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}

@@ -1,15 +1,19 @@
-@import 'index.css';
-@import 'formProduct.css';
-@import 'login.css';
-@import 'register.css';
-@import 'productCart.css';
-@import 'productDetail.css';
-@import 'productDetailId.css';
-@import 'productListHome.css';
-@import 'productListCompany.css';
+@import "index.css";
+@import "formProduct.css";
+@import "login.css";
+@import "register.css";
+@import "productCart.css";
+@import "productDetail.css";
+@import "productDetailId.css";
+@import "productListHome.css";
+@import "productListCompany.css";
+@import "profile.css";
 
 body {
-	font-family: 'Pragati Narrow', sans-serif;
-	margin: 0;
-	padding: 0;
+  font-family: "Pragati Narrow", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  min-height: calc(100vh - 170px - 237px);
 }

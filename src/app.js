@@ -5,23 +5,24 @@ const mainRouter = require("./routers/mainRoute");
 const productsRouter = require("./routers/productsRoute");
 const userRouter = require("./routers/userRoute");
 const methodOverride = require("method-override");
-const session = require ('express-session');
-const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
-const cookies = require ("cookie-parser");
-
-
+const session = require("express-session");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const authAdmin = require("./middlewares/authAdmin");
+const cookies = require("cookie-parser");
 
 app.use(express.static("public"));
 
-app.use(session({
-  secret: "Shhh, It's a secret ",
-  resave: false,
-  saveUninitialized: false,
-}))
+app.use(
+  session({
+    secret: "Shhh, It's a secret ",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 app.use(cookies());
-
 app.use(userLoggedMiddleware);
+app.use(authAdmin);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

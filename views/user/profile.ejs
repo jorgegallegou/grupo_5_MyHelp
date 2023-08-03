@@ -6,10 +6,40 @@
 
 <main class="main-login">
 
-  	<div>
-		<h2>Hola <%= user.nombre %> </h2>
-		<img src="/img/imgUsers/<%= user.image %> ">
-		<div><h2><%= user.email %></h2> </div>
+	<div class="card">
+		<img src="/img/imgUsers/<%= user.image %> ">				
+		
+		<div class="data">
+			<h2> <%= user.nombre %></h2>
+			<div class="email">
+				<li><i class="fa-solid fa-envelope"></i></li>
+				<h3> <%= user.email %></h3>
+			</div>
+
+			<div class="phone">
+				<li><i class="fa-solid fa-phone"></i></li>
+				<h3> +57 <%= user.telefono %></h3>
+			</div>
+		</div>
+			<div class="edit-button">
+				<a href="/user/edit">
+					<button class="btn-form-register" type="">Editar perfil</button>
+				</a>
+		</div>
+			<% if (locals.adminLog) { %>
+				<div class="admin-buttons">
+					<div class="edit-product">
+						<a href="/product/edit/:id">
+							<button class="btn-form-register" type="">Editar producto</button>
+						</a>
+					</div>
+					<div class="create-product">
+						<a href="/product/create">
+							<button class="btn-form-register" type="">Crear producto</button>
+						</a>
+					</div>
+				</div>
+		<% } %>
 	</div>
         
 </main>

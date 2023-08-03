@@ -18,11 +18,8 @@
           <% if (locals.isLogged) { %>
           <li class="profile-link">
             <a href="#"
-              ><img
-                src="/img/imgUsers/<%= locals.userLogged.image%>"
-                width="40"
-                style="border-radius: 100%"
-              />Hola <%= locals.userLogged.nombre %></a
+              ><img src="/img/imgUsers/<%= locals.userLogged.image%>" />Hola <%=
+              locals.userLogged.nombre %></a
             >
           </li>
           <li class="nav-item">
