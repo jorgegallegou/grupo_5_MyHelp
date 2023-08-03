@@ -1,39 +1,41 @@
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require('bcryptjs');
+const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const users = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json")));
-const User = require ("../../models/User.js");
+const users = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
+);
 
 module.exports = {
-
   register: (req, res) => {
     res.render("user/register");
   },
 
   processRegister: (req, res) => {
-    
     //Validación de email ya registrado
     let userRegistered = users.find((row) => row.email == req.body.email);
-        if (userRegistered) {
-          return res.render("user/register", {
-            errors: {
-              email: {
-                msg: "Email ya registrado",
-              },
-            },
-          });
-        }
+    if (userRegistered) {
+      return res.render("user/register", {
+        errors: {
+          email: {
+            msg: "Email ya registrado",
+          },
+        },
+      });
+    }
 
     const rsdoValidation = validationResult(req);
     if (!rsdoValidation.isEmpty()) {
-      return res.render("user/register", { errors: rsdoValidation.mapped(), oldData: req.body });
+      return res.render("user/register", {
+        errors: rsdoValidation.mapped(),
+        oldData: req.body,
+      });
     } else {
       const newUser = {
         id: users.length + 1,
         nombre: req.body.nombre,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10), 
+        password: bcrypt.hashSync(req.body.password, 10),
         categoria: "",
         image: req.file.filename,
         tipo_identificacion: req.body.tipo_identificacion,
@@ -45,42 +47,47 @@ module.exports = {
         JSON.stringify([...users, newUser], null, 2),
         "utf-8"
       );
-      return res.redirect("/")
-      }
+      return res.redirect("/");
+    }
   },
 
   login: (req, res) => {
-  return res.render("user/login");
+    return res.render("user/login");
   },
 
   loginProcess: (req, res) => {
-     let userToLogin = User.findByField('email', req.body.email)
-     if (userToLogin) {
-       let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
-       if (isOkThePassword) {
-         delete userToLogin.password
-         req.session.userLogged = userToLogin
+    let userToLogin = users.find((row) => row.email == req.body.email);
+    if (userToLogin) {
+      let isOkThePassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (isOkThePassword) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
 
         if (req.body.remember_user) {
-          res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) * 2 })
-
+          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 30 * 2 });
         }
-         return res.redirect("profile")
-       }
-       return res.render ("user/login", {errors: {email: {msg: 'Las credenciales son inválidas'}}});
-     }
-     return res.render ("user/login", {errors: {email: {msg: 'Email no encontrado'}}})
+        return res.redirect("profile");
+      }
+      return res.render("user/login", {
+        errors: { email: { msg: "Las credenciales son inválidas" } },
+      });
+    }
+    return res.render("user/login", {
+      errors: { email: { msg: "Email no encontrado" } },
+    });
   },
 
-  profile: (req,res) => {
-    return res.render ("user/profile", {
-      user: req.session.userLogged
-    })
+  profile: (req, res) => {
+    return res.render("user/profile", {
+      user: req.session.userLogged,
+    });
   },
 
-  logout: (req,res) => {
-    res.clearCookie('userEmail')
+  logout: (req, res) => {
     req.session.destroy();
-    return res.redirect('user/profile')
-  }
-}
+    return res.redirect("/");
+  },
+};

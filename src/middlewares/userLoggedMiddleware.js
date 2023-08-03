@@ -1,22 +1,27 @@
-const User = require("../../models/User");
+const fs = require("fs");
+const path = require("path");
 
-function userLoggedMiddleware (req, res, next) {
+const users = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
+);
 
-    res.locals.isLogged = false;
+function userLoggedMiddleware(req, res, next) {
+  res.locals.isLogged = false;
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField ('email', emailInCookie);
+  if (!req.session.userLogged && req.cookies.remember) {
+    const userFound = users.find(
+      (row) => row.email == req.cookies.remember_user
+    );
+    delete userFound.password;
+    req.session.userLogged = userFound;
+  }
 
-    if (userFromCookie) {
-        req.session.userLogged = userFromCookie;
-    }
+  if (req.session.userLogged) {
+    res.locals.isLogged = true;
+    res.locals.userLogged = req.session.userLogged;
+  }
 
-    if (req.session.userLogged) {
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
-    }
-    
-    next();
+  next();
 }
 
-module.exports = userLoggedMiddleware 
+module.exports = userLoggedMiddleware;

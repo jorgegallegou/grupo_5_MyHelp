@@ -108,27 +108,5 @@
     "tipo_identificacion": "Cedula de ciudadania",
     "numero_identificacion": "3210987654",
     "telefono": "3210987654"
-  },
-  {
-    "id": 11,
-    "nombre": "Pepito Perez",
-    "email": "pepito@prueba.com",
-    "password": "$2a$10$WiHtC3Iq0DufIuL94E6WS.YEnqo8wiTuuFLl5FlAZFIzP5f6Imeju",
-    "categoria": "1",
-    "image": "1690211829442-01-01-2014.jpg",
-    "tipo_identificacion": "Cedula de ciudadania",
-    "numero_identificacion": "93513306",
-    "telefono": "3177156374"
-  },
-  {
-    "id": 12,
-    "nombre": "prueba",
-    "email": "prueba@gmail.com",
-    "password": "$2a$10$KkXCZF0meG6bcPPFlc0KFenmTwiqBNu.w73jPRH8X4CHLQMyRfwmi",
-    "categoria": "",
-    "image": "1690849313287-default.jpg",
-    "tipo_identificacion": "Cedula de ciudadania",
-    "numero_identificacion": "123",
-    "telefono": "123"
   }
 ]
