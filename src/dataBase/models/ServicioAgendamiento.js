@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
       },
     };
     const config = {
-      tableName: "serviciosAgendamientos",
+      tableName: "servicios_agendamientos",
       timestamps: false,
     };
     const ServicioAgendamiento = sequelize.define(alias, cols, config);

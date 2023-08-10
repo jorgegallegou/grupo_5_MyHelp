@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
       },
     };
     const config = {
-      tableName: "serviciosTickets",
+      tableName: "servicios_tickets",
       timestamps: false,
     };
     const ServicioTicket = sequelize.define(alias, cols, config);

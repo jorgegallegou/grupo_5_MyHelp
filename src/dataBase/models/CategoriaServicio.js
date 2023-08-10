@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
       },
     };
     const config = {
-      tableName: "categoriasServicios",//tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
+      tableName: "categorias_servicios",//tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
       timestamps: false,
     };
     const CategoriaServicio = sequelize.define(alias, cols, config);
