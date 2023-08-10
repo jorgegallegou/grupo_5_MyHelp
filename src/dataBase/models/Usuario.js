@@ -45,12 +45,16 @@ module.exports = (Sequelize, DataTypes) => {
       updated_at: {
         type: DataTypes.DATETIME
       },
+      id_roles: {
+        type: DataTypes.BIGINT.UNSIGNED,
+        allowNull: false,
+      },
     };
     const config = {
       tableName: "usuarios",
       timestamps: false,
     };
-    const usuario = Sequelize.define(alias, cols, config);
+    const usuarios = Sequelize.define(alias, cols, config);
   
-    return usuario;
+    return usuarios;
   };

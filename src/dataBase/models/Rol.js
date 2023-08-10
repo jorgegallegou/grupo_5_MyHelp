@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const alias = "Tecnico";
+    const alias = "Rol";
     const cols = {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -11,14 +11,6 @@ module.exports = (Sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      identificacion: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      foto: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
       created_at: {
         type: DataTypes.DATETIME
       },
@@ -27,10 +19,10 @@ module.exports = (Sequelize, DataTypes) => {
       },
     };
     const config = {
-      tableName: "tecnicos",
+      tableName: "roles",
       timestamps: false,
     };
-    const tecnico = Sequelize.define(alias, cols, config);
+    const roles = Sequelize.define(alias, cols, config);
   
-    return tecnico;
+    return roles;
   };

@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const alias = "Pago";
+    const alias = "Ticket";
     const cols = {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -12,6 +12,10 @@ module.exports = (Sequelize, DataTypes) => {
         allowNull: false,
       },
       total: {
+        type: DataTypes.BIGINT,
+        allowNull: false,
+      },
+      id_usuarios: {
         type: DataTypes.BIGINT,
         allowNull: false,
       },

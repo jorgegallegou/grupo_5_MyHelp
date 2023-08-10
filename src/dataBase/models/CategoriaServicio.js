@@ -13,10 +13,10 @@ module.exports = (Sequelize, DataTypes) => {
       },
     };
     const config = {
-      tableName: "categoria_servicios",
+      tableName: "categorias_servicios",
       timestamps: false,
     };
-    const categoria_servicio = Sequelize.define(alias, cols, config);
+    const categorias_servicios = Sequelize.define(alias, cols, config);
   
-    return categoria_servicio;
+    return categorias_servicios;
   };

@@ -42,7 +42,7 @@ module.exports = (Sequelize, DataTypes) => {
       tableName: "servicios",
       timestamps: false,
     };
-    const servicio = Sequelize.define(alias, cols, config);
+    const servicios = Sequelize.define(alias, cols, config);
   
-    return servicio;
+    return servicios;
   };

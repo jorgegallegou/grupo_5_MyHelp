@@ -1,5 +1,5 @@
 module.exports = (Sequelize, DataTypes) => {
-    const alias = "Agendamiento";
+    const alias = "ServicioTicket";
     const cols = {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -7,28 +7,28 @@ module.exports = (Sequelize, DataTypes) => {
         autoIncrement: true,
         allowNull: false,
       },
-      fecha: {
-        type: DataTypes.BIGINT,
+      id_servicios: {
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
-      hora: {
-        type: DataTypes.STRING,
+      id_tickets: {
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
-      lugar: {
-        type: DataTypes.STRING,
+      precio: {
+        type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
-      id_usuarios: {
+      cantidad: {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
     };
     const config = {
-      tableName: "agendamientos",
+      tableName: "servicios_tickets",
       timestamps: false,
     };
-    const agendamientos = Sequelize.define(alias, cols, config);
+    const servicios_tickets = Sequelize.define(alias, cols, config);
   
-    return agendamientos;
+    return servicios_tickets;
   };
