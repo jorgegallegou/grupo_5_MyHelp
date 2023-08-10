@@ -1,34 +1,34 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Agendamiento";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "Agendamientos";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       fecha: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       hora: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       lugar: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       id_usuarios: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
     };
     const config = {
-      tableName: "agendamientos",
+      tableName: "agendamientos", //tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
       timestamps: false,
     };
-    const agendamientos = Sequelize.define(alias, cols, config);
+    const Agendamiento = sequelize.define(alias, cols, config);
   
-    return agendamientos;
+    return Agendamiento;
   };

@@ -1,26 +1,26 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "ServicioAgendamiento";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "ServiciosAgendamientos";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       id_agendamientos: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
       id_servicios: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
     };
     const config = {
-      tableName: "servicios_agendamientos",
+      tableName: "serviciosAgendamientos",
       timestamps: false,
     };
-    const servicios_agendamientos = Sequelize.define(alias, cols, config);
+    const ServicioAgendamiento = sequelize.define(alias, cols, config);
   
-    return servicios_agendamientos;
+    return ServicioAgendamiento;
   };

@@ -1,22 +1,22 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Categoria_Servicio";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "CategoriasServicios";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       descripcion: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
     };
     const config = {
-      tableName: "categorias_servicios",
+      tableName: "categoriasServicios",//tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
       timestamps: false,
     };
-    const categorias_servicios = Sequelize.define(alias, cols, config);
+    const CategoriaServicio = sequelize.define(alias, cols, config);
   
-    return categorias_servicios;
+    return CategoriaServicio;
   };

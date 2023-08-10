@@ -1,28 +1,28 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Rol";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "Roles";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       nombre: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       created_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
       updated_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
     };
     const config = {
-      tableName: "roles",
+      tableName: "roles",//tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
       timestamps: false,
     };
-    const roles = Sequelize.define(alias, cols, config);
+    const Rol = sequelize.define(alias, cols, config);
   
-    return roles;
+    return Rol;
   };

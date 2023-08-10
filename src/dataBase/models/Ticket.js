@@ -1,30 +1,30 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Ticket";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "Tickets";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       fecha: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       total: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       id_usuarios: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
     };
     const config = {
-      tableName: "pagos",
+      tableName: "tickets",
       timestamps: false,
     };
-    const pago = Sequelize.define(alias, cols, config);
+    const Ticket = sequelize.define(alias, cols, config);
   
-    return pago;
+    return Ticket;
   };
