@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
       },
       fecha: {
-        type: dataTypes.BIGINT,
+        type: dataTypes.DATE,
         allowNull: false,
       },
       total: {

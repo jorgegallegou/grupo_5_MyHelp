@@ -8,14 +8,14 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
       },
       fecha: {
-        type: dataTypes.BIGINT,
+        type: dataTypes.DATE,
         allowNull: false,
       },
       hora: {
         type: dataTypes.STRING,
         allowNull: false,
       },
-      lugar: {
+      direccion: {
         type: dataTypes.STRING,
         allowNull: false,
       },
