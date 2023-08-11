@@ -1,48 +1,44 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Servicio";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "Servicios";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       nombre: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       precio: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       descripcion: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      categoria: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       imagen: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       id_categorias_servicios: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
       created_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
       updated_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
     };
     const config = {
       tableName: "servicios",
       timestamps: false,
     };
-    const servicios = Sequelize.define(alias, cols, config);
+    const Servicio = sequelize.define(alias, cols, config);
   
-    return servicios;
+    return Servicio;
   };

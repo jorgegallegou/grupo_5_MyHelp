@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": root,
+    "username": "myhelp",
+    "password": "Adiviname",
     "database": "myhelp_db",
-    "host": "127.0.0.1",
+    "host": "mysql-myhelp.alwaysdata.net",
     "dialect": "mysql"
   },
   "test": {

@@ -1,52 +1,52 @@
-module.exports = (Sequelize, DataTypes) => {
-    const alias = "Usuario";
+module.exports = (sequelize, dataTypes) => {
+    const alias = "Usuarios";
     const cols = {
       id: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       nombre: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       email: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       password: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       categoria: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       image: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       tipo_identificacion: {
-        type: DataTypes.STRING,
+        type: dataTypes.STRING,
         allowNull: false,
       },
       numero_identificacion: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       telefono: {
-        type: DataTypes.BIGINT,
+        type: dataTypes.BIGINT,
         allowNull: false,
       },
       created_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
       updated_at: {
-        type: DataTypes.DATETIME
+        type: dataTypes.DATETIME
       },
       id_roles: {
-        type: DataTypes.BIGINT.UNSIGNED,
+        type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
     };
@@ -54,7 +54,7 @@ module.exports = (Sequelize, DataTypes) => {
       tableName: "usuarios",
       timestamps: false,
     };
-    const usuarios = Sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
   
-    return usuarios;
+    return Usuario;
   };
