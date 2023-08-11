@@ -87,7 +87,12 @@ module.exports = {
   },
 
   logout: (req, res) => {
-    req.session.destroy();
-    return res.redirect("/");
+    req.session.destroy((err) => {
+      if (err) {
+        console.error("Error destroying session:", err);
+      } else {
+        return res.redirect("/");
+      }
+    });
   },
 };

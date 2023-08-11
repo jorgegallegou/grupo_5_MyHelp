@@ -16,7 +16,7 @@ app.use(
   session({
     secret: "Shhh, It's a secret ",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
   })
 );
 

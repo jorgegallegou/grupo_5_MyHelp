@@ -9,45 +9,86 @@
   width: 100%;
 }
 
-/* ----------------
+/*----------------
      MY PROFILE 
------------------ * /
+------------------*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
 /* Estilo para el enlace del perfil */
-.profile-link {
-  list-style: none;
-  margin-bottom: 10px;
-}
 
-.profile-link a {
-  display: none;
+.droplink {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  text-decoration: none;
   color: #ffb703;
+  text-decoration: none;
+  transition: all 0.5s;
 }
-
-.profile-link img {
+.droplink:hover {
+  color: #fb8500;
+}
+.droplink img {
+  display: block;
   width: 40px;
   height: 40px;
-  border-radius: 100%;
-  margin-right: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.droplink i {
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 /* Estilo para los enlaces de la lista */
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  visibility: hidden;
+  background-color: #023047;
+  right: 0;
+  padding: 5px;
+  border-radius: 1rem;
+  width: 50%;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+}
+.hidden {
+  position: absolute;
+  top: 5px;
+  background-color: #023047;
+  border: none;
+  color: #ffb703;
+  border-radius: 1rem;
+}
 .nav-item {
+  text-align: center;
   list-style: none;
-  margin-bottom: 10px;
+  margin: 15px 0 0 0;
 }
-
-.nav-item a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-}
-
-/* Estilo para el ícono en los enlaces */
 .nav-item i {
-  margin-right: 5px;
+  border-bottom: 1px solid #044566;
+  margin-bottom: 5px;
+  color: #ffb703;
+  scale: 1;
+  transition: all 0.5s;
+}
+.nav-item i:hover {
+  scale: 1.2;
+}
+.nav-item p {
+  font-family: "Pragati Narrow";
+  font-weight: 400;
+  margin: 0;
+}
+.dropdown-content.deploy {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
 }
 
 /*--------------------
@@ -86,40 +127,78 @@
   border-top: solid 1px #044566;
 }
 .menu .logo {
-  height: 80px;
+  max-width: 7rem;
+}
+
+/*---------------------------------
+ Header container-menu drop-down
+ --------------------------------*/
+
+.menu .open {
+  background-color: #023047;
+  border: 0;
+}
+.menu .open i {
+  font-size: 22px;
+  color: #ffb703;
+}
+.nav .close {
+  background-color: #023047;
+  border: 0;
+  color: #ffb703;
+}
+.nav .close i {
+  font-size: 22px;
 }
 .container-menu .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu nav ul {
+.nav {
   display: flex;
+  flex-direction: column;
+  position: absolute;
   align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  right: 0;
+  top: 90px;
+  padding: 0 1.1rem;
+  background-color: #023047;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
 }
-.container-menu nav li {
-  padding-right: 15px;
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0 10px;
+  text-align: center;
 }
-.container-menu nav li a i {
+.nav-list .register,
+.nav-list .log-in {
+  border-bottom: 1px solid #044566;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.nav-list li a i {
   color: #ffb703;
   text-align: center;
 }
-.container-menu nav li a i:hover {
+.nav-list li a i:hover {
   color: #fb8500;
 }
-.container-menu nav li i p {
+.nav-list li i p {
   font-size: 14px;
   font-family: "Pragati Narrow";
   font-weight: 400;
   margin: 3px 0;
 }
-.log-in,
-.register,
-.shopping {
-  display: none;
+.nav.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
 }
 
 /*----------------------
@@ -354,13 +433,30 @@ footer {
   --------HEADER----------
   ----------------------*/
 
-  .log-in,
-  .register,
-  .shopping {
+  .nav {
+    opacity: 1;
+    visibility: visible;
     display: block;
+    background-color: #023047;
+    box-shadow: none;
   }
-  .burger-menu {
+  .open {
     display: none;
+  }
+  .close {
+    display: none;
+  }
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-list .register,
+  .nav-list .log-in {
+    border-bottom: none;
+    margin-bottom: 0;
   }
   /*.top-navbar .nav-links ul{
     display: flex;

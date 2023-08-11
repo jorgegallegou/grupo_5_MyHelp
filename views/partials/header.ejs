@@ -13,27 +13,38 @@
     <div class="menu">
       <a href="/"><img src="/img/logo.png" alt="logo" class="logo" /></a>
 
-      <nav>
-        <ul>
-          <% if (locals.isLogged) { %>
-          <li class="profile-link">
-            <a href="#"
-              ><img src="/img/imgUsers/<%= locals.userLogged.image%>" />Hola <%=
-              locals.userLogged.nombre %></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="/user/profile"
-              ><i class="fa fa-user"><p>Mi perfil</p></i></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="/user/logout"
-              ><i class="fa fa-sign-out"><p>Salir</p></i></a
-            >
-          </li>
+      <% if (locals.isLogged) { %>
+        <div class="dropdown">
+          <a id="droplink" class="droplink" href="#"
+            ><img src="/img/imgUsers/<%= locals.userLogged.image%>" />Hola <%=
+            locals.userLogged.nombre %> <i class="fa-solid fa-angle-down"></i>
+          </a>
+          
+          <div class="dropdown-content" id="dropdown-content">
+            <button class="hidden" id="hidden"><i class="fa-solid fa-xmark"></i></button>
+            <li class="nav-item">
+              <a href="/user/profile"
+                ><i class="fa fa-user"><p>Perfil</p></i>
+              </a>
+    
+            </li>
+            <li class="nav-item">
+              <a href="/user/logout"
+                ><i class="fa fa-sign-out"><p>logout</p></i>
+              </a>
+            </li>
+          </div>
+        </div>
+          
 
-          <% } else { %>
+        <% }else { %>
+
+      <button class="open" id="open"><i class="fa-solid fa-bars"></i></button>
+
+      <nav class="nav" id="nav">
+        <button class="close" id="close"><i class="fa-solid fa-xmark"></i></i></button>
+        <ul class="nav-list">
+           
           <li class="register">
             <a href="/user/register"
               ><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a
@@ -49,14 +60,11 @@
               ><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a
             >
           </li>
-          <li class="burger-menu">
-            <a href="#"
-              ><i class="fa-solid fa-bars"><p>Menu</p></i></a
-            >
-          </li>
           <% } %>
         </ul>
       </nav>
     </div>
   </div>
+  <script src="/js/headerWithoutLog.js"></script>
+  <script src="/js/headerWithLog.js"></script>
 </header>
