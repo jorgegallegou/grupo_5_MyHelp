@@ -19,10 +19,6 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING,
         allowNull: false,
       },
-      categoria: {
-        type: dataTypes.STRING,
-        allowNull: false,
-      },
       imagen: {
         type: dataTypes.STRING,
         allowNull: false,

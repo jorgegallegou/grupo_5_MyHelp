@@ -23,6 +23,16 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
+      created_at: {
+        type: dataTypes.DATETIME
+      },
+      updated_at: {
+        type: dataTypes.DATETIME
+      },
+      indicaciones: {
+        type: dataTypes.STRING,
+        allowNull: false,
+      }
     };
     const config = {
       tableName: "agendamientos", //tableName es opcional. Sequalize infiere que el nombre de la tabla corresponde al nombre del archivo.
