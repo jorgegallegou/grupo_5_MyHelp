@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Detail'}) %>
+<body>
+    
+    <%- include ('../partials/header') %>
+
+<main>
+    <form class="schedule" action="/productCart" method="get">
+        <div  iv class="first-container">
+            <div class="select-options">
+                <div class="horas">
+                    <h3>Elige el horario que se adapte a tus necesidades</h3>
+                    <input type="radio" name="horas" id="4-horas-am" value="am">
+                    <label for="4-horas-am">4 Horas - AM</label>
+                    <input type="radio" name="horas" id="4-horas-pm" value="pm">
+                    <label for="4-horas-pm">4 Horas - PM</label>
+                    <input type="radio" name="horas" id="8-horas" value="all">
+                    <label for="8-horas">8 Horas </label>
+                </div>
+                <div class="periodo">
+                    <h3>Elige el periodo de tiempo</h3>
+                    <input type="radio" name="periodo" id="semanal" value="sem">
+                    <label for="semanal">Semanal</label>
+                    <input type="radio" name="periodo" id="mensual" value="men">
+                    <label for="mensual">Mensual</label>
+                    <input type="radio" name="periodo" id="dia" value="all">
+                    <label for="dia">Dia</label>
+                </div>
+            </div>
+        </div>
+        <div class="fields">
+            <div class="name">
+                <label class="labels" for="names">Nombre completo</label>
+                <input type="text" name="name" id="names" placeholder="Ingresa tu nombre"> 
+            </div>
+    
+                <div class="mail">
+                    <label class="labels" for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo">  
+                </div>
+    
+                <div class="num-phone">
+                    <label class="labels" for="celphone">Celular</label>
+                    <input type="text" name="celphone" id="celphone" placeholder="Ingresa tu celular">             
+                </div>
+    
+                <div class="street">
+                    <label class="labels" for="direction">Dirección</label>
+                    <input type="text" name="direction" id="direction" placeholder="Ingresa tu direccion">
+                </div>
+    
+                <div class="select-date">
+                    <div class="date-picker">
+                        <label class="labels" for="fecha">Fecha</label>
+                        <input class="date" type="date" name="fecha" id="fecha">
+                    </div>
+                    <div class="hour">
+                        <label class="labels" for="hora">Hora</label>
+                    <select name="select" id="hora">
+                        <option value="defaut">Selecione</option>
+                        <option value="1">7:30 AM - 3:00 PM</option>
+                        <option value="2">8:30 AM - 4:30 PM</option>
+                    </select>
+                    </div>
+                    
+                </div>
+    
+                <div class="textarea">
+                    <label class="labels" for="recomendaciones">¿Indicaciones o recomendaciones?</label>
+                    <textarea name="recomendaciones" id="recomendaciones" cols="30" rows="5"></textarea>
+                </div>
+        </div>
+        
+        <div class="buttons">
+            <a href="/productCart">
+                <button class="sending" type="submit">¡Agendar servicio!</button>
+            </a>
+            <button class="clear" type="reset">Cancelar</button>
+        </div>             
+    </form>
+
+    <div class="detail">
+        <div class="second-container">
+            <div class="incluye">
+                <h2>¿Que incluye tu servicio?</h2>
+                    <ul>
+                        <li>
+                        <strong>SERVICIO POR 8 HORAS</strong>
+                        <p>Una empleada Myhelp realizará la labores de limpieza del hogar, teniendo en cuenta el tiempo contratado.</p>
+                        <p>Aseo general de todo tu hogar, incluido:</p>
+                        <p>Limpiar pisos (barrer o aspirar, trapear) en áreas comunes y habitaciones.</p>
+                        <p>Limpieza de baños (lavado general.)</p>
+                        <p>Limpiar cocina (mesón, piso, estufa, lavaplatos, loza.)</p>
+                        <p>Tender camas</p>
+                        <p>Quitar polvo de muebles y superficies de fácil acceso</p>
+                        <p>Lavar ropa y dejarla tendida en el tendedero</p>
+                    </li>
+                    </ul>
+              </div>
+              <div class="no-incluye">
+                <h2>Tu servicio no incluye</h2>
+                <ul>
+                    <li>
+                       <p>Preparación o alistamiento de alimentos.</p>
+                       <p>Aseo profundo en áreas o elementos específicos.</p>
+                       <p>Elementos e insumos para la realización del servicio.</p>
+                    </li>
+                   </ul>
+              </div>
+        </div>
+     </div>           
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>

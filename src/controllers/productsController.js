@@ -12,8 +12,8 @@ module.exports = {
   productCart: (req, res) => {
     return res.render("products/productCart");
   },
-  productDetail: (req, res) => {
-    return res.render("products/productDetail");
+  scheduleService: (req, res) => {
+    return res.render("products/scheduleService");
   },
   productDetailId: (req, res) => {
     const productFound = products.find((row) => row.id == req.params.id);

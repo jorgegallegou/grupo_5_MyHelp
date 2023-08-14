@@ -10,7 +10,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/productHome", controller.productListHome);
 router.get("/productCompany", controller.productListCompany);
 router.get("/productCart", controller.productCart);
-router.get("/productDetail", controller.productDetail);
+router.get("/scheduleService", controller.scheduleService);
 router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT

@@ -1,0 +1,287 @@
+/*-------------------------
+--STYLES SCHEDULE SERVICE--
+-------------------------*/
+
+.first-container {
+  display: block;
+  width: 80%;
+}
+.horas {
+  margin: 5px auto;
+  text-align: center;
+  border-bottom: solid 1px #219ebc;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.horas h3 {
+  margin: 0;
+}
+.horas label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 5px;
+  background-color: #044566;
+  border: solid 1px #219ebc;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow: none;
+  padding: 5px 12px;
+  transition: all 0.2s;
+}
+.horas input[type="radio"]:checked + label {
+  background-color: #fb8500;
+  border: solid 2px #219ebc;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+.horas input[type="radio"] {
+  opacity: 0;
+}
+.periodo {
+  margin: 5px auto;
+  text-align: center;
+  border-bottom: solid 1px #219ebc;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.periodo h3 {
+  margin: 0;
+}
+.periodo label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 5px;
+  background-color: #044566;
+  border: solid 1px #219ebc;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow: none;
+  padding: 5px 12px;
+  transition: all 0.2s;
+}
+.periodo input[type="radio"]:checked + label {
+  background-color: #fb8500;
+  border: solid 2px #219ebc;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+.periodo input[type="radio"] {
+  opacity: 0;
+}
+.first-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*------------------
+-------form---------
+--------------------*/
+.schedule {
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+  text-align: center;
+  margin: 10px auto;
+  width: 70%;
+}
+.fields {
+  display: block;
+  box-sizing: border-box;
+  margin: 10px auto;
+  width: 80%;
+  padding: 15px;
+}
+.name,
+.mail,
+.num-phone,
+.street,
+.textarea {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.select-date {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10px auto;
+}
+.name input[type="text"],
+.mail input[type="email"],
+.num-phone input[type="text"],
+.street input[type="text"],
+select {
+  height: 40px;
+  outline: none;
+  font-family: "Pragati Narrow";
+  font-size: 16px;
+}
+.name input[type="text"]:focus,
+.mail input[type="email"]:focus,
+.num-phone input[type="text"]:focus,
+.street input[type="text"]:focus,
+textarea:focus {
+  outline: solid 2px #ffb703;
+}
+input[type="date"] {
+  height: 40px;
+  outline: none;
+  border: solid 1px #219ebc;
+  margin-bottom: 10px;
+  font-family: "Pragati Narrow";
+  font-size: 16px;
+}
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  border: solid 1px #219ebc;
+  border-radius: 0.5rem;
+}
+textarea {
+  height: 100px;
+  font-family: "Pragati Narrow";
+  font-size: 16px;
+}
+.sending {
+  border: solid 1px #219ebc;
+  color: #ffffff;
+  background-color: #044566;
+  font-family: "Pragati Narrow";
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+  transition: all 0.3s ease;
+}
+.sending:hover {
+  background-color: #ffb703;
+}
+.clear {
+  border: solid 1px #219ebc;
+  color: #ffffff;
+  background-color: #044566;
+  font-family: "Pragati Narrow";
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+  transition: all 0.3s ease;
+}
+.clear:hover {
+  background-color: #ff3503;
+}
+
+/*-------------------------------
+--STYLES DESCRIPTION OF SERVICE--
+-------------------------------*/
+
+.detail {
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgb(100, 100, 100);
+  border-radius: 10px;
+}
+.second .second-container .incluye {
+  padding: 0 5px;
+  margin: 5px 0;
+}
+.second-container .incluye h2 {
+  text-align: center;
+  margin: 0;
+}
+.second-container .incluye ul {
+  border-top: solid 1px #044566;
+  padding: 5px 10px 5px 20px;
+  margin: 5px 0;
+  list-style: none;
+}
+.second-container .incluye ul p {
+  margin: 0;
+  line-height: 1;
+  text-align: justify;
+}
+.second-container .no-incluye {
+  border-radius: 5px;
+  padding: 0 5px;
+  margin: 5px 0;
+}
+.second-container .no-incluye h2 {
+  text-align: center;
+  margin: 0;
+}
+.second-container .no-incluye ul {
+  border-top: solid 1px #044566;
+  padding: 5px 10px 5px 20px;
+  margin: 5px 0;
+  list-style: none;
+}
+.second-container .no-incluye ul p {
+  margin: 0;
+  line-height: 1;
+  text-align: justify;
+}
+/*--------------------------------
+----------MEDIA QUERIES-----------
+--------------------------------*/
+
+@media (min-width: 480px) {
+  .schedule {
+    padding: 10px;
+  }
+  .sending {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  /*------------------------
+  ----MAIN PRODUCT DETAIL---
+  ------------------------*/
+
+  .first-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .first-container .select-options {
+    box-shadow: 0 0 5px rgb(100, 100, 100);
+    border-radius: 8px;
+    margin: 30px 0 30px 0;
+    width: 100%;
+  }
+  .horas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .horas h3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .periodo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: none;
+  }
+  .periodo h3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .second-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .second-container .incluye,
+  .second-container .no-incluye {
+    width: 48%;
+  }
+  .detail {
+    width: 70%;
+  }
+}
