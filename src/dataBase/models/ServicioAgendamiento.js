@@ -1,18 +1,18 @@
-module.exports = (sequelize, dataTypes) => {
-    const alias = "ServiciosAgendamientos";
+module.exports = (sequelize, DataTypes) => {
+    const alias = "ServicioAgendamiento";
     const cols = {
       id: {
-        type: dataTypes.BIGINT.UNSIGNED,
+        type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       id_agendamientos: {
-        type: dataTypes.BIGINT.UNSIGNED,
+        type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
       },
       id_servicios: {
-        type: dataTypes.BIGINT.UNSIGNED,
+        type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
       },
     };
