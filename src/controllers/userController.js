@@ -56,7 +56,10 @@ module.exports = {
   },
 
   loginProcess: (req, res) => {
-    let userToLogin = users.find((row) => row.email == req.body.email);
+    const userData = JSON.parse(
+      fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
+    );
+    let userToLogin = userData.find((row) => row.email == req.body.email);
     if (userToLogin) {
       let isOkThePassword = bcrypt.compareSync(
         req.body.password,
