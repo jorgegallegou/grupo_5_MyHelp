@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const db = require ("../database/models")
 
 const products = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/products.json"))
@@ -21,8 +22,29 @@ module.exports = {
       return res.render("products/productDetailId", { found: productFound });
     else return res.send("Product not found");
   },
-  productListHome: (req, res) => {
-    const cleanProducts = products.filter(
+  productListHome: async (req, res) => {
+    try {
+      const clean = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 1,
+          deleted_at: null,
+        },
+      });
+      const special = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 2,
+          deleted_at: null,
+        },
+      });
+      return res.render("products/productListHome", {
+        clean: clean,
+        special: special,
+      });
+    } catch (error) {
+      console.log(error);
+    };
+    
+    /*const cleanProducts = products.filter(
       (row) => row.categoria == "Limpieza hogar" && row.borrado != true
     );
     const specialProducts = products.filter(
@@ -31,7 +53,10 @@ module.exports = {
     return res.render("products/productListHome", {
       clean: cleanProducts,
       special: specialProducts,
-    });
+      
+    });*/
+
+
   },
   productListCompany: (req, res) => {
     const cleanProducts = products.filter(

@@ -49,5 +49,19 @@ module.exports = (sequelize, DataTypes) => {
   };
   const Agendamiento = sequelize.define(alias, cols, config);
 
-  return Agendamiento;
-};
+  Agendamiento.associate = function (models) {
+    Agendamiento.belongsToMany(models.Servicio, {
+      as: "servicios",
+      through: "servicios_agendamientos",
+      foreignKey: "id_agendamientos",
+      otherKey: "id_servicios",
+      timestamps: true
+    })
+    Agendamiento.belongsTo(models.Usuario, {
+      as: "usuarios",
+      foreignKey: "id_usuarios"
+    })
+  }
+
+return Agendamiento;
+}

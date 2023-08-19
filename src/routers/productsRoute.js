@@ -34,4 +34,9 @@ router.put("/product/:id", uploadFile.single("imagen"), controller.processEdit);
 // DELETE PRODUCT
 router.delete("/product/:id", controller.processDelete);
 
+
+//RUTAS PARA LA CREACIÓN DEL CRUD
+
+//router.get ('/product/add', productsController.add)
+
 module.exports = router;
