@@ -114,5 +114,21 @@
     "descripcion": "Servicio diario o semanal. Servicio de desinfección de superficies para tu oficina",
     "categoria": "Desinfeccion empresa",
     "imagen": "1688691306736-desinfeccionSuperficies.svg"
+  },
+  {
+    "id": 14,
+    "nombre": "Prueba",
+    "precio": "12",
+    "descripcion": "Prueba",
+    "categoria": "Limpieza hogar",
+    "imagen": "1692476852619-default.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Prueba",
+    "precio": "11",
+    "descripcion": "Prueba",
+    "categoria": "1",
+    "imagen": "1692479869701-default.jpg"
   }
 ]

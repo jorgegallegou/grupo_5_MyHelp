@@ -14,21 +14,11 @@ router.get("/scheduleService", controller.scheduleService);
 router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT
-router.get(
-  "/product/create",
-  guestMiddleware,
-  authMiddleware,
-  controller.productLoad
-);
+router.get("/product/create",guestMiddleware,authMiddleware,controller.productLoad);
 router.post("/product", uploadFile.single("imagen"), controller.processCreate);
 
 // EDIT PRODUCT
-router.get(
-  "/product/edit/:id",
-  guestMiddleware,
-  authMiddleware,
-  controller.productEdit
-);
+router.get("/product/edit/:id",guestMiddleware,authMiddleware,controller.productEdit);
 router.put("/product/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT

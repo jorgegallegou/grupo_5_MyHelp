@@ -19,12 +19,13 @@
 
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
-      <select class="select" id="categoria" name="categoria" required>
+      <select class="select" name="categoria" required>
         <option value="">Selecciona categoria</option>
-        <% categories.forEach(row => {  %>
-        <option value="<%= row.categoria %>"><%= row.categoria %></option>
-        <%}); %>
-        
+        <% for (i=0; i < categorias.length; i++) {  %>
+            <option value="<%= categorias[i].id %>">
+              <%= categorias[i].descripcion %>
+            </option>
+        <% }; %>
       </select>
     </div>
    

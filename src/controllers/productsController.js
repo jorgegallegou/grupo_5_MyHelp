@@ -10,18 +10,25 @@ const categories = JSON.parse(
 );
 
 module.exports = {
+
   productCart: (req, res) => {
     return res.render("products/productCart");
   },
+
+
   scheduleService: (req, res) => {
     return res.render("products/scheduleService");
   },
+
+
   productDetailId: (req, res) => {
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound && productFound.borrado != true)
       return res.render("products/productDetailId", { found: productFound });
     else return res.send("Product not found");
   },
+
+
   productListHome: async (req, res) => {
     try {
       const clean = await db.Servicio.findAll({
@@ -42,22 +49,10 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-    };
-    
-    /*const cleanProducts = products.filter(
-      (row) => row.categoria == "Limpieza hogar" && row.borrado != true
-    );
-    const specialProducts = products.filter(
-      (row) => row.categoria == "Servicios especiales" && row.borrado != true
-    );
-    return res.render("products/productListHome", {
-      clean: cleanProducts,
-      special: specialProducts,
-      
-    });*/
-
-
+      };
   },
+
+
   productListCompany: (req, res) => {
     const cleanProducts = products.filter(
       (row) => row.categoria == "Limpieza empresa" && row.borrado != true
@@ -70,25 +65,40 @@ module.exports = {
       disinfection: disinfectionProducts,
     });
   },
-  productLoad: (req, res) => {
-    return res.render("products/productLoad", { categories: categories });
+
+/*-------------------------------------------------------------------------------------
+-- Muestra la lista de categorias en la vista de "Creacion de Servicio" --> ProductLoad
+-------------------------------------------------------------------------------------*/
+  productLoad: async (req, res) => {
+    try {
+      db.CategoriaServicio.findAll()
+      .then(function(categorias){
+        return res.render("products/productLoad", { categorias: categorias });
+      })
+    } catch (error) {
+      console.log(error);
+      };
   },
-  processCreate: (req, res) => {
-    const newProduct = {
-      id: products.length + 1,
-      nombre: req.body.nombre,
-      precio: req.body.precio,
-      descripcion: req.body.descripcion,
-      categoria: req.body.categoria,
-      imagen: req.file.filename,
+
+/*--------------------
+-- CRUD: Método CREATE
+--------------------*/
+  processCreate: async (req, res) => {
+    try {
+        await db.Servicio.create({
+          nombre: req.body.nombre,
+          precio: req.body.precio,
+          descripcion: req.body.descripcion,
+          id_categorias_servicios: req.body.categoria,
+          imagen: req.file.filename,
+        });
+        return res.redirect("/");
+    } catch (error) {
+      console.log(error);
     };
-    fs.writeFileSync(
-      path.resolve(__dirname, "../dataBase/products.json"),
-      JSON.stringify([...products, newProduct], null, 2),
-      "utf-8"
-    );
-    return res.redirect("/");
   },
+
+
   productEdit: (req, res) => {
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound)
@@ -98,6 +108,8 @@ module.exports = {
       });
     else return res.send("Product not found");
   },
+
+
   processEdit: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
     if (req.file) {
@@ -118,6 +130,8 @@ module.exports = {
     );
     return res.redirect("/");
   },
+
+
   processDelete: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
     product.borrado = true;
