@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const db = require ("../database/models")
+const db = require("../database/models");
 
 const products = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/products.json"))
@@ -42,8 +42,8 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-    };
-    
+    }
+
     /*const cleanProducts = products.filter(
       (row) => row.categoria == "Limpieza hogar" && row.borrado != true
     );
@@ -55,11 +55,30 @@ module.exports = {
       special: specialProducts,
       
     });*/
-
-
   },
-  productListCompany: (req, res) => {
-    const cleanProducts = products.filter(
+  productListCompany: async (req, res) => {
+    try {
+      const cleaning = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 3,
+          deleted_at: null,
+        },
+      });
+      const disinfection = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 4,
+          deleted_at: null,
+        },
+      });
+      return res.render("products/productListCompany", {
+        cleaning: cleaning,
+        disinfection: disinfection,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    /*const cleanProducts = products.filter(
       (row) => row.categoria == "Limpieza empresa" && row.borrado != true
     );
     const disinfectionProducts = products.filter(
@@ -68,7 +87,7 @@ module.exports = {
     return res.render("products/productListCompany", {
       cleaning: cleanProducts,
       disinfection: disinfectionProducts,
-    });
+    });*/
   },
   productLoad: (req, res) => {
     return res.render("products/productLoad", { categories: categories });
