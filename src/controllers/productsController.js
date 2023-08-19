@@ -65,16 +65,37 @@ module.exports = {
 
 
   },
-  productListCompany: (req, res) => {
-    const cleanProducts = products.filter(
+  productListCompany: async (req, res) => {
+    try {
+      const cleaning = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 3,
+          deleted_at: null,
+        },
+      });
+      const disinfection = await db.Servicio.findAll({
+        where: {
+          id_categorias_servicios: 4,
+          deleted_at: null,
+        },
+      });
+      return res.render("products/productListCompany", {
+        cleaning: cleaning,
+        disinfection: disinfection,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    /*const cleanProducts = products.filter(
       (row) => row.categoria == "Limpieza empresa" && row.borrado != true
     );
     const disinfectionProducts = products.filter(
-      (row) => row.categoria == "Desinfeccion empresa" && row.borrado != true
-    );
+@@ -68,7 +87,7 @@ module.exports = {
     return res.render("products/productListCompany", {
       cleaning: cleanProducts,
       disinfection: disinfectionProducts,
+    });
     });*/
   },
 
