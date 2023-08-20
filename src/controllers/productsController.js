@@ -7,24 +7,46 @@ const products = JSON.parse(
 );
 
 module.exports = {
-
   productCart: (req, res) => {
     return res.render("products/productCart");
   },
-
 
   scheduleService: (req, res) => {
     return res.render("products/scheduleService");
   },
 
+  productDetailId: async (req, res) => {
+    /*-----------------------------------------------------------------
+  <-- Muestra el detalle de un producto a travez de bases de datos--> 
+  -----------------------------------------------------------------*/
 
-  productDetailId: (req, res) => {
+    try {
+      const serviceDetail = await db.Servicio.findByPk(req.params.id, {
+        where: {
+          deleted_at: null,
+        },
+        include: [
+          {
+            association: "categorias",
+          },
+        ],
+      });
+      if (serviceDetail) {
+        res.render("products/productDetailId", { found: serviceDetail });
+      } else return res.send("Product not found");
+    } catch (error) {
+      console.log(error);
+    }
+
+    /*-----------------------------------------------------------------
+  <-- Muestra el detalle de un producto a travez de bases de datos--> 
+  -----------------------------------------------------------------
+
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound && productFound.borrado != true)
       return res.render("products/productDetailId", { found: productFound });
-    else return res.send("Product not found");
+    else return res.send("Product not found");*/
   },
-
 
   productListHome: async (req, res) => {
     try {
@@ -46,9 +68,8 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-    };
+    }
   },
-
 
   productListCompany: async (req, res) => {
     try {
@@ -70,57 +91,58 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-    };
+    }
   },
 
-/*-------------------------------------------------------------------------------------
+  /*-------------------------------------------------------------------------------------
 -- Muestra la lista de categorias en la vista de "Creacion de Servicio" --> ProductLoad
 -------------------------------------------------------------------------------------*/
   productLoad: async (req, res) => {
     try {
-      await db.CategoriaServicio.findAll()
-      .then(function(categorias){
+      await db.CategoriaServicio.findAll().then(function (categorias) {
         return res.render("products/productLoad", { categorias: categorias });
-      })
+      });
     } catch (error) {
       console.log(error);
-      };
+    }
   },
 
-/*------------------------------------------------------------------------------------
+  /*------------------------------------------------------------------------------------
 -- CRUD: Método CREATE
 ------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
-        await db.Servicio.create({
-          nombre: req.body.nombre,
-          precio: req.body.precio,
-          descripcion: req.body.descripcion,
-          id_categorias_servicios: req.body.categoria,
-          imagen: req.file.filename,
-        });
-        return res.redirect("/");
+      await db.Servicio.create({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descripcion: req.body.descripcion,
+        id_categorias_servicios: req.body.categoria,
+        imagen: req.file.filename,
+      });
+      return res.redirect("/");
     } catch (error) {
       console.log(error);
-    };
+    }
   },
 
-/*------------------------------------------------------------------------------------
+  /*------------------------------------------------------------------------------------
 -- CRUD: Método UPDATE 
 ------------------------------------------------------------------------------------*/
   productEdit: async (req, res) => {
     try {
-        let servicioPedido = db.Servicio.findByPk(req.params.id);
-        let categoriasPedido = db.CategoriaServicio.findAll();
+      let servicioPedido = db.Servicio.findByPk(req.params.id);
+      let categoriasPedido = db.CategoriaServicio.findAll();
 
-        Promise.all ([servicioPedido, categoriasPedido])
-
-        .then(function ([servicio, categorias]) {
-          res.render ("products/productEdit", {servicio: servicio, categorias: categorias})
-        })
+      Promise.all([servicioPedido, categoriasPedido])
+      .then(function ([servicio, categorias]) {
+        res.render("products/productEdit", {
+          servicio: servicio,
+          categorias: categorias,
+        });
+      });
     } catch (error) {
       console.log(error);
-  };    
+    }
     /*
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound)
@@ -131,7 +153,6 @@ module.exports = {
     else return res.send("Product not found");
     */
   },
-
 
   processEdit: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
@@ -153,7 +174,6 @@ module.exports = {
     );
     return res.redirect("/");
   },
-
 
   processDelete: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
