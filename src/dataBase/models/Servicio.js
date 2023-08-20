@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    descripcion_general: {
+      type: DataTypes.STRING(1234),
+      allowNull: false,
+    },
     imagen: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -49,27 +53,26 @@ module.exports = (sequelize, DataTypes) => {
   };
   const Servicio = sequelize.define(alias, cols, config);
 
-
   Servicio.associate = function (models) {
     Servicio.belongsToMany(models.Agendamiento, {
       as: "agendamientos",
       through: "servicios_agendamientos",
       foreignKey: "id_servicios",
       otherKey: "id_agendamientos",
-      timestamps: true
-    })
+      timestamps: true,
+    });
     Servicio.belongsToMany(models.Ticket, {
       as: "tickets",
       through: "servicios_tickets",
       foreignKey: "id_servicios",
       otherKey: "id_tickets",
-      timestamps: true
-    })
-    Servicio.belongsTo(models.CategoriaServicio,{
+      timestamps: true,
+    });
+    Servicio.belongsTo(models.CategoriaServicio, {
       as: "categorias",
-      foreignKey: "id_categorias_servicios"
-    })
-  }
+      foreignKey: "id_categorias_servicios",
+    });
+  };
 
   return Servicio;
 };
