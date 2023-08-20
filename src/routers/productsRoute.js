@@ -22,11 +22,6 @@ router.get("/product/edit/:id",guestMiddleware,authMiddleware,controller.product
 router.put("/product/edit/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT
-router.delete("/product/borrar/:id", controller.processDelete);
-
-
-//RUTAS PARA LA CREACIÓN DEL CRUD
-
-//router.get ('/product/add', productsController.add)
+router.post("/product/delete/:id", controller.processDelete);
 
 module.exports = router;

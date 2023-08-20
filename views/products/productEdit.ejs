@@ -42,16 +42,12 @@
       
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen">
-
-    <div class="btn-formEditarEliminar">
-      <button class="btn-login-cargar-producto" type="submit">Editar</button>
-      <p></p>
-      
-    </div>
-    
+   
+    <button class="btn-login-cargar-producto" type="submit">Editar</button> 
   </form>
 
-  <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
+  <form action="/product/delete/:id" method="POST" class="formulario">
+    <input type="hidden" name="_method" value="DELETE">
     <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
   </form>
 
