@@ -5,9 +5,6 @@ const db = require("../database/models");
 const products = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/products.json"))
 );
-const categories = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/productCategories.json"))
-);
 
 module.exports = {
 
@@ -50,21 +47,9 @@ module.exports = {
     } catch (error) {
       console.log(error);
     };
-    
-    /*const cleanProducts = products.filter(
-      (row) => row.categoria == "Limpieza hogar" && row.borrado != true
-    );
-    const specialProducts = products.filter(
-      (row) => row.categoria == "Servicios especiales" && row.borrado != true
-    );
-    return res.render("products/productListHome", {
-      clean: cleanProducts,
-      special: specialProducts,
-      
-    });*/
-
-
   },
+
+
   productListCompany: async (req, res) => {
     try {
       const cleaning = await db.Servicio.findAll({
@@ -85,18 +70,7 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-    }
-
-    /*const cleanProducts = products.filter(
-      (row) => row.categoria == "Limpieza empresa" && row.borrado != true
-    );
-    const disinfectionProducts = products.filter(
-@@ -68,7 +87,7 @@ module.exports = {
-    return res.render("products/productListCompany", {
-      cleaning: cleanProducts,
-      disinfection: disinfectionProducts,
-    });
-    });*/
+    };
   },
 
 /*-------------------------------------------------------------------------------------
@@ -104,7 +78,7 @@ module.exports = {
 -------------------------------------------------------------------------------------*/
   productLoad: async (req, res) => {
     try {
-      db.CategoriaServicio.findAll()
+      await db.CategoriaServicio.findAll()
       .then(function(categorias){
         return res.render("products/productLoad", { categorias: categorias });
       })
@@ -113,9 +87,9 @@ module.exports = {
       };
   },
 
-/*--------------------
+/*------------------------------------------------------------------------------------
 -- CRUD: Método CREATE
---------------------*/
+------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
         await db.Servicio.create({
@@ -131,15 +105,31 @@ module.exports = {
     };
   },
 
+/*------------------------------------------------------------------------------------
+-- CRUD: Método UPDATE 
+------------------------------------------------------------------------------------*/
+  productEdit: async (req, res) => {
+    try {
+        let servicioPedido = db.Servicio.findByPk(req.params.id);
+        let categoriasPedido = db.CategoriaServicio.findAll();
 
-  productEdit: (req, res) => {
+        Promise.all ([servicioPedido, categoriasPedido])
+
+        .then(function ([servicio, categorias]) {
+          res.render ("products/productEdit", {servicio: servicio, categorias: categorias})
+        })
+    } catch (error) {
+      console.log(error);
+  };    
+    /*
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound)
-      return res.render("products/productEdit", {
+      return res.render("products/productEdit/:id", {
         found: productFound,
         categories: categories,
       });
     else return res.send("Product not found");
+    */
   },
 
 

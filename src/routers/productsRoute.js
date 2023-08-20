@@ -15,11 +15,11 @@ router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT
 router.get("/product/create",guestMiddleware,authMiddleware,controller.productLoad);
-router.post("/product", uploadFile.single("imagen"), controller.processCreate);
+router.post("/product/create", uploadFile.single("imagen"), controller.processCreate);
 
 // EDIT PRODUCT
 router.get("/product/edit/:id",guestMiddleware,authMiddleware,controller.productEdit);
-router.put("/product/:id", uploadFile.single("imagen"), controller.processEdit);
+router.put("/product/edit/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT
 router.delete("/product/:id", controller.processDelete);

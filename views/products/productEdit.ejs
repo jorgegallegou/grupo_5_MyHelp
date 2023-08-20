@@ -7,28 +7,33 @@
 <main class="main-register">
 
   
-  <form action="/product/<%= found.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
+  <form action="/product/edit/<%= servicio.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
     <h1>Edición de servicio</h1>
     
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
-    <input class="input-normal" type="text" id="nombre" name="nombre" required value="<%= found.nombre %>">
+    <input class="input-normal" type="text" id="nombre" name="nombre" required value="<%= servicio.nombre %>">
     
     <label class="label-principal" for="precio">Precio:</label>
-    <input class="input-normal" type="number" id="precio" name="precio" required value="<%= found.precio %>">
+    <input class="input-normal" type="number" id="precio" name="precio" required value="<%= servicio.precio %>">
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion" required value="<%= found.descripcion %>">
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" required value="<%= servicio.descripcion %>">
 
-    <div>
+    <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
-      <select class="select" id="categoria" name="categoria" required>
-        <option value="optinon 0" disabled>Selecciona categoria</option>
-        <% categories.forEach(row => { %>
-        <option value="<%= row.categoria %>" <% if (found.categoria == row.categoria) { %>
-          selected
-        <% } %>
-        ><%= row.categoria %></option>
-        <%}); %>
+      <select class="select" name="categoria" required>
+        <option value="">Selecciona categoria</option>
+        <% for (i=0; i < categorias.length; i++) {  %>
+          <% if (categorias[i].id == servicio.id_categorias_servicios) { %>
+            <option value="<%= categorias[i].id %>" selected>
+                <%= categorias[i].descripcion %>
+            </option>
+          <% } else { %> 
+              <option value="<%= categorias[i].id %>">
+                <%= categorias[i].descripcion %>
+              </option>
+          <% } %>
+        <% }; %>
       </select>
     </div>
     
@@ -39,7 +44,7 @@
     
   </form>
 
-  <form action="/product/<%= found.id %>?_method=DELETE" method="post" class="formulario">
+  <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
     <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
   </form>
 

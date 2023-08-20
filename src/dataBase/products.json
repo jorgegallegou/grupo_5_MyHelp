@@ -10,10 +10,10 @@
   },
   {
     "id": 2,
-    "nombre": "Limpieza Profunda vapor",
-    "precio": 90000,
+    "nombre": "Limpieza Profunda vapor (PRUEBA)",
+    "precio": "90000",
     "descripcion": "Servicio por horas. Deja impecable áreas específicas como baños y cocinas en tu hogar.",
-    "categoria": "Limpieza hogar",
+    "categoria": "1",
     "imagen": "limpiezaVapor.svg",
     "borrado": false
   },
