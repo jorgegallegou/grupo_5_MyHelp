@@ -116,6 +116,7 @@ module.exports = {
         nombre: req.body.nombre,
         precio: req.body.precio,
         descripcion: req.body.descripcion,
+        descripcion_general: req.body.descripcion_general,
         id_categorias_servicios: req.body.categoria,
         imagen: req.file.filename,
       });
@@ -160,6 +161,7 @@ module.exports = {
             nombre: req.body.nombre,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
+            descripcion_general: req.body.descripcion_general,
             id_categorias_servicios: req.body.categoria,
             imagen: req.file.filename,
         }, 
@@ -210,7 +212,7 @@ module.exports = {
   },
 
 
-  processDelete: (req, res) => {
+  /*processDelete: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
     product.borrado = true;
     fs.writeFileSync(
@@ -219,4 +221,5 @@ module.exports = {
     );
     return res.redirect("/");
   },
+  */
 };

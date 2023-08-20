@@ -9,17 +9,20 @@
   <form action="/product/create" method="post" enctype="multipart/form-data" class="formulario">
     <h1>Carga de servicios</h1>
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
-    <input class="input-normal" type="text" id="nombre" name="nombre" required>
+    <input class="input-normal" type="text" id="nombre" name="nombre">
     
     <label class="label-principal" for="precio">Precio:</label>
-    <input class="input-normal" type="number" id="precio" name="precio" required>
+    <input class="input-normal" type="number" id="precio" name="precio" >
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion" required>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion">
+
+    <label class="label-principal" for="descripcion_general">Descripción general:</label>
+    <input class="input-normal" type="text" id="descripcion_general" name="descripcion_general"">
 
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
-      <select class="select" name="categoria" required>
+      <select class="select" name="categoria">
         <option value="">Selecciona categoria</option>
         <% for (i=0; i < categorias.length; i++) {  %>
             <option value="<%= categorias[i].id %>">
@@ -30,9 +33,9 @@
     </div>
    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
-    <input class="input-normal" type="file" id="imagen" name="imagen" required>
+    <input class="input-normal" type="file" id="imagen" name="imagen">
     
-    <button class="btn-login-cargar-producto" type="submit">Cargar servicio</button>
+    <button class="btn-login-cargar-producto" type="submit">Crear servicio</button>
     
   </form>
 

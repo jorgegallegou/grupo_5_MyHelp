@@ -16,8 +16,11 @@
     <label class="label-principal" for="precio">Precio:</label>
     <input class="input-normal" type="number" id="precio" name="precio" required value="<%= servicio.precio %>">
     
-    <label class="label-principal" for="descripcion">Descripción:</label>
+    <label class="label-principal" for="descripcion">Descripción general:</label>
     <input class="input-normal" type="text" id="descripcion" name="descripcion" required value="<%= servicio.descripcion %>">
+
+    <label class="label-principal" for="descripcion_general">Descripción:</label>
+    <input class="input-normal" type="text" id="descripcion_general" name="descripcion_general" required value="<%= servicio.descripcion_general %>">
 
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
@@ -43,12 +46,15 @@
     <div class="btn-formEditarEliminar">
       <button class="btn-login-cargar-producto" type="submit">Editar</button>
       <p></p>
-      <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
-        <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
-      </form>
+      
     </div>
     
   </form>
+
+  <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
+    <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
+  </form>
+
 </main>
 
 <%- include ('../partials/footer') %>  
