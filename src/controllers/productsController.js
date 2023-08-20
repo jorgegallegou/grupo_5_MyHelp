@@ -134,8 +134,10 @@ module.exports = {
       let servicioPedido = db.Servicio.findByPk(req.params.id);
       let categoriasPedido = db.CategoriaServicio.findAll();
 
-      Promise.all([servicioPedido, categoriasPedido])
-      .then(function ([servicio, categorias]) {
+      Promise.all([servicioPedido, categoriasPedido]).then(function ([
+        servicio,
+        categorias,
+      ]) {
         res.render("products/productEdit", {
           servicio: servicio,
           categorias: categorias,
@@ -143,7 +145,7 @@ module.exports = {
       });
     } catch (error) {
       console.log(error);
-  };    
+    }
     /*
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound)
@@ -157,24 +159,24 @@ module.exports = {
 
   processEdit: async (req, res) => {
     try {
-        await db.Servicio.update({
-            nombre: req.body.nombre,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
-            descripcion_general: req.body.descripcion_general,
-            id_categorias_servicios: req.body.categoria,
-            imagen: req.file.filename,
-        }, 
-            {where: {id: req.params.id}}
-        );
-        return res.redirect("/");
-
+      await db.Servicio.update(
+        {
+          nombre: req.body.nombre,
+          precio: req.body.precio,
+          descripcion: req.body.descripcion,
+          descripcion_general: req.body.descripcion_general,
+          id_categorias_servicios: req.body.categoria,
+          imagen: req.file.filename,
+        },
+        { where: { id: req.params.id } }
+      );
+      return res.redirect("/");
     } catch (error) {
       console.log(error);
-    };
+    }
   },
-  
-    /*
+
+  /*
     const product = products.find((row) => row.id == req.params.id);
     if (req.file) {
       fs.unlinkSync(
@@ -194,25 +196,25 @@ module.exports = {
     );
     return res.redirect("/");
     */
-  
-/*------------------------------------------------------------------------------------
+
+  /*------------------------------------------------------------------------------------
 -- CRUD: Método DELETE 
 ------------------------------------------------------------------------------------*/
   processDelete: async (req, res) => {
     try {
       await db.Servicio.destroy({
         where: {
-          id: req.params.id
-        }
-      })
-      res.redirect ("/")
+          id: req.params.id,
+        },
+      });
+      res.redirect("/");
     } catch (error) {
       console.log(error);
-      };
+    }
   },
 
-
-  /*processDelete: (req, res) => {
+  /*
+  processDelete: (req, res) => {
     const product = products.find((row) => row.id == req.params.id);
     product.borrado = true;
     fs.writeFileSync(

@@ -115,7 +115,7 @@
 .mail input[type="email"],
 .num-phone input[type="text"],
 .street input[type="text"],
-select {
+.horario {
   height: 40px;
   outline: none;
   font-family: "Pragati Narrow";
