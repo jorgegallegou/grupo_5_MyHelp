@@ -7,7 +7,7 @@
 <main class="main-register">
 
   
-  <form action="/product/edit/<%= servicio.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
+  <form action="/product/edit/<%= servicio.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario"> 
     <h1>Edición de servicio</h1>
     
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
@@ -31,23 +31,24 @@
           <% } else { %> 
               <option value="<%= categorias[i].id %>">
                 <%= categorias[i].descripcion %>
-              </option>
-          <% } %>
-        <% }; %>
-      </select>
+                </option>
+            <% } %>
+          <% }; %>
+        </select>
     </div>
-    
+      
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen">
-    
-    <button class="btn-login-cargar-producto" type="submit">Editar</button>
+
+    <div class="btn-formEditarEliminar">
+      <button class="btn-login-cargar-producto" type="submit">Editar</button>
+      <p></p>
+      <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
+        <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
+      </form>
+    </div>
     
   </form>
-
-  <form action="/product/<%= servicio.id %>?_method=DELETE" method="post" class="formulario">
-    <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
-  </form>
-
 </main>
 
 <%- include ('../partials/footer') %>  

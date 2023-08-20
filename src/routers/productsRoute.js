@@ -22,7 +22,7 @@ router.get("/product/edit/:id",guestMiddleware,authMiddleware,controller.product
 router.put("/product/edit/:id", uploadFile.single("imagen"), controller.processEdit);
 
 // DELETE PRODUCT
-router.delete("/product/:id", controller.processDelete);
+router.delete("/product/borrar/:id", controller.processDelete);
 
 
 //RUTAS PARA LA CREACIÓN DEL CRUD

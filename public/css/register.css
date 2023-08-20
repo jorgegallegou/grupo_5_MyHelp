@@ -39,6 +39,12 @@
   font-size: 18px;
   transition: all 0.3s;
 }
+
+.btn-formEditarEliminar {
+  display: flex;
+}
+
+
 .formulario button:hover {
   background-color: #ffb703;
 }

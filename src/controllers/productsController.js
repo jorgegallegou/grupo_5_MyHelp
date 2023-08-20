@@ -120,20 +120,29 @@ module.exports = {
         })
     } catch (error) {
       console.log(error);
-  };    
-    /*
-    const productFound = products.find((row) => row.id == req.params.id);
-    if (productFound)
-      return res.render("products/productEdit/:id", {
-        found: productFound,
-        categories: categories,
-      });
-    else return res.send("Product not found");
-    */
+    };    
   },
 
 
-  processEdit: (req, res) => {
+  processEdit: async (req, res) => {
+    try {
+        await db.Servicio.update({
+            nombre: req.body.nombre,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            id_categorias_servicios: req.body.categoria,
+            imagen: req.file.filename,
+        }, 
+            {where: {id: req.params.id}}
+        );
+        return res.redirect("/");
+
+    } catch (error) {
+      console.log(error);
+    };
+  },
+  
+    /*
     const product = products.find((row) => row.id == req.params.id);
     if (req.file) {
       fs.unlinkSync(
@@ -152,16 +161,30 @@ module.exports = {
       JSON.stringify(products, null, 2)
     );
     return res.redirect("/");
+    */
+  
+/*------------------------------------------------------------------------------------
+-- CRUD: Método DELETE 
+------------------------------------------------------------------------------------*/
+  processDelete: async (req, res) => {
+    try {
+      await db.Servicio.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      res.redirect ("/")
+    } catch (error) {
+      console.log(error);
+      };
   },
-
-
-  processDelete: (req, res) => {
-    const product = products.find((row) => row.id == req.params.id);
-    product.borrado = true;
-    fs.writeFileSync(
-      path.resolve(__dirname, "../dataBase/products.json"),
-      JSON.stringify(products, null, 2)
-    );
-    return res.redirect("/");
-  },
-};
+  /*
+  const product = products.find((row) => row.id == req.params.id);
+        product.borrado = true;
+        fs.writeFileSync(
+          path.resolve(__dirname, "../dataBase/products.json"),
+          JSON.stringify(products, null, 2)
+        );
+        return res.redirect("/");
+  */
+}

@@ -25,8 +25,7 @@
           <a href="scheduleService">
             <button class="request" type="submit">
               Solicita aquí tu servicio
-            </button></a
-          >
+            </button></a>
         </div>
       </div>
       <%}); %>
@@ -51,11 +50,24 @@
           <a href="scheduleService">
             <button class="request" type="submit">
               Solicita aquí tu servicio
-            </button></a
-          >
+            </button></a>
+                        <% if (locals.adminLog) { %>
+                            <div class="admin-buttons">
+                              <div class="edit-product">
+                                <a href="/product/edit/:id">
+                                  <button class="btn-form-register" type="">Editar producto</button>
+                                </a>
+                              </div>
+                              <div class="create-product">
+                                <a href="/product/create">
+                                  <button class="btn-form-register" type="">Crear producto</button>
+                                </a>
+                              </div>
+                            </div>
+                        <% } %>
         </div>
       </div>
-      <%}); %>
+      <% }); %>
     </div>
   </main>
   <%- include ('../partials/footer') %>
