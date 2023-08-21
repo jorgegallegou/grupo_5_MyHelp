@@ -29,6 +29,6 @@ router.get("/profile", authMiddleware, controller.profile);
 router.get("/logout", controller.logout);
 
 //Lista de usuarios
-router.get("/list", controller.list);
+router.get("/list", guestMiddleware,authMiddleware,controller.list);
 
 module.exports = router;
