@@ -14,12 +14,7 @@ const regValidations = require('../middlewares/regValidation')
 router.get("/register", guestMiddleware, controller.register);
 
 //Procesar el registro
-router.post(
-  "/register",
-  uploadFile.single("imagen"),
-  regValidations,
-  controller.processRegister
-);
+router.post("/register", uploadFile.single("imagen"), regValidations, controller.processRegister);
 
 //Formulario de login
 router.get("/login", guestMiddleware, controller.login);
@@ -31,6 +26,9 @@ router.post("/login", controller.loginProcess);
 router.get("/profile", authMiddleware, controller.profile);
 
 //Logout
-router.get("/logout", controller.logout)
+router.get("/logout", controller.logout);
+
+//Lista de usuarios
+router.get("/list", controller.list);
 
 module.exports = router;

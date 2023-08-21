@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Lista de usuarios'}) %>
+<body>
+
+  <%- include ('../partials/header') %>
+  <main>
+    <h2>LISTA DE USUARIOS</h2>
+
+    <ul>
+      <% for (let i = 0; i < usuarios.length; i++) { %> 
+        <li>
+          <a href="/user/detail/<% usuarios[i].id %>"><%= usuarios[i].nombre %></a>
+        </li>
+      <% } %>
+    </ul>
+
+  </main>
+  <%- include ('../partials/footer') %>
+  
+</body>
+</html>

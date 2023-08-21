@@ -1,10 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
+
+const { AsyncQueueError } = require("sequelize");
 
 module.exports = {
   register: (req, res) => {
@@ -98,4 +101,14 @@ module.exports = {
       }
     });
   },
-};
+
+  list: async (req, res) => {
+    try {
+      const usuarios = await db.Usuario.findAll()
+      return res.render("user/list", {usuarios: usuarios})
+    } 
+    catch (error) {
+    console.log(error);
+    }
+  }
+}
