@@ -15,11 +15,10 @@ module.exports = {
     return res.render("products/scheduleService");
   },
 
-  productDetailId: async (req, res) => {
-    /*-----------------------------------------------------------------
+  /*-----------------------------------------------------------------
   <-- Muestra el detalle de un producto a travez de bases de datos--> 
   -----------------------------------------------------------------*/
-
+  productDetailId: async (req, res) => {
     try {
       const serviceDetail = await db.Servicio.findByPk(req.params.id, {
         where: {
@@ -38,9 +37,9 @@ module.exports = {
       console.log(error);
     }
 
-    /*-----------------------------------------------------------------
-  <-- Muestra el detalle de un producto a travez de bases de datos--> 
-  -----------------------------------------------------------------
+/*-----------------------------------------------------------------
+<-- Muestra el detalle de un producto a travez de bases de datos--> 
+-----------------------------------------------------------------
 
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound && productFound.borrado != true)
@@ -94,7 +93,7 @@ module.exports = {
     }
   },
 
-  /*-------------------------------------------------------------------------------------
+/*-------------------------------------------------------------------------------------
 -- Muestra la lista de categorias en la vista de "Creacion de Servicio" --> ProductLoad
 -------------------------------------------------------------------------------------*/
   productLoad: async (req, res) => {
@@ -107,12 +106,12 @@ module.exports = {
     }
   },
 
-  /*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
 -- CRUD: Método CREATE
 ------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
-      await db.Servicio.create({
+      const servicioCreado = await db.Servicio.create({
         nombre: req.body.nombre,
         precio: req.body.precio,
         descripcion: req.body.descripcion,
@@ -120,13 +119,13 @@ module.exports = {
         id_categorias_servicios: req.body.categoria,
         imagen: req.file.filename,
       });
-      return res.redirect("/");
+      return res.redirect("/productDetail/" + servicioCreado.id);
     } catch (error) {
       console.log(error);
     }
   },
 
-  /*------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
 -- CRUD: Método UPDATE 
 ------------------------------------------------------------------------------------*/
   productEdit: async (req, res) => {
@@ -197,7 +196,7 @@ module.exports = {
     return res.redirect("/");
     */
 
-  /*------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------
 -- CRUD: Método DELETE 
 ------------------------------------------------------------------------------------*/
   processDelete: async (req, res) => {
