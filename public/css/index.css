@@ -216,32 +216,12 @@
   width: 100%;
   display: block;
   text-align: center;
-  position: relative;
 }
 .main-img img {
   display: block;
   width: 100%;
   border-top: solid 5px #219ebc;
   border-bottom: solid 5px #219ebc;
-}
-.send {
-  border: solid 1px #219ebc;
-  border-radius: 8px;
-  color: #ffffff;
-  background-color: #044566;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 200px;
-  height: 30px;
-  font-family: "Pragati Narrow";
-  font-size: 16px;
-  text-align: center;
-  display: none;
-  transition: all 0.3s;
-}
-.send:hover {
-  background-color: #fb8500;
 }
 .highlight-container {
   width: 100%;
