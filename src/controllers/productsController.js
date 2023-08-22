@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const db = require("../database/models");
+const db = require("../dataBase/models");
 
 const products = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/products.json"))
@@ -130,8 +130,8 @@ module.exports = {
 ------------------------------------------------------------------------------------*/
   productEdit: async (req, res) => {
     try {
-      let servicioPedido = db.Servicio.findByPk(req.params.id);
-      let categoriasPedido = db.CategoriaServicio.findAll();
+      let servicioPedido = await db.Servicio.findByPk(req.params.id);
+      let categoriasPedido = await db.CategoriaServicio.findAll();
 
       Promise.all([servicioPedido, categoriasPedido]).then(function ([
         servicio,

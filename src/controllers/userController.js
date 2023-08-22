@@ -3,6 +3,9 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
+const db = require("../dataBase/models");
+const { Op } = require("sequelize");
+
 const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
@@ -58,32 +61,62 @@ module.exports = {
     return res.render("user/login");
   },
 
-  loginProcess: (req, res) => {
-    const userData = JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
-    );
-    let userToLogin = userData.find((row) => row.email == req.body.email);
-    if (userToLogin) {
-      let isOkThePassword = bcrypt.compareSync(
-        req.body.password,
-        userToLogin.password
-      );
-      if (isOkThePassword) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
+  loginProcess: async (req, res) => {
+    try {
+      const { email, password } = req.body;
 
-        if (req.body.remember_user) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 30 * 2 });
+      const userToLogin = await db.Usuario.findOne({ email });
+
+      if (userToLogin) {
+        const checkPass = await bcrypt.compare(password, userToLogin.password);
+
+        if (checkPass) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if (req.body.remember_user) {
+            res.cookie("userEmail", email, { maxAge: 1000 * 30 * 2 });
+          }
+          return res.redirect("profile");
         }
-        return res.redirect("profile");
+        return res.render("user/login", {
+          errors: { email: { msg: "Las credenciales son inválidas" } },
+        });
       }
       return res.render("user/login", {
-        errors: { email: { msg: "Las credenciales son inválidas" } },
+        errors: { email: { msg: "Email no encontrado" } },
       });
+    } catch (error) {
+      console.log(error);
     }
-    return res.render("user/login", {
-      errors: { email: { msg: "Email no encontrado" } },
-    });
+
+    /*---------------------------------
+      PROCESS TO LOGIN THROUGH JSONDATA
+    ---------------------------------*/
+
+    // const userData = JSON.parse(
+    //   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
+    // );
+    // let userToLogin = userData.find((row) => row.email == req.body.email);
+    // if (userToLogin) {
+    //   let isOkThePassword = bcrypt.compareSync(
+    //     req.body.password,
+    //     userToLogin.password
+    //   );
+    //   if (isOkThePassword) {
+    //     delete userToLogin.password;
+    //     req.session.userLogged = userToLogin;
+    //     if (req.body.remember_user) {
+    //       res.cookie("userEmail", req.body.email, { maxAge: 1000 * 30 * 2 });
+    //     }
+    //     return res.redirect("profile");
+    //   }
+    //   return res.render("user/login", {
+    //     errors: { email: { msg: "Las credenciales son inválidas" } },
+    //   });
+    // }
+    // return res.render("user/login", {
+    //   errors: { email: { msg: "Email no encontrado" } },
+    // });
   },
 
   profile: (req, res) => {
