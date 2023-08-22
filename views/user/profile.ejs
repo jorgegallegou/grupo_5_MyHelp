@@ -4,76 +4,45 @@
 
   <%- include ('../partials/header') %>
 
-	<main class="main-login">
+<main class="main-login">
 
-		<div class="card">
-			<img src="/img/imgUsers/<%= user.image %> ">				
-			
-			<div class="data">
-				<h2> <%= user.nombre %></h2>
-				<div class="email">
-					<li><i class="fa-solid fa-envelope"></i></li>
-					<h3> <%= user.email %></h3>
-				</div>
-	
-				<div class="phone">
-					<li><i class="fa-solid fa-phone"></i></li>
-					<h3> +57 <%= user.telefono %></h3>
-				</div>
+	<div class="card">
+		<img src="/img/imgUsers/<%= user.image %> ">				
+		
+		<div class="data">
+			<h2> <%= user.nombre %></h2>
+			<div class="email">
+				<li><i class="fa-solid fa-envelope"></i></li>
+				<h3> <%= user.email %></h3>
+			</div>
+
+			<div class="phone">
+				<li><i class="fa-solid fa-phone"></i></li>
+				<h3> +57 <%= user.telefono %></h3>
 			</div>
 		</div>
-	
-		<div class="edicion">
-			<form action="/profile/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
-				<h1>Edita tu perfil</h1>
-				<div>
-					<label class="label-principal" for="imagen">Avatar</label>
-					<input class="input-normal" type="file" id="imagen" name="imagen">
-				</div>
-	
-					<div class="container-nombre">
-						<div>
-							<label class="label-principal" for="nombre">Nombre completo</label>
-							<input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="">							
-						</div>
-					</div>
-		
-					<div>
-						<label class="label-principal" for="email">Correo electrónico</label>
-						<input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="">
-					</div>
-	
-					<div>
-						<label class="label-principal" for="celular">Celular</label>
-						<input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" value="">
-				</div>
-	
-				<div class="edit-button">
-					<a href="#">
-						<button class="btn-form-register" type="">Editar perfil</button>
-					</a>
-				</div>
-	
-			</form>			
+			<div class="edit-button">
+				<a href="/user/edit">
+					<button class="btn-form-register" type="">Editar perfil</button>
+				</a>
 		</div>
-		
-				<% if (locals.adminLog) { %>
-					<div class="admin-buttons">
-						<div class="edit-product">
-							<a href="/product/edit/:id">
-								<button class="btn-form-register" type="">Editar producto</button>
-							</a>
-						</div>
-						<div class="create-product">
-							<a href="/product/create">
-								<button class="btn-form-register" type="">Crear producto</button>
-							</a>
-						</div>
+			<% if (locals.adminLog) { %>
+				<div class="admin-buttons">
+					<div class="edit-product">
+						<a href="/product/edit/:id">
+							<button class="btn-form-register" type="">Editar producto</button>
+						</a>
 					</div>
+					<div class="create-product">
+						<a href="/product/create">
+							<button class="btn-form-register" type="">Crear producto</button>
+						</a>
+					</div>
+				</div>
 			<% } %>
-		
-					
-	</main>
+	</div>
+        
+</main>
 
 <%- include ('../partials/footer') %>
 
