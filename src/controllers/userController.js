@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const db = require("../dataBase/models");
 const { Op } = require("sequelize");
@@ -137,11 +136,10 @@ module.exports = {
 
   list: async (req, res) => {
     try {
-      const usuarios = await db.Usuario.findAll()
-      return res.render("user/list", {usuarios: usuarios})
-    } 
-    catch (error) {
-    console.log(error);
+      const usuarios = await db.Usuario.findAll();
+      return res.render("user/list", { usuarios: usuarios });
+    } catch (error) {
+      console.log(error);
     }
-  }
-}
+  },
+};
