@@ -158,6 +158,12 @@ module.exports = {
 
   processEdit: async (req, res) => {
     try {
+      if (!req.file) {
+        const servicio = await db.Servicio.findByPk(req.params.id);
+        imagen = servicio.imagen;
+      } else {
+        imagen = req.file.filename;
+      }
       await db.Servicio.update(
         {
           nombre: req.body.nombre,
@@ -165,10 +171,20 @@ module.exports = {
           descripcion: req.body.descripcion,
           descripcion_general: req.body.descripcion_general,
           id_categorias_servicios: req.body.categoria,
-          imagen: req.file.filename,
+          imagen: imagen,
         },
         { where: { id: req.params.id } }
       );
+
+      // if (req.file) {
+      //   user.image = req.file.filename
+      // }
+      // else {
+      //   user.image = 'default-image.png'
+      // }
+      // fs.writeFileSync(path.resolve(__dirname, '../database/user.json'),JSON.stringify([...datos,user],null,2));
+      // return res.redirect ('/')
+
       return res.redirect("/");
     } catch (error) {
       console.log(error);
