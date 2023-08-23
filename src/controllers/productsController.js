@@ -37,10 +37,9 @@ module.exports = {
       console.log(error);
     }
 
-    /*-----------------------------------------------------------------
-<-- Muestra el detalle de un producto a travez de bases de datos--> 
------------------------------------------------------------------
-
+    /*---------------------------------------------------
+<-- Muestra el detalle de un producto a travez de JSON--> 
+---------------------------------------------------------
     const productFound = products.find((row) => row.id == req.params.id);
     if (productFound && productFound.borrado != true)
       return res.render("products/productDetailId", { found: productFound });

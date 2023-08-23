@@ -8,8 +8,6 @@ const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
 
-const { AsyncQueueError } = require("sequelize");
-
 module.exports = {
   register: (req, res) => {
     res.render("user/register");

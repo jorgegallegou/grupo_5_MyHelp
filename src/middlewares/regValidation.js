@@ -1,4 +1,4 @@
-const { body, check } = require("express-validator");
+const { check } = require("express-validator");
 
 module.exports = [
   check("nombre").notEmpty().withMessage("Campo obligatório"),
@@ -8,8 +8,8 @@ module.exports = [
     .isEmail()
     .withMessage("ingrese un email válido"),
   check("password").notEmpty().withMessage("Campo obligatorio"),
-  check("imagen").custom((value, {req}) => {
-    if (!req.file) throw new Error('Inserta una imagen');
+  check("imagen").custom((value, { req }) => {
+    if (!req.file) throw new Error("Inserta una imagen");
     return true;
   }),
   check("tipo_identificacion").exists().optional(),
