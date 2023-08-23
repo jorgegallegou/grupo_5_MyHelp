@@ -33,6 +33,11 @@ router.get("/profile", authMiddleware, controller.profile);
 router.get("/logout", controller.logout);
 
 //Lista de usuarios
-router.get("/list", guestMiddleware, authMiddleware, controller.list);
+router.get("/list", controller.list);
+
+// Edición de usuario
+//router.get("/user/edit/:id", controller.userEdit);
+//router.put("/user/edit/:id", uploadFile.single("imagen"), controller.userProcessEdit);
+
 
 module.exports = router;
