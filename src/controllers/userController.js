@@ -8,7 +8,6 @@ const users = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
 );
 
-const { AsyncQueueError } = require("sequelize");
 
 module.exports = {
 
@@ -17,43 +16,42 @@ module.exports = {
   },
 
 
-  processRegister: (req, res) => {
-    //Validación de email ya registrado
-    let userRegistered = users.find((row) => row.email == req.body.email);
-    if (userRegistered) {
-      return res.render("user/register", {
-        errors: {
-          email: {
-            msg: "Email ya registrado",
-          },
-        },
-      });
-    }
+  processRegister: async (req, res) => {
+    try {
 
-    const rsdoValidation = validationResult(req);
-    if (!rsdoValidation.isEmpty()) {
-      return res.render("user/register", {
-        errors: rsdoValidation.mapped(),
-        oldData: req.body,
+      const userRegistered = await db.Usuario.findOne({
+        where: { email: req.body.email },
       });
-    } else {
-      const newUser = {
-        id: users.length + 1,
-        nombre: req.body.nombre,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        categoria: "",
-        image: req.file.filename,
-        tipo_identificacion: req.body.tipo_identificacion,
-        numero_identificacion: req.body.identificacion,
-        telefono: req.body.celular,
-      };
-      fs.writeFileSync(
-        path.resolve(__dirname, "../dataBase/users.json"),
-        JSON.stringify([...users, newUser], null, 2),
-        "utf-8"
-      );
+      if (userRegistered) {
+        return res.render("user/register", {
+          errors: {
+            email: {
+              msg: "Email ya registrado",
+            },
+          },
+        });
+      }
+      const rsdoValidation = validationResult(req);
+      if (!rsdoValidation.isEmpty()) {
+        return res.render("user/register", {
+          errors: rsdoValidation.mapped(),
+          oldData: req.body
+        });
+      }else {
+        await db.Usuario.create({
+          nombre: req.body.nombre,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          id_roles: 1,
+          image: !req.file ? 'default-image.jpg' : req.file.filename,
+          tipo_identificacion: req.body.tipo_identificacion,
+          numero_identificacion: req.body.identificacion,
+          telefono: req.body.celular,
+        });
+      }
       return res.redirect("/");
+    } catch (error) {
+      console.log(error);
     }
   },
 
@@ -65,18 +63,15 @@ module.exports = {
 
   loginProcess: async (req, res) => {
     try {
-      const { email, password } = req.body;
-
-      const userToLogin = await db.Usuario.findOne({ email });
-
+      const userToLogin = await db.Usuario.findOne({where :{ email: req.body.email}});
       if (userToLogin) {
-        const checkPass = await bcrypt.compare(password, userToLogin.password);
+        const checkPass = bcrypt.compare(req.body.password, userToLogin.password);
 
         if (checkPass) {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
           if (req.body.remember_user) {
-            res.cookie("userEmail", email, { maxAge: 1000 * 30 * 2 });
+            res.cookie("userEmail", userToLogin.email, { maxAge: 1000 * 30 * 2 });
           }
           return res.redirect("profile");
         }
@@ -90,45 +85,12 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-
-    /*---------------------------------
-     PROCESS TO LOGIN THROUGH JSONDATA
-    ---------------------------------*/
-
-    // const userData = JSON.parse(
-    //   fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
-    // );
-    // let userToLogin = userData.find((row) => row.email == req.body.email);
-    // if (userToLogin) {
-    //   let isOkThePassword = bcrypt.compareSync(
-    //     req.body.password,
-    //     userToLogin.password
-    //   );
-    //   if (isOkThePassword) {
-    //     delete userToLogin.password;
-    //     req.session.userLogged = userToLogin;
-    //     if (req.body.remember_user) {
-    //       res.cookie("userEmail", req.body.email, { maxAge: 1000 * 30 * 2 });
-    //     }
-    //     return res.redirect("profile");
-    //   }
-    //   return res.render("user/login", {
-    //     errors: { email: { msg: "Las credenciales son inválidas" } },
-    //   });
-    // }
-    // return res.render("user/login", {
-    //   errors: { email: { msg: "Email no encontrado" } },
-    // });
   },
-
-
   profile: (req, res) => {
     return res.render("user/profile", {
       user: req.session.userLogged,
     });
   },
-
-
   logout: (req, res) => {
     req.session.destroy((err) => {
       if (err) {

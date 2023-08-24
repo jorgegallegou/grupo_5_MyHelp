@@ -1,17 +1,13 @@
-const fs = require("fs");
-const path = require("path");
+const db = require("../dataBase/models");
 
-const users = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
-);
-
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
 
   if (!req.session.userLogged && req.cookies.remember) {
-    const userFound = users.find(
-      (row) => row.email == req.cookies.remember_user
-    );
+    const userFound = await db.Usuario.findOne({
+      where :{
+        email: req.cookies.remember_user
+    }});
     delete userFound.password;
     req.session.userLogged = userFound;
   }
@@ -25,3 +21,4 @@ function userLoggedMiddleware(req, res, next) {
 }
 
 module.exports = userLoggedMiddleware;
+
