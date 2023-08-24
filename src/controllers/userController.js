@@ -11,9 +11,11 @@ const users = JSON.parse(
 const { AsyncQueueError } = require("sequelize");
 
 module.exports = {
+
   register: (req, res) => {
     res.render("user/register");
   },
+
 
   processRegister: (req, res) => {
     //Validación de email ya registrado
@@ -55,9 +57,11 @@ module.exports = {
     }
   },
 
+
   login: (req, res) => {
     return res.render("user/login");
   },
+
 
   loginProcess: async (req, res) => {
     try {
@@ -117,11 +121,13 @@ module.exports = {
     // });
   },
 
+
   profile: (req, res) => {
     return res.render("user/profile", {
       user: req.session.userLogged,
     });
   },
+
 
   logout: (req, res) => {
     req.session.destroy((err) => {
@@ -133,10 +139,64 @@ module.exports = {
     });
   },
 
+
   list: async (req, res) => {
     try {
       const usuarios = await db.Usuario.findAll();
       return res.render("user/list", { usuarios: usuarios });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+
+
+  /*----------------------------------------------------------
+  -- CRUD: Método UPDATE 
+  ----------------------------------------------------------*/
+  edit: async (req, res) => {
+    try {
+      let usuarioPedido = db.Usuario.findByPk(req.params.id);
+      let rolesPedido = db.Rol.findAll();
+
+      Promise.all([usuarioPedido, rolesPedido]).then(function ([
+        usuario,
+        roles,
+      ]) {
+        res.render("user/edit", {
+          usuario: usuario,
+          roles: roles,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+
+  processEdit: async (req, res) => {
+    try {
+      if (!req.file) {
+        const usuario = await db.Usuario.findByPk(req.params.id);
+        imagen = usuario.imagen;
+      } else {
+        imagen = req.file.filename;
+      }
+      await db.Usuario.update(
+        {
+          nombre: req.body.nombre,
+          email: req.body.email,
+          password: req.body.password,
+          image: req.body.image,
+          tipo_identificacion: req.body.tipo_identificacion,
+          numero_identificacion: req.body.numero_identificacion,
+          id_roles: req.body.roles,
+          telefono: req.body.telefono,
+          imagen: imagen,
+        },
+        { where: { id: req.params.id } }
+      );
+      return res.redirect("/");
     } catch (error) {
       console.log(error);
     }

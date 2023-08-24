@@ -108,5 +108,16 @@
     "tipo_identificacion": "Cedula de ciudadania",
     "numero_identificacion": "3210987654",
     "telefono": "3210987654"
+  },
+  {
+    "id": 11,
+    "nombre": "prueba",
+    "email": "prueba@gmail.com",
+    "password": "$2a$10$LMQ/pD2KeHd.09os2p40QOX.T7SscbUfetWrp6.Pu8cusDkTSRETq",
+    "categoria": "",
+    "image": "1692825069168-default.jpg",
+    "tipo_identificacion": "Cedula de ciudadania",
+    "numero_identificacion": "123",
+    "telefono": "123"
   }
 ]
