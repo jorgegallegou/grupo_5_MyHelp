@@ -11,6 +11,7 @@
 			
 			<div class="data">
 				<h2> <%= user.nombre %></h2>
+				
 				<div class="email">
 					<li><i class="fa-solid fa-envelope"></i></li>
 					<h3> <%= user.email %></h3>
@@ -25,20 +26,22 @@
 	
 		
 		
-				<% if (locals.adminLog) { %>
+				
 					<div class="admin-buttons">
 						<div class="edit-product">
 							<a href="edit/<%= user.id %>">
 								<button class="btn-form-register" type="">Editar perfil</button>
 							</a>
 						</div>
+
+					<% if (locals.adminLog) { %>
 						<div class="create-product">
 							<a href="/product/create">
 								<button class="btn-form-register" type="">Crear producto</button>
 							</a>
 						</div>
 					</div>
-			<% } %>
+					<% } %>
 		
 					
 	</main>

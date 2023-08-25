@@ -140,7 +140,7 @@ module.exports = {
     try {
       if (!req.file) {
         const usuario = await db.Usuario.findByPk(req.params.id);
-        imagen = usuario.imagen;
+        imagen = usuario.image;
       } else {
         imagen = req.file.filename;
       }
@@ -149,12 +149,11 @@ module.exports = {
           nombre: req.body.nombre,
           email: req.body.email,
           password: req.body.password,
-          image: req.body.image,
           tipo_identificacion: req.body.tipo_identificacion,
           numero_identificacion: req.body.numero_identificacion,
           id_roles: req.body.roles,
           telefono: req.body.telefono,
-          imagen: imagen,
+          image: imagen,
         },
         { where: { id: req.params.id } }
       );
