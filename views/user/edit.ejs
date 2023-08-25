@@ -7,7 +7,8 @@
 
       <main class="main-register">
 
-        <form action="/user/edit" method="post" enctype="multipart/form-data" class="formulario">
+        <form action="/user/edit/<%= usuario.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
+        <form action="/user/edit/<%= usuario.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
           <h1 class="crea-tu-cuenta">Edición de usuario</h1>
           
                   
@@ -61,6 +62,34 @@
             <input class="input-normal" type="tel" id="celular" name="celular" value="<%= usuario.telefono %>">
           </div>
 
+
+          
+          <% if (locals.adminLog) { %>
+          <label class="label-principal" for="rol">Rol</label>
+          <select class="select" name="rol">
+            
+            <% for (i=0; i < roles.length; i++) {  %>
+              <% if (roles[i].id == usuario.id_roles) { %>
+                <option value="<%= roles[i].id %>" selected>
+                    <%= roles[i].nombre %>
+                </option>
+              <% } else { %> 
+                  <option value="<%= roles[i].id %>">
+                    <%= roles[i].nombre %>
+                    </option>
+                <% } %>
+              <% }; %>
+
+              <% } %>
+              
+          </select>
+
+
+
+
+
+
+
           
           <div class="container-button">
             <button class="btn-form-register" type="submit">Editar</button>
@@ -68,10 +97,10 @@
 
         </form>
 
-        <form action="/user/delete/:id" method="POST" class="formulario">
+        <!-- <form action="/user/delete/:id" method="POST" class="formulario">
           <input type="hidden" name="_method" value="DELETE">
           <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
-        </form>
+        </form> -->
 
       </main>
 
