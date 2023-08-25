@@ -36,8 +36,8 @@ router.get("/logout", controller.logout);
 router.get("/list", controller.list);
 
 // Edición de usuario
-//router.get("/user/edit/:id", controller.userEdit);
-//router.put("/user/edit/:id", uploadFile.single("imagen"), controller.userProcessEdit);
+router.get("/edit/:id", controller.edit);
+router.put("/edit/:id", uploadFile.single("imagen"), controller.processEdit);
 
 
 module.exports = router;

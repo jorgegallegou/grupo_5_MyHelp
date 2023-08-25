@@ -1,9 +1,12 @@
+const env = require('dotenv')
+
 module.exports = {
   "development": {
-    "username": "myhelp",
-    "password": "Adiviname",
-    "database": "myhelp_db",
-    "host": "mysql-myhelp.alwaysdata.net",
+    "username": procces.env.DB_USER,
+    "password": procces.env.DB_PASS,
+    "database": procces.env.DB_NAME,
+    "port": procces.env.DB_PORT,
+    "host": procces.env.DB_HOST,
     "dialect": "mysql"
   },
   "test": {

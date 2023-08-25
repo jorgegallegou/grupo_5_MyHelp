@@ -23,45 +23,13 @@
 			</div>
 		</div>
 	
-		<div class="edicion">
-			<form action="/profile/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="post" class="formulario">
-				<h1>Edita tu perfil</h1>
-				<div>
-					<label class="label-principal" for="imagen">Avatar</label>
-					<input class="input-normal" type="file" id="imagen" name="imagen">
-				</div>
-	
-					<div class="container-nombre">
-						<div>
-							<label class="label-principal" for="nombre">Nombre completo</label>
-							<input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="">							
-						</div>
-					</div>
 		
-					<div>
-						<label class="label-principal" for="email">Correo electrónico</label>
-						<input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="">
-					</div>
-	
-					<div>
-						<label class="label-principal" for="celular">Celular</label>
-						<input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" value="">
-				</div>
-	
-				<div class="edit-button">
-					<a href="#">
-						<button class="btn-form-register" type="">Editar perfil</button>
-					</a>
-				</div>
-	
-			</form>			
-		</div>
 		
 				<% if (locals.adminLog) { %>
 					<div class="admin-buttons">
 						<div class="edit-product">
-							<a href="/product/edit/:id">
-								<button class="btn-form-register" type="">Editar producto</button>
+							<a href="edit/<%= user.id %>">
+								<button class="btn-form-register" type="">Editar perfil</button>
 							</a>
 						</div>
 						<div class="create-product">

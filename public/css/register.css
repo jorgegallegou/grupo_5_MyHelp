@@ -18,6 +18,7 @@
   border-radius: 10px;
 }
 .btn-form-register {
+  cursor: pointer;
   border: none;
   border-radius: 20px;
   background-color: #044566;
@@ -44,6 +45,9 @@
   display: flex;
 }
 
+.btn-form-register:hover {
+  background-color: #ffb703;
+}
 
 .formulario button:hover {
   background-color: #ffb703;

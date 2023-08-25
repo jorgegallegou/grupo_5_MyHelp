@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<%- include ('../partials/head', {title: 'Edición de usuario' }) %>
+
+  <body>
+
+    <%- include ('../partials/header') %>
+
+      <main class="main-register">
+
+        <form action="/user/edit" method="post" enctype="multipart/form-data" class="formulario">
+          <h1 class="crea-tu-cuenta">Edición de usuario</h1>
+          
+                  
+          <div class="container-nombre">
+            <div>
+              <label class="label-principal" for="nombre">Nombre completo</label>
+              <input class="input-normal" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
+            </div>
+          </div>
+
+          <div>
+            <label class="label-principal" for="email">Correo electrónico</label>
+            <input class="input-normal" type="email" id="email" name="email" value="<%= usuario.email %>">
+          </div>
+
+          
+
+          <div>
+            <label class="label-principal" for="imagen">Avatar</label>
+            <input class="input-normal" type="file" id="imagen" name="imagen">
+          </div>
+
+          <div class="container-identificacion">
+            
+            <div>
+              <label class="label-principal" for="tipo_identificacion">Tipo de identificación</label>
+                <select class="select" id="tipo_identificacion" name="tipo_identificacion"> 
+                  <option value="">Selecciona...</option>
+
+                  <% const tiposIdentificacion= ['Cedula de ciudadania', 'Cedula de extrangeria' , 'Pasaporte' ]; %>
+                    <% for (let tipo of tiposIdentificacion) { %>
+                      <option value="<%= tipo %>" <%=tipo===usuario.tipo_identificacion ? 'selected' : '' %>
+                        >
+                        <%= tipo %>
+                      </option>
+                      <% } %>
+
+                </select>
+            </div>
+            
+            
+            
+            <div>
+              <label class="label-principal" for="identificacion">Número</label>
+              <input class="input-normal" type="number" id="identificacion" name="identificacion" value="<%= usuario.numero_identificacion %>">
+            </div>
+          </div>
+
+          <div>
+            <label class="label-principal" for="celular">Celular</label>
+            <input class="input-normal" type="tel" id="celular" name="celular" value="<%= usuario.telefono %>">
+          </div>
+
+          
+          <div class="container-button">
+            <button class="btn-form-register" type="submit">Editar</button>
+          </div>
+
+        </form>
+
+        <form action="/user/delete/:id" method="POST" class="formulario">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
+        </form>
+
+      </main>
+
+      <%- include ('../partials/footer') %>
+
+  </body>
+
+  </html>
