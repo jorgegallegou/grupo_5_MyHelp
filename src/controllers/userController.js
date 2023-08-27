@@ -10,15 +10,12 @@ const users = JSON.parse(
 
 
 module.exports = {
-
   register: (req, res) => {
     res.render("user/register");
   },
 
-
   processRegister: async (req, res) => {
     try {
-
       const userRegistered = await db.Usuario.findOne({
         where: { email: req.body.email },
       });
@@ -35,15 +32,15 @@ module.exports = {
       if (!rsdoValidation.isEmpty()) {
         return res.render("user/register", {
           errors: rsdoValidation.mapped(),
-          oldData: req.body
+          oldData: req.body,
         });
-      }else {
+      } else {
         await db.Usuario.create({
           nombre: req.body.nombre,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
           id_roles: 1,
-          image: !req.file ? 'default-image.jpg' : req.file.filename,
+          image: !req.file ? "default-image.jpg" : req.file.filename,
           tipo_identificacion: req.body.tipo_identificacion,
           numero_identificacion: req.body.identificacion,
           telefono: req.body.celular,
@@ -55,17 +52,17 @@ module.exports = {
     }
   },
 
-
   login: (req, res) => {
     return res.render("user/login");
   },
 
+  
 
   loginProcess: async (req, res) => {
     try {
       const userToLogin = await db.Usuario.findOne({where :{ email: req.body.email}});
       if (userToLogin) {
-        const checkPass = bcrypt.compare(req.body.password, userToLogin.password);
+        const checkPass = bcrypt.compareSync(req.body.password, userToLogin.password);
 
         if (checkPass) {
           delete userToLogin.password;
@@ -86,11 +83,18 @@ module.exports = {
       console.log(error);
     }
   },
+
+
+
+
+
+
   profile: (req, res) => {
     return res.render("user/profile", {
       user: req.session.userLogged,
     });
   },
+
   logout: (req, res) => {
     req.session.destroy((err) => {
       if (err) {
@@ -101,7 +105,6 @@ module.exports = {
     });
   },
 
-
   list: async (req, res) => {
     try {
       const usuarios = await db.Usuario.findAll();
@@ -110,8 +113,6 @@ module.exports = {
       console.log(error);
     }
   },
-
-
 
   /*----------------------------------------------------------
   -- CRUD: Método UPDATE 
@@ -135,7 +136,6 @@ module.exports = {
     }
   },
 
-
   processEdit: async (req, res) => {
     try {
       if (!req.file) {
@@ -157,6 +157,18 @@ module.exports = {
         },
         { where: { id: req.params.id } }
       );
+
+      // req.session.userLogged =
+      // {
+      //   nombre: req.body.nombre,
+      //   email: req.body.email,
+      //   tipo_identificacion: req.body.tipo_identificacion,
+      //   numero_identificacion: req.body.numero_identificacion,
+      //   id_roles: req.body.roles,
+      //   telefono: req.body.telefono,
+      //   image: imagen,
+      // }
+
       return res.redirect("/");
     } catch (error) {
       console.log(error);

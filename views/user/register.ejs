@@ -21,7 +21,7 @@
       </div>
 
         <div>
-          <label class="label-principal" for="email">Correo electrónico</label>
+        <label class="label-principal" for="email">Correo electrónico</label>
         <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
         <% if (locals.errors && errors.email) { %>
           <div class="text-danger">

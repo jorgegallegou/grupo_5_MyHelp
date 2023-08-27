@@ -95,6 +95,7 @@
   color: #ff0000;
   margin: 0 0 20px 0;
   line-height: 0;
+  width: max-content;
 }
 .politica {
   display: flex;

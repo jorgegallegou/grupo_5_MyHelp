@@ -9,7 +9,7 @@
     <form action="" method="POST" class="formulario">
         <h1>Iniciar sesión</h1>
         <label class="label-principal" for="correo">Correo electrónico</label>
-        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo">
+        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
         <% if (locals.errors && errors.email) { %>
           <div class="text-danger">
             <p><%= errors.email.msg %></p>
@@ -18,6 +18,11 @@
         
         <label class="label-principal" for="password">Contraseña</label>
         <input class="input-normal" type="password" id="password" name="password" placeholder="Contraseña">
+        <% if (locals.errors && errors.password) { %>
+          <div class="text-danger">
+            <p><%= errors.password.msg %></p>
+          </div>
+        <% } %>
         
         
         <div>
