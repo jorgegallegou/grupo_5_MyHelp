@@ -4,6 +4,7 @@ const controller = require("../controllers/productsController");
 const uploadFile = require("../middlewares/multerProductMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+const productValidation = require("../middlewares/productValidation")
 
 // PRODUCTS
 router.get("/productHome", controller.productListHome);
@@ -14,7 +15,7 @@ router.get("/productDetail/:id", controller.productDetailId);
 
 // LOAD PRODUCT
 router.get("/product/create",guestMiddleware,authMiddleware,controller.productLoad);
-router.post("/product/create", uploadFile.single("imagen"), controller.processCreate);
+router.post("/product/create", uploadFile.single("imagen"), productValidation, controller.processCreate);
 
 // EDIT PRODUCT
 router.get("/product/edit/:id",guestMiddleware,authMiddleware,controller.productEdit);

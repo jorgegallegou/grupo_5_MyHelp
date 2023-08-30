@@ -1,4 +1,5 @@
 const db = require("../dataBase/models");
+const { validationResult } = require("express-validator");
 
 module.exports = {
   productCart: (req, res) => {
@@ -96,15 +97,24 @@ module.exports = {
 ------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
-      const servicioCreado = await db.Servicio.create({
-        nombre: req.body.nombre,
-        precio: req.body.precio,
-        descripcion: req.body.descripcion,
-        descripcion_general: req.body.descripcion_general,
-        id_categorias_servicios: req.body.categoria,
-        imagen: req.file.filename,
-      });
-      return res.redirect("/productDetail/" + servicioCreado.id);
+      const rsdoValidation = validationResult(req);
+      if (!rsdoValidation.isEmpty()) {
+        return res.render("user/register", {
+          errors: rsdoValidation.mapped(),
+          oldData: req.body,
+        });
+      }else {
+        const servicioCreado = await db.Servicio.create({
+          nombre: req.body.nombre,
+          precio: req.body.precio,
+          descripcion: req.body.descripcion,
+          descripcion_general: req.body.descripcion_general,
+          id_categorias_servicios: req.body.categoria,
+          imagen: req.file.filename,
+        });
+        return res.redirect("/productDetail/" + servicioCreado.id);
+      }
+      
     } catch (error) {
       console.log(error);
     }
