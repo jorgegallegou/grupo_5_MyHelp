@@ -1,0 +1,11 @@
+const letrasHex = "0123456789ABCDEF";
+
+  let colorHex = "#";
+
+ 
+
+  for (let i = 0; i < 6; i++) {
+
+    colorHex += letrasHex[Math.floor(Math.random() * 16)];
+
+  }

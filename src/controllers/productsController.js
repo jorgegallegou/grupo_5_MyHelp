@@ -84,9 +84,8 @@ module.exports = {
 -------------------------------------------------------------------------------------*/
   productLoad: async (req, res) => {
     try {
-      await db.CategoriaServicio.findAll().then(function (categorias) {
-        return res.render("products/productLoad", { categorias: categorias });
-      });
+      let categorias = await db.CategoriaServicio.findAll()
+      return res.render('products/productLoad', {categorias: categorias})
     } catch (error) {
       console.log(error);
     }
@@ -97,9 +96,12 @@ module.exports = {
 ------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
+      let categorias = await db.CategoriaServicio.findAll()
+
       const rsdoValidation = validationResult(req);
       if (!rsdoValidation.isEmpty()) {
-        return res.render("user/register", {
+        return res.render("products/productLoad", {
+          categorias:categorias,
           errors: rsdoValidation.mapped(),
           oldData: req.body,
         });

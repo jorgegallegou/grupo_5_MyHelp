@@ -20,10 +20,10 @@
     <input class="input-normal" type="number" id="precio" name="precio">
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion" value="<%= locals.oldData ? oldData.nombre : null %>">
-    <% if (locals.errors && errors.nombre) { %>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>">
+    <% if (locals.errors && errors.descripcion) { %>
       <div class="text-danger">
-        <p><%= errors.nombre.msg %></p>
+        <p><%= errors.descripcion.msg %></p>
       </div>
     <% } %>
 
@@ -43,7 +43,12 @@
     </div>
    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
-    <input class="input-normal" type="file" id="imagen" name="imagen">
+    <input class="input-normal" type="file" id="imagen" name="imagen" value="<%= locals.oldData ? oldData.imagen : null %>">
+    <% if (locals.errors && errors.imagen) { %>
+      <div class="text-danger">
+        <p><%= errors.imagen.msg %></p>
+      </div>
+    <% } %>
     
     <button class="btn-login-cargar-producto" type="submit">Crear servicio</button>
     

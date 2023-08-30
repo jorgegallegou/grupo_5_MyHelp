@@ -8,8 +8,7 @@ module.exports = [
         .withMessage("Campo obligatorio")
         .isEmail()
         .withMessage("ingrese un email válido"),
-
-
+ 
     check("password")
         .notEmpty()
         .withMessage("Campo obligatorio")
