@@ -26,7 +26,6 @@ module.exports = [
   //   return true;
   // }),
 
-  
   check("tipo_identificacion")
     .exists()
     .optional(),

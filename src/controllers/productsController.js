@@ -1,10 +1,4 @@
-const fs = require("fs");
-const path = require("path");
 const db = require("../dataBase/models");
-
-const products = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/products.json"))
-);
 
 module.exports = {
   productCart: (req, res) => {
@@ -36,14 +30,6 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-
-    /*---------------------------------------------------
-<-- Muestra el detalle de un producto a travez de JSON--> 
----------------------------------------------------------
-    const productFound = products.find((row) => row.id == req.params.id);
-    if (productFound && productFound.borrado != true)
-      return res.render("products/productDetailId", { found: productFound });
-    else return res.send("Product not found");*/
   },
 
   productListHome: async (req, res) => {
@@ -144,15 +130,6 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-    /*
-    const productFound = products.find((row) => row.id == req.params.id);
-    if (productFound)
-      return res.render("products/productEdit/:id", {
-        found: productFound,
-        categories: categories,
-      });
-    else return res.send("Product not found");
-    */
   },
 
   processEdit: async (req, res) => {
@@ -175,41 +152,12 @@ module.exports = {
         { where: { id: req.params.id } }
       );
 
-      // if (req.file) {
-      //   user.image = req.file.filename
-      // }
-      // else {
-      //   user.image = 'default-image.png'
-      // }
-      // fs.writeFileSync(path.resolve(__dirname, '../database/user.json'),JSON.stringify([...datos,user],null,2));
-      // return res.redirect ('/')
 
       return res.redirect("/");
     } catch (error) {
       console.log(error);
     }
   },
-
-  /*
-    const product = products.find((row) => row.id == req.params.id);
-    if (req.file) {
-      fs.unlinkSync(
-        path.resolve(
-          __dirname,
-          "../../public/img/imgServiciosMyHelp/" + product.imagen
-        )
-      );
-      product.imagen = req.file.filename;
-    }
-    for (let prop in req.body) {
-      product[prop] = req.body[prop];
-    }
-    fs.writeFileSync(
-      path.resolve(__dirname, "../dataBase/products.json"),
-      JSON.stringify(products, null, 2)
-    );
-    return res.redirect("/");
-    */
 
   /*------------------------------------------------------------------------------------
 -- CRUD: Método DELETE 
@@ -226,16 +174,4 @@ module.exports = {
       console.log(error);
     }
   },
-
-  /*
-  processDelete: (req, res) => {
-    const product = products.find((row) => row.id == req.params.id);
-    product.borrado = true;
-    fs.writeFileSync(
-      path.resolve(__dirname, "../dataBase/products.json"),
-      JSON.stringify(products, null, 2)
-    );
-    return res.redirect("/");
-  },
-  */
 };

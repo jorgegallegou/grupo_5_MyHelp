@@ -1,12 +1,7 @@
-const fs = require("fs");
-const path = require("path");
 const bcrypt = require("bcryptjs");
 const db = require("../dataBase/models");
 const { validationResult } = require("express-validator");
 
-const users = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../dataBase/users.json"))
-);
 
 
 module.exports = {
@@ -84,11 +79,6 @@ module.exports = {
     }
   },
 
-
-
-
-
-
   profile: (req, res) => {
     return res.render("user/profile", {
       user: req.session.userLogged,
@@ -157,17 +147,6 @@ module.exports = {
         },
         { where: { id: req.params.id } }
       );
-
-      // req.session.userLogged =
-      // {
-      //   nombre: req.body.nombre,
-      //   email: req.body.email,
-      //   tipo_identificacion: req.body.tipo_identificacion,
-      //   numero_identificacion: req.body.numero_identificacion,
-      //   id_roles: req.body.roles,
-      //   telefono: req.body.telefono,
-      //   image: imagen,
-      // }
 
       return res.redirect("/");
     } catch (error) {
