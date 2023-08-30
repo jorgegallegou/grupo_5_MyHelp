@@ -151,25 +151,27 @@ module.exports = {
           password: req.body.password,
           tipo_identificacion: req.body.tipo_identificacion,
           numero_identificacion: req.body.numero_identificacion,
-          id_roles: req.body.roles,
+          // id_roles: req.body.roles,
           telefono: req.body.telefono,
           image: imagen,
         },
         { where: { id: req.params.id } }
       );
-
-      // req.session.userLogged =
-      // {
-      //   nombre: req.body.nombre,
-      //   email: req.body.email,
-      //   tipo_identificacion: req.body.tipo_identificacion,
-      //   numero_identificacion: req.body.numero_identificacion,
-      //   id_roles: req.body.roles,
-      //   telefono: req.body.telefono,
-      //   image: imagen,
-      // }
-
-      return res.redirect("/");
+      
+      
+      req.session.userLogged =
+      {
+        id: req.params.id,
+        nombre: req.body.nombre,
+        email: req.body.email,
+        tipo_identificacion: req.body.tipo_identificacion,
+        numero_identificacion: req.body.numero_identificacion,
+        // id_roles: id_roles == req.body.roles ? '' : , 
+        telefono: req.body.telefono,
+        image: imagen,
+      }
+      
+      return res.redirect('/user/profile');
     } catch (error) {
       console.log(error);
     }

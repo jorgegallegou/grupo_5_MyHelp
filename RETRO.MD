@@ -1,10 +1,10 @@
-# Retrospectiva quinto Sprint
+# Retrospectiva sexto Sprint
 
 ## Empezar a hacer
 - 'Codear juntos' los días martes y jueves de cada semana a las 8:00 p.m. (Colombia)
 
 ## Seguir haciendo
-- Reuniones semanales los martes a las 20:00 horas.
+- Reuniones semanales los martes y jueves  a las 20:00 horas, y fines de semana de manera opcional.
 
 ## Menos de
 - Hacer entrega de los sprint de manera parcial, sin cumplir todos las tareas asignadas. 
