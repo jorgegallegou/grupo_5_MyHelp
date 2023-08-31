@@ -144,6 +144,7 @@ module.exports = {
       } else {
         imagen = req.file.filename;
       }
+      
       await db.Usuario.update(
         {
           nombre: req.body.nombre,
@@ -151,7 +152,7 @@ module.exports = {
           password: req.body.password,
           tipo_identificacion: req.body.tipo_identificacion,
           numero_identificacion: req.body.numero_identificacion,
-          // id_roles: req.body.roles,
+          id_roles: req.body.rol,
           telefono: req.body.telefono,
           image: imagen,
         },
@@ -166,7 +167,7 @@ module.exports = {
         email: req.body.email,
         tipo_identificacion: req.body.tipo_identificacion,
         numero_identificacion: req.body.numero_identificacion,
-        // id_roles: id_roles == req.body.roles ? '' : , 
+        id_roles: req.body.rol,
         telefono: req.body.telefono,
         image: imagen,
       }
