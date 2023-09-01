@@ -32,7 +32,7 @@
 
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
-      <select class="select" name="categoria">
+      <select class="select" name="categoria" id="categoria">
         <option value="">Selecciona categoria</option>
         <% for (i=0; i < categorias.length; i++) {  %>
             <option value="<%= categorias[i].id %>">
@@ -57,6 +57,6 @@
 </main>
 
 <%- include ('../partials/footer') %>  
-
+<script src="/js/productValidation.js"></script>
 </body>
 </html>
