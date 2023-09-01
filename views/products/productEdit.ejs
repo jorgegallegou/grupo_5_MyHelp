@@ -12,12 +12,22 @@
     
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
     <input class="input-normal" type="text" id="nombre" name="nombre" value="<%= servicio.nombre %>">
+    <% if (locals.errors && errors.nombre) { %>
+      <div class="text-danger">
+        <p><%= errors.nombre.msg %></p>
+      </div>
+    <% } %>
     
     <label class="label-principal" for="precio">Precio:</label>
     <input class="input-normal" type="number" id="precio" name="precio" value="<%= servicio.precio %>">
     
     <label class="label-principal" for="descripcion">Descripción:</label>
     <input class="input-normal" type="text" id="descripcion" name="descripcion" value="<%= servicio.descripcion %>">
+    <% if (locals.errors && errors.descripcion) { %>
+      <div class="text-danger">
+        <p><%= errors.descripcion.msg %></p>
+      </div>
+    <% } %>
 
     <label class="label-principal" for="descripcion_general">Descripción general:</label>
     <input class="input-normal" type="text" id="descripcion_general" name="descripcion_general" value="<%= servicio.descripcion_general %>">
@@ -42,6 +52,11 @@
       
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen">
+    <% if (locals.errors && errors.imagen) { %>
+      <div class="text-danger">
+        <p><%= errors.imagen.msg %></p>
+      </div>
+    <% } %>
    
     <button class="btn-login-cargar-producto" type="submit">Editar</button> 
   </form>

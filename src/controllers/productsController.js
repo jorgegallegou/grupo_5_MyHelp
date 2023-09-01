@@ -146,13 +146,25 @@ module.exports = {
 
   processEdit: async (req, res) => {
     try {
+      let servicioPedido = await db.Servicio.findByPk(req.params.id);
+      let categoriasPedido = await db.CategoriaServicio.findAll();
+
+      const rsdoValidation = validationResult(req);
+      if (!rsdoValidation.isEmpty())
+        return res.render('products/productEdit', {
+          servicio: servicioPedido,
+          categorias: categoriasPedido,
+          errors: rsdoValidation.mapped(),
+          oldData: req.body
+          });
+
       if (!req.file) {
         const servicio = await db.Servicio.findByPk(req.params.id);
         imagen = servicio.imagen;
       } else {
         imagen = req.file.filename;
       }
-      await db.Servicio.update(
+      const servicioEditado = await db.Servicio.update(
         {
           nombre: req.body.nombre,
           precio: req.body.precio,
@@ -163,9 +175,7 @@ module.exports = {
         },
         { where: { id: req.params.id } }
       );
-
-
-      return res.redirect("/");
+      return res.redirect('/');
     } catch (error) {
       console.log(error);
     }
