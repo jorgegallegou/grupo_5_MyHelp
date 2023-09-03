@@ -77,6 +77,15 @@ window.addEventListener("load", function () {
 
 
     if (errores.length > 0) {
+      let tituloError = document.querySelector(".errores");
+      let icono = tituloError.querySelector("i");
+      let texto = tituloError.querySelector("h3");
+
+      tituloError.style.display = 'inline-block';
+      icono.style.display = 'inline-block';
+      texto.style.display = 'inline-block';
+      icono.style.marginRight = '5px'
+      
       e.preventDefault();
       for (let i = 0; i < errores.length; i++) {
         ulErrores.innerHTML += "<li>" + errores[i] + "</li>";

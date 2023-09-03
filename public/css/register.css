@@ -146,8 +146,11 @@
 }
 
 .errores {
-  color: red
+  color: red;
+  display: none
 }
+
+
 
 /*---------------------------------
 ------------MEDIA QUERIES---------
