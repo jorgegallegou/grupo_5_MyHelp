@@ -20,12 +20,6 @@ module.exports = [
     .isLength({min: 8})    
     .withMessage("Debe tener al menos 8 caracteres"),
 
-  
-  // check("imagen").custom((value, {req}) => {
-  //   if (!req.file) throw new Error('Inserta una imagen');
-  //   return true;
-  // }),
-
   check("tipo_identificacion")
     .exists()
     .optional(),
@@ -37,4 +31,11 @@ module.exports = [
   check("celular")
     .notEmpty()
     .withMessage("Campo obligatorio"),
+
+  check('imagen').custom((value , {req}) => {
+    if(req.fileInvalidError || !req.file){
+      throw new Error('Campo obligatorio / Tipo de archivo invalido')
+    }
+    return true
+  })
 ];
