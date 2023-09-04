@@ -6,7 +6,13 @@
 
 <main class="main-register">
 
-    <form action="" method="POST" class="formulario">
+    <form action="" method="POST" class="formulario" novalidate>
+
+      <div class="errores">
+        <i class="fa-solid fa-circle-exclamation"></i><h3>Error</h3>
+        <ul></ul>
+      </div>
+      
         <h1>Iniciar sesión</h1>
         <label class="label-principal" for="correo">Correo electrónico</label>
         <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
@@ -41,6 +47,8 @@
 </main>
 
 <%- include ('../partials/footer') %>
+
+<script src="/js/validacionesLogin.js"></script>
 
 </body>
 </html>

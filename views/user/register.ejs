@@ -6,8 +6,14 @@
 
 <main class="main-register">
   
-  <form action="/user/register" method="post"  enctype="multipart/form-data" class="formulario">
+  <form action="/user/register" method="post"  enctype="multipart/form-data" class="formulario" novalidate>
     <h1 class="crea-tu-cuenta" >Crea tu cuenta Myhelp</h1>
+
+    <div class="errores">
+      <i class="fa-solid fa-circle-exclamation"></i><h3>Error</h3>
+      <ul></ul>
+    </div>
+
       <div class="container-nombre">
         <div>
           <label class="label-principal" for="nombre">Nombre completo</label>
@@ -91,17 +97,6 @@
             <% } %>
         </div>
     
-        <div class="politica">
-          <input type="checkbox" name="politica" value="politica1">
-          <p>Acepto los términos y condiciones de uso del sitio web.</p>
-        </div>
-
-        <div class="politica"> 
-            <input type="checkbox" name="politica" value="politica2">
-            <p>Acepto el tratamiento de datos personales según la política de privacidad 
-            con el fin de ser contactado por MyHelp a través de los medios suministrados 
-            y/o recibir información relacionada con productos/servicios.</p>
-        </div>
 
         <div class="container-button">
             <button class="btn-form-register"  type="reset">Cancelar</button>
@@ -110,13 +105,15 @@
 
         <div class="ya-tienes-cuenta">
           <p>¿Ya tienes una cuenta?</p>
-          <a class="text-iniciar-sesion" href="/login"><p>Iniciar sesión</p></a>
+          <a class="text-iniciar-sesion" href="/user/login"><p>Iniciar sesión</p></a>
         </div>
   </form>
 
 </main>
 
 <%- include ('../partials/footer') %>  
+
+<script src="/js/validacionesRegister.js"></script>
 
 </body>
 </html>
