@@ -1,6 +1,7 @@
-const nav = document.querySelector("#nav");
-const open = document.querySelector("#open");
-const close = document.querySelector("#close");
+const nav = document.getElementById("nav");
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+
 
 open.addEventListener("click", () => {
   nav.classList.add("visible");

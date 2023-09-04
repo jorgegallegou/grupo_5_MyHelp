@@ -63,7 +63,7 @@ module.exports = {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
           if (req.body.remember_user) {
-            res.cookie("userEmail", userToLogin.email, { maxAge: 1000 * 30 * 2 });
+            res.cookie("userEmail", userToLogin.email, { maxAge: 10000 * 30 * 2 });
           }
           return res.redirect("profile");
         }
