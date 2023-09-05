@@ -18,7 +18,7 @@
         <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
         <% if (locals.errors && errors.email) { %>
           <div class="text-danger">
-            <p><%= errors.email.msg %></p>
+            <em><%= errors.email.msg %></em>
           </div>
         <% } %>
         

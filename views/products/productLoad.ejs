@@ -9,37 +9,51 @@
   <form action="/product/create" method="post" enctype="multipart/form-data" class="formulario">
     <h1>Carga de servicios</h1>
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
-    <input class="input-normal" type="text" id="nombre" name="nombre">
-    <span class="msg-error"></span>
+    <input class="input-normal" type="text" id="nombre" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+    <div>
+      <em class="msg-error" id="error-nombre"></em>
+    </div>
     
     
     <label class="label-principal" for="precio">Precio:</label>
-    <input class="input-normal" type="number" id="precio" name="precio">
-    <span class="msg-error"></span>
+    <input class="input-normal" type="number" id="precio" name="precio" value="<%= locals.oldData ? oldData.nombre : null %>">
+    <div>
+      <em class="msg-error" id="error-precio"></em>
+    </div>
     
     <label class="label-principal" for="descripcion">Descripción:</label>
-    <input class="input-normal" type="text" id="descripcion" name="descripcion">
-    <span class="msg-error"></span>
+    <input class="input-normal" type="text" id="descripcion" name="descripcion" value="<%= locals.oldData ? oldData.nombre : null %>">
+    <div>
+      <em class="msg-error" id="error-descripcion"></em>
+    </div>
 
     <label class="label-principal" for="descripcion_general">Descripción general:</label>
-    <input class="input-normal" type="text" id="descripcion_general" name="descripcion_general"">
-    <span class="msg-error"></span>
+    <input class="input-normal" type="text" id="descripcion_general" name="descripcion_general" value="<%= locals.oldData ? oldData.nombre : null %>">
+    <div>
+      <em class="msg-error" id="error-descripcion_general"></em>
+    </div>
 
     <div class="form-group">
       <label class="label-principal" for="categoria">Categoría:</label>
       <select class="select" name="categoria" id="categoria">
-        <option value="">Selecciona categoria</option>
+        <option value="0">Selecciona categoria</option>
         <% for (i=0; i < categorias.length; i++) {  %>
             <option value="<%= categorias[i].id %>">
               <%= categorias[i].descripcion %>
             </option>
         <% }; %>
       </select>
+      <div>
+        <em class="msg-error" id="error-categoria"></em>
+      </div>
     </div>
+    
    
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen" >
-    <span class="msg-error"></span>
+    <div>
+      <em class="msg-error" id="error-imagen"></em>
+    </div>
     
     <button class="btn-login-cargar-producto" type="submit" id="cargar-producto">Crear servicio</button>
     
