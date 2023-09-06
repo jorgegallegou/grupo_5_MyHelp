@@ -18,8 +18,8 @@
         <div class="descriptionCompany">
           <h4>Precio: <strong>$<%= row.precio %></strong></h4>
           <p><%= row.descripcion %></p>
-          <a href="scheduleService">
-            <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
+          <a href="/productDetail/<%= row.id %>">
+            <button class="request" type="submit"> Conoce más!</button></a>
             <% if (locals.adminLog) { %>
               <a href="product/edit/<%= row.id %>">
                 <button class="request" type="submit"> Editar</button></a>

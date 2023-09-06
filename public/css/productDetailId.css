@@ -1,71 +1,83 @@
 .clean {
-	border: solid 1px #ebebeb;
-	border-radius: 8px;
-	box-shadow: 0 0 5px rgb(149, 149, 149);
-	width: 95vw;
-	margin: 10px auto;
+  border: solid 1px #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+  width: 95vw;
+  margin: 10px auto;
 }
 .clean article {
-	padding: 10px;
-	display: inline-block;
-	justify-content: center;
-	align-items: center;
+  padding: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 .clean article img {
-	display: block;
-	width: 100%;
-	border-radius: 5px;
-	margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px auto;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
 }
 .clean article .image {
-	width: 100%;
-	border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 .clean .desc {
-	text-align: left;
-	padding: 0 10px;
+  width: 100%;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 .clean .desc h3 {
-	font-size: 16px;
-	color: #044566;
-	margin: 0;
-	line-height: 1;
+  font-size: 16px;
+  color: #044566;
+  margin: 10px 0px;
+  line-height: 1;
 }
 .clean .desc h4 {
-	margin: 0;
-	line-height: 1;
-	font-size: 16px;
-	color: #000000;
-	font-weight: 400;
+  margin: 0px 0px 10px 0px;
+  line-height: 1;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
 }
 .clean .desc strong {
-	margin: 0;
-	line-height: 1;
-	font-size: 16px;
-	color: #044566;
+  margin: 0px 0px 10px 0px;
+  line-height: 1;
+  font-size: 16px;
+  color: #044566;
+}
+.clean .desc h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0px 0px 10px 0px;
 }
 .clean .desc p {
-	display: block;
-	line-height: 1;
+  display: block;
+  margin: 10px auto;
+  text-align: justify;
+  width: 90%;
+  border-bottom: solid 2px #044566;
+}
+.clean article .btn-schedule {
+  text-align: center;
 }
 @media (min-width: 769px) {
-	.clean article {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-	.clean article img {
-		margin-bottom: 0;
-	}
-	.clean article .image {
-		width: 50%;
-	}
-	.clean article .desc {
-		width: 50%;
-	}
-}
-@media (min-width: 1280px) {
-	.clean {
-		max-width: 1200px;
-	}
+  .clean {
+    max-width: 770px;
+  }
+  /*.clean article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .clean article img {
+    margin-bottom: 0;
+  }
+  .clean article .image {
+    width: 70%;
+  }
+  .clean article .desc {
+    width: 30%;
+  }*/
 }

@@ -5,97 +5,98 @@
 ---Cleaning services--
 --------------------*/
 .main-description {
-	text-align: left;
-	padding: 0 15px;
-	margin: 10px 0;
+  text-align: left;
+  padding: 0 15px;
+  margin: 10px 0;
 }
 .main-description h2 {
-	border-left: solid 5px #219ebc;
-	margin: 0;
-	padding: 0 15px;
-	color: #044566;
+  border-left: solid 5px #219ebc;
+  margin: 0;
+  padding: 0 15px;
+  color: #044566;
 }
 .main-description p {
-	line-height: 1;
+  line-height: 1;
 }
 .clean-home {
-	position: relative;
-	width: 50%;
-	border: solid 1px #ebebeb;
-	border-radius: 8px;
-	box-shadow: 0 0 5px rgb(149, 149, 149);
-	width: 95vw;
-	margin: 10px auto;
-	padding: 5px;
+  position: relative;
+  width: 50%;
+  border: solid 1px #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+  width: 95vw;
+  margin: 10px auto;
+  padding: 5px;
 }
-.clean-home  img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
+.clean-home img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
- .second-description {
-	position: absolute;
-	bottom: 100%;
-	right: 0;
-	left: 0;
-	background: linear-gradient(180deg,#219ebc, #044566) ;
-	overflow: hidden;
-	width: 95%;
-	height: 0;
-	text-align: center;
-	padding: 0 10px;
-	transition: .7s ease;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.second-description {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, #219ebc, #044566);
+  overflow: hidden;
+  width: 95%;
+  height: 0;
+  text-align: center;
+  padding: 0 10px;
+  transition: 0.7s ease;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .clean-home:hover .second-description {
-	bottom: 0;
-	height: 100%;
+  bottom: 0;
+  height: 100%;
 }
 .clean-home h3 {
-	text-align: center;
-	color: #044566;
-	margin: 0;
-	line-height: 1;
+  text-align: center;
+  color: #044566;
+  margin: 0;
+  line-height: 1;
 }
 .second-description h4 {
-	margin: 0;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffffff;
-	font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
 }
 .second-description p {
-	margin: 10px;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffffff;
-	font-weight: 400;
+  margin: 10px;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
 }
 .second-description strong {
-	margin: 0;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffb703;
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffb703;
 }
 .request {
-	width: 200px;
-	height: 40px;
+  width: 200px;
+  height: 40px;
   border: solid 1px #219ebc;
-	border-radius: 8px;
-	color: #ffffff;
-	background-color: #044566;
-	font-family: 'Pragati Narrow';
-	font-size: 20px;
-	text-align: center;
-	transition: all 0.3s;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #044566;
+  font-family: "Pragati Narrow";
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  margin-bottom: 10px;
 }
 .request:hover {
-	background-color: #fb8500;
+  background-color: #fb8500;
 }
 
 /*--------------------
@@ -103,83 +104,83 @@
 --------------------*/
 
 .works {
-	position: relative;
-	width: 50%;
-	border: solid 1px #ebebeb;
-	border-radius: 8px;
-	box-shadow: 0 0 5px rgb(149, 149, 149);
-	width: 95vw;
-	margin: 10px auto;
-	padding: 5px;
+  position: relative;
+  width: 50%;
+  border: solid 1px #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+  width: 95vw;
+  margin: 10px auto;
+  padding: 5px;
 }
 .works img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 .description {
-	position: absolute;
-	bottom: 100%;
-	right: 0;
-	left: 0;
-	background: linear-gradient(180deg,#219ebc, #044566) ;
-	overflow: hidden;
-	width: 95%;
-	height: 0;
-	text-align: center;
-	padding: 0 10px;
-	transition: .7s ease;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, #219ebc, #044566);
+  overflow: hidden;
+  width: 95%;
+  height: 0;
+  text-align: center;
+  padding: 0 10px;
+  transition: 0.7s ease;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .works:hover .description {
-	bottom: 0;
-	height: 100%;
+  bottom: 0;
+  height: 100%;
 }
 .works h3 {
-	text-align: center;
-	color: #044566;
-	margin: 0;
-	line-height: 1;
+  text-align: center;
+  color: #044566;
+  margin: 0;
+  line-height: 1;
 }
 .description h4 {
-	margin: 0;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffffff;
-	font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
 }
 .description strong {
-	margin: 0;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffb703;
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffb703;
 }
 .description p {
-	margin: 10px;
-	line-height: 1;
-	font-size: 18px;
-	color: #ffffff;
-	font-weight: 400;
+  margin: 10px;
+  line-height: 1;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
 }
 .request {
-	width: 200px;
-	height: 40px;
+  width: 200px;
+  height: 40px;
   border: solid 1px #219ebc;
-	border-radius: 8px;
-	color: #ffffff;
-	background-color: #044566;
-	font-family: 'Pragati Narrow';
-	font-size: 20px;
-	text-align: center;
-	transition: all 0.3s;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #044566;
+  font-family: "Pragati Narrow";
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s;
 }
 .request:hover {
-	background-color: #fb8500;
+  background-color: #fb8500;
 }
 
 /*-----------------
@@ -187,26 +188,26 @@
 -----------------*/
 
 @media (min-width: 480px) {
-	.second-description,
-	.description{
-		width: auto;
-	}
+  .second-description,
+  .description {
+    width: auto;
+  }
 }
 @media (min-width: 769px) {
-	.all-works {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.clean-home {
-		width: 30%;
-	}
-	.works {
-		width: 30%;
-	}
+  .all-works {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .clean-home {
+    width: 30%;
+  }
+  .works {
+    width: 30%;
+  }
 }
 @media (min-width: 1280px) {
-	.clean-home,
-	.works {
-		max-width: 1280px;
-	}
+  .clean-home,
+  .works {
+    max-width: 1280px;
+  }
 }

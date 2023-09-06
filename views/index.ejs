@@ -12,41 +12,44 @@
     </section>
 
     <section class="highlight-container">
-      <div class="search-bar">
-        <div class="title">
-          <h3>¡Encuentra el servicio a tu necesidad!</h3>
-          <p>Nuestros profesionales te ayudarán</p>
-        </div>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" name="search" placeholder="Encuentra tu sevicio MyHelp">
-        <a href="#"><button type="submit">Buscar</button></a>
-      </div>
-      <h2>Servicios más solicitados</h2>
-      <div class="all-services">
-        <div class="services">
-          <article>
-            <img src="/img/imgServiciosMyHelp/fontaneria.svg" alt="limpiezaHogar">
-            <div class="description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+          <div class="search-bar">
+            <div class="title">
+              <h3>¡Encuentra el servicio a tu necesidad!</h3>
+              <p>Nuestros profesionales te ayudarán</p>
             </div>
-          </article>
-        </div>
-        <div class="services">
-          <article>
-            <img src="/img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
-            <div class="description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search" placeholder="Encuentra tu sevicio MyHelp">
+            <a href="#"><button type="submit">Buscar</button></a>
+          </div>
+        
+          
+          <!-- Swiper -->
+      <div class="swiper">
+        <h2>Nuestros servicios destacados</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="img/imgServiciosMyHelp/limpiezaHogar.svg" alt="limpiezaHogar">
+              <div class="text">
+                <a href="scheduleService">
+                <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
+              </div>       
+          </div>
+          <div class="swiper-slide">
+            <img src="img/imgServiciosMyHelp/limpiezaProfunda.svg" alt="limpiezaProfunda">
+            <div class="text">
+              <a href="scheduleService">
+              <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
             </div>
-          </article>
-        </div>
-        <div class="services">
-          <article>
-            <img src="/img/imgServiciosMyHelp/1690208479669-desinfeccion.svg" alt="desinfeccion">
-            <div class="description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto aspernatur doloremque corporis.</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="fontaneria">
+            <div class="text">
+              <a href="scheduleService">
+              <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
             </div>
-          </article>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   </main>
@@ -54,5 +57,6 @@
   <%- include ('./partials/footer') %>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="/js/sliderMainPage.js"></script>
 </body>
 </html>

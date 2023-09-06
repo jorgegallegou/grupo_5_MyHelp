@@ -220,6 +220,7 @@
 .main-img img {
   display: block;
   width: 100%;
+  height: auto;
   border-top: solid 5px #219ebc;
   border-bottom: solid 5px #219ebc;
 }
@@ -272,21 +273,46 @@
   border-bottom-right-radius: 8px;
   font-family: "Pragati Narrow";
 }
-.services {
-  border: solid 1px #ebebeb;
-  border-radius: 20px;
-  padding: 3px;
-  margin-bottom: 10px;
-}
-.services article {
-  padding: 10px;
-  margin-bottom: 5px;
-}
-.services article img {
+/*----------------------
+--------SLIDER---------- 
+-----------------------*/
+.swiper {
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 1rem;
 }
-.description {
+.swiper h2 {
   text-align: center;
+  margin-top: 10px;
+  font-size: 22px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin: 10px 0px;
+  padding: 20px;
+  background-image: linear-gradient(
+    -225deg,
+    #044566 0%,
+    #3584a7 51%,
+    #219ebc 100%
+  );
+  border-radius: 1rem;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  border: solid 1px #ffffff;
+  background: linear-gradient(45deg, #043e5c, #044a6d);
+  box-shadow: 19px -19px 38px #033853, -19px 19px 38px #055279;
+}
+.swiper-slide .text {
+  text-align: center;
+  margin: 10px 0px;
 }
 
 /*----------------------

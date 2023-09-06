@@ -22,9 +22,9 @@
         <div class="second-description">
           <h4>Precio: <strong>$<%= row.precio %></strong></h4>
           <p><%= row.descripcion %></p>
-          <a href="scheduleService">
+          <a href="/productDetail/<%= row.id %>">
             <button class="request" type="submit">
-              Solicita aquí tu servicio
+              Conoce más!
             </button></a>
 
             <% if (locals.adminLog) { %>
