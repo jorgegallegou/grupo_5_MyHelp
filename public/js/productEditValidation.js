@@ -79,26 +79,51 @@ window.onload = function () {
       );
     }
 
-    if (errors.length === 0) {
-      form.submit();
+    if (imagen.files.length > 0) {
+      {
+        const imgExt = imagen.files[0].name.split(".").pop().toLowerCase();
+        const allowExt = ["jpg", "jpeg", "png", "gif", "svg"];
+        if (!allowExt.includes(imgExt)) {
+          errors.push({
+            campo: "imagen",
+            msg: "¡Selecciona una imagen en formato JPG, JPEG, PNG, GIF o .SVG!",
+          });
+          showError(
+            "imagen",
+            "¡Selecciona una imagen en formato JPG, JPEG, PNG, GIF o .SVG!"
+          );
+        }
+      }
+    }
+
+    if (errors.length > 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algun campo incorrecto!",
+      });
+    } else {
+      Swal.fire("Exito!", "Has editado el servicio!", "success").then(() => {
+        form.submit();
+      });
+    }
+
+    /*funcion para pasar los errores*/
+
+    function showError(campo, msg) {
+      const errorField = document.getElementById(`error-${campo}`);
+      if (errorField) {
+        errorField.textContent = msg;
+      }
+    }
+
+    /*funcion para limpiar los errores*/
+
+    function cleanError() {
+      const errorEmpty = document.querySelectorAll(".msg-error");
+      errorEmpty.forEach((errorField) => {
+        errorField.textContent = "";
+      });
     }
   });
-
-  /*funcion para pasar los errores*/
-
-  function showError(campo, msg) {
-    const errorField = document.getElementById(`error-${campo}`);
-    if (errorField) {
-      errorField.textContent = msg;
-    }
-  }
-
-  /*funcion para limpiar los errores*/
-
-  function cleanError() {
-    const errorEmpty = document.querySelectorAll(".msg-error");
-    errorEmpty.forEach((errorField) => {
-      errorField.textContent = "";
-    });
-  }
 };

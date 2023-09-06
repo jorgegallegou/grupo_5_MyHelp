@@ -7,7 +7,7 @@
 <main class="main-register">
   
   <form action="/product/create" method="post" enctype="multipart/form-data" class="formulario">
-    <h1>Carga de servicios</h1>
+    <h1>Crear servicio</h1>
     <label class="label-principal" for="nombre">Nombre del servicio:</label>
     <input class="input-normal" type="text" id="nombre" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
     <div>
@@ -64,6 +64,7 @@
   <%- include ('../partials/footer') %> 
 
   <script src="/js/productValidation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

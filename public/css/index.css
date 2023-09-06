@@ -149,7 +149,7 @@
 .nav .close i {
   font-size: 22px;
 }
-.container-menu .menu {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;

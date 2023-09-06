@@ -56,11 +56,10 @@
       
     <label class="label-principal" for="imagen">Imagen del servicio:</label>
     <input class="input-normal" type="file" id="imagen" name="imagen">
-    <% if (locals.errors && errors.imagen) { %>
-      <div class="text-danger">
-        <em><%= errors.imagen.msg %></em>
-      </div>
-    <% } %>
+    <div>
+      <em class="msg-error" id="error-imagen"></em>
+    </div>
+    
    
     <button class="btn-login-cargar-producto" type="submit">Editar</button> 
   </form>
@@ -75,6 +74,7 @@
 <%- include ('../partials/footer') %> 
 
 <script src="/js/productEditValidation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
