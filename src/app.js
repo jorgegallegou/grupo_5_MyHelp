@@ -11,6 +11,7 @@ const productsRouter = require('./routers/productsRoute');
 const userRouter = require('./routers/userRoute');
 
 //API-ROUTES CALL
+const userApiRouter = require('./routers/api/userRouteApi');
 const productsApiRoute = require('./routers/api/productsRouteAPI');
 
 //MIDDLEWARES
@@ -49,4 +50,5 @@ app.use('/', productsRouter);
 app.use('/user', userRouter);
 
 //API-ROUTES
+app.use('/api/users', userApiRouter);
 app.use('/api/products', productsApiRoute);

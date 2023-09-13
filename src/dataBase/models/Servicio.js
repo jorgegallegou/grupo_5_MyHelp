@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const alias = "Servicio";
+  const alias = 'Servicio';
   const cols = {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
@@ -44,33 +44,33 @@ module.exports = (sequelize, DataTypes) => {
     },
   };
   const config = {
-    tableName: "servicios",
+    tableName: 'servicios',
     timestamps: true,
     paranoid: true,
-    createdAt: "created_at",
-    updatedAt: "updated_at",
-    deletedAt: "deleted_at",
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    deletedAt: 'deleted_at',
   };
   const Servicio = sequelize.define(alias, cols, config);
 
   Servicio.associate = function (models) {
     Servicio.belongsToMany(models.Agendamiento, {
-      as: "agendamientos",
-      through: "servicios_agendamientos",
-      foreignKey: "id_servicios",
-      otherKey: "id_agendamientos",
+      as: 'agendamientos',
+      through: 'servicios_agendamientos',
+      foreignKey: 'id_servicios',
+      otherKey: 'id_agendamientos',
       timestamps: true,
     });
     Servicio.belongsToMany(models.Ticket, {
-      as: "tickets",
-      through: "servicios_tickets",
-      foreignKey: "id_servicios",
-      otherKey: "id_tickets",
+      as: 'tickets',
+      through: 'servicios_tickets',
+      foreignKey: 'id_servicios',
+      otherKey: 'id_tickets',
       timestamps: true,
     });
     Servicio.belongsTo(models.CategoriaServicio, {
-      as: "categorias",
-      foreignKey: "id_categorias_servicios",
+      as: 'categorias',
+      foreignKey: 'id_categorias_servicios',
     });
   };
 

@@ -1,13 +1,13 @@
-const db = require("../dataBase/models");
-const { validationResult } = require("express-validator");
+const db = require('../dataBase/models');
+const { validationResult } = require('express-validator');
 
 module.exports = {
   productCart: (req, res) => {
-    return res.render("products/productCart");
+    return res.render('products/productCart');
   },
 
   scheduleService: (req, res) => {
-    return res.render("products/scheduleService");
+    return res.render('products/scheduleService');
   },
 
   /*-----------------------------------------------------------------
@@ -21,13 +21,13 @@ module.exports = {
         },
         include: [
           {
-            association: "categorias",
+            association: 'categorias',
           },
         ],
       });
       if (serviceDetail) {
-        res.render("products/productDetailId", { found: serviceDetail });
-      } else return res.send("Product not found");
+        res.render('products/productDetailId', { found: serviceDetail });
+      } else return res.send('Product not found');
     } catch (error) {
       console.log(error);
     }
@@ -47,7 +47,7 @@ module.exports = {
           deleted_at: null,
         },
       });
-      return res.render("products/productListHome", {
+      return res.render('products/productListHome', {
         clean: clean,
         special: special,
       });
@@ -70,7 +70,7 @@ module.exports = {
           deleted_at: null,
         },
       });
-      return res.render("products/productListCompany", {
+      return res.render('products/productListCompany', {
         cleaning: cleaning,
         disinfection: disinfection,
       });
@@ -84,8 +84,8 @@ module.exports = {
 -------------------------------------------------------------------------------------*/
   productLoad: async (req, res) => {
     try {
-      let categorias = await db.CategoriaServicio.findAll()
-      return res.render('products/productLoad', {categorias: categorias})
+      let categorias = await db.CategoriaServicio.findAll();
+      return res.render('products/productLoad', { categorias: categorias });
     } catch (error) {
       console.log(error);
     }
@@ -96,27 +96,26 @@ module.exports = {
 ------------------------------------------------------------------------------------*/
   processCreate: async (req, res) => {
     try {
-      let categorias = await db.CategoriaServicio.findAll()
+      let categorias = await db.CategoriaServicio.findAll();
 
       const rsdoValidation = validationResult(req);
       if (!rsdoValidation.isEmpty()) {
-        return res.render("products/productLoad", {
-          categorias:categorias,
+        return res.render('products/productLoad', {
+          categorias: categorias,
           errors: rsdoValidation.mapped(),
           oldData: req.body,
         });
-      }else {
+      } else {
         const servicioCreado = await db.Servicio.create({
           nombre: req.body.nombre,
           precio: req.body.precio,
           descripcion: req.body.descripcion,
           descripcion_general: req.body.descripcion_general,
           id_categorias_servicios: req.body.categoria,
-          imagen: req.file.filename,
+          //imagen: req.file.filename,
         });
-        return res.redirect("/productDetail/" + servicioCreado.id);
+        return res.redirect('/productDetail/' + servicioCreado.id);
       }
-      
     } catch (error) {
       console.log(error);
     }
@@ -134,7 +133,7 @@ module.exports = {
         servicio,
         categorias,
       ]) {
-        res.render("products/productEdit", {
+        res.render('products/productEdit', {
           servicio: servicio,
           categorias: categorias,
         });
@@ -155,8 +154,8 @@ module.exports = {
           servicio: servicioPedido,
           categorias: categoriasPedido,
           errors: rsdoValidation.mapped(),
-          oldData: req.body
-          });
+          oldData: req.body,
+        });
 
       if (!req.file) {
         const servicio = await db.Servicio.findByPk(req.params.id);
@@ -191,7 +190,7 @@ module.exports = {
           id: req.params.id,
         },
       });
-      res.redirect("/");
+      res.redirect('/');
     } catch (error) {
       console.log(error);
     }
