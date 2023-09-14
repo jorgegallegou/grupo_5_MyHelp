@@ -2,11 +2,12 @@ const db = require('../../dataBase/models');
 const User = db.Usuario;
 module.exports = {
   list: async (req, res) => {
-    let response = {};
+    let response = { data: {} };
     try {
       const allUsers = await User.findAll();
-      response.count = allUsers.length;
-      response.users = allUsers.map((row) => {
+
+      response.data.count = allUsers.length;
+      response.data.users = allUsers.map((row) => {
         return {
           id: row.id,
           name: row.nombre,

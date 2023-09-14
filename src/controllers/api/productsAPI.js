@@ -6,7 +6,7 @@ const CategoriaServicio = db.CategoriaServicio;
 module.exports = {
   productListHome: async (req, res) => {
     try {
-      const response = {};
+      const response = { data: {} };
 
       const [allHomeServices, categorias] = await Promise.all([
         Servicio.findAll(
@@ -15,12 +15,13 @@ module.exports = {
         ),
         CategoriaServicio.findAll({ include: [{ association: 'servicios' }] }),
       ]);
-      response.count = allHomeServices.length;
-      response.countByCategory = {};
+      response.data.count = allHomeServices.length;
+      response.data.countByCategory = {};
       categorias.forEach((row) => {
-        response.countByCategory[row.name] = row.servicios.length;
+        console.log(row);
+        response.data.countByCategory[row.descripcion] = row.servicios.length;
       });
-      response.products = allHomeServices.map((row) => {
+      response.data.products = allHomeServices.map((row) => {
         return {
           id: row.id,
           name: row.nombre,
@@ -36,7 +37,7 @@ module.exports = {
   },
   productListCompany: async (req, res) => {
     try {
-      const response = {};
+      const response = { data: {} };
 
       const [allCompanyServices, categorias] = await Promise.all([
         Servicio.findAll(
@@ -46,17 +47,17 @@ module.exports = {
         CategoriaServicio.findAll({ include: [{ association: 'servicios' }] }),
       ]);
 
-      response.count = allCompanyServices.length;
-      response.countByCategory = {};
+      response.data.count = allCompanyServices.length;
+      response.data.countByCategory = {};
       categorias.forEach((row) => {
-        response.countByCategory[row.name] = row.servicios.length;
+        response.data.countByCategory[row.name] = row.servicios.length;
       });
-      response.products = allCompanyServices.map((row) => {
+      response.data.products = allCompanyServices.map((row) => {
         return {
           id: row.id,
           name: row.nombre,
           description: row.descripcion,
-          categories: row.categorias,
+          categories: row.categorias.name,
           detail: `/api/products/${row.id}`,
         };
       });
