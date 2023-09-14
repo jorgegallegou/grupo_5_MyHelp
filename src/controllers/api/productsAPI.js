@@ -18,7 +18,6 @@ module.exports = {
       response.data.count = allHomeServices.length;
       response.data.countByCategory = {};
       categorias.forEach((row) => {
-        console.log(row);
         response.data.countByCategory[row.descripcion] = row.servicios.length;
       });
       response.data.products = allHomeServices.map((row) => {
@@ -50,14 +49,14 @@ module.exports = {
       response.data.count = allCompanyServices.length;
       response.data.countByCategory = {};
       categorias.forEach((row) => {
-        response.data.countByCategory[row.name] = row.servicios.length;
+        response.data.countByCategory[row.descripcion] = row.servicios.length;
       });
       response.data.products = allCompanyServices.map((row) => {
         return {
           id: row.id,
           name: row.nombre,
           description: row.descripcion,
-          categories: row.categorias.name,
+          categories: row.categorias,
           detail: `/api/products/${row.id}`,
         };
       });
