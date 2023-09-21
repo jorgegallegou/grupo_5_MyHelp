@@ -112,7 +112,7 @@ module.exports = {
           descripcion: req.body.descripcion,
           descripcion_general: req.body.descripcion_general,
           id_categorias_servicios: req.body.categoria,
-          //imagen: req.file.filename,
+          imagen: req.file.filename,
         });
         return res.redirect('/productDetail/' + servicioCreado.id);
       }

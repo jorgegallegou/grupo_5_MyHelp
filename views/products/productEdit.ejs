@@ -64,7 +64,7 @@
     <button class="btn-login-cargar-producto" type="submit">Editar</button> 
   </form>
 
-  <form action="/product/delete/:id" method="POST" class="formulario">
+  <form action="/product/delete/<%= servicio.id %>" method="POST" class="formulario">
     <input type="hidden" name="_method" value="DELETE">
     <button class="btn-login-cargar-producto" type="submit">Eliminar</button>
   </form>

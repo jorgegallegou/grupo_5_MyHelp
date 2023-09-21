@@ -23,15 +23,14 @@
           <h4>Precio: <strong>$<%= row.precio %></strong></h4>
           <p><%= row.descripcion %></p>
           <a href="/productDetail/<%= row.id %>">
-            <button class="request" type="submit">
-              Conoce más!
-            </button></a>
+            <button class="request" type="submit">Conoce más!</button></a
+          >
 
-            <% if (locals.adminLog) { %>
-              <a href="product/edit/<%= row.id %>">
-                <button class="request" type="submit"> Editar</button></a>
-            <% } %>
-
+          <% if (locals.adminLog) { %>
+          <a href="product/edit/<%= row.id %>">
+            <button class="request" type="submit">Editar</button></a
+          >
+          <% } %>
         </div>
       </div>
       <%}); %>
@@ -53,16 +52,15 @@
         <div class="description">
           <h4>Precio: <strong>$<%= row.precio %></strong></h4>
           <p><%= row.descripcion %></p>
-          <a href="scheduleService">
-            <a href="scheduleService">
-              <button class="request" type="submit">
-                Solicita aquí tu servicio
-              </button></a>
-  
-              <% if (locals.adminLog) { %>
-                <a href="product/edit/<%= row.id %>">
-                  <button class="request" type="submit"> Editar</button></a>
-              <% } %>
+          <a href="/productDetail/<%= row.id %>">
+            <button class="request" type="submit">Conoce más!</button></a
+          >
+
+          <% if (locals.adminLog) { %>
+          <a href="product/edit/<%= row.id %>">
+            <button class="request" type="submit">Editar</button></a
+          >
+          <% } %>
         </div>
       </div>
       <% }); %>

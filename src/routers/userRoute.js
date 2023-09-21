@@ -1,39 +1,43 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const controller = require("../controllers/userController");
-const uploadFile = require("../middlewares/multerUserMiddleware");
-const guestMiddleware = require("../middlewares/guestMiddleware");
-const authMiddleware = require("../middlewares/authMiddleware");
-const loginValidation = require("../middlewares/loginValidation");
+const controller = require('../controllers/userController');
+const uploadFile = require('../middlewares/multerUserMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+const loginValidation = require('../middlewares/loginValidation');
 
 // VALIDATIONS //
 
-const regValidations = require("../middlewares/regValidation");
+const regValidations = require('../middlewares/regValidation');
 
 // Formulario de registro
-router.get("/register", guestMiddleware, controller.register);
+router.get('/register', guestMiddleware, controller.register);
 
 //Procesar el registro
-router.post("/register", uploadFile.single("imagen"), regValidations, controller.processRegister );
+router.post(
+  '/register',
+  uploadFile.single('imagen'),
+  regValidations,
+  controller.processRegister
+);
 
 //Formulario de login
-router.get("/login", guestMiddleware, controller.login);
+router.get('/login', guestMiddleware, controller.login);
 
 //Process el login
-router.post("/login", loginValidation, controller.loginProcess);
+router.post('/login', loginValidation, controller.loginProcess);
 
 //Perfil del usuario
-router.get("/profile", authMiddleware, controller.profile);
+router.get('/profile', authMiddleware, controller.profile);
 
 //Logout
-router.get("/logout", controller.logout);
+router.get('/logout', controller.logout);
 
 //Lista de usuarios
-router.get("/list", controller.list);
+router.get('/list', guestMiddleware, authMiddleware, controller.list);
 
 // Edición de usuario
-router.get("/edit/:id", controller.edit);
-router.put("/edit/:id", uploadFile.single("imagen"), controller.processEdit);
-
+router.get('/edit/:id', controller.edit);
+router.put('/edit/:id', uploadFile.single('imagen'), controller.processEdit);
 
 module.exports = router;

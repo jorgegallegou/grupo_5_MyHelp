@@ -4,15 +4,45 @@ const Servicio = db.Servicio;
 const CategoriaServicio = db.CategoriaServicio;
 
 module.exports = {
+  allList: async (req, res) => {
+    try {
+      const response = { data: {} };
+
+      const [allServices, categorias] = await Promise.all([
+        Servicio.findAll({
+          where: { id_categorias_servicios: [1, 2, 3, 4] },
+          include: [{ association: 'categorias' }],
+        }),
+        CategoriaServicio.findAll({ include: [{ association: 'servicios' }] }),
+      ]);
+      response.data.count = allServices.length;
+      response.data.countByCategory = {};
+      categorias.forEach((row) => {
+        response.data.countByCategory[row.descripcion] = row.servicios.length;
+      });
+      response.data.products = allServices.map((row) => {
+        return {
+          id: row.id,
+          name: row.nombre,
+          description: row.descripcion,
+          categories: row.categorias,
+          detail: `/api/products/${row.id}`,
+        };
+      });
+      return res.json(response);
+    } catch (error) {
+      console.log(error);
+    }
+  },
   productListHome: async (req, res) => {
     try {
       const response = { data: {} };
 
       const [allHomeServices, categorias] = await Promise.all([
-        Servicio.findAll(
-          { where: { id_categorias_servicios: [1, 2] } },
-          { include: [{ association: 'categorias' }] }
-        ),
+        Servicio.findAll({
+          where: { id_categorias_servicios: [1, 2] },
+          include: [{ association: 'categorias' }],
+        }),
         CategoriaServicio.findAll({ include: [{ association: 'servicios' }] }),
       ]);
       response.data.count = allHomeServices.length;
@@ -39,10 +69,10 @@ module.exports = {
       const response = { data: {} };
 
       const [allCompanyServices, categorias] = await Promise.all([
-        Servicio.findAll(
-          { where: { id_categorias_servicios: [3, 4] } },
-          { include: [{ association: 'categorias' }] }
-        ),
+        Servicio.findAll({
+          where: { id_categorias_servicios: [3, 4] },
+          include: [{ association: 'categorias' }],
+        }),
         CategoriaServicio.findAll({ include: [{ association: 'servicios' }] }),
       ]);
 
