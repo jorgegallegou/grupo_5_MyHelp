@@ -25,7 +25,8 @@ module.exports = {
           id: row.id,
           name: row.nombre,
           description: row.descripcion,
-          categories: row.categorias,
+          categories: row.categorias.descripcion,
+          image: row.imagen,
           detail: `/api/products/${row.id}`,
         };
       });
