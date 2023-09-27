@@ -1,87 +1,140 @@
 window.addEventListener("load", function () {
-  let form = document.querySelector("form.formulario");
+  const form = document.querySelector(".formulario");
 
-  form.addEventListener("submit", function (e) {
-    // Limpia los errores anteriores
-    let ulErrores = document.querySelector("div.errores ul");
-    ulErrores.innerHTML = "";
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    cleanError();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const cpassword = document.getElementById("cpassword").value.trim();
+    const imagen = document.getElementById("imagen");
+    const tipo_identificacion = document.getElementById("tipo_identificacion").value.trim();
+    const identificacion = document.getElementById("identificacion").value.trim();
+    const celular = document.getElementById("celular").value.trim();
 
     let errores = [];
+    console.log(errores);
 
-    let campoNombre = document.querySelector("input[name='nombre']");
-    if (campoNombre.value === "") {
-      errores.push("Ingresa tu nombre completo.");
-    } else if (campoNombre.value.length < 2) {
-      errores.push("Tu nombre debe tener al menos 2 caracteres.");
+    if (!nombre) {
+      errores.push({
+        campo: "nombre",
+        msg: "El campo nombre está vacío",
+      });
+      showError("nombre", "El campo nombre está vacío");
+    } else if (nombre.length < 2) {
+      errores.push({
+        campo: "nombre",
+        msg: "El campo nombre debe tener al menos 2 caracteres",
+      });
+      showError("nombre", "El campo nombre debe tener al menos 2 caracteres");
     }
 
-    let campoEmail = document.querySelector("input[name='email']");
-    let correoExpresionRegular =
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (campoEmail.value === "") {
-      errores.push("Ingresa tu dirección de correo electrónico.");
-    } else if (!correoExpresionRegular.test(campoEmail.value)) {
-      errores.push("El formato del correo electrónico no es válido");
+    let correoExpresionRegular = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email) {
+      errores.push({
+        campo: "email",
+        msg: "Ingresa un correo electrónico",
+      });
+      showError("email", "Ingresa un correo electrónico");
+    } else if (!correoExpresionRegular.test(email)) {
+      errores.push({
+        campo: "email",
+        msg: "El formato del correo electrónico no es válido",
+      });
+      showError("email", "El formato del correo electrónico no es válido");
     }
 
-    let campoPassword = document.querySelector("input[name='password']");
-    if (campoPassword.value === "") {
-      errores.push("Ingresa una contraseña.");
+    if (!password) {
+      errores.push({
+        campo: "password",
+        msg: "Ingresa una contraseña",
+      });
+      showError("password", "Ingresa una contraseña");
+    } else if (password.length < 8) {
+      errores.push({
+        campo: "password",
+        msg: "La contraseña debe tener mínimo 8 caracteres.",
+      });
+      showError("password", "La contraseña debe tener mínimo 8 caracteres.");
+    } else if (password !== cpassword) {
+      errores.push({
+        campo: "password",
+        msg: "Las contraseñas no coinciden.",
+      });
+      showError("password", "Las contraseñas no coinciden.");
     }
 
-    let campoImagen = document.querySelector("input[name='imagen']");
-    if (campoImagen.files.length === 0) {
-      errores.push("Por favor, selecciona una imagen.");
+    if (imagen.files.length === 0) {
+      errores.push({
+        campo: "imagen",
+        msg: "Selecciona una imagen",
+      });
+      showError("imagen", "Selecciona una imagen.");
     } else {
-      let imagen = campoImagen.files[0];
+      let campoImagen = imagen.files[0];
       let extensionesPermitidas = ["jpg", "jpeg", "png", "gif", "svg"];
-      let extension = imagen.name.split(".").pop().toLowerCase();
+      let extension = campoImagen.name.split(".").pop().toLowerCase();
       if (extensionesPermitidas.indexOf(extension) === -1) {
-        errores.push(
-          "Selecciona una imagen en formato JPG, JPEG, PNG, GIF o .SVG"
-        );
-      }
-      let tamanoMaximo = 5 * 1024 * 1024; // 5 MB
-      if (imagen.size > tamanoMaximo) {
-        errores.push(
-          "La imagen es demasiado grande. El tamaño máximo permitido es de 5 MB."
-        );
+        errores.push({
+          campo: "imagen",
+          msg: "Selecciona una imagen en formato JPG, JPEG, PNG, GIF o .SVG",
+        });
+        showError("imagen","Selecciona una imagen en formato JPG, JPEG, PNG, GIF o .SVG");
       }
     }
 
-    let campoTipoIdentificacion = document.querySelector(
-      "select[name='tipo_identificacion']"
-    );
-    if (campoTipoIdentificacion.value === "") {
-      errores.push("Debes seleccionar un tipo de documento de identificación.");
+    if (!tipo_identificacion) {
+      errores.push({
+        campo: "tipo_identificacion",
+        msg: "Debes seleccionar un tipo de documento de identificación.",
+      });
+      showError("tipo_identificacion","Debes seleccionar un tipo de documento de identificación.");
     }
 
-    let campoIdentificacion = document.querySelector(
-      "input[name='identificacion']"
-    );
-    if (campoIdentificacion.value === "") {
-      errores.push("Debes ingresar el número de identificacíon.");
+    if (!identificacion) {
+      errores.push({
+        campo: "identificacion",
+        msg: "Debes ingresar el número de identificacíon.",
+      });
+      showError("identificacion","Debes ingresar el número de identificación.");
     }
 
-    let campoCelular = document.querySelector("input[name='celular']");
-    if (campoCelular.value === "") {
-      errores.push("Debes ingresar un número de celular.");
+    if (!celular) {
+      errores.push({
+        campo: "celular",
+        msg: "Debes ingresar un número de celular.",
+      });
+      showError("celular", "Debes ingresar un número de celular.");
     }
 
     if (errores.length > 0) {
-      let tituloError = document.querySelector(".errores");
-      let icono = tituloError.querySelector("i");
-      let texto = tituloError.querySelector("h3");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "¡Algún campo incorrecto!",
+      });
+    } else {
+      Swal.fire("¡Registro satisfactorio!", "", "success").then(() => {
+        form.submit();
+      });
+    }
 
-      tituloError.style.display = "inline-block";
-      icono.style.display = "inline-block";
-      texto.style.display = "inline-block";
-      icono.style.marginRight = "5px";
-
-      e.preventDefault();
-      for (let i = 0; i < errores.length; i++) {
-        ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
+    /*Función para mostrar los errores en el formulario*/
+    function showError(campo, msg) {
+      const errorField = document.getElementById(`error-${campo}`);
+      if (errorField) {
+        errorField.textContent = msg;
       }
+    }
+
+    /*Funcion para limpiar los errores*/
+    function cleanError() {
+      const errorEmpty = document.querySelectorAll(".msg-error");
+      errorEmpty.forEach((errorField) => {
+        errorField.textContent = "";
+      });
     }
   });
 });

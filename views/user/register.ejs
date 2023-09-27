@@ -18,48 +18,46 @@
         <div>
           <label class="label-principal" for="nombre">Nombre completo</label>
           <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
-          <% if (locals.errors && errors.nombre) { %>
-            <div class="text-danger">
-              <p><%= errors.nombre.msg %></p>
-            </div>
-          <% } %>
+          <div>
+            <em class="msg-error" id="error-nombre"></em>
+          </div>
+          
         </div>
       </div>
 
         <div>
         <label class="label-principal" for="email">Correo electrónico</label>
         <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
-        <% if (locals.errors && errors.email) { %>
-          <div class="text-danger">
-            <p><%= errors.email.msg %></p>
-          </div>
-        <% } %>
+        <div>
+          <em class="msg-error" id="error-email"></em>
+        </div>
+        
         </div>
 
         <div class="container-contrasenia"> 
           <div>
             <label class="label-principal" for="password">Contraseña</label>
-            <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" >
-            <% if (locals.errors && errors.password) { %>
-              <div class="text-danger">
-                <p><%= errors.password.msg %></p>
-              </div>
-            <% } %>
+            <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" >          
           </div>
           <div>
             <label class="label-principal" for="cpassword">Confirma la contraseña</label>
             <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirma contraseña" >
+            <div>
+              <em class="msg-error" id="error-cpassword"></em>
+            </div>
           </div>
+        </div>
+        <div>
+          <em class="msg-error" id="error-password"></em>
         </div>
 
         <div>
           <label class="label-principal" for="imagen">Avatar</label>
           <input class="input-normal" type="file" id="imagen" name="imagen">
-          <% if (locals.errors && errors.imagen) { %>
-            <div class="text-danger">
-              <p><%= errors.imagen.msg %></p>
-            </div>
-          <% } %>
+          <div>
+            <em class="msg-error" id="error-imagen"></em>
+          </div>
+         
         </div>
 
         <div class="container-identificacion">
@@ -78,23 +76,23 @@
           </div>
           <div>
             <label class="label-principal" for="identificacion">Número</label>
-            <input class="input-normal" type="number" id="identificacion" name="identificacion" placeholder="Escribe tu documento" value="<%= locals.oldData ? oldData.identificacion : null %>">
-            <% if (locals.errors && errors.identificacion) { %>
-              <div class="text-danger">
-                <p><%= errors.identificacion.msg %></p>
-              </div>
-            <% } %>
-          </div> 
-        </div> 
+            <input class="input-normal" type="number" id="identificacion" name="identificacion"
+              placeholder="Escribe tu documento" value="<%= locals.oldData ? oldData.identificacion : null %>">
+          </div>
+        </div>
+        <div>
+          <em class="msg-error" id="error-tipo_identificacion"></em>
+        </div>
+        <div>
+          <em class="msg-error" id="error-identificacion"></em>
+        </div>
 
         <div>
             <label class="label-principal" for="celular">Celular</label>
             <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" value="<%= locals.oldData ? oldData.celular : null %>">
-            <% if (locals.errors && errors.celular) { %>
-              <div class="text-danger">
-                <p><%= errors.celular.msg %></p>
-              </div>
-            <% } %>
+            <div>
+              <em class="msg-error" id="error-celular"></em>
+            </div>
         </div>
     
 
@@ -114,6 +112,7 @@
 <%- include ('../partials/footer') %>  
 
 <script src="/js/validacionesRegister.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

@@ -7,7 +7,7 @@ module.exports = [
         .notEmpty()
         .withMessage("Campo obligatorio")
         .isEmail()
-        .withMessage("ingrese un email válido"),
+        .withMessage("Ingrese un email válido"),
  
     check("password")
         .notEmpty()
