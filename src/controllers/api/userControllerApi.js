@@ -12,6 +12,7 @@ module.exports = {
           id: row.id,
           name: row.nombre,
           email: row.email,
+          image: row.image,
           detail: `/api/users/${row.id}`,
         };
       });
