@@ -42,6 +42,10 @@ router.put(
   controller.processEdit
 );
 
+// SEARCH PRODUCT
+
+router.post('/search', controller.searchService);
+
 // DELETE PRODUCT
 router.post('/product/delete/:id', controller.processDelete);
 

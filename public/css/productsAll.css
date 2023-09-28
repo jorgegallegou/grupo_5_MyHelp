@@ -1,0 +1,25 @@
+.buscar-servicios {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.buscar-servicios a {
+  text-decoration: none;
+  background-color: #023047;
+  border-radius: 1.2rem;
+  border: solid 2px #ebebeb;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+}
+.buscar-servicios i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffb703;
+  padding: 10px;
+}
+.buscar-servicios i p {
+  font-family: 'Pragati Narrow', sans-serif;
+  margin: 0;
+  font-size: 16px;
+}

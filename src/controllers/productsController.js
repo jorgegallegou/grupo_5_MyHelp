@@ -1,5 +1,6 @@
 const db = require('../dataBase/models');
 const { validationResult } = require('express-validator');
+const { Op } = require('sequelize');
 
 module.exports = {
   productCart: (req, res) => {
@@ -177,6 +178,24 @@ module.exports = {
       return res.redirect('/');
     } catch (error) {
       console.log(error);
+    }
+  },
+
+  searchService: async (req, res) => {
+    try {
+      const allProducts = await db.Servicio.findAll({
+        where: {
+          [Op.or]: [
+            { nombre: { [Op.like]: '%' + req.body.search + '%' } },
+            { descripcion: { [Op.like]: '%' + req.body.search + '%' } },
+            { descripcion_general: { [Op.like]: '%' + req.body.search + '%' } },
+          ],
+        },
+        include: [{ association: 'categorias' }],
+      });
+      return res.render('products/productsAll', { allProducts });
+    } catch (error) {
+      console.error(error);
     }
   },
 

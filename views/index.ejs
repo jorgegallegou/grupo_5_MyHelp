@@ -17,9 +17,11 @@
               <h3>¡Encuentra el servicio a tu necesidad!</h3>
               <p>Nuestros profesionales te ayudarán</p>
             </div>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="search" placeholder="Encuentra tu sevicio MyHelp">
-            <a href="#"><button type="submit">Buscar</button></a>
+            <form action="/search" method="post" class="search-form">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="search" placeholder="Encuentra tu sevicio MyHelp">
+            </form>
+            
           </div>
         
           
@@ -43,6 +45,13 @@
           </div>
           <div class="swiper-slide">
             <img src="img/imgServiciosMyHelp/fontaneria.svg" alt="fontaneria">
+            <div class="text">
+              <a href="scheduleService">
+              <button class="request" type="submit"> Solicita aquí tu servicio</button></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/imgServiciosMyHelp/limpiezaVapor.svg" alt="fontaneria">
             <div class="text">
               <a href="scheduleService">
               <button class="request" type="submit"> Solicita aquí tu servicio</button></a>

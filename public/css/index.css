@@ -81,7 +81,7 @@
   scale: 1.2;
 }
 .nav-item p {
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
   font-weight: 400;
   margin: 0;
 }
@@ -190,7 +190,7 @@
 }
 .nav-list li i p {
   font-size: 14px;
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
   font-weight: 400;
   margin: 3px 0;
 }
@@ -251,9 +251,9 @@
   font-size: 14px;
 }
 .search-bar i {
-  color: grey;
+  color: #219ebc;
   position: absolute;
-  bottom: 12px;
+  bottom: 11px;
 }
 .search-bar input {
   height: 30px;
@@ -264,14 +264,14 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   outline-color: #219ebc;
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
 }
 .search-bar button {
   height: 30px;
   border: none;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
 }
 /*----------------------
 --------SLIDER---------- 
@@ -288,7 +288,7 @@
   font-size: 22px;
 }
 .swiper-slide {
-  background-position: center;
+  background-position: left;
   background-size: cover;
   width: 300px;
   height: 300px;
@@ -358,7 +358,7 @@ footer {
   border: none;
   height: 30px;
   outline-color: #219ebc;
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
 }
 .newsletter form button {
   padding: 0 5px;
@@ -367,7 +367,7 @@ footer {
   border-bottom-right-radius: 8px;
   border: none;
   height: 30px;
-  font-family: "Pragati Narrow";
+  font-family: 'Pragati Narrow';
   transition: all 0.3s;
 }
 .social-media ul {

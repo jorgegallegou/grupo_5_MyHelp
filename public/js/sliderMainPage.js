@@ -1,5 +1,5 @@
-const swiper = new Swiper(".swiper", {
-  effect: "coverflow",
+const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
   grabCursor: false,
   centeredSlides: true,
   slidesPerView: 2,
@@ -13,11 +13,11 @@ const swiper = new Swiper(".swiper", {
     slideShadows: true,
   },
   autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
+    delay: 2000,
+    disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     dynamicBullets: true,
     clickable: true,
   },
