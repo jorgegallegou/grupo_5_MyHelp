@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
       showError('email', 'El formato del correo electrónico no es válido');
     }
 
-    if (!password) {
+    if (!password && !cpassword) {
       errores.push({
         campo: 'password',
         msg: 'Ingresa una contraseña',
@@ -63,6 +63,13 @@ window.addEventListener('load', function () {
         msg: 'La contraseña debe tener mínimo 8 caracteres.',
       });
       showError('password', 'La contraseña debe tener mínimo 8 caracteres.');
+    }
+    if (password && !cpassword) {
+      errores.push({
+        campo: 'cpassword',
+        msg: 'Debes confirmar la contraseña',
+      });
+      showError('cpassword', 'Debes confirmar la contraseña');
     } else if (password !== cpassword) {
       errores.push({
         campo: 'password',
