@@ -4,114 +4,112 @@
 
 /*Productos*/
 
-.contenedor{
-    max-width: 1200px;
-    max-height: 1000px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    contain: paint;
-  }
-  
-  .contenedor .contenedor-items{
-    flex:wrap;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap:30px;
-    grid-row-gap: 30px;
-    width: 80%;
-    transition: .3s;
-  }
-  .contenedor .contenedor-items .item{
-    max-width: 200px;
-    margin: auto;
-    border: 1px solid #219EBC;
-    border-radius: 10px;
-    padding: 20px;
-    transition: .3s;
-  }
-  .contenedor .contenedor-items .item .img-item{
-    width: 100%;
-  }
-  .contenedor .contenedor-items .item:hover{
-    box-shadow: 0 0 10px #ffb703;
-    scale: 1.05;
-  }
-  .contenedor .contenedor-items .item .titulo-item{
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .contenedor .contenedor-items .item .precio-item{
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    font-size: 22px;
-  }
-  .contenedor .contenedor-items .item .boton-item{
-    display: block;
-    margin: 10px auto;
-    border: none;
-    background-color: #044566;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Pragati Narrow';
-    font-size: 14px;
-  }
-  
-  /*Finalizacion de compra*/
-  
-  .contenedor .contenedor-compras{
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap:30px;
-  grid-row-gap: 30px;
-  border: 1px solid #ffffff;
+.container-cart {
+  display: block;
+  align-items: center;
+  width: 100vw;
+  background-color: #ebebeb;
+  font-size: 18px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 80%;
-  transition: .3s;
-  position: sticky !important;
-  }
-  .contenedor .contenedor-compras .compra{
-  max-width: 200px;
-  border-radius: 10px;
   padding: 20px;
-  transition: .3s;
-  }
-  
-  .contenedor .contenedor-compras .compra .titulo-compras{
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+  background: linear-gradient(180deg, #219ebc, #044566);
+  margin: 20px 10px 10px 10px;
+  border-radius: 0.5rem;
+  color: #ebebeb;
+  transition: all;
+}
+.product .img-producto {
+  width: 100%;
   display: block;
-  font-weight: bold;
-  text-align: right;
-  text-transform: uppercase;
-  }
-  .contenedor .contenedor-compras .compra .txt-compras{
-  display: block;
-  font-weight: 100;
-  text-align: right;
-  text-transform: uppercase;
-  
-  }
-  .contenedor .contenedor-compras .compra .precio-compras{
-  display: block;
+  border: solid 1px #ffffff;
+  border-radius: 0.5rem;
+}
+.product .descripcion {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+.product .titulo {
+  margin: 0;
+  font-size: 24px;
+}
+.resumen-pago {
   text-align: center;
-  font-weight: bold;
-  font-size: 22px;
-  background: #023047;
-  }
-  
-  .contenedor .contenedor-compras .compra .boton-compras{
-  display: block;
-  border: none;
-  background-color: #023047;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 5px;
-  width: 100px;
-  margin: 10px 0 0 100px;
-  cursor: pointer;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(149, 149, 149);
+  margin: 0px 10px 10px 10px;
+  width: 80%;
+  border-radius: 0.5rem;
+  color: #ebebeb;
+  background: linear-gradient(180deg, #219ebc, #044566);
+}
+.a-pagar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.pago {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.a-pagar h4,
+.a-pagar p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.pago h4,
+.pago p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.divider {
+  color: #044566;
+}
+.pagar {
+  width: 80%;
+  border: solid 1px #219ebc;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #044566;
   font-family: 'Pragati Narrow';
-  font-size: 14px;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+  transition: all;
+}
+.pagar:hover {
+  background-color: #fb8500;
+}
+
+/*-----------------
+---MEDIA QUERIES---
+-----------------*/
+
+@media (min-width: 480px) {
+  .container-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
+  .product {
+    width: 35%;
+  }
+  .resumen-pago {
+    width: 35%;
+    margin: 0;
+  }
+}

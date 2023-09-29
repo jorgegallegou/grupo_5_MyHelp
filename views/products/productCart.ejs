@@ -1,48 +1,39 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Products'}) %>
-<body>
+<%- include ('../partials/head', {title: 'Products' }) %>
 
-  <%- include ('../partials/header') %>
-  
-    <main>
+    <body>
 
-    <section class="contenedor">
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item">Limpieza Hogar</span>
-                <img src="img/imgServiciosMyhelp/limpiezaHogar.svg" alt="" class="img-item">
-                <span class="precio-item">Limpieza por 8 horas</span>
-                <span class="precio-item">$70.000</span>
-                <button class="boton-item">Agregar</button>
-            </div>
-        </div>
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item"></span>
-                <img src="img/limpieza.png" alt="" class="img-item">
-                <span class="precio-item">$####</span>
-                <button class="boton-item">Agregar</button>
-            </div>
-        </div>
+        <%- include ('../partials/header') %>
 
-        <!-- Código HTML de finalizacion de compra-->
+            <main>
+                <div class="container-cart">
+                    <div class="product">
+                        <img class="img-producto" src="/img/imgServiciosMyhelp/limpiezaHogar.svg" alt="img">
+                        <h2 class="titulo">Limpieza hogar</h2>
+                        <p><strong>$ precio</strong></p>
+                        <h3 class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                            laboriosam ipsa eos accusantium est numquam consectetur sapiente labore, asperiores vero
+                            totam necessitatibus sunt eaque neque distinctio maxime iusto, libero repellat.</h3>
+                    </div>
+                    <div class="resumen-pago">
+                        <h4 class="resumen">Resumen de compra</h4>
+                        <hr class="divider">
+                        <div class="a-pagar">
+                            <h4>Servicio</h4>
+                            <p>$ 75000</p>
+                        </div>
+                        <hr class="divider">
+                        <div class="pago">
+                            <h4>Total</h4>
+                            <p>$ 75000</p>
+                        </div>
+                        <button class="pagar" type="submit">Pagar</button>
+                    </div>
+                </div>
+            </main>
 
-        <div class="contenedor-compras">
-            <div class="compra">
-                <span class="titulo-compras">Finalizar compra</span>
-                <span class="txt-compras"><strong>$70.000</strong></span>
-                <span class="txt-compras">iva <strong>$11.200</strong> </span>
-                <span class="txt-compras">-----------------</span>
-                <span class="txt-compras">Total <strong>$81.200</strong></span>
-                <button class="boton-compras">Pagar</button>
-                <a href="/"><button class="boton-compras">Cancelar</button></a>
+            <%- include ('../partials/footer') %>
 
-            </div>
-        </div>
-    </section>
-</main>
+    </body>
 
-  <%- include ('../partials/footer') %>
-
-</body>
-</html>
+    </html>
