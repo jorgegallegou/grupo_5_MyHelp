@@ -1,119 +1,141 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Register'}) %>
-<body>
-  
-  <%- include ('../partials/header') %>
+<%- include ('../partials/head', {title: 'Register' }) %>
 
-<main class="main-register">
-  
-  <form action="/user/register" method="post"  enctype="multipart/form-data" class="formulario" novalidate>
-    <h1 class="crea-tu-cuenta" >Crea tu cuenta Myhelp</h1>
+  <body>
 
-    <div class="errores">
-      <i class="fa-solid fa-circle-exclamation"></i><h3>Error</h3>
-      <ul></ul>
-    </div>
+    <%- include ('../partials/header') %>
 
-      <div class="container-nombre">
-        <div>
-          <label class="label-principal" for="nombre">Nombre completo</label>
-          <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
-          <div>
-            <em class="msg-error" id="error-nombre"></em>
+      <main class="main-register">
+
+        <form action="/user/register" method="post" enctype="multipart/form-data" class="formulario" novalidate>
+          <h1 class="crea-tu-cuenta">Crea tu cuenta Myhelp</h1>
+
+          <div class="errores">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h3>Error</h3>
+            <ul></ul>
           </div>
-          
-        </div>
-      </div>
 
-        <div>
-        <label class="label-principal" for="email">Correo electrónico</label>
-        <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo" value="<%= locals.oldData ? oldData.email : null %>">
-        <div>
-          <em class="msg-error" id="error-email"></em>
-        </div>
-        
-        </div>
+          <div class="container-nombre">
+            <div>
+              <label class="label-principal" for="nombre">Nombre completo</label>
+              <input class="input-normal" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"
+                value="<%= locals.oldData ? oldData.nombre : null %>">
+              <div>
+                <em class="msg-error" id="error-nombre"></em>
+              </div>
 
-        <div class="container-contrasenia"> 
-          <div>
-            <label class="label-principal" for="password">Contraseña</label>
-            <input class="input-normal" type="password" id="password" name="password" placeholder="Crea tu contraseña" >          
+            </div>
           </div>
-          <div>
-            <label class="label-principal" for="cpassword">Confirma la contraseña</label>
-            <input class="input-normal" type="password" id="cpassword" name="cpassword" placeholder="Confirma contraseña" >
-            
-          </div>
-        </div>
-        <div>
-          <em class="msg-error" id="error-password"></em>
-        </div>
-        <div>
-          <em class="msg-error" id="error-cpassword"></em>
-        </div>
 
-        <div>
-          <label class="label-principal" for="imagen">Avatar</label>
-          <input class="input-normal" type="file" id="imagen" name="imagen">
           <div>
-            <em class="msg-error" id="error-imagen"></em>
-          </div>
-         
-        </div>
+            <label class="label-principal" for="email">Correo electrónico</label>
+            <input class="input-normal" type="email" id="email" name="email" placeholder="Ingresa tu correo"
+              value="<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) { %>
 
-        <div class="container-identificacion">
-          <div>
-            <label class="label-principal" for="tipo_identificacion">Tipo de identificacón</label>
-            <% let typeOfDocument = ['Cedula de ciudadania', 'Cedula de extrangeria', 'Pasaporte'] %>
-            <select class="select" id="tipo_identificacion" name="tipo_identificacion">
-              <option value="">Selecciona...</option>
-              <% for (let doc of typeOfDocument ) { %>
-                <option value="<%= doc %>" 
-                <%= locals.oldData && (doc == oldData.tipo_identificacion) ? 'selected' : null%>
-                > <%= doc %> </option>
+              <div class="text-danger">
+
+                <em>
+                  <%= errors.email.msg %>
+                </em>
+
+              </div>
+
               <% } %>
-              
-            </select>
+                <div>
+                  <em class="msg-error" id="error-email"></em>
+                </div>
+
+          </div>
+
+          <div class="container-contrasenia">
+            <div>
+              <label class="label-principal" for="password">Contraseña</label>
+              <input class="input-normal" type="password" id="password" name="password"
+                placeholder="Crea tu contraseña">
+            </div>
+            <div>
+              <label class="label-principal" for="cpassword">Confirma la contraseña</label>
+              <input class="input-normal" type="password" id="cpassword" name="cpassword"
+                placeholder="Confirma contraseña">
+
+            </div>
           </div>
           <div>
-            <label class="label-principal" for="identificacion">Número</label>
-            <input class="input-normal" type="number" id="identificacion" name="identificacion"
-              placeholder="Escribe tu documento" value="<%= locals.oldData ? oldData.identificacion : null %>">
+            <em class="msg-error" id="error-password"></em>
           </div>
-        </div>
-        <div>
-          <em class="msg-error" id="error-tipo_identificacion"></em>
-        </div>
-        <div>
-          <em class="msg-error" id="error-identificacion"></em>
-        </div>
+          <div>
+            <em class="msg-error" id="error-cpassword"></em>
+          </div>
 
-        <div>
+          <div>
+            <label class="label-principal" for="imagen">Avatar</label>
+            <input class="input-normal" type="file" id="imagen" name="imagen">
+            <div>
+              <em class="msg-error" id="error-imagen"></em>
+            </div>
+
+          </div>
+
+          <div class="container-identificacion">
+            <div>
+              <label class="label-principal" for="tipo_identificacion">Tipo de identificacón</label>
+              <% let typeOfDocument=['Cedula de ciudadania', 'Cedula de extrangeria' , 'Pasaporte' ] %>
+                <select class="select" id="tipo_identificacion" name="tipo_identificacion">
+                  <option value="">Selecciona...</option>
+                  <% for (let doc of typeOfDocument ) { %>
+                    <option value="<%= doc %>" <%=locals.oldData && (doc==oldData.tipo_identificacion) ? 'selected' :
+                      null%>
+                      > <%= doc %>
+                    </option>
+                    <% } %>
+
+                </select>
+            </div>
+            <div>
+              <label class="label-principal" for="identificacion">Número</label>
+              <input class="input-normal" type="number" id="identificacion" name="identificacion"
+                placeholder="Escribe tu documento" value="<%= locals.oldData ? oldData.identificacion : null %>">
+            </div>
+          </div>
+          <div>
+            <em class="msg-error" id="error-tipo_identificacion"></em>
+          </div>
+          <div>
+            <em class="msg-error" id="error-identificacion"></em>
+          </div>
+
+          <div>
             <label class="label-principal" for="celular">Celular</label>
-            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular" value="<%= locals.oldData ? oldData.celular : null %>">
+            <input class="input-normal" type="tel" id="celular" name="celular" placeholder="Ingresa tu celular"
+              value="<%= locals.oldData ? oldData.celular : null %>">
             <div>
               <em class="msg-error" id="error-celular"></em>
             </div>
-        </div>
-    
+          </div>
 
-        <div class="container-button">
-            <button class="btn-form-register"  type="reset">Cancelar</button>
+
+          <div class="container-button">
+            <button class="btn-form-register" type="reset">Cancelar</button>
             <button class="btn-form-register" type="submit">Enviar</button>
-        </div>  
+          </div>
 
-        <div class="ya-tienes-cuenta">
-          <p>¿Ya tienes una cuenta?</p>
-          <a class="text-iniciar-sesion" href="/user/login"><p>Iniciar sesión</p></a>
-        </div>
-  </form>
+          <div class="ya-tienes-cuenta">
+            <p>¿Ya tienes una cuenta?</p>
+            <a class="text-iniciar-sesion" href="/user/login">
+              <p>Iniciar sesión</p>
+            </a>
+          </div>
+        </form>
 
-</main>
+      </main>
 
-<%- include ('../partials/footer') %>  
+      <%- include ('../partials/footer') %>
 
-<script src="/js/validacionesRegister.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/js/validacionesRegister.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-</body>
-</html>
+  </body>
+
+  </html>
