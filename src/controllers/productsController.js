@@ -7,10 +7,6 @@ module.exports = {
     return res.render('products/productCart');
   },
 
-  scheduleService: (req, res) => {
-    return res.render('products/scheduleService');
-  },
-
   /*-----------------------------------------------------------------
   <-- Muestra el detalle de un producto a travez de bases de datos--> 
   -----------------------------------------------------------------*/

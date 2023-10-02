@@ -11,7 +11,6 @@ const validateEditProduct = require('../middlewares/validateEditProduct');
 router.get('/productHome', controller.productListHome);
 router.get('/productCompany', controller.productListCompany);
 router.get('/productCart', controller.productCart);
-router.get('/scheduleService', controller.scheduleService);
 router.get('/productDetail/:id', controller.productDetailId);
 
 // LOAD PRODUCT

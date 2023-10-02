@@ -4,7 +4,7 @@
       <ul>
         <li><a href="/productHome">Servicios Hogar</a></li>
         <li><a href="/productCompany">Empresas</a></li>
-        <li><a href="#">Nosotros</a></li>
+        <li><a href="/about">Nosotros</a></li>
       </ul>
     </nav>
   </div>
@@ -15,22 +15,23 @@
 
       <% if (locals.isLogged) { %>
         <div class="dropdown">
-          <a id="droplink" class="droplink" href="#"
-            ><img src="/img/imgUsers/<%= locals.userLogged.image%>" />Hola <%=
-            locals.userLogged.nombre %> <i class="fa-solid fa-angle-down"></i>
+          <a id="droplink" class="droplink" href="#"><img src="/img/imgUsers/<%= locals.userLogged.image%>" />Hola <%=
+              locals.userLogged.nombre %> <i class="fa-solid fa-angle-down"></i>
           </a>
-          
+
           <div class="dropdown-content" id="dropdown-content">
             <button class="hidden" id="hidden"><i class="fa-solid fa-xmark"></i></button>
             <li class="nav-item">
-              <a href="/user/profile"
-                ><i class="fa fa-user"><p>Perfil</p></i>
+              <a href="/user/profile"><i class="fa fa-user">
+                  <p>Perfil</p>
+                </i>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="/user/logout"
-                ><i class="fa fa-sign-out"><p>logout</p></i>
+              <a href="/user/logout"><i class="fa fa-sign-out">
+                  <p>logout</p>
+                </i>
               </a>
             </li>
 
@@ -44,34 +45,34 @@
 
           </div>
         </div>
-          
+
 
         <% }else { %>
 
-      <button class="open" id="open"><i class="fa-solid fa-bars"></i></button>
+          <button class="open" id="open"><i class="fa-solid fa-bars"></i></button>
 
-      <nav class="nav" id="nav">
-        <button class="close" id="close"><i class="fa-solid fa-xmark"></i></i></button>
-        <ul class="nav-list">
-           
-          <li class="register">
-            <a href="/user/register"
-              ><i class="fa-regular fa-id-card"><p>Registrarse</p></i></a
-            >
-          </li>
-          <li class="log-in">
-            <a href="/user/login"
-              ><i class="fa-regular fa-user"><p>Ingresar</p></i></a
-            >
-          </li>
-          <li class="shopping">
-            <a href="/productCart"
-              ><i class="fa-solid fa-cart-shopping"><p>Carrito</p></i></a
-            >
-          </li>
-          <% } %>
-        </ul>
-      </nav>
+          <nav class="nav" id="nav">
+            <button class="close" id="close"><i class="fa-solid fa-xmark"></i></i></button>
+            <ul class="nav-list">
+
+              <li class="register">
+                <a href="/user/register"><i class="fa-regular fa-id-card">
+                    <p>Registrarse</p>
+                  </i></a>
+              </li>
+              <li class="log-in">
+                <a href="/user/login"><i class="fa-regular fa-user">
+                    <p>Ingresar</p>
+                  </i></a>
+              </li>
+              <li class="shopping">
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping">
+                    <p>Carrito</p>
+                  </i></a>
+              </li>
+              <% } %>
+            </ul>
+          </nav>
     </div>
   </div>
 </header>

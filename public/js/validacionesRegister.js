@@ -130,17 +130,7 @@ window.addEventListener('load', function () {
       showError('celular', 'Debes ingresar un número de celular.');
     }
 
-    if (errores.length > 0) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: '¡Algún campo incorrecto!',
-      });
-    } else {
-      Swal.fire('¡Registro satisfactorio!', '', 'success').then(() => {
-        form.submit();
-      });
-    }
+    errores.length == 0 ? form.submit() : null;
 
     /*Función para mostrar los errores en el formulario*/
     function showError(campo, msg) {

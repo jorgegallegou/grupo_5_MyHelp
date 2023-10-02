@@ -10,6 +10,7 @@
   width: 100vw;
   background-color: #ebebeb;
   font-size: 18px;
+  margin: 0 auto;
 }
 .product {
   display: flex;
@@ -57,6 +58,13 @@
   align-items: center;
   padding: 20px;
 }
+.impuesto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 .pago {
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +74,11 @@
 }
 .a-pagar h4,
 .a-pagar p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.impuesto h4,
+.impuesto p {
   margin: 10px 0;
   font-size: 18px;
 }
@@ -104,6 +117,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin: 20px 0;
+    text-align: center;
   }
   .product {
     width: 35%;

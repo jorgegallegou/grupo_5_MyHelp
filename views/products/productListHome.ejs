@@ -1,70 +1,69 @@
 <!DOCTYPE html>
-<%- include ('../partials/head', {title: 'Myhelp Productslist'}) %>
-<body>
-  <%- include ('../partials/header') %>
-  <main>
-    <div class="main-description">
-      <h2>Limpieza y Aseo</h2>
-      <p>
-        Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en
-        servicios de limpieza.
-      </p>
-    </div>
-    <div class="all-works">
-      <% clean.forEach(row => { %>
-      <div class="clean-home">
-        <img
-          src="img/imgServiciosMyHelp/<%= row.imagen %>"
-          alt="<%= row.imagen %>"
-        />
-        <h3><%= row.nombre %></h3>
+<%- include ('../partials/head', {title: 'Myhelp Productslist' }) %>
 
-        <div class="second-description">
-          <h4>Precio: <strong>$<%= row.precio %></strong></h4>
-          <p><%= row.descripcion %></p>
-          <a href="/productDetail/<%= row.id %>">
-            <button class="request" type="submit">Conoce más!</button></a
-          >
-
-          <% if (locals.adminLog) { %>
-          <a href="product/edit/<%= row.id %>">
-            <button class="request" type="submit">Editar</button></a
-          >
-          <% } %>
+  <body>
+    <%- include ('../partials/header') %>
+      <main>
+        <div class="main-description">
+          <h2>Limpieza y Aseo</h2>
+          <p>
+            Tu hogar impecable, sin esfuerzo! Confía en nuestra excelencia en
+            servicios de limpieza.
+          </p>
         </div>
-      </div>
-      <%}); %>
-    </div>
+        <div class="all-works">
+          <% clean.forEach(row=> { %>
+            <div class="clean-home">
+              <img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
+              <h3>
+                <%= row.nombre %>
+              </h3>
 
-    <div class="main-description">
-      <h2>Servicios Especiales</h2>
-      <p>Tu necesidad, nuestra especialidad.</p>
-    </div>
-    <div class="all-works">
-      <% special.forEach(row => { %>
-      <div class="works">
-        <img
-          src="img/imgServiciosMyHelp/<%= row.imagen %>"
-          alt="<%= row.imagen %>"
-        />
-        <h3><%= row.nombre %></h3>
+              <div class="second-description">
+                <h4>Precio: <strong>$<%= row.precio %></strong></h4>
+                <p>
+                  <%= row.descripcion %>
+                </p>
+                <a href="/productDetail/<%= row.id %>">
+                  <button class="request" type="submit">Conoce más!</button></a>
 
-        <div class="description">
-          <h4>Precio: <strong>$<%= row.precio %></strong></h4>
-          <p><%= row.descripcion %></p>
-          <a href="/productDetail/<%= row.id %>">
-            <button class="request" type="submit">Conoce más!</button></a
-          >
-
-          <% if (locals.adminLog) { %>
-          <a href="product/edit/<%= row.id %>">
-            <button class="request" type="submit">Editar</button></a
-          >
-          <% } %>
+                <% if (locals.adminLog) { %>
+                  <a href="product/edit/<%= row.id %>">
+                    <button class="request" type="submit">Editar</button></a>
+                  <% } %>
+              </div>
+            </div>
+            <%}); %>
         </div>
-      </div>
-      <% }); %>
-    </div>
-  </main>
-  <%- include ('../partials/footer') %>
-</body>
+
+        <div class="main-description">
+          <h2>Servicios Especiales</h2>
+          <p>Tu necesidad, nuestra especialidad.</p>
+        </div>
+        <div class="all-works">
+          <% special.forEach(row=> { %>
+            <div class="works">
+              <img src="img/imgServiciosMyHelp/<%= row.imagen %>" alt="<%= row.imagen %>" />
+              <h3>
+                <%= row.nombre %>
+              </h3>
+
+              <div class="description">
+                <h4>Precio: <strong>$<%= row.precio %></strong></h4>
+                <p>
+                  <%= row.descripcion %>
+                </p>
+                <a href="/productDetail/<%= row.id %>">
+                  <button class="request" type="submit">Conoce más!</button></a>
+
+                <% if (locals.adminLog) { %>
+                  <a href="product/edit/<%= row.id %>">
+                    <button class="request" type="submit">Editar</button></a>
+                  <% } %>
+              </div>
+            </div>
+            <% }); %>
+        </div>
+      </main>
+      <%- include ('../partials/footer') %>
+  </body>

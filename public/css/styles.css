@@ -2,12 +2,12 @@
 @import 'login.css';
 @import 'register.css';
 @import 'productCart.css';
-@import 'scheduleService.css';
 @import 'productDetailId.css';
 @import 'productListHome.css';
 @import 'productListCompany.css';
 @import 'profile.css';
 @import 'productsAll.css';
+@import 'aboutUs.css';
 
 body {
   font-family: 'Pragati Narrow', sans-serif;
