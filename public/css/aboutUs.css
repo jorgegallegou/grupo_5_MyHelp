@@ -18,6 +18,10 @@
   font-weight: 400;
   text-align: justify;
 }
+.about-description h1,
+.about-description h3 {
+  color: #044566;
+}
 .bottom-info,
 .bg-img {
   padding: 20px;
@@ -25,6 +29,12 @@
   line-height: 1;
   font-weight: 400;
   text-align: justify;
+}
+.bottom-info {
+  background: #ebebeb;
+}
+.bottom-info h3 {
+  color: #044566;
 }
 .btns {
   text-align: center;

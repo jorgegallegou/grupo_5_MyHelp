@@ -241,28 +241,27 @@
   color: #ffb703;
   margin: 0px;
   padding: 0px;
-  font-size: 16px;
+  font-size: 20px;
   justify-content: center;
   align-items: center;
 }
 .title p {
   color: #ffb703;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 .search-bar i {
   color: #219ebc;
   position: absolute;
-  bottom: 11px;
+  bottom: 12px;
 }
 .search-bar input {
-  height: 30px;
+  height: 35px;
   width: 210px;
-  border: none;
+  border: solid 1px #219ebc;
   margin-bottom: 5px;
   text-indent: 20px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 0.5rem;
   outline-color: #219ebc;
   font-family: 'Pragati Narrow';
 }
@@ -286,6 +285,7 @@
   text-align: center;
   margin-top: 10px;
   font-size: 22px;
+  color: #044566;
 }
 .swiper-slide {
   background-position: left;
